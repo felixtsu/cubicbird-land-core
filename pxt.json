@@ -13,8 +13,9 @@
         "README.md",
         "assets.json",
         "room.ts",
-        "cbl-core-api.ts",
+        "cbl-info.ts",
         "cbl-main.ts",
+        "cbl-room.ts",
         "tilemap.g.jres",
         "tilemap.g.ts"
     ],

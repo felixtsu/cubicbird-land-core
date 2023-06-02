@@ -29,7 +29,7 @@ namespace room {
         enterRoom(heroSprite: Sprite, entrance?: string): void
         leaveRoom(name: string): void
         getRoomName(): string
-        createSprite(image: Image, spriteKind?: number): Sprite
+        createSprite(image: Image, spriteKind?: number, stateful?:boolean): Sprite
     }
 
     const EXIT_NAME_SD_KEY = "EXIT_NAME_SD_KEY"
@@ -100,6 +100,7 @@ namespace room {
         }
 
         protected createdSprites: Sprite[]
+        protected statefulSprites:Sprite[]
 
         createSprite(image: Image, spriteKind?: number): Sprite {
 
@@ -114,8 +115,11 @@ namespace room {
 
         public enterRoom(heroSprite: Sprite, entrance?: string): void {
             game.pushScene()
+
+            // 这样就把外层游戏sprite带入这个场景
             game.currentScene().addSprite(heroSprite)
             game.currentScene().physicsEngine.addSprite(heroSprite)
+
             heroSprite.vx = 0, heroSprite.vy = 0
             this.heroSprite = heroSprite
 
@@ -149,7 +153,11 @@ namespace room {
             for (let createdSprite of this.createdSprites) {
                 createdSprite.destroy()
             }
+
+
             game.popScene()
+
+
             nextRoom.enterRoom(this.heroSprite, this.getRoomName());
         }
 

@@ -16,14 +16,27 @@ let player = sprites.create(img`
     . . . f f f f f f . . . .
     . . . f f . . f f . . . .
 `, SpriteKind.Player)
-controller.moveSprite(player)
-scene.cameraFollowSprite(player)
-scene.setTileMapLevel(tilemap`cbland`)
+let villageRoom = new cbland.VillageRoom('village')
+let rooms:room.Room[] = []
 
 prepareRooms()
 
+    
 function prepareRooms() {
-
-
+    // extension to be made here.
     
 }
+
+// 起步资金
+cbland_info.setMoneyTo(100)
+cbland_info.setTime(1, 23, 50, 5000)
+
+villageRoom.enterRoom(player)
+
+controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
+    
+    player.say(cbland_info.currentDay())
+
+    cbland_info.fastForwardTo(8,0)
+
+})   
