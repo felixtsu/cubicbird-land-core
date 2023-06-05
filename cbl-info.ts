@@ -26,16 +26,37 @@ namespace cbland_info {
         setTimeMinutes: number
         lastTick : number
 
-        constructor(day : number, hour: number, minute: number, tickInterval: number) {
+        constructor(day? : number, hour?: number, minute?: number, tickInterval?: number) {
+            if (day == undefined) {
+                day = cbland.readSavingDataNumber("GLOBAL", "day")
+                hour = cbland.readSavingDataNumber("GLOBAL", "hour")
+                minute = cbland.readSavingDataNumber("GLOBAL", "minute")
+                tickInterval = cbland.readSavingDataNumber("GLOBAL", "tickInterval")
+                
+            } 
+
+
             this.hour = (hour + 24) % 24
             this.minute = (minute + 60) % 60
             this.tickInterval = tickInterval
             this.day = day
 
+
+
             this.currentTimeMinutes = this.hour * 60 + this.minute
 
             this.lastTick = game.currentScene().millis()
             this.setTimeMinutes = this.currentTimeMinutes
+
+            this.save()
+        }
+
+        save() {
+
+            cbland.writeSavingDataNumber("GLOBAL", "day", this.day)
+            cbland.writeSavingDataNumber("GLOBAL", "hour", this.hour)
+            cbland.writeSavingDataNumber("GLOBAL", "minute", this.minute)
+            cbland.writeSavingDataNumber("GLOBAL", "tickInterval", this.tickInterval)
         }
 
         timeElasped(currentMillis: number) {
@@ -50,8 +71,10 @@ namespace cbland_info {
             }
             
             this.hour = Math.floor(this.currentTimeMinutes / 60)
-            this.minute = Math.floor(this.currentTimeMinutes % 60)
-        }
+            this.minute = Math.floor(this.currentTimeMinutes % 60)        
+            this.save()
+            
+            }
     }
 
     let CLOCK_INSTANCE: Clock
@@ -94,7 +117,7 @@ namespace cbland_info {
     //%block="set time to hour %hour, minute %minute || %tickInterval millis for one minute"
     //%block.loc.zh-CN="设置时钟 %hour 点 %minute 分 || 以 %tickInterval 毫秒代替一分钟"
     //%tickInterval.defl=60000
-    export function setTime(day : number, hour: number, minute: number, tickInterval: number = 60000) {
+    export function setTime(day? : number, hour?: number, minute?: number, tickInterval: number = 5000) {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
     }
 
@@ -218,10 +241,12 @@ namespace cbland_info {
 
     export function changeMoneyBy(incr: number) {
         _money += incr
+        cbland.writeSavingDataNumber("GLOBAL", "money", _money)
     }
 
     export function setMoneyTo(amount: number) {
         _money = amount
+        cbland.writeSavingDataNumber("GLOBAL", "money", _money)
     }
 
     export function money(): number {

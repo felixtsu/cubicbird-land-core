@@ -113,6 +113,7 @@ namespace room {
         protected roomTilemap(): tiles.TileMapData { return null }
 
         public enterRoom(heroSprite: Sprite, entrance?: string): void {
+            _currentRoom = this;
             game.pushScene()
 
             // 这样就把外层游戏sprite带入这个场景
@@ -122,7 +123,7 @@ namespace room {
             heroSprite.vx = 0, heroSprite.vy = 0
             this.heroSprite = heroSprite
 
-            _currentRoom = this;
+            
 
             tiles.setTilemap(this.roomTilemap())
 

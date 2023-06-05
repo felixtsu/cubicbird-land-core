@@ -2,47 +2,50 @@
 namespace cbland {
 
 
-    let _currentRoomInRegister = null;
+    let _currentRoomInRegister :string= null;
+
+    export function _getCurrentRoomInRegister() : string {
+        return _currentRoomInRegister
+    }
 
     
-    function currentRoom(): room.Room {
+    export function currentRoom(): room.Room {
         return room.currentRoom()
     }
 
-    let roomSavingDataMap: {[key:string]:SavingData} = {}
+    
 
     export class SavingData {
 
-        private data: { [key: string]: any };
+        static SEPERATOR = "||";
 
-        public constructor() {
-            this.data = {}
+        writeDataNumber(roomName:string, key: string, value: number) {
+            
+            settings.writeNumber(roomName + SavingData.SEPERATOR  + key, value)
         }
 
-        writeDataNumber(key: string, value: number) {
-            this.data[key] = value
+        readDataNumber(roomName: string, key: string): number {
+            return settings.readNumber(roomName + SavingData.SEPERATOR + key)
         }
 
-        readDataNumber(key: string): number {
-            return this.data[key]
+        writeDataBoolean(roomName: string, key: string, value: boolean) {
+            settings.writeNumber(roomName + SavingData.SEPERATOR + key, value ? 1 : 0)
         }
 
-        writeDataBoolean(key: string, value: boolean) {
-            this.data[key] = value
+        readDataBoolean(roomName: string, key: string) {
+            return settings.readNumber(roomName + SavingData.SEPERATOR + key) == 1 ? true : false
         }
 
-        readDataBoolean(key: string) {
-            return this.data[key]
+        writeDataString(roomName: string, key: string, value: string) {
+            settings.writeString(roomName + SavingData.SEPERATOR + key, value)
         }
 
-        writeDataString(key: string, value: string) {
-            this.data[key] = value
-        }
-
-        readDataString(key: string) {
-            return this.data[key]
+        readDataString(roomName: string, key: string) {
+            return settings.readString(roomName + SavingData.SEPERATOR + key)
         }
     }
+
+    const SAVINGDATA_INSTANCE = new SavingData()
 
 
     export function restoreFromSavingData(roomName: string, callback: (savingData: SavingData) => {}) {
@@ -55,41 +58,19 @@ namespace cbland {
     // }
 
     export function writeSavingDataNumber(roomName:string, key:string, value:number) {
-        let savingData = roomSavingDataMap[roomName]
-        if (!savingData ) {
-            savingData = new SavingData()
-            roomSavingDataMap[roomName] = savingData
-        }
-
-        savingData.writeDataNumber(key, value)
+        SAVINGDATA_INSTANCE.writeDataNumber(roomName, key, value)
     }
 
     export function readSavingDataNumber(roomName: string, key: string) :number {
-        let savingData = roomSavingDataMap[roomName]
-        if (!savingData) {
-            return undefined
-        }
-
-        return savingData.readDataNumber(key)
+        return SAVINGDATA_INSTANCE.readDataNumber(roomName, key)
     }
 
     export function writeSavingDataBoolean(roomName: string, key: string, value: boolean) {
-        let savingData = roomSavingDataMap[roomName]
-        if (!savingData) {
-            savingData = new SavingData()
-            roomSavingDataMap[roomName] = savingData
-        }
-
-        savingData.writeDataBoolean(key, value)
+        SAVINGDATA_INSTANCE.writeDataBoolean(roomName, key, value)
     }
 
     export function readSavingDataBoolean(roomName: string, key: string): boolean {
-        let savingData = roomSavingDataMap[roomName]
-        if (!savingData) {
-            return undefined
-        }
-
-        return savingData.readDataBoolean(key)
+        return SAVINGDATA_INSTANCE.readDataBoolean(roomName, key)
     }
 
 
@@ -120,6 +101,7 @@ namespace cbland {
 
     //%blocks
     export function registerRoom(roomName: string, roomImage: Image, tilemap: tiles.TileMapData) {
+        _currentRoomInRegister = roomName
         if (rooms[roomName] != null) {
             console.error("duplicate room name encountered:" + roomName)
         }

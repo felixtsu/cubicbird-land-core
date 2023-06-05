@@ -21,7 +21,8 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "images.g.jres",
-        "images.g.ts"
+        "images.g.ts",
+        "scene_capture.ts"
     ],
     "testFiles": [
         "test.ts"
