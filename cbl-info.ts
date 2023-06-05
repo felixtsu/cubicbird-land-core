@@ -153,7 +153,6 @@ namespace cbland_info {
                 drawClockImplement()
             }
         )
-
     }
 
     // -------- time ends ------------
@@ -201,6 +200,18 @@ namespace cbland_info {
 
         game.onShade(function () {
             drawMoneyIconImpl()
+        })
+
+        game.addScenePopHandler((oldScene: scene.Scene) => {
+            cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
+        })
+
+        game.addScenePushHandler((oldScene: scene.Scene) => {
+            cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
+            initTimeHud()
+            game.onShade(function () {
+                drawMoneyIconImpl()
+            })
         })
 
     }

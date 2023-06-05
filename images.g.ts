@@ -1,4 +1,4 @@
-// Auto-generated code. Do not edit.
+// 自动生成的代码。请勿编辑。
 namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
@@ -54,25 +54,6 @@ cc66666666664c66e4e44e44e44feeee66c46666666666cc
 .....64eee444c66f4e44e44e44e44ee66c444eee46.....
 ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
 `;
-            case "image2":
-            case "wardrobe":return img`
-f f f f f f f f f f f f f f f f 
-f e e e e e e e e e e e e e e f 
-f e e e e e e e e e e e e e e f 
-f f f f f f f e e f f f f f f f 
-f e e e e e f e e f e e e e e f 
-f e e e e e f e e f e e e e e f 
-f e e e e e f e e f e e e e e f 
-f e e e e e f e e f e e e e e f 
-f e e e e e f 3 3 f e e e e e f 
-f e e e e e f e e f e e e e e f 
-f e e e e e f e e f e e e e e f 
-f f f f f f f e e f f f f f f f 
-f e e e e e e e e e e e e e e f 
-f e e e e e e e e e e e e e e f 
-f f f f f f f f f f f f f f f f 
-e f e f e e e e e e e f e e f e 
-`;
             case "image3":
             case "myImage":return img`
 . . . . . . . . . . . . . . . . 
@@ -91,6 +72,95 @@ e f e f e e e e e e e f e e f e
 . 6 6 . 2 . . 6 6 . . . . . . . 
 . . 6 6 . . . . 6 6 6 6 . . . . 
 . . . 6 6 6 6 6 6 6 6 6 . . . . 
+`;
+            case "image4":
+            case "waypoint_default_E":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . 1 1 1 1 1 1 . . . . . 
+. . . . 1 9 9 9 9 9 9 1 . . . . 
+. . . 1 9 9 c b b b 9 9 1 . . . 
+. . 1 9 9 9 c b b b 9 9 9 1 . . 
+. 1 9 9 9 9 c b b b 9 9 9 9 1 . 
+. 9 9 9 9 9 c b b b 9 9 9 9 9 . 
+. 9 9 9 9 9 c b b b 9 9 9 9 9 . 
+. 9 9 c b 9 c b b b 9 c b 9 9 . 
+. 9 9 c b b c b b b c b b 9 9 . 
+. 8 9 9 c b b b b b b b 9 9 8 . 
+. . 8 9 9 c b b b b b 9 9 8 . . 
+. . . 8 9 9 c b b b 9 9 8 . . . 
+. . . . 8 9 9 9 9 9 9 8 . . . . 
+. . . . . 8 8 8 8 8 8 . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image5":
+            case "wardrobe_open":return img`
+...dddddddddddddddddddddddddddd.
+..dffeeeeeeccceeeecceeeeeeeedff.
+.dffeeecccceeecceeeeeeeeccedfcf.
+dffeeeeeeeeeeeeeeeeccceeeedfcef.
+ddddddddddddddddddddddddddfceef.
+fffffffffffffffffffffffffffeeef.
+ffeeeeeeeeeeeeefeeeeeeeeeffeeef.
+feffeeefeefeefefeeefeeeffefeeef.
+feeefeefeeeeeeefeeefeefeeefecef.
+feeefeeeeeeeeeeeeeeeeefeeefecef.
+feeefbbbbbbbbbbbbbbbbbfeeefecef.
+feeefbbbbbbbbbbbbbbbbbfeeefecef.
+feeefbbbbbbbbbbbbbbbbbfeeefeeef.
+fefefdddddddddddddddddfefefeeef.
+fefefcccccccccccccccccfefefeecf.
+fefefcccccccccccccccccfefefeecf.
+fefefeeeeeeeeeeeeeeeeefefefceef.
+fefefeeeeeeeeeeeeeeeeefefefceef.
+fefefbbbbbbbbbbbbbbbbbfefefeeef.
+fefefbbbbbbbbbbbbbbbbbfefefeeef.
+fefefbbbbbbbbbbbbbbbbbfefefeeef.
+feeefdddddddddddddddddfefefecef.
+feeefcccccccccccccccccfeeefecef.
+feeefcccccccccccccccccfeeefeeff.
+feeefeeeeeeeeeeeeeeeeefeeefefff.
+feeefeeefffffeeffffeeefeeefffff.
+feeefeeeeeeeeeeeeeeeeefeeefffef.
+fffffffffffffffffffffffffff.fef.
+feefffef..............ffeef.fef.
+feef.fff...............feef.fff.
+feef...................feef.....
+ffff...................ffff.....
+`;
+            case "image2":
+            case "wardrobe":return img`
+...dddddddddddddddddddddddddddd.
+..dffeeeeeeccceeeecceeeeeeeedff.
+.dffeeecccceeecceeeeeeeeccedfcf.
+dffeeeeeeeeeeeeeeeeccceeeedfcef.
+ddddddddddddddddddddddddddfceef.
+ffccccccccccccccccccccccccfeeef.
+ffceeeeeeeeeeceeeeeeeeeeecfeeef.
+ffceeeeeeeeeeceeeeeeeeeeecfeeef.
+ffceeeeeeeedecedeeeeeeeeecfecef.
+ffceeeeeeeefecefeeeeeeeeecfecef.
+ffceeeeeeeefecefeeeeeeeeecfecef.
+ffceeeeeeeefecefeeeeeeeeecfecef.
+ffceeeeeeeefecefeeeeeeeeecfeeef.
+ffceeeeeeeefecefeeeeeeeeecfeeef.
+ffceeeeeedefecefedeeeeeeecfeecf.
+ffceeeeedfefecefefdeeeeeecfeecf.
+ffceeeeeffefecefeffeeeeeecfceef.
+ffceeeeeffefecefeffeeeeeecfceef.
+ffceeeeeefefecefefeeeeeeecfeeef.
+ffceeeeeeeefecefeeeeeeeeecfeeef.
+ffceeeeeeeefecefeeeeeeeeecfeeef.
+ffceeeeeeeefecefeeeeeeeeecfecef.
+ffceeeeeeeefecefeeeeeeeeecfecef.
+ffceeeeeeeeeeceeeeeeeeeeecfeeff.
+ffceeeeeeeeeeceeeeeeeeeeecfefff.
+ffccccccccccccccccccccccccfffff.
+fffffffffffffffffffffffffffffef.
+fffffffffffffffffffffffffff.fef.
+feef.fef...............feef.fef.
+feef.fff...............feef.fff.
+feef...................feef.....
+ffff...................ffff.....
 `;
         }
         return null;
@@ -111,10 +181,4 @@ e f e f e e e e e e e f e e f e
     })
 
 }
-// Auto-generated code. Do not edit.
-
-// Auto-generated code. Do not edit.
-namespace myTiles {
-
-}
-// Auto-generated code. Do not edit.
+// 自动生成的代码。请勿编辑。

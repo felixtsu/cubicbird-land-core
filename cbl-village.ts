@@ -20,13 +20,12 @@ namespace cbland {
             // 这里要组装dlc
             this.placeCustomRooms()
 
-
         }
 
         // 这个是expose给cbl-main里面用来组装不同插件的入口，或者说，这个地方应该是Village的初始化函数
         private placeCustomRooms() {
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
-                villageRoom.addExitOnLocation(room.getRoomName(), 5,3)
+                this.addExitOnLocation(roomName, 5,13)
             })
         }
 
@@ -43,8 +42,8 @@ namespace cbland {
 
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
                 let roomSprite = createSprite(room.roomImage, SpriteKind._CommonRoomDummy, false)
-                tiles.placeOnTile(roomSprite, tiles.getTileLocation(5, 2))   
-                villageRoom.addExitOnLocation(room.getRoomName(), 5,2)
+                tiles.placeOnTile(roomSprite, tiles.getTileLocation(5, 13))   
+                villageRoom.addExitOnLocation(room.getRoomName(), 5,13)
             })
 
         }

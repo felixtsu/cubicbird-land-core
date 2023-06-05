@@ -13,7 +13,11 @@ namespace cbland {
 
     export class SavingData {
 
-        private data: { [key: string]: any } = {};
+        private data: { [key: string]: any };
+
+        public constructor() {
+            this.data = {}
+        }
 
         writeDataNumber(key: string, value: number) {
             this.data[key] = value
@@ -45,14 +49,47 @@ namespace cbland {
     }
 
 
-    export function writeToSavingData(roomName: string, callback: (savingData: SavingData) => {}) {
+    // export function writeToSavingData(roomName: string, callback: (savingData: SavingData) => {}) {
+    //     let savingData = roomSavingDataMap[roomName]
+    //     callback(savingData)
+    // }
+
+    export function writeSavingDataNumber(roomName:string, key:string, value:number) {
         let savingData = roomSavingDataMap[roomName]
-        callback(savingData)
+        if (!savingData ) {
+            savingData = new SavingData()
+            roomSavingDataMap[roomName] = savingData
+        }
 
-        
+        savingData.writeDataNumber(key, value)
+    }
 
+    export function readSavingDataNumber(roomName: string, key: string) :number {
+        let savingData = roomSavingDataMap[roomName]
+        if (!savingData) {
+            return undefined
+        }
 
+        return savingData.readDataNumber(key)
+    }
 
+    export function writeSavingDataBoolean(roomName: string, key: string, value: boolean) {
+        let savingData = roomSavingDataMap[roomName]
+        if (!savingData) {
+            savingData = new SavingData()
+            roomSavingDataMap[roomName] = savingData
+        }
+
+        savingData.writeDataBoolean(key, value)
+    }
+
+    export function readSavingDataBoolean(roomName: string, key: string): boolean {
+        let savingData = roomSavingDataMap[roomName]
+        if (!savingData) {
+            return undefined
+        }
+
+        return savingData.readDataBoolean(key)
     }
 
 
@@ -61,15 +98,26 @@ namespace cbland {
 
     let rooms: { [name: string]: room.CommonRoom } = {}
     
+
+
     export function forEachRoom(callback: (roomName: string, room: room.CommonRoom) => void) {
         for (const name of Object.keys(rooms)) {
             callback(name, rooms[name])
         }
     }
 
-    export function _getRoom(roomName: string): room.CommonRoom {
+    export function _getRoom(roomName: string): room.Room {
+        if (roomName == 'village') {
+            return villageRoom
+        } 
+        return _getCommonRoom(roomName)
+    }
+
+
+    export function _getCommonRoom(roomName:string) :room.CommonRoom {
         return rooms[roomName]
     }
+
     //%blocks
     export function registerRoom(roomName: string, roomImage: Image, tilemap: tiles.TileMapData) {
         if (rooms[roomName] != null) {
@@ -85,8 +133,8 @@ namespace cbland {
     }
 
     //%blocks
-    export function didEnterRoom(roomName: string, callback: (room:room.Room) => void) {
-
+    export function didEnterRoom(roomName: string, callback: (player:Sprite, room:room.Room, entrance?:string) => void) {
+        _getCommonRoom(roomName).setDidEnterRoomCallback(callback)
     }
 
     //%blocks
@@ -104,7 +152,7 @@ namespace cbland {
     }
     
     export function addExit(roomName: string, col: number, row: number, nextRoomName:string, waypointSignImage?:Image) {
-        _getRoom(roomName).addExitOnLocation(nextRoomName, col, row,waypointSignImage)
+        _getCommonRoom(roomName).addExitOnLocation(nextRoomName, col, row,waypointSignImage)
     }
 
 

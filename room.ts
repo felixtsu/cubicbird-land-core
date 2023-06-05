@@ -15,6 +15,7 @@ namespace room {
         col: number;
         row: number;
         waypointImage: Image;
+        hidden: boolean
 
         constructor(roomName: string, col?: number, row?: number, waypointImage?: Image) {
             this.roomName = roomName
@@ -46,6 +47,7 @@ namespace room {
         constructor(name: string) {
             this.name = name
             this.createdSprites = []
+            this.statefulSprites = []
         }
 
         getRoomName(): string {
@@ -67,13 +69,16 @@ namespace room {
         addExitOnLocation(nextRoomName: string, col: number, row: number, waypointSignImage?: Image) {
             this.addExit(nextRoomName)
 
-            if (!waypointSignImage) {
-                waypointSignImage = assets.image`waypoint_default_E`
-            }   
+               
 
             this.exits[nextRoomName].col = col
             this.exits[nextRoomName].row = row
+            if (!waypointSignImage) {
+                waypointSignImage = assets.image`waypoint_default_E`
+                this.exits[nextRoomName].hidden = true
+            }
             this.exits[nextRoomName].waypointImage = waypointSignImage
+            
         }
 
         addExit(nextRoomName: string) {
@@ -93,11 +98,14 @@ namespace room {
         protected createdSprites: Sprite[]
         protected statefulSprites:Sprite[]
 
-        createSprite(image: Image, spriteKind?: number): Sprite {
+        createSprite(image: Image, spriteKind?: number, stateful?:boolean): Sprite {
 
             let result = sprites.create(image, spriteKind)
 
             this.createdSprites.push(result)
+            if (stateful) {
+                this.statefulSprites.push(result)
+            }
 
             return result;
         }
@@ -118,14 +126,15 @@ namespace room {
 
             tiles.setTilemap(this.roomTilemap())
 
-
-            console.log(this.exits)
             for (let exitName of Object.keys(this.exits)) {
                 let exit = this.exits[exitName]
                 if (exit.col != undefined) {
                     let exitWayppointSprite = this.createSprite(exit.waypointImage, SpriteKind.ExitWaypoint)
                     sprites.setDataString(exitWayppointSprite, EXIT_NAME_SD_KEY, exitName)
                     tiles.placeOnTile(exitWayppointSprite, tiles.getTileLocation(exit.col, exit.row))
+                    if (exit.hidden) {
+                        exitWayppointSprite.setFlag(SpriteFlag.Invisible, true)
+                    }
                 }
             }
 
@@ -145,6 +154,7 @@ namespace room {
             let nextRoomName = this.exits[name].roomName;
             for (let createdSprite of this.createdSprites) {
                 createdSprite.destroy()
+                this.statefulSprites.removeElement(createdSprite)
             }
 
 
@@ -159,6 +169,12 @@ namespace room {
 
         private tilemap: tiles.TileMapData
         private _roomImage: Image
+
+        private _didEnterRoomCallback: (player: Sprite, room: CommonRoom, entrance:string) =>void
+
+        public setDidEnterRoomCallback(cb: (player: Sprite, room: CommonRoom, entrance: string) => void ) {
+            this._didEnterRoomCallback = cb
+        }
 
         get roomImage() {
             return this._roomImage
@@ -175,6 +191,12 @@ namespace room {
             return this.tilemap
         }
 
+        public enterRoom(heroSprite: Sprite, entrance?: string): void {
+            super.enterRoom(heroSprite, entrance)
+
+            this._didEnterRoomCallback(heroSprite, this, entrance)
+
+        }
 
      }
 }
