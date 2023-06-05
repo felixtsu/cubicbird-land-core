@@ -1,0 +1,26 @@
+{
+    "myImages.image1": {
+        "id": "myImages.image1",
+        "data": "hwQwADAAAAAAAABARkRGREZERkRGRGxmZmZmxswAAAAAAADAbMZsxmzGbMZsxkxmZmZmZsYMAAAAAADAZsZmxmbGZsZmxkxsZmZmZmbGAAAAAAAiLiLiIiIuIuIiwkzL5u7u7m5mDAAAAAAiLiLiIiIuIuIiYkzEJN7d3W1EZAAAACDu7u7u7u7u7u7ubEzEJN7P/WzkTgYAACAuIuIiIi4i4iIibEzEJN7P/WzkTmQAACAuIuIiIi4i4iIiZkzEJN7d3W3kTs4AAO7uXlVVVVXl7u7OxkbEJN7P/WxERM4AAC4i4iJSLiLiIiLOxkbEJN7P/WzkTs4AAC4i4iJSLiLiIiJuxkbEJN7d3W3kTmQA4O7u7u5e7u7u7u5sbEbE5O7u7m7kTmQAICLiIiJeIuIiIuJsTEbERERERERERGQAICLiUlVVVVUlIuJmTGbMzMzMzMzMzMwA4u7u7u7u7u7u7s5mRsbbEWFmZmZmZmYAIuIiIi4iIi4iIs7GtEwUYWZmZmZmZmYAIuIiIi4iIi4iIm7GxEth5v7/7+7+/+8g7u7uXlVVVVXl7mxmxERhTkREREREREQg4iIiUiIi4iIl4mxMZERh7u7u7u7u7u4g4iIiUiIi4iIl4mZMZERhTkT/TkRERETu7u7uXu7u7u7lzmZGZERhTuT/TkRERETiIiIuUuIiIi4lzsZEZERh7v7/7u7u7u7u7u7uXlVVVVXlbsZEZERhTvT/TkREREQiIiIiIiIiIiIiYsZEZERhTvT/TkREREQiIiIiIiIiIiIiYsZEZERh7v7/7u7u7u7u7u7uXlVVVVXlbsZEZERhTvT/TkREREQiLiIuUuIiIi4izsZEZERhTvT/TkRERETu7u7uXu7u7u7uzmZGZERh7u7/7v7/7u4g4iIiUlVVVSIi4mZMZERhTkT/TuRPT0Qg4iIiUiIi4iIi4mxMZERhTkTkTuRPT0Qg7u7uXlVVVVXl7mxmxERh7u7u7u7/7u4AIuIiIi4iIi4iIm7GxEth5u7u7u7u7u4AIuIiIi4iIi4iIs7GtEwUYWZmZmZmZmYA4u7uXlVVVVXl7s5mRsbbEWFmZmZmZmYAICLiUiJeIuIlIuJmTGbMzMzMzMzMzMwAICLiUiJeIuIlIuJsTEbERERERERERGQA4O7uXu5e7u7l7u5sbEbE5O7u7m7kTmQAAC4iUiJSLiLlIiJuxkbEJN7d3W3kTmQAAC4iUiIiLiLlIiLOxkbEJN7P/WzkTs4AAO7u7u7u7u7u7u7OxkbEJN7P/WxERM4AACAuIuIiIi4i4iIiZkzEJN7d3W3kTs4AACAuIuIiIi4i4iIibEzEJN7P/WzkTmQAACDu7u7u7u7u7u7ubEzEJN7P/WzkTgYAAAAiLiLiIiIuIuIiYkzEJN7d3W1EZAAAAAAiLiLiIiIuIuIiwkzL5u7u7m5mDAAAAADAZsZmxmbGZsZmxkxsZmZmZmbGAAAAAADAbMZsxmzGbMZsxkxmZmZmZsYMAAAAAABARkRGREZERkRGRGxmZmZmxswAAAA=",
+        "dataEncoding": "base64",
+        "namespace": "myImages.",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "homeImage"
+    },
+    "myImages.image2": {
+        "id": "myImages.image2",
+        "data": "hwQQABAAAAD/////////7+/+7u7u/u7/7/7u7u7+7u/v/u7u7v7u/+/+7u7u/u7v7/7u7u7+7u/v/v/////u7+/u7u7j7u7v7+7u7uPu7u/v/v/////u7+/+7u7u/u7v7/7u7u7+7v/v/u7u7v7u7+/+7u7u/u7v7/7u7u7+7v//////////7w==",
+        "dataEncoding": "base64",
+        "namespace": "myImages.",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "wardrobe"
+    },
+    "myImages.image3": {
+        "id": "myImages.image3",
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAABmZmYAAAAAAAYGYAYAZgZgAAYAZgAGZWAABiBgYAZmZgYAAGBgAAYGAGYGYGAABgYABmZgYABgBgAGYGZgAAAAAGYAZmAGAAAAYABmAAYAAABmAGYAYGZmZgYAAHAAAGYAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "dataEncoding": "base64",
+        "namespace": "myImages.",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
+    }
+}

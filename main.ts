@@ -1,3 +1,9 @@
+namespace SpriteKind {
+    export const _CommonRoomDummy = SpriteKind.create()
+}
+
+
+
 let player = sprites.create(img`
     . . . . f f f f . . . . .
     . . f f f f f f f f . . .
@@ -16,14 +22,18 @@ let player = sprites.create(img`
     . . . f f f f f f . . . .
     . . . f f . . f f . . . .
 `, SpriteKind.Player)
-let villageRoom = new cbland.VillageRoom('village')
-let rooms:room.Room[] = []
+player.z = scene.HUD_Z - 1
+let villageRoom = new cbland.VillageRoom()
 
 prepareRooms()
+
+
 
     
 function prepareRooms() {
     // extension to be made here.
+
+    home.prepareHome()
     
 }
 
@@ -32,6 +42,7 @@ cbland_info.setMoneyTo(100)
 cbland_info.setTime(1, 23, 50, 5000)
 
 villageRoom.enterRoom(player)
+
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, () => {
     

@@ -34,20 +34,17 @@ namespace cbland_info {
 
             this.currentTimeMinutes = this.hour * 60 + this.minute
 
-            // this.setTimeMillis = game.currentScene().millis()
             this.lastTick = game.currentScene().millis()
             this.setTimeMinutes = this.currentTimeMinutes
         }
 
         timeElasped(currentMillis: number) {
-            // let deltaMillis = currentMillis - this.setTimeMillis
             let deltaMillis = currentMillis - this.lastTick
             this.lastTick = currentMillis
             this.currentTimeMinutes += deltaMillis / this.tickInterval * 60
 
             // another day has pass
             if (this.currentTimeMinutes > 60 * 24) {
-                player.say(this.setTimeMinutes)
                 this.day += 1
                 this.currentTimeMinutes -= 60 * 24
             }

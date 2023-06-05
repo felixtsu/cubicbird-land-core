@@ -11,13 +11,13 @@ namespace room {
 
 
     class Exit {
-        room: Room;
+        roomName: string;
         col: number;
         row: number;
         waypointImage: Image;
 
-        constructor(room: Room, col?: number, row?: number, waypointImage?: Image) {
-            this.room = room
+        constructor(roomName: string, col?: number, row?: number, waypointImage?: Image) {
+            this.roomName = roomName
             this.col = col
             this.row = row
             this.waypointImage = waypointImage
@@ -52,44 +52,35 @@ namespace room {
             return this.name
         }
 
-        protected createExitInRoom(nextRoom: Room, col: number, row: number, name?: string, waypointSignImage?: Image) {
-            if (!name) {
-                name = nextRoom.getRoomName()
-            }
+        protected createExitInRoom(nextRoomName: string, col: number, row: number,  waypointSignImage?: Image) {
 
-            this.addExitOnLocation(nextRoom, col, row, name, waypointSignImage)
+            this.addExitOnLocation(nextRoomName, col, row, waypointSignImage)
 
-            let exit = this.exits[name]
+            let exit = this.exits[nextRoomName]
 
             let exitWayppointSprite = this.createSprite(exit.waypointImage, SpriteKind.ExitWaypoint)
-            sprites.setDataString(exitWayppointSprite, EXIT_NAME_SD_KEY, name)
+            sprites.setDataString(exitWayppointSprite, EXIT_NAME_SD_KEY, nextRoomName)
             tiles.placeOnTile(exitWayppointSprite, tiles.getTileLocation(exit.col, exit.row))
 
         }
 
-        addExitOnLocation(nextRoom: Room, col: number, row: number, name?: string, waypointSignImage?: Image) {
-            if (!name) {
-                name = nextRoom.getRoomName()
-            }
-            this.addExit(nextRoom, name)
+        addExitOnLocation(nextRoomName: string, col: number, row: number, waypointSignImage?: Image) {
+            this.addExit(nextRoomName)
 
             if (!waypointSignImage) {
                 waypointSignImage = assets.image`waypoint_default_E`
-            }
+            }   
 
-            this.exits[name].col = col
-            this.exits[name].row = row
-            this.exits[name].waypointImage = waypointSignImage
+            this.exits[nextRoomName].col = col
+            this.exits[nextRoomName].row = row
+            this.exits[nextRoomName].waypointImage = waypointSignImage
         }
 
-        addExit(nextRoom: Room, name?: string) {
+        addExit(nextRoomName: string) {
             if (this.exits == undefined) {
                 this.exits = {}
             }
-            if (!name) {
-                name = nextRoom.getRoomName()
-            }
-            this.exits[name] = new Exit(nextRoom)
+            this.exits[nextRoomName] = new Exit(nextRoomName)
         }
 
         protected didEnterRoom(entrance: string): void {
@@ -127,6 +118,8 @@ namespace room {
 
             tiles.setTilemap(this.roomTilemap())
 
+
+            console.log(this.exits)
             for (let exitName of Object.keys(this.exits)) {
                 let exit = this.exits[exitName]
                 if (exit.col != undefined) {
@@ -149,7 +142,7 @@ namespace room {
             if (!result) {
                 return
             }
-            let nextRoom = this.exits[name].room;
+            let nextRoomName = this.exits[name].roomName;
             for (let createdSprite of this.createdSprites) {
                 createdSprite.destroy()
             }
@@ -157,11 +150,31 @@ namespace room {
 
             game.popScene()
 
-
-            nextRoom.enterRoom(this.heroSprite, this.getRoomName());
+            cbland._getRoom(nextRoomName).enterRoom(this.heroSprite, this.getRoomName());
         }
 
     }
 
+    export class CommonRoom extends AbstractRoom {
 
+        private tilemap: tiles.TileMapData
+        private _roomImage: Image
+
+        get roomImage() {
+            return this._roomImage
+        }
+
+        public constructor(roomName: string, roomImage: Image, tilemap: tiles.TileMapData) {
+            super(roomName)
+            this.tilemap = tilemap
+            this._roomImage = roomImage
+            tiles.loadMap
+        }
+
+        protected roomTilemap(): tiles.TileMapData {
+            return this.tilemap
+        }
+
+
+     }
 }

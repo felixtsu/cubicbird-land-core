@@ -5,7 +5,8 @@
         "device": "*",
         "arcade-sprite-data": "github:microsoft/arcade-sprite-data#v0.2.1",
         "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0",
-        "color-coded-tilemap": "*"
+        "color-coded-tilemap": "*",
+        "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0"
     },
     "files": [
         "main.blocks",
@@ -13,11 +14,14 @@
         "README.md",
         "assets.json",
         "room.ts",
+        "home.ts",
         "cbl-info.ts",
-        "cbl-main.ts",
+        "cbl-village.ts",
         "cbl-room.ts",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "images.g.jres",
+        "images.g.ts"
     ],
     "testFiles": [
         "test.ts"
