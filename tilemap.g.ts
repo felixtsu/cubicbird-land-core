@@ -1,7 +1,7 @@
 // 自动生成的代码。请勿编辑。
 namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
-    export const transparency16 = image.ofBuffer(hex``);
+    export const transparencyCBLInternal = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
     export const tile1 = image.ofBuffer(hex``);
     //% fixedInstance jres blockIdentity=images._tile
@@ -31,7 +31,7 @@ namespace myTiles {
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 
-`, [myTiles.transparency16,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath3,sprites.castle.tilePath2,sprites.castle.tilePath4,sprites.castle.tilePath8,sprites.castle.tilePath6,sprites.castle.tileGrass1], TileScale.Sixteen);
+`, [myTiles.transparencyCBLInternal,sprites.castle.tilePath5,sprites.castle.tilePath1,sprites.castle.tilePath9,sprites.castle.tilePath7,sprites.castle.tilePath3,sprites.castle.tilePath2,sprites.castle.tilePath4,sprites.castle.tilePath8,sprites.castle.tilePath6,sprites.castle.tileGrass1], TileScale.Sixteen);
             case "homeInside":
             case "homeInside1":return tiles.createTilemap(hex`0a000800010303030303030303040209090909090909090502090909090909090905020909090909090909050209090909090909090502090909090909090905060808080b0a0808080700000000000000000000`, img`
 2 2 2 2 2 2 2 2 2 2 
@@ -42,14 +42,14 @@ namespace myTiles {
 2 . . . . . . . . 2 
 2 2 2 2 . . 2 2 2 2 
 . . . . . . . . . . 
-`, [myTiles.transparency16,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouth1,sprites.dungeon.floorLight2,myTiles.tile3,myTiles.tile4], TileScale.Sixteen);
+`, [myTiles.transparencyCBLInternal,sprites.dungeon.greenOuterNorthWest,sprites.dungeon.greenOuterWest0,sprites.dungeon.greenOuterNorth0,sprites.dungeon.greenOuterNorthEast,sprites.dungeon.greenOuterEast0,sprites.dungeon.greenOuterSouthEast,sprites.dungeon.greenOuterSouthWest,sprites.dungeon.greenOuterSouth1,sprites.dungeon.floorLight2,myTiles.tile3,myTiles.tile4], TileScale.Sixteen);
         }
         return null;
     })
 
     helpers._registerFactory("tile", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "transparency16":return transparency16;
+            case "transparencyCBLInternal":return transparencyCBLInternal;
             case "myTile":
             case "tile1":return tile1;
             case "myTile0":
