@@ -31,6 +31,11 @@ namespace scene_util {
         }
         // restore forever handlers ends
 
+
+        for (let buttonEventHandler of scene.buttonEventHandlers) {
+            game.currentScene().buttonEventHandlers.push(buttonEventHandler)
+        }
+
         
          
     }

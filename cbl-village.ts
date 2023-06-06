@@ -6,10 +6,10 @@ namespace cbland {
         row: number
     }
 
-    const _roomLocations:{[roomName:string]:room.CommonRoom } = {
+    const _roomLocations: { [roomName: string]: room.CommonRoom } = {
 
     }
-    
+
     export class VillageRoom extends room.AbstractRoom {
 
 
@@ -25,11 +25,11 @@ namespace cbland {
         // 这个是expose给cbl-main里面用来组装不同插件的入口，或者说，这个地方应该是Village的初始化函数
         private placeCustomRooms() {
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
-                this.addExitOnLocation(roomName, 5,3)
+                this.addExitOnLocation(roomName, 5, 3)
             })
         }
 
-                    
+
 
         protected roomTilemap(): tiles.TileMapData { return tilemap`cbland` }
 
@@ -42,10 +42,10 @@ namespace cbland {
 
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
                 let roomSprite = createSprite(room.roomImage, SpriteKind._CommonRoomDummy, false)
-                tiles.placeOnTile(roomSprite, tiles.getTileLocation(5, 2))   
+                tiles.placeOnTile(roomSprite, tiles.getTileLocation(5, 2))
             })
 
         }
-    }  
+    }
 
 }

@@ -286,6 +286,10 @@
         }
 
         ITEM_DATA = settings.readJSON(INTERNAL_ITEM_DATA_SETTINGS_KEY)
+        if (ITEM_DATA == null) {
+            ITEM_DATA = {}
+        }
+
     }
 
     function saveItems() {
@@ -293,7 +297,8 @@
     }
 
     export function registerItem(name:string, icon:Image, value:number) {
-        if (!ITEM_META_DATA[name]) {
+        _init()
+        if (ITEM_META_DATA[name]) {
             console.error("Item with name (" + name + ") already registered")
             let dummpySprite:Sprite = null
             dummpySprite.sayText(1111)
@@ -310,6 +315,14 @@
         }
     }
 
+    export function itemQuantity(name:string) : number {
+        let ret = ITEM_DATA[name]
+        if (ret == null) {
+            ret = 0
+        }
+        return ret
+    }
+ 
     export function loseItem(name:string, amount:number) {
         if (!ITEM_DATA[name] || ITEM_DATA[name] < amount) {
             console.error("Insufficent Item with name (" + name +"), only has " + amount)
