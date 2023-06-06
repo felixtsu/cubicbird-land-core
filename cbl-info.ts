@@ -258,4 +258,66 @@
     }
 
     // ------ money begins -----------
+
+
+
+    // ------ backpack begins ---------
+    class Item {
+
+        private name :string
+        private icon : Image
+        private value : number
+
+        constructor(name :string, icon :Image, value : number) {
+            this.name = name
+            this.icon = icon
+            this.value = value 
+        }
+        
+    }
+
+    const ITEM_META_DATA : {[name:string] : Item} = {}
+    let ITEM_DATA : {[name:string] : number}
+     const INTERNAL_ITEM_DATA_SETTINGS_KEY = "INTERNAL_ITEM_DATA"
+
+    function _init() {
+        if (ITEM_DATA != null) {
+            return
+        }
+
+        ITEM_DATA = settings.readJSON(INTERNAL_ITEM_DATA_SETTINGS_KEY)
+    }
+
+    function saveItems() {
+        settings.writeJSON("INTERNAL_ITEM_DATA", ITEM_DATA)
+    }
+
+    export function registerItem(name:string, icon:Image, value:number) {
+        if (!ITEM_META_DATA[name]) {
+            console.error("Item with name (" + name + ") already registered")
+            let dummpySprite:Sprite = null
+            dummpySprite.sayText(1111)
+        }
+
+        ITEM_META_DATA[name] = new Item(name, icon, value)
+    }
+
+    export function getItem(name:string, amount :number) {
+        if (!ITEM_DATA[name]) {
+            ITEM_DATA[name] = amount
+        } else {
+            ITEM_DATA[name] += amount
+        }
+    }
+
+    export function loseItem(name:string, amount:number) {
+        if (!ITEM_DATA[name] || ITEM_DATA[name] < amount) {
+            console.error("Insufficent Item with name (" + name +"), only has " + amount)
+            let dummpySprite: Sprite = null
+            dummpySprite.sayText(1111)
+        } else {
+            ITEM_DATA[name] -= amount
+        }
+    }
+    // ------ backpack ends ---------
 }
