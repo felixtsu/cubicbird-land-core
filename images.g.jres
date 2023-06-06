@@ -24,6 +24,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "wardrobe"
     },
+    "image6": {
+        "data": "hwQQACAAAAAAAOHu7u7+AAAAAADh7u4AABDu7u7+EQAAAAAQ7u7+AAAQ/v7O/BHMzMzMHO7uDwAAEP7+zvwRu7u7uxzu7g8AABD+3tH9Ebu7u7sc7u4PAAAQ/h4R/RG7u7u7HO7uDwAAEP4eEf0Ru7u7uxzu7g8AABD+HxH9Ebu7u7sc7u4PAAAQ/h8R/RG7u7y8HO7uDwAAEP4eEf0Ru8vLuxzu7g8AABD+HhH9Ebu7vLwc7u4PAAAQ/t7R/RG7y8u7HO7uDwAAEP7+zvwRu7u7uxzu7g8AABD+/s78EczMzMwc7u4PAAAQ7u7u/hEAAAAAEO7u/gAAAOHu7u7+AAAAAADh7u4A",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "singleBed"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

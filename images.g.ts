@@ -162,6 +162,41 @@ feef.fff...............feef.fff.
 feef...................feef.....
 ffff...................ffff.....
 `;
+            case "image6":
+            case "singleBed":return img`
+................
+................
+................
+.11111111111111.
+1eeeeeeeeeeeeee1
+eeffffffffffffee
+eeeeeeeffeeeeeee
+eeffd111111dffee
+eeee11111111eeee
+eeccd111111dccee
+eeccddddddddccee
+effffffffffffffe
+e11111111111111e
+f11111111111111f
+..cbbbbbbbbbbc..
+..cbbbbbbbbbbc..
+..cbbbbbbbbbbc..
+..cbbbbbbcbcbc..
+..cbbbbbcbcbbc..
+..cbbbbbbcbcbc..
+..cbbbbbcbcbbc..
+..cbbbbbbbbbbc..
+..cccccccccccc..
+.11111111111111.
+1eeeeeeeeeeeeee1
+eeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeee
+eeeeeeeeeeeeeeee
+eeffffffffffffee
+ef............fe
+................
+................
+`;
         }
         return null;
     })

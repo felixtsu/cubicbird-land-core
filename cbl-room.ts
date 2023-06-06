@@ -137,6 +137,10 @@ namespace cbland {
         _getCommonRoom(roomName).addExitOnLocation(nextRoomName, col, row,waypointSignImage)
     }
 
+    export function createRoomSprite(image: Image, spriteKind : number) :Sprite{
+        return currentRoom().createSprite(image, spriteKind)
+    }
+
 
 
     // ------ room life cycle ends ---------

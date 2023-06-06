@@ -1,6 +1,5 @@
 namespace SpriteKind {
     export const _CommonRoomDummy = SpriteKind.create()
-    export const Wardrobe = SpriteKind.create()
 }
 
 

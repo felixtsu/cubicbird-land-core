@@ -1,3 +1,8 @@
+namespace SpriteKind {
+    export const Wardrobe = SpriteKind.create()
+    export const Bed = SpriteKind.create()
+}
+
 namespace home {
 
     export function prepareHome() {
@@ -9,7 +14,7 @@ namespace home {
 
         cbland.didEnterRoom("home", (player:Sprite, room:room.Room, entrance:string) => {
 
-            let wardrobe = room.createSprite(assets.image`wardrobe`, SpriteKind.Wardrobe, true)
+            let wardrobe = cbland.createRoomSprite(assets.image`wardrobe`, SpriteKind.Wardrobe)
         
             if (cbland.readSavingDataBoolean('home', 'wardrobe_open')) {
                 wardrobe.setImage(assets.image`wardrobe_open`)
@@ -17,6 +22,10 @@ namespace home {
             tiles.placeOnTile(wardrobe, tiles.getTileLocation(7, 1))
             wardrobe.x += 8
             wardrobe.y -= 8
+
+            let bed = cbland.createRoomSprite(assets.image`singleBed`, SpriteKind.Bed)        
+            tiles.placeOnTile(bed, tiles.getTileLocation(1, 1))
+            bed.y += 8
             
             tiles.placeOnTile(player, tiles.getTileLocation(4, 5))
             controller.moveSprite(player)
@@ -37,6 +46,23 @@ namespace home {
                     cbland.writeSavingDataBoolean('home', 'wardrobe_open', true)
                 }
                 pause(500)
+            }
+        })
+
+        sprites.onOverlap(SpriteKind.Player, SpriteKind.Bed, (sprite: Sprite, otherSprite: Sprite) => {
+            otherSprite.say("A", 500)
+
+            if (controller.A.isPressed()) {
+                story.startCutscene(()=> {
+                    controller.moveSprite(player, 0, 0)
+                    story.showPlayerChoices("sleep", "no")
+                    if ("sleep" == story.getLastAnswer()) {
+                        cbland_info.fastForwardTo(6, 30)
+                        
+                    }
+                    story.cancelAllCutscenes()
+                    controller.moveSprite(player)
+                })
             }
         })
     }
