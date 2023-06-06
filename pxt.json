@@ -11,8 +11,6 @@
         "arcade-storytelling": "github:microsoft/arcade-storytelling#v1.0.3"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
         "README.md",
         "assets.json",
         "room.ts",
