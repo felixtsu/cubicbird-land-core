@@ -55,10 +55,14 @@ namespace home {
             if (controller.A.isPressed()) {
                 story.startCutscene(()=> {
                     controller.moveSprite(player, 0, 0)
-                    story.showPlayerChoices("sleep", "no")
-                    if ("sleep" == story.getLastAnswer()) {
+                    story.printCharacterText("要睡到什么时候?")
+                    story.showPlayerChoices("早上", "中午", "晚上", "不睡了")
+                    if ("早上" == story.getLastAnswer()) {
                         cbland_info.fastForwardTo(6, 30)
-                        
+                    } else if ("中午" == story.getLastAnswer()) {
+                        cbland_info.fastForwardTo(12, 0)
+                    } else if ("晚上" == story.getLastAnswer()) {
+                        cbland_info.fastForwardTo(18, 30)
                     }
                     story.cancelAllCutscenes()
                     controller.moveSprite(player)
