@@ -50,7 +50,7 @@ namespace home {
         })
 
         sprites.onOverlap(SpriteKind.Player, SpriteKind.Bed, (sprite: Sprite, otherSprite: Sprite) => {
-            otherSprite.say("A", 500)
+            otherSprite.say("消磨时间", 100)
 
             if (controller.A.isPressed()) {
                 story.startCutscene(()=> {
@@ -64,9 +64,12 @@ namespace home {
                     } else if ("晚上" == story.getLastAnswer()) {
                         cbland_info.fastForwardTo(18, 30)
                     }
-                    story.cancelAllCutscenes()
+                    
                     controller.moveSprite(player)
+                    pause(1000)
+                    story.cancelAllCutscenes()
                 })
+                
             }
         })
     }

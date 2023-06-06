@@ -65,13 +65,13 @@
             this.currentTimeMinutes += deltaMillis / this.tickInterval * 60
 
             // another day has pass
-            if (this.currentTimeMinutes > 60 * 24) {
+            if (Math.floor(this.currentTimeMinutes) > 60 * 24) {
                 this.day += 1
                 this.currentTimeMinutes -= 60 * 24
             }
             
-            this.hour = Math.floor(this.currentTimeMinutes / 60)
-            this.minute = Math.floor(this.currentTimeMinutes % 60)        
+            this.hour = Math.floor(Math.floor(this.currentTimeMinutes) / 60)
+            this.minute = Math.floor(this.currentTimeMinutes) % 60
             this.save()
             
             }
@@ -160,7 +160,11 @@
                 screen.drawTransparentImage(clockIcon, left - 1, 1)
             }
 
-            screen.print(formatDecimal(CLOCK_INSTANCE.hour) + ":" + formatDecimal(CLOCK_INSTANCE.minute), left + clockIconShift, 1, color1, font)
+            let minuteToPrint = Math.floor(CLOCK_INSTANCE.minute / 10) * 10
+
+
+
+            screen.print(formatDecimal(CLOCK_INSTANCE.hour) + ":" + formatDecimal(minuteToPrint), left + clockIconShift, 1, color1, font)
 
         }
     }
