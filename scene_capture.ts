@@ -16,10 +16,21 @@ namespace scene_util {
         if (scene ==  null) {
             return
         }
+
+        // restore sprite overlap begins
         for (let overlapHandler of scene.overlapHandlers) {
             game.currentScene().overlapHandlers.push(overlapHandler)
         }
         game.currentScene().overlapMap = scene.overlapMap
+        // restore sprite overlap ends
+
+
+        // restore forever handlers begins
+        for (let gameForeverHandler of scene.gameForeverHandlers) {
+            game.currentScene().gameForeverHandlers.push(gameForeverHandler)
+        }
+        // restore forever handlers ends
+
         
          
     }
