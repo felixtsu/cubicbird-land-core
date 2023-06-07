@@ -13,6 +13,8 @@
     "files": [
         "README.md",
         "assets.json",
+        "home.ts",
+        "cbl-village.ts",
         "room.ts",
         "cbl-info.ts",
         "cbl-room.ts",
@@ -23,8 +25,6 @@
         "tilemap.g.ts"
     ],
     "testFiles": [
-        "home.ts",
-        "cbl-village.ts",
         "test.ts"
     ],
     "targetVersions": {

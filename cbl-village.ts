@@ -9,13 +9,11 @@ namespace cbland {
         constructor(public col : number, public row :number){}
     }
 
-    // const _roomLocations: { [roomName: string]: room.CommonRoom } = {
-        
-    // }
-
     export class VillageRoom extends room.AbstractRoom {
 
-        _roomLocations = [
+        _roomLocations: { [name: string]: RoomLocation} = {}
+
+        _availableLocationForRooms = [
             new RoomLocation(5, 2),
             new RoomLocation(8, 3),
             new RoomLocation(3, 6),
@@ -25,7 +23,7 @@ namespace cbland {
         public constructor() {
 
             super('village')
-
+            
             // 这里要组装dlc
             this.placeCustomRooms()
 
@@ -35,7 +33,8 @@ namespace cbland {
         private placeCustomRooms() {
             let currentRoomLocationIndex = 0
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
-                let roomLocation = this._roomLocations[currentRoomLocationIndex++]
+                let roomLocation = this._availableLocationForRooms[currentRoomLocationIndex++]
+                this._roomLocations[roomName] = roomLocation
                 this.addExitOnLocation(roomName, roomLocation.col, roomLocation.row + 1)
             })
         }
@@ -45,16 +44,21 @@ namespace cbland {
         protected roomTilemap(): tiles.TileMapData { return tilemap`cbland` }
 
         protected didEnterRoom(entrance: string): void {
-            cbland_info.initHud()
             controller.moveSprite(player)
-            tiles.placeOnTile(player, tiles.getTileLocation(5, 5))
             scene.cameraFollowSprite(player)
 
+            let roomLocation = this._roomLocations[entrance]
+            if (roomLocation) {
+                tiles.placeOnTile(player, tiles.getTileLocation(roomLocation.col, roomLocation.row + 2))
+            } else {
+                tiles.placeOnTile(player, tiles.getTileLocation(5, 5))
+            }
+            
 
             let currentRoomLocationIndex = 0
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
                 let roomSprite = createSprite(room.roomImage, SpriteKind._CommonRoomDummy, false)
-                let roomLocation = this._roomLocations[currentRoomLocationIndex++]
+                let roomLocation = this._roomLocations[roomName]
                 tiles.placeOnTile(roomSprite, tiles.getTileLocation(roomLocation.col, roomLocation.row))
             })
 

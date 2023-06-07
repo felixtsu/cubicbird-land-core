@@ -1,23 +1,14 @@
 // 这个地方真正的做到了dlc里面全局定义的overlap handler都拿过来
 // main这里能做的就是，每次出发的时候，某个scene的东西完整的保存下来，然后在进入的时候还原这些handler，这样就ok了
-let sceneCaptureHandler = (oldScene: scene.Scene) => {
-    scene_util.captureScene(cbland._getCurrentRoomInRegister(), oldScene)
-}
-game.addScenePopHandler(sceneCaptureHandler)
-
-game.addScenePushHandler((oldScene: scene.Scene) => {
-    scene_util.restoreScene(cbland.currentRoom().getRoomName())
-})
-
 
 // 1. invoke all dlc registeration
-function prepareRooms() {
-    home.prepareHome()
-    game.popScene()
-}
-prepareRooms()
-
-
+scene_util.captureRegisteringRoomScenes(()=>{
+    function prepareRooms() {
+        home.prepareHome()
+        game.popScene()
+    }
+    prepareRooms()
+})
 
 let player = sprites.create(img`
     . . . . f f f f . . . . . 
@@ -38,10 +29,12 @@ let player = sprites.create(img`
     . . . f f . . f f . . . . 
     `, SpriteKind.Player)
 player.z = scene.HUD_Z - 1
+
 let villageRoom = new cbland.VillageRoom()
+cbland_info.initHud()
 cbland_info.setMoneyTo(cbland.readSavingDataNumber("GLOBAL", "money"))
 cbland_info.setTime()
-game.removeScenePopHandler(sceneCaptureHandler)
+
 
 villageRoom.enterRoom(player)
 
