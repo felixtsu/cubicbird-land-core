@@ -14,17 +14,17 @@
         "README.md",
         "assets.json",
         "room.ts",
-        "home.ts",
         "cbl-info.ts",
         "cbl-room.ts",
-        "tilemap.g.jres",
-        "tilemap.g.ts",
         "images.g.jres",
         "images.g.ts",
         "scene_capture.ts",
-        "cbl-village.ts"
+        "tilemap.g.jres",
+        "tilemap.g.ts"
     ],
     "testFiles": [
+        "home.ts",
+        "cbl-village.ts",
         "test.ts"
     ],
     "targetVersions": {

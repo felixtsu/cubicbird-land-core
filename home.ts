@@ -33,7 +33,7 @@ namespace home {
 
 
         sprites.onOverlap(SpriteKind.Player, SpriteKind.Wardrobe, (sprite:Sprite, otherSprite:Sprite) => {
-            otherSprite.say("A", 500)
+            otherSprite.sayText("A", 500)
 
             if (controller.A.isPressed()) {
                 if (cbland.readSavingDataBoolean('home', 'wardrobe_open')) {
@@ -50,7 +50,7 @@ namespace home {
         })
 
         sprites.onOverlap(SpriteKind.Player, SpriteKind.Bed, (sprite: Sprite, otherSprite: Sprite) => {
-            otherSprite.say("消磨时间", 100)
+            otherSprite.sayText("消磨时间", 100)
 
             if (controller.A.isPressed()) {
                 story.startCutscene(()=> {
