@@ -1,4 +1,7 @@
 // 在此处添加您的代码
+//%icon="\uf132" color="#B6392F"
+//%block="CBLand_Room"
+//%block.loc.zh-CN="方块鸟大陆-房间"
 namespace cbland {
 
 
