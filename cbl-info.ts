@@ -1,7 +1,7 @@
 //%groups=["money", "clock"]
 //%icon="\uf132" color="#B6392F"
 //%block="CBLand_info"
-//%block.loc.zh-CN="方块鸟大陆信息"
+//%block.loc.zh-CN="方块鸟大陆-信息"
  namespace cbland_info {
 
     // ------ time begins ----------
@@ -368,4 +368,5 @@
         }
     }
     // ------ backpack ends ---------
+
 }

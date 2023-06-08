@@ -149,7 +149,6 @@ namespace cbland {
     //%blockNamespace=cbland
     //%group="Room"
     //%group.loc.zh-CN="房间"
-    //%afterOnStart=true
     //%blockId=cbland_rooom_did_enter_room
     //%block="run code after player enter room $roomName"
     //%block.loc.zh-CN="进入 $roomName 后运行"
@@ -212,12 +211,6 @@ namespace cbland {
 
     }
 
-
     // -----  sprites ends ----------
-
-
-
-
-
 
 }

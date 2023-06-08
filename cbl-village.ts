@@ -29,8 +29,9 @@ namespace cbland {
 
         }
 
-        // 这个是expose给cbl-main里面用来组装不同插件的入口，或者说，这个地方应该是Village的初始化函数
         private placeCustomRooms() {
+            // 这个是expose给cbl-main里面用来组装不同插件的入口，或者说，这个地方应该是Village的初始化函数
+            // 这个地方把村子里面的空地放好，然后就在特定的地方
             let currentRoomLocationIndex = 0
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
                 let roomLocation = this._availableLocationForRooms[currentRoomLocationIndex++]
@@ -38,8 +39,6 @@ namespace cbland {
                 this.addExitOnLocation(roomName, roomLocation.col, roomLocation.row + 1)
             })
         }
-
-
 
         protected roomTilemap(): tiles.TileMapData { return tilemap`cbland` }
 
@@ -66,24 +65,37 @@ namespace cbland {
     }
 
     let VILLAGE_INSTANCE : VillageRoom = null
+    let player : Sprite = null
 
     export function _getVillageRoom() :VillageRoom{
         return VILLAGE_INSTANCE
     }
 
+    //%group="Character"
+    //%group.loc.zh-CN="角色"
+    //%blockid=cbland_get_player_sprite block="player sprite"
+    //%block.loc.zh-CN="玩家精灵"
+    export function getPlayer() : Sprite {
+        return player
+    }
 
+    //%group="Game"
+    //%group.loc.zh-CN="游戏"
     //%blockid=cbland_start_village block="start village life"
     //%block.loc.zh-CN="开始乡村生活"
-    export function startVillage() {
+    export function startVillage(developementMode: boolean=true) {
 
+        if (developementMode) {
+            scene_util.captureCurrentScene(cbland._getCurrentRoomInRegister())
+        }
+        
         scene_util.captureRegisteringRoomScenes(() => {
             home.prepareHome()
             game.popScene()
         })
 
 
-
-        let player = sprites.create(img`
+        player = sprites.create(img`
     . . . . f f f f . . . . . 
     . . f f f f f f f f . . . 
     . f f f f f f c f f f . . 

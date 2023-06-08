@@ -7,6 +7,10 @@ namespace scene_util {
         _scenes[name] = scene
     }
 
+    export function captureCurrentScene(name:string) {
+        scene_util.captureScene(name, game.currentScene())
+    }
+
     export function captureRegisteringRoomScenes(callback : ()=>void) {
         let sceneCaptureHandler = (oldScene: scene.Scene) => {
             scene_util.captureScene(cbland._getCurrentRoomInRegister(), oldScene)
