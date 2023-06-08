@@ -54,7 +54,7 @@ namespace home {
 
             if (controller.A.isPressed()) {
                 story.startCutscene(()=> {
-                    controller.moveSprite(player, 0, 0)
+                    controller.moveSprite(sprite, 0, 0)
                     story.printCharacterText("要睡到什么时候?")
                     story.showPlayerChoices("早上", "中午", "晚上", "不睡了")
                     if ("早上" == story.getLastAnswer()) {
@@ -65,7 +65,7 @@ namespace home {
                         cbland_info.fastForwardTo(18, 30)
                     }
                     
-                    controller.moveSprite(player)
+                    controller.moveSprite(sprite)
                     pause(1000)
                     story.cancelAllCutscenes()
                 })

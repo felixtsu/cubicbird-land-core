@@ -1,3 +1,7 @@
+//%groups=["money", "clock"]
+//%icon="\uf132" color="#B6392F"
+//%block="CBLand_info"
+//%block.loc.zh-CN="方块鸟大陆信息"
  namespace cbland_info {
 
     // ------ time begins ----------
@@ -243,16 +247,28 @@
 
     }
 
+    //%group="Money"
+    //%group.loc.zh-CN="钱"
+    //%blockid=cbland_change_money_by block="change money by %incr"
+    //%block.loc.zh-CN="增加 %incr 个金币"
     export function changeMoneyBy(incr: number) {
         _money += incr
         cbland.writeSavingDataNumber("GLOBAL", "money", _money)
     }
 
+    //%group="Money"
+    //%group.loc.zh-CN="钱"
+    //%blockid=cbland_set_money_to block="set money to %amount"
+    //%block.loc.zh-CN="设金币数为 %amount"
     export function setMoneyTo(amount: number) {
         _money = amount
         cbland.writeSavingDataNumber("GLOBAL", "money", _money)
     }
 
+    //%group="Money"
+    //%group.loc.zh-CN="钱"
+    //%blockid=cbland_get_money block="money"
+    //%block.loc.zh-CN="金币数量"
     export function money(): number {
         return _money
     }
@@ -296,6 +312,11 @@
         settings.writeJSON("INTERNAL_ITEM_DATA", ITEM_DATA)
     }
 
+
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_register_item block="register item $name of $value, icon %icon=screen_image_picker"
+    //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $value"
     export function registerItem(name:string, icon:Image, value:number) {
         _init()
         if (ITEM_META_DATA[name]) {
@@ -307,14 +328,23 @@
         ITEM_META_DATA[name] = new Item(name, icon, value)
     }
 
-    export function getItem(name:string, amount :number) {
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_get_item block="rceive item %name quantity %quantity"
+    //%block.loc.zh-CN="获得数量 $quantity 的 $name"
+     export function getItem(name: string, quantity :number) {
         if (!ITEM_DATA[name]) {
-            ITEM_DATA[name] = amount
+            ITEM_DATA[name] = quantity
         } else {
-            ITEM_DATA[name] += amount
+            ITEM_DATA[name] += quantity
         }
     }
 
+
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_item_quantity block="quantity of %name"
+    //%block.loc.zh-CN="$name的数量"
     export function itemQuantity(name:string) : number {
         let ret = ITEM_DATA[name]
         if (ret == null) {
@@ -323,13 +353,18 @@
         return ret
     }
  
-    export function loseItem(name:string, amount:number) {
-        if (!ITEM_DATA[name] || ITEM_DATA[name] < amount) {
-            console.error("Insufficent Item with name (" + name +"), only has " + amount)
+
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_lose_item block="lost item %name quantity %quantity"
+    //%block.loc.zh-CN="失去数量 %quantity 的 %name"
+     export function loseItem(name: string, quantity:number) {
+         if (!ITEM_DATA[name] || ITEM_DATA[name] < quantity) {
+             console.error("Insufficent Item with name (" + name + "), only has " + quantity)
             let dummpySprite: Sprite = null
             dummpySprite.sayText(1111)
         } else {
-            ITEM_DATA[name] -= amount
+             ITEM_DATA[name] -= quantity
         }
     }
     // ------ backpack ends ---------

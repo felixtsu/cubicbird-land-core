@@ -57,18 +57,35 @@ namespace cbland {
     //     callback(savingData)
     // }
 
+
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_write_saving_data_number block="write room %roomName data %key to %value"
+    //%block.loc.zh-CN="将房间 %roomName 的数据 %key 设为 %value"
     export function writeSavingDataNumber(roomName:string, key:string, value:number) {
         SAVINGDATA_INSTANCE.writeDataNumber(roomName, key, value)
     }
 
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_read_saving_data_number block="read room %roomName data of key %key"
+    //%block.loc.zh-CN="读取房间 %roomName 的 %key 数据"
     export function readSavingDataNumber(roomName: string, key: string) :number {
         return SAVINGDATA_INSTANCE.readDataNumber(roomName, key)
     }
 
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_write_saving_data_boolean block="write room %roomName data %key to %value"
+    //%block.loc.zh-CN="将房间 %roomName 的数据 %key 设为 %value"
     export function writeSavingDataBoolean(roomName: string, key: string, value: boolean) {
         SAVINGDATA_INSTANCE.writeDataBoolean(roomName, key, value)
     }
 
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_read_saving_data_boolean block="read room %roomName data of key %key"
+    //%block.loc.zh-CN="读取房间 %roomName 的 %key 数据"
     export function readSavingDataBoolean(roomName: string, key: string): boolean {
         return SAVINGDATA_INSTANCE.readDataBoolean(roomName, key)
     }
@@ -89,7 +106,7 @@ namespace cbland {
 
     export function _getRoom(roomName: string): room.Room {
         if (roomName == 'village') {
-            return villageRoom
+            return cbland._getVillageRoom()
         } 
         return _getCommonRoom(roomName)
     }
@@ -99,7 +116,18 @@ namespace cbland {
         return rooms[roomName]
     }
 
-    //%blocks
+    //%block
+    //%blockNamespace=cbland
+    //%group="Room"
+    //%group.loc.zh-CN="房间"
+    //%blockId=cbland_rooom_register_room
+    //%block="register room $roomName, village image $roomImage=screen_image_picker, $tilemap"
+    //%block.loc.zh-CN="注册房间，名字$roomName, 外观 $roomImage=screen_image_picker, $tilemap"
+    //% tilemap.fieldEditor="tilemap"
+    //% tilemap.fieldOptions.decompileArgumentAsString="true"
+    //% tilemap.fieldOptions.filter="tile"
+    //% tilemap.fieldOptions.taggedTemplate="tilemap"
+    //%weight=90
     export function registerRoom(roomName: string, roomImage: Image, tilemap: tiles.TileMapData) {
         _currentRoomInRegister = roomName
         if (rooms[roomName] != null) {
@@ -114,7 +142,18 @@ namespace cbland {
 
     }
 
-    //%blocks
+    //%block
+    //%blockNamespace=cbland
+    //%group="Room"
+    //%group.loc.zh-CN="房间"
+    //%afterOnStart=true
+    //%blockId=cbland_rooom_did_enter_room
+    //%block="run code after player enter room $roomName"
+    //%block.loc.zh-CN="进入 $roomName 后运行"
+    //%weight=90
+    //%topblock=false
+    //%handlerStatement=true
+    //%draggableParameters="player, room, entrance"
     export function didEnterRoom(roomName: string, callback: (player:Sprite, room:room.Room, entrance?:string) => void) {
         _getCommonRoom(roomName).setDidEnterRoomCallback(callback)
     }
@@ -133,6 +172,17 @@ namespace cbland {
         return null
     }
     
+
+    //%block
+    //%blockNamespace=cbland
+    //%group="Room"
+    //%group.loc.zh-CN="房间"
+    //%afterOnStart=true
+    //%blockId=cbland_rooom_add_exit
+    //%block="add exit from room $roomName to $nextRoomName at col $col row $row || with $waypointSignImage"
+    //%block.loc.zh-CN="在 $roomName 的$col列$row行添加一个到$nextRoomName的出口 || 出口图标 $waypointSignImage"
+    //%weight=90
+    //%topblock=false
     export function addExit(roomName: string, col: number, row: number, nextRoomName:string, waypointSignImage?:Image) {
         _getCommonRoom(roomName).addExitOnLocation(nextRoomName, col, row,waypointSignImage)
     }
