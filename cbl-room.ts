@@ -135,6 +135,8 @@ namespace cbland {
         _currentRoomInRegister = roomName
         if (rooms[roomName] != null) {
             console.error("duplicate room name encountered:" + roomName)
+            let dummpySprite: Sprite = null
+            dummpySprite.sayText(1111)
         }
         let newRoom = new room.CommonRoom(roomName, roomImage, tilemap)
         rooms[roomName] = newRoom
@@ -195,7 +197,26 @@ namespace cbland {
 
 
 
+
+
+
     // ------ room life cycle ends ---------
+
+    // ------ action begins -----------
+    //%block
+    //%blockNamespace=cbland
+    //%group="Control"
+    //%group.loc.zh-CN="控制"
+    //%blockId=setSkill 
+    //%block="In room $roomName on $button $event "
+    //%block.loc.zh-CN="在 $roomName 场景里 $button $event 时"
+    //%weight=90
+    //%topblock=false
+    export function onButtonEvent(roomName : string, button:ControllerButton, event:ControllerButtonEvent, handler:()=>void) {
+        scene_util.registerRoomButtonEvent(roomName, button, event, handler)
+    }
+
+    // ------ end begins -----------
 
     // -----  sprites begins ----------
 
