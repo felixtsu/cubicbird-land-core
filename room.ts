@@ -1,6 +1,18 @@
 namespace SpriteKind {
     export const ExitWaypoint = SpriteKind.create()
 }
+namespace assets {
+    //% helper=getCBLTilemapByName
+    //% pyConvertToTaggedTemplate
+    //% blockIdentity="tiles._tilemapEditor"
+    export function cbl_tilemap(lits: any, ...args: any[]): tiles.TileMapData { return null }
+}
+namespace helpers {
+    export function getCBLTilemapByName(name: string) {
+        return _getFactoryInstance("cbl_tilemap", name);
+    }
+}
+
 namespace room {
 
     let _currentRoom: Room = null

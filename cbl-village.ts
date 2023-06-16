@@ -40,7 +40,7 @@ namespace cbland {
             })
         }
 
-        protected roomTilemap(): tiles.TileMapData { return tilemap`cbland` }
+        protected roomTilemap(): tiles.TileMapData { return assets.cbl_tilemap`cbland`}
 
         protected didEnterRoom(entrance: string): void {
             controller.moveSprite(this.heroSprite)
