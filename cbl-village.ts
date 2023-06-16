@@ -117,7 +117,7 @@ namespace cbland {
 
         VILLAGE_INSTANCE = new cbland.VillageRoom()
         cbland_info.initHud()
-        cbland_info.setMoneyTo(cbland.readSavingDataNumber("GLOBAL", "money"))
+        cbland_info.setMoneyTo(cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money"))
         cbland_info.setTime()
 
 

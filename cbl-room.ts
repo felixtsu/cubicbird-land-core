@@ -16,6 +16,8 @@ namespace cbland {
         return room.currentRoom()
     }
 
+
+    export const SAVINGDATA_GLOBAL_KEY = "GLOBAL"
     
 
     export class SavingData {
@@ -28,38 +30,39 @@ namespace cbland {
         }
 
         readDataNumber(roomName: string, key: string): number {
-            return settings.readNumber(roomName + SavingData.SEPERATOR + key)
+            if (settings.exists(roomName + SavingData.SEPERATOR + key)) {
+                return settings.readNumber(roomName + SavingData.SEPERATOR + key)
+            } else {
+                return settings.readNumber(SAVINGDATA_GLOBAL_KEY + SavingData.SEPERATOR + key)
+            }
         }
 
         writeDataBoolean(roomName: string, key: string, value: boolean) {
             settings.writeNumber(roomName + SavingData.SEPERATOR + key, value ? 1 : 0)
         }
 
-        readDataBoolean(roomName: string, key: string) {
-            return settings.readNumber(roomName + SavingData.SEPERATOR + key) == 1 ? true : false
+        readDataBoolean(roomName: string, key: string) :boolean{
+            if (settings.exists(roomName + SavingData.SEPERATOR + key)) {
+                return settings.readNumber(roomName + SavingData.SEPERATOR + key) == 1 ? true : false
+            } else {
+                return settings.readNumber(SAVINGDATA_GLOBAL_KEY + SavingData.SEPERATOR + key) == 1 ? true : false
+            }
         }
 
         writeDataString(roomName: string, key: string, value: string) {
             settings.writeString(roomName + SavingData.SEPERATOR + key, value)
         }
 
-        readDataString(roomName: string, key: string) {
-            return settings.readString(roomName + SavingData.SEPERATOR + key)
+        readDataString(roomName: string, key: string) :string{
+            if (settings.exists(roomName + SavingData.SEPERATOR + key)) {
+                return settings.readString(roomName + SavingData.SEPERATOR + key)
+            } else {
+                return settings.readString(SAVINGDATA_GLOBAL_KEY + SavingData.SEPERATOR + key)
+            }
         }
     }
 
     const SAVINGDATA_INSTANCE = new SavingData()
-
-
-    export function restoreFromSavingData(roomName: string, callback: (savingData: SavingData) => {}) {
-    }
-
-
-    // export function writeToSavingData(roomName: string, callback: (savingData: SavingData) => {}) {
-    //     let savingData = roomSavingDataMap[roomName]
-    //     callback(savingData)
-    // }
-
 
     //%group="Data"
     //%group.loc.zh-CN="数据"

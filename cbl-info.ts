@@ -32,10 +32,10 @@
 
         constructor(day? : number, hour?: number, minute?: number, tickInterval?: number) {
             if (day == undefined) {
-                day = cbland.readSavingDataNumber("GLOBAL", "day")
-                hour = cbland.readSavingDataNumber("GLOBAL", "hour")
-                minute = cbland.readSavingDataNumber("GLOBAL", "minute")
-                tickInterval = cbland.readSavingDataNumber("GLOBAL", "tickInterval")
+                day = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day")
+                hour = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour")
+                minute = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute")
+                tickInterval = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval")
                 
             } 
 
@@ -57,10 +57,10 @@
 
         save() {
 
-            cbland.writeSavingDataNumber("GLOBAL", "day", this.day)
-            cbland.writeSavingDataNumber("GLOBAL", "hour", this.hour)
-            cbland.writeSavingDataNumber("GLOBAL", "minute", this.minute)
-            cbland.writeSavingDataNumber("GLOBAL", "tickInterval", this.tickInterval)
+            cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day", this.day)
+            cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour", this.hour)
+            cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute", this.minute)
+            cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval", this.tickInterval)
         }
 
         timeElasped(currentMillis: number) {
@@ -253,7 +253,7 @@
     //%block.loc.zh-CN="增加 %incr 个金币"
     export function changeMoneyBy(incr: number) {
         _money += incr
-        cbland.writeSavingDataNumber("GLOBAL", "money", _money)
+        cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money", _money)
     }
 
     //%group="Money"
@@ -262,7 +262,7 @@
     //%block.loc.zh-CN="设金币数为 %amount"
     export function setMoneyTo(amount: number) {
         _money = amount
-        cbland.writeSavingDataNumber("GLOBAL", "money", _money)
+        cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money", _money)
     }
 
     //%group="Money"
