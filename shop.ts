@@ -105,24 +105,26 @@ namespace shop {
                 story.startCutscene(()=>{
                     story.printCharacterText("今天要卖点什么？", "收购员")
                     let sellItems = cbland_info.openInventoryAndSelectMultiple()
-                    let text = ""
-                    for (let item of Object.keys(sellItems)) {
-                        text += item + ":" + sellItems[item] + ", "
-                    }
-                    text = text.slice(0, -2)
-                    story.printCharacterText("出售" + text, "收购员")
-
-                    story.showPlayerChoices("是的", "再考虑一下")
-                    if (story.checkLastAnswer("是的")) {
-                        let coin = 0
+                    if (Object.keys(sellItems).length > 0) {
+                        let text = ""
                         for (let item of Object.keys(sellItems)) {
-                            cbland_info.loseItem(item, sellItems[item])
-                            coin += cbland_info.itemValue(item) * sellItems[item]
+                            text += item + ":" + sellItems[item] + ", "
                         }
-                        cbland_info.changeMoneyBy(coin)
+                        text = text.slice(0, -2)
+                        story.printCharacterText("出售" + text, "收购员")
+
+                        story.showPlayerChoices("是的", "再考虑一下")
+                        if (story.checkLastAnswer("是的")) {
+                            let coin = 0
+                            for (let item of Object.keys(sellItems)) {
+                                cbland_info.loseItem(item, sellItems[item])
+                                coin += cbland_info.itemValue(item) * sellItems[item]
+                            }
+                            cbland_info.changeMoneyBy(coin)
+                        }
                     }
+                    pauseUntil(() => !controller.A.isPressed())
                     story.cancelAllCutscenes()
-                    pause(1000)
                 })
                 
             }

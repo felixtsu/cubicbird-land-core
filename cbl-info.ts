@@ -331,6 +331,7 @@ namespace cbland_info {
         } else {
             ITEM_DATA[name] += quantity
         }
+        saveItems()
     }
 
 
@@ -371,6 +372,7 @@ namespace cbland_info {
         } else {
             ITEM_DATA[name] -= quantity
         }
+        saveItems()
     }
     // ------ backpack ends ---------
 

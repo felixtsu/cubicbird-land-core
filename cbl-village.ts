@@ -97,6 +97,7 @@ namespace cbland {
                         } else {
                             
                         }
+                        pauseUntil(()=>!controller.A.isPressed())
                         story.cancelAllCutscenes()
                     })
                 }

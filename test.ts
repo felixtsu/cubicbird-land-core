@@ -41,9 +41,9 @@ cbland_info.registerItem('蘑菇', img`
 cbland.startVillage()
 
 
-cbland_info.getItem("鸡蛋", 10)
-cbland_info.getItem("蘑菇", 5)
-cbland_info.getItem("鸡蛋", 1)
+// cbland_info.getItem("鸡蛋", 10)
+// cbland_info.getItem("蘑菇", 5)
+// cbland_info.getItem("鸡蛋", 1)
 
 controller.B.onEvent(ControllerButtonEvent.Pressed, () => {
     cbland_info.openInventoryAndSelectMultiple()
