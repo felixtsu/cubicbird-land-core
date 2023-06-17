@@ -6,7 +6,7 @@ namespace shop {
 
     export function prepareShop() {
 
-        cbland.registerRoom("shop", assets.image`shopImage`, assets.cbl_tilemap`shopInside`)
+        cbland.registerRoom("shop", assets.cbl_image`shopImage`, assets.cbl_tilemap`shopInside`)
 
         cbland.addExit("shop", 4, 6, "village")
         cbland.addExit("shop", 5, 6, "village")

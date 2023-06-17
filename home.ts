@@ -7,23 +7,23 @@ namespace home {
 
     export function prepareHome() {
 
-        cbland.registerRoom("home", assets.image`homeImage`, assets.cbl_tilemap`homeInside`)
+        cbland.registerRoom("home", assets.cbl_image`homeImage`, assets.cbl_tilemap`homeInside`)
         
         cbland.addExit("home", 4, 6, "village")
         cbland.addExit("home", 5, 6, "village")
 
         cbland.didEnterRoom("home", (player:Sprite, room:room.Room, entrance:string) => {
 
-            let wardrobe = cbland.createRoomSprite(assets.image`wardrobe`, SpriteKind.Wardrobe)
+            let wardrobe = cbland.createRoomSprite(assets.cbl_image`wardrobe`, SpriteKind.Wardrobe)
         
             if (cbland.readSavingDataBoolean('home', 'wardrobe_open')) {
-                wardrobe.setImage(assets.image`wardrobe_open`)
+                wardrobe.setImage(assets.cbl_image`wardrobe_open`)
             }
             tiles.placeOnTile(wardrobe, tiles.getTileLocation(7, 1))
             wardrobe.x += 8
             wardrobe.y -= 8
 
-            let bed = cbland.createRoomSprite(assets.image`singleBed`, SpriteKind.Bed)        
+            let bed = cbland.createRoomSprite(assets.cbl_image`singleBed`, SpriteKind.Bed)        
             tiles.placeOnTile(bed, tiles.getTileLocation(1, 1))
             bed.y += 8
             
@@ -37,12 +37,12 @@ namespace home {
 
             if (controller.A.isPressed()) {
                 if (cbland.readSavingDataBoolean('home', 'wardrobe_open')) {
-                    otherSprite.setImage(assets.image`wardrobe`)
+                    otherSprite.setImage(assets.cbl_image`wardrobe`)
                     cbland.writeSavingDataBoolean('home', 'wardrobe_open', false)
                 } else {
                     game.splash("找到了一块钱")
                     cbland_info.changeMoneyBy(1)
-                    otherSprite.setImage(assets.image`wardrobe_open`)
+                    otherSprite.setImage(assets.cbl_image`wardrobe_open`)
                     cbland.writeSavingDataBoolean('home', 'wardrobe_open', true)
                 }
                 pause(500)

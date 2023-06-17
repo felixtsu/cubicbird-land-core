@@ -20,7 +20,7 @@ namespace helpers {
 
 
     export function getCBLImageByName(name: string) {
-        return _getFactoryInstance("image", name);
+        return _getFactoryInstance("cbl_image", name);
     }
 }
 
@@ -46,7 +46,7 @@ namespace room {
             this.row = row
             
             if (!waypointImage) {
-                this.waypointImage = assets.image`waypoint_default_E`
+                this.waypointImage = assets.cbl_image`waypoint_default_E`
                 this.hidden = true
             }
             

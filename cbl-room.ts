@@ -191,7 +191,7 @@ namespace cbland {
     //%weight=90
     //%topblock=false
     export function addExit(roomName: string, col: number, row: number, nextRoomName:string, waypointSignImage?:Image) {
-        _getCommonRoom(roomName).addExitOnLocation(nextRoomName, col, row,waypointSignImage)
+        _getCommonRoom(roomName).addExitOnLocation(nextRoomName, col, row, waypointSignImage)
     }
 
     export function createRoomSprite(image: Image, spriteKind : number) :Sprite{
