@@ -91,7 +91,6 @@ namespace scene_util {
 
 
         // restore controller button event handlers 
-
         let roomButtonEventHandlers = _buttonEventHandlers[name]
         if (roomButtonEventHandlers) {
             for (let buttonEventHandler of roomButtonEventHandlers) {

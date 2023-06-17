@@ -67,6 +67,27 @@
         ],
         "displayName": "homeInside"
     },
+    "homeInside2": {
+        "id": "homeInside2",
+        "mimeType": "application/mkcd-tilemap",
+        "data": "MTAwYTAwMDgwMDAxMDMwMzAzMDMwMzAzMDMwMzA0MDIwOTA5MDkwOTA5MDkwOTA5MDUwMjA5MDkwOTA5MDkwOTA5MDkwNTAyMGMwYzBjMGMwYzBjMGMwYzA1MDIwOTA5MDkwOTA5MDkwOTA5MDUwMjA5MDkwOTA5MDkwOTA5MDkwNTA2MDgwODA4MGIwYTA4MDgwODA3MDAwMDAwMDAwMDAwMDAwMDAwMDAyMjIyMjIyMjIyMDIwMDAwMDAyMDAyMDAwMDAwMjAwMjAwMDAwMDIwMDIwMDAwMDAyMDAyMDAwMDAwMjAyMjIyMDAyMjIyMDAwMDAwMDAwMA==",
+        "tileset": [
+            "myTiles.transparencyCBLInternal",
+            "sprites.dungeon.greenOuterNorthWest",
+            "sprites.dungeon.greenOuterWest0",
+            "sprites.dungeon.greenOuterNorth0",
+            "sprites.dungeon.greenOuterNorthEast",
+            "sprites.dungeon.greenOuterEast0",
+            "sprites.dungeon.greenOuterSouthEast",
+            "sprites.dungeon.greenOuterSouthWest",
+            "sprites.dungeon.greenOuterSouth1",
+            "sprites.dungeon.floorLight2",
+            "myTiles.tile3",
+            "myTiles.tile4",
+            "sprites.dungeon.stairLadder"
+        ],
+        "displayName": "shopInside"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

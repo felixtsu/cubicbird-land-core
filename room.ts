@@ -6,10 +6,21 @@ namespace assets {
     //% pyConvertToTaggedTemplate
     //% blockIdentity="tiles._tilemapEditor"
     export function cbl_tilemap(lits: any, ...args: any[]): tiles.TileMapData { return null }
+
+
+    //% helper=getCBLImageByName
+    //% pyConvertToTaggedTemplate
+    //% blockIdentity="images._spriteImage"
+    export function cbl_image(lits: any, ...args: any[]): Image { return null }
 }
 namespace helpers {
     export function getCBLTilemapByName(name: string) {
         return _getFactoryInstance("cbl_tilemap", name);
+    }
+
+
+    export function getCBLImageByName(name: string) {
+        return _getFactoryInstance("image", name);
     }
 }
 

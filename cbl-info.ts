@@ -2,42 +2,42 @@
 //%icon="\uf132" color="#B6392F"
 //%block="CBLand_info"
 //%block.loc.zh-CN="方块鸟大陆-信息"
- namespace cbland_info {
+namespace cbland_info {
 
     // ------ time begins ----------
 
     const clockIcon = img`
-     . . . 1 1 1 . . .
-     . . 1 . 1 . 1 . .
-     . 1 . . 1 . . 1 .
-     1 . . . 1 . . . 1
-     1 . 1 1 1 . . . 1
-     1 . . . . . . . 1
-     . 1 . . . . . 1 .
-     . . 1 . . . 1 . .
-     . . . 1 1 1 . . .
- `
+        . . . 1 1 1 . . .
+        . . 1 . 1 . 1 . .
+        . 1 . . 1 . . 1 .
+        1 . . . 1 . . . 1
+        1 . 1 1 1 . . . 1
+        1 . . . . . . . 1
+        . 1 . . . . . 1 .
+        . . 1 . . . 1 . .
+        . . . 1 1 1 . . .
+    `
 
     class Clock {
         hour: number
         minute: number
         tickInterval: number
-        day : number
+        day: number
 
         currentTimeMinutes: number
 
         setTimeMillis: number
         setTimeMinutes: number
-        lastTick : number
+        lastTick: number
 
-        constructor(day? : number, hour?: number, minute?: number, tickInterval?: number) {
+        constructor(day?: number, hour?: number, minute?: number, tickInterval?: number) {
             if (day == undefined) {
                 day = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day")
                 hour = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour")
                 minute = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute")
                 tickInterval = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval")
-                
-            } 
+
+            }
 
 
             this.hour = (hour + 24) % 24
@@ -73,12 +73,12 @@
                 this.day += 1
                 this.currentTimeMinutes -= 60 * 24
             }
-            
+
             this.hour = Math.floor(Math.floor(this.currentTimeMinutes) / 60)
             this.minute = Math.floor(this.currentTimeMinutes) % 60
             this.save()
-            
-            }
+
+        }
     }
 
     let CLOCK_INSTANCE: Clock
@@ -121,7 +121,7 @@
     //%block="set time to hour %hour, minute %minute || %tickInterval millis for one minute"
     //%block.loc.zh-CN="设置时钟 %hour 点 %minute 分 || 以 %tickInterval 毫秒代替一分钟"
     //%tickInterval.defl=60000
-    export function setTime(day? : number, hour?: number, minute?: number, tickInterval: number = 5000) {
+    export function setTime(day?: number, hour?: number, minute?: number, tickInterval: number = 5000) {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
     }
 
@@ -131,11 +131,11 @@
     //%block.loc.zh-CN="时间快进到 %hour 点 %minute 分"
     export function fastForwardTo(hour: number, minute: number) {
         let currentTickInterval = CLOCK_INSTANCE.tickInterval
-        let currentDay  = CLOCK_INSTANCE.day
+        let currentDay = CLOCK_INSTANCE.day
         if (hour * 60 + minute < CLOCK_INSTANCE.hour * 60 + CLOCK_INSTANCE.minute) {
             currentDay += 1
         }
-        
+
         CLOCK_INSTANCE = new Clock(currentDay, hour, minute, currentTickInterval)
     }
 
@@ -280,21 +280,14 @@
     // ------ backpack begins ---------
     class Item {
 
-        private name :string
-        private icon : Image
-        private value : number
-
-        constructor(name :string, icon :Image, value : number) {
-            this.name = name
-            this.icon = icon
-            this.value = value 
+        constructor(public name: string, public icon: Image, public value: number) {
         }
-        
+
     }
 
-    const ITEM_META_DATA : {[name:string] : Item} = {}
-    let ITEM_DATA : {[name:string] : number}
-     const INTERNAL_ITEM_DATA_SETTINGS_KEY = "INTERNAL_ITEM_DATA"
+    const ITEM_META_DATA: { [name: string]: Item } = {}
+    let ITEM_DATA: { [name: string]: number }
+    const INTERNAL_ITEM_DATA_SETTINGS_KEY = "INTERNAL_ITEM_DATA"
 
     function _init() {
         if (ITEM_DATA != null) {
@@ -317,11 +310,11 @@
     //%group.loc.zh-CN="物品"
     //%blockid=cbland_register_item block="register item $name of $value, icon %icon=screen_image_picker"
     //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $value"
-    export function registerItem(name:string, icon:Image, value:number) {
+    export function registerItem(name: string, icon: Image, value: number) {
         _init()
         if (ITEM_META_DATA[name]) {
             console.error("Item with name (" + name + ") already registered")
-            let dummpySprite:Sprite = null
+            let dummpySprite: Sprite = null
             dummpySprite.sayText(1111)
         }
 
@@ -332,7 +325,7 @@
     //%group.loc.zh-CN="物品"
     //%blockid=cbland_get_item block="rceive item %name quantity %quantity"
     //%block.loc.zh-CN="获得数量 $quantity 的 $name"
-     export function getItem(name: string, quantity :number) {
+    export function getItem(name: string, quantity: number) {
         if (!ITEM_DATA[name]) {
             ITEM_DATA[name] = quantity
         } else {
@@ -345,28 +338,146 @@
     //%group.loc.zh-CN="物品"
     //%blockid=cbland_item_quantity block="quantity of %name"
     //%block.loc.zh-CN="$name的数量"
-    export function itemQuantity(name:string) : number {
+    export function itemQuantity(name: string): number {
         let ret = ITEM_DATA[name]
         if (ret == null) {
             ret = 0
         }
         return ret
     }
- 
+
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_item_value block="value of %name"
+    //%block.loc.zh-CN="$name的价格"
+    export function itemValue(name: string): number {
+        let ret = ITEM_META_DATA[name]
+        if (ret == null) {
+            return 0;
+        }
+        return ret.value
+    }
+
 
     //%group="Item"
     //%group.loc.zh-CN="物品"
     //%blockid=cbland_lose_item block="lost item %name quantity %quantity"
     //%block.loc.zh-CN="失去数量 %quantity 的 %name"
-     export function loseItem(name: string, quantity:number) {
-         if (!ITEM_DATA[name] || ITEM_DATA[name] < quantity) {
-             console.error("Insufficent Item with name (" + name + "), only has " + quantity)
+    export function loseItem(name: string, quantity: number) {
+        if (!ITEM_DATA[name] || ITEM_DATA[name] < quantity) {
+            console.error("Insufficent Item with name (" + name + "), only has " + quantity)
             let dummpySprite: Sprite = null
             dummpySprite.sayText(1111)
         } else {
-             ITEM_DATA[name] -= quantity
+            ITEM_DATA[name] -= quantity
         }
     }
     // ------ backpack ends ---------
+
+    function _createMenuItemFromInventory(): miniMenu.MenuItem[] {
+        let inventory = []
+        for (let key of Object.keys(ITEM_DATA)) {
+            inventory.push(new miniMenu.MenuItem(key, ITEM_META_DATA[key].icon))
+        }
+
+        inventory.push(new miniMenu.MenuItem("OK", assets.cbl_image`tick`))
+        return inventory
+
+    }
+
+    function _setMenuStyle(menu: miniMenu.MenuSprite) {
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Rows, 3)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Columns, 5)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.BackgroundColor, 1)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Border, 1)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.BorderColor, 11)
+        menu.setStyleProperty(miniMenu.StyleKind.DefaultAndSelected, miniMenu.StyleProperty.IconOnly, 1)
+        menu.setStyleProperty(miniMenu.StyleKind.Selected, miniMenu.StyleProperty.Background, 9)
+        menu.setStyleProperty(miniMenu.StyleKind.Title, miniMenu.StyleProperty.Foreground, 15)
+        menu.setStyleProperty(miniMenu.StyleKind.Title, miniMenu.StyleProperty.Border, miniMenu.createBorderBox(
+            0,
+            0,
+            0,
+            2
+        ))
+        menu.setStyleProperty(miniMenu.StyleKind.Title, miniMenu.StyleProperty.Background, 1)
+        menu.setStyleProperty(miniMenu.StyleKind.Title, miniMenu.StyleProperty.BorderColor, 11)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Width, 118)
+        menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Height, 73)
+        menu.bottom = 100
+        menu.left = 22
+
+    }
+
+    function openInventoryAndSelect(multiple: boolean): { [name: string]: number } {
+        game.pushScene()
+
+        let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
+        _setMenuStyle(menu)
+
+        let selected = false;
+        let selectedItem: { [name: string]: number } = {}
+
+        if (multiple) {
+            menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
+                if (selection == "OK") {
+                    menu.close()
+                    selected = true
+                } else {
+                    if (selectedItem[selection] == null) {
+                        selectedItem[selection] = 1
+                    } else if (selectedItem[selection] < ITEM_DATA[selection]) {
+                        selectedItem[selection] += 1
+                    }
+                    menu.setTitle(selection + "  " + selectedItem[selection] + "/" + ITEM_DATA[selection])
+                }
+            })
+            menu.onButtonPressed(controller.B, (selection: string, selectedIndex: number) => {
+                if (selection == "OK") {
+
+                } else {
+                    if (selectedItem[selection] != null && selectedItem[selection] > 0) {
+                        selectedItem[selection] -= 1
+                        if (selectedItem[selection] == 0) {
+                            delete selectedItem[selection]
+                        }
+                    }
+                    menu.setTitle(selection + "  " + selectedItem[selection] + "/" + ITEM_DATA[selection])
+                }
+            })
+            menu.onSelectionChanged((selection: string, selectedIndex: number) => {
+                if (selection == "OK") {
+                    menu.setTitle("选好了")
+                } else {
+                    let picked = 0
+                    if (selectedItem[selection]) {
+                        picked = selectedItem[selection]
+                    }
+                    menu.setTitle(selection + "  " + picked + "/" + ITEM_DATA[selection])
+                }
+
+            })
+        } else {
+            menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
+                menu.close()
+                selectedItem[selection] = 1
+                selected = true
+            })
+        }
+        pauseUntil(() => selected)
+        game.popScene()
+        return selectedItem
+
+    }
+
+    export function openInventoryAndSelectMultiple(): { [name: string]: number } {
+        return openInventoryAndSelect(true)
+    }
+
+    export function openInventoryAndSelectSingle(): string {
+        let selectedItem = openInventoryAndSelect(false)
+        return Object.keys(selectedItem)[0]
+    }
+
 
 }

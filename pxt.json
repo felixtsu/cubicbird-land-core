@@ -8,7 +8,8 @@
         "tilemaps": "github:microsoft/pxt-tilemaps#v1.12.0",
         "color-coded-tilemap": "*",
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
-        "arcade-storytelling": "github:microsoft/arcade-storytelling#v1.0.3"
+        "arcade-storytelling": "github:microsoft/arcade-storytelling#v1.0.3",
+        "arcade-mini-menu": "github:riknoll/arcade-mini-menu#c8b01b9d47f85a5133c786f1c026b1f376fe4285"
     },
     "files": [
         "README.md",
@@ -22,7 +23,8 @@
         "images.g.ts",
         "scene_capture.ts",
         "tilemap.g.jres",
-        "tilemap.g.ts"
+        "tilemap.g.ts",
+        "shop.ts"
     ],
     "testFiles": [
         "test.ts"

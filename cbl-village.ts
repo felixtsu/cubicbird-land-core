@@ -1,5 +1,7 @@
 namespace SpriteKind {
     export const _CommonRoomDummy = SpriteKind.create()
+    export const Dog = SpriteKind.create()
+    export const Bone = SpriteKind.create()
 }
 
 // 这个就是村庄的地方，村庄的地图和链接的房间都在这里控制
@@ -15,14 +17,15 @@ namespace cbland {
 
         _availableLocationForRooms = [
             new RoomLocation(5, 2),
-            new RoomLocation(8, 3),
-            new RoomLocation(3, 6),
-            new RoomLocation(8, 9)
+            new RoomLocation(10, 2),
+            new RoomLocation(8, 9),
+            new RoomLocation(3, 6)
         ]
 
         public constructor() {
 
             super('village')
+            cbland_info.registerItem("骨头",assets.cbl_image`boneImage`, 1)
             
             // 这里要组装dlc
             this.placeCustomRooms()
@@ -61,6 +64,44 @@ namespace cbland {
                 tiles.placeOnTile(roomSprite, tiles.getTileLocation(roomLocation.col, roomLocation.row))
             })
 
+            let dogSprite = createSprite(img`
+                . . 4 4 4 . . . . 4 4 4 . . . .
+                . 4 5 5 5 e . . e 5 5 5 4 . . .
+                4 5 5 5 5 5 e e 5 5 5 5 5 4 . .
+                4 5 5 4 4 5 5 5 5 4 4 5 5 4 . .
+                e 5 4 4 5 5 5 5 5 5 4 4 5 e . .
+                . e e 5 5 5 5 5 5 5 5 e e . . .
+                . . e 5 f 5 5 5 5 f 5 e . . . .
+                . . f 5 5 5 4 4 5 5 5 f . . f f
+                . . f 4 5 5 f f 5 5 6 f . f 5 f
+                . . . f 6 6 6 6 6 6 4 4 f 5 5 f
+                . . . f 4 5 5 5 5 5 5 4 4 5 f .
+                . . . f 5 5 5 5 5 4 5 5 f f . .
+                . . . f 5 f f f 5 f f 5 f . . .
+                . . . f f . . f f . . f f . . .
+            `, SpriteKind.Dog, false)
+
+            tiles.placeOnTile(dogSprite, tiles.getTileLocation(6, 4))
+
+
+            sprites.onOverlap(SpriteKind.Player, SpriteKind.Dog, (sprite:Sprite, otherSprite:Sprite) => {
+                if(controller.A.isPressed()) {
+                    story.startCutscene(()=>{
+                        story.printCharacterText("要喂它什么?")
+                        let item = cbland_info.openInventoryAndSelectSingle()
+                        if (item == "鸡蛋") {
+                            otherSprite.say("wang")
+                            let bone = createSprite(assets.cbl_image`boneImage`, SpriteKind.Bone, false)
+                            bone.x = otherSprite.x
+                            bone.y = otherSprite.y
+                        } else {
+                            
+                        }
+                        story.cancelAllCutscenes()
+                    })
+                }
+            })
+            
         }
     }
 
@@ -93,6 +134,10 @@ namespace cbland {
             home.prepareHome()
             game.popScene()
         })
+        scene_util.captureRegisteringRoomScenes(() => {
+            shop.prepareShop()
+            game.popScene()
+        })
 
 
         player = sprites.create(img`
@@ -113,7 +158,7 @@ namespace cbland {
     . . . f f f f f f . . . . 
     . . . f f . . f f . . . . 
     `, SpriteKind.Player)
-        player.z = scene.HUD_Z - 1
+        player.z = scene.HUD_Z - 10
 
         VILLAGE_INSTANCE = new cbland.VillageRoom()
         cbland_info.initHud()

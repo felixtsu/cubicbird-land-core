@@ -54,25 +54,6 @@ cc66666666664c66e4e44e44e44feeee66c46666666666cc
 .....64eee444c66f4e44e44e44e44ee66c444eee46.....
 ......6ccc666c66e4e44e44e44e44ee66c666ccc6......
 `;
-            case "image3":
-            case "myImage":return img`
-. . . . . . . . . . . . . . . . 
-. . . . . 6 6 6 6 6 6 . . 7 . . 
-. . . 6 6 6 . . . . 6 6 . . . . 
-. . . 6 . . . . . . . . 6 . . . 
-. . . 6 5 6 6 6 . . . . 6 . . . 
-. . . . 6 6 . . 6 . . . 6 . . . 
-. . . . . 6 6 6 6 . . . 6 6 . . 
-. . . 6 6 6 . . . . . . 6 6 . . 
-. 6 6 . . 6 . . . . . . 6 . . . 
-. 6 . . . . . . . . . . 6 . . . 
-. 6 6 6 6 . 6 6 6 6 . 6 6 . . . 
-. 6 . . . . 6 . . 6 6 6 . . . . 
-. 6 . . . . 6 6 . . . . . . . . 
-. 6 6 . 2 . . 6 6 . . . . . . . 
-. . 6 6 . . . . 6 6 6 6 . . . . 
-. . . 6 6 6 6 6 6 6 6 6 . . . . 
-`;
             case "image4":
             case "waypoint_default_E":return img`
 . . . . . . . . . . . . . . . . 
@@ -196,6 +177,95 @@ eeffffffffffffee
 ef............fe
 ................
 ................
+`;
+            case "image7":
+            case "shopImage":return img`
+.................bbbbbbbbbbbbbb.................
+.................bbbbbbbbbbbbbb.................
+..............bbb55555555555555bbb..............
+...........e77bbb55555555555555bbb77e...........
+........eeee77bb555555555555555bbb77eeee........
+.....777e77bbbb555555555555555555bbbe77e777.....
+...77eeee77bb55555555555555555555bbbe77eeee77...
+8cc77e77e77bb555555555555555555555bbe77e77e77cc8
+6c6eee77e7bbb5555dddd333333dddd555bbe77e77eee6c6
+86677e77e7bbb5555dddd333333dddd555bb777e77e77668
+86677e77e7bbb5555dddd333333dddd555bbe77e77e77668
+8cc77eeee7bbb5555dddd333333dddd555bbe77eeee77cc8
+6c677e77e7bbb555533335555551111555bbe77e77e776c6
+866eee77e7bbb555533335555551111555bb777e77eee668
+86677e77e7ccc555533335555551111dddcceeee77e77668
+8cc77e77e7ccc555533335555551111dddcce77e77e77cc8
+6c677eeee7ccc555533335555551111dddcce77eeee776c6
+86677e77e7ccc555533335555551111dddcce77e77e77668
+866eee77e7cccdddddddd111111dddddddcc777e77eee668
+8cc77e77e7cccdddddddd111111dddddddcceeee77e77cc8
+6c677e77e7cccdddddddd111111dddddddcce77e77e776c6
+86677eeee7cccdddddddd111111dddddddcce77eeee77668
+86677e77e7777ffffddddddddddddddfff77e77e77e77668
+8cceee77e7777ffffddddddddddddddfffeee77e77eeecc8
+6c677e77eeeeeffffddddddddddddddfff6cceee77e776c6
+86677e77cc66666ccffffffffffffffcc66666cc77e77668
+86677cc6666ccc688ffffffffffffff886ccc6666cc77668
+8ccc6666ccc6888bcc666666666666ccb8886ccc6666ccc8
+cccccccc6666666cb88888888888888bc6666666cccccccc
+68888888888886c888888888888888888c68888888888886
+66cb888888888cb811111111111111118bc888888888bc66
+666cccccccccccd166666666666666661dccccccccccc666
+6666888888888c116eeeeeeeeeeeeee611c8888888886666
+666e2222222e8c16e8e88e88e88e88ee61c8e2222222e666
+666eeeeeeeee8c16e8e88e88e88e88ee61c8eeeeeeeee666
+666eddddddde8c66f8e8effffffe88ee66c8eddddddde666
+666edffdffde8c66f8effffffffff8ee66c8edffdffde666
+666edccdccde8c66f8effffffffffeee66c8edccdccde666
+666eddddddde8c66f8eeeeeeeeeeeeee66c8eddddddde666
+c66edffdffde8c66e8e88e88e88e88ee66c8edffdffde66c
+c66edccdccde8c66e8e88e88e88e88ee66c8edccdccde66c
+cc66666666668c66e8e88e88e88feeee66c86666666666cc
+.c66888888888c66e8e88e88e88ffffe66c88888888866c.
+..c68eee8eee8c66f8e88e88e88f88fe66c8eee8eee86c..
+...c8eee8eee8c66f8e88e88e88effee66c8eee8eee8c...
+....688888888c66f8e88e88e88e88ee66c888888886....
+.....68eee888c66f8e88e88e88e88ee66c888eee86.....
+......6ccc666c66e8e88e88e88e88ee66c666ccc6......
+`;
+            case "image3":
+            case "tick":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . 1 1 . . 
+. . . . . . . . . . . . 7 7 . . 
+. . . . . . . . . . . 1 7 7 . . 
+. . . . . . . . . . . 7 7 6 . . 
+. . . . . . . . . . 1 7 7 . . . 
+. . 1 . . . . . . 1 7 7 6 . . . 
+. . 7 . . . . . . 7 7 6 . . . . 
+. . 7 1 . . . . 1 7 7 . . . . . 
+. . 7 7 1 . . . 7 7 6 . . . . . 
+. . 6 7 7 1 . 1 7 6 . . . . . . 
+. . . 6 7 7 1 7 7 . . . . . . . 
+. . . . 7 7 7 7 6 . . . . . . . 
+. . . . 6 7 7 6 . . . . . . . . 
+. . . . . 7 6 . . . . . . . . . 
+. . . . . 6 . . . . . . . . . . 
+`;
+            case "image8":
+            case "boneImage":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. b b b . . . . . . . . b b b . 
+b 1 1 1 b . . . . . . b 1 1 1 b 
+b 1 1 1 1 b . . . b b 1 1 1 1 1 
+b 1 1 1 1 1 b b b 1 1 1 1 1 1 1 
+b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+b 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 
+b 1 1 1 c c c c c 1 1 1 1 1 1 1 
+c 1 1 c . . . . . c c 1 1 1 1 c 
+. c c . . . . . . . . c c c c . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
 `;
         }
         return null;
