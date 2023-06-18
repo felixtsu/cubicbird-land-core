@@ -472,6 +472,39 @@ namespace cbland_info {
 
     }
 
+    function openInventory(): { [name: string]: number } {
+        game.pushScene()
+
+        let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
+        _setMenuStyle(menu)
+
+        let selected = false;
+        let selectedItem: { [name: string]: number } = {}
+
+        menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
+            if (selection == "OK") {
+                menu.close()
+                selected = true
+            }
+        })
+        menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {
+            menu.close()
+            selected = true
+        })
+        menu.onSelectionChanged((selection: string, selectedIndex: number) => {
+            if (selection == "OK") {
+                menu.setTitle("关闭")
+            } else {
+                menu.setTitle(selection + ITEM_DATA[selection])
+            }
+
+        })
+        
+        pauseUntil(() => selected)
+        game.popScene()
+        return selectedItem
+    }
+
     export function openInventoryAndSelectMultiple(): { [name: string]: number } {
         return openInventoryAndSelect(true)
     }
@@ -479,6 +512,10 @@ namespace cbland_info {
     export function openInventoryAndSelectSingle(): string {
         let selectedItem = openInventoryAndSelect(false)
         return Object.keys(selectedItem)[0]
+    }
+
+    export function addInventoryMenu() {
+        menu.addmenuoption("Inventory",assets.cbl_image`inventoryIcon`, openInventory)
     }
 
 

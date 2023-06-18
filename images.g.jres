@@ -39,6 +39,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "boneImage"
     },
+    "image9": {
+        "data": "hwQQABAAAADAzMzMzMzMDMzMzMzMzMzM7szMzMzMzMzu7s7M7u7uzu7u7s7u7u7u7u7uTkRERO5O5O5ORERE5E7k7k5ERETk7u7uTkREROTu7u7RRERE5E7k7l1ERETkTuTuTkRERORO5O5ORERE5E7k7k5ERETk7u7uTkREROTg7u4OREREDg==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "inventoryIcon"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
