@@ -472,24 +472,25 @@ namespace cbland_info {
 
     }
 
-    function openInventory(): { [name: string]: number } {
+    function openInventory(){
         game.pushScene()
 
         let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
         _setMenuStyle(menu)
 
         let selected = false;
-        let selectedItem: { [name: string]: number } = {}
 
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             if (selection == "OK") {
                 menu.close()
                 selected = true
+                game.popScene()
             }
         })
         menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {
             menu.close()
             selected = true
+            game.popScene()
         })
         menu.onSelectionChanged((selection: string, selectedIndex: number) => {
             if (selection == "OK") {
@@ -500,9 +501,9 @@ namespace cbland_info {
 
         })
         
-        pauseUntil(() => selected)
-        game.popScene()
-        return selectedItem
+        // pauseUntil(() => selected)
+        
+        // return selectedItem
     }
 
     export function openInventoryAndSelectMultiple(): { [name: string]: number } {
@@ -515,7 +516,11 @@ namespace cbland_info {
     }
 
     export function addInventoryMenu() {
-        menu.addmenuoption("Inventory",assets.cbl_image`inventoryIcon`, openInventory)
+        scene.systemMenu.addEntry(()=>"Inventory", ()=>{
+            scene.systemMenu.closeMenu()
+            openInventory()
+            }
+            , assets.cbl_image`inventoryIcon`)
     }
 
 

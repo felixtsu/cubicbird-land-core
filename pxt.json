@@ -9,8 +9,7 @@
         "color-coded-tilemap": "*",
         "settings-blocks": "github:microsoft/pxt-settings-blocks#v1.0.0",
         "arcade-storytelling": "github:microsoft/arcade-storytelling#v1.0.3",
-        "arcade-mini-menu": "github:riknoll/arcade-mini-menu#c8b01b9d47f85a5133c786f1c026b1f376fe4285",
-        "Custom Systemmenu Options": "github:meeeeeeeep1/custom-systemmenu-options#55a5f850d6debf3fa843202a6cd96b5004f8eb23"
+        "arcade-mini-menu": "github:riknoll/arcade-mini-menu#c8b01b9d47f85a5133c786f1c026b1f376fe4285"
     },
     "files": [
         "README.md",

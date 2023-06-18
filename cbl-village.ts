@@ -140,6 +140,8 @@ namespace cbland {
             game.popScene()
         })
 
+        cbland_info.addInventoryMenu()
+
 
         player = sprites.create(img`
     . . . . f f f f . . . . . 
