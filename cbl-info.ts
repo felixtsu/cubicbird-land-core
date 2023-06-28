@@ -493,18 +493,18 @@ namespace cbland_info {
         let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
         _setMenuStyle(menu)
 
-        let selected = false;
+        // let selected = false;
 
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             if (selection == "OK") {
                 menu.close()
-                selected = true
+                // selected = true
                 game.popScene()
             }
         })
         menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {
             menu.close()
-            selected = true
+            // selected = true
             game.popScene()
         })
         menu.onSelectionChanged((selection: string, selectedIndex: number) => {

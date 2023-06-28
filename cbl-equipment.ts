@@ -32,24 +32,36 @@ namespace cbland_equipment {
         }
 
         iconSprite = sprites.create(img`
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-        . . . . . . . . . . . . . . . .
-    `)
-        iconSprite.setFlag(SpriteFlag.Invisible, true)
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+            f f f f f f f f f f f f f f f f
+        `)
+
+        game.addScenePushHandler((oldScene: scene.Scene) => {
+            scene.createRenderable(
+                scene.HUD_Z,
+                () => {
+                    screen.fillRect(140, 100, 18, 18, 3)
+                    screen.fillRect(141, 101, 16, 16, 1)
+                    if (EQUIPMENT_META_DATA[_currentEquipment]) {
+                        screen.drawTransparentImage(EQUIPMENT_META_DATA[_currentEquipment].icon, 141, 101)
+                    }
+                }
+            )
+        })
     }
 
     function saveEquipment() {
@@ -63,7 +75,7 @@ namespace cbland_equipment {
     //%group.loc.zh-CN="工具"
     //%blockid=cbland_register_equipement block="register equipment $name of $price, icon %icon=screen_image_picker"
     //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $price"
-    export function registerItem(name: string, icon: Image, price: number) {
+    export function registerEquipment(name: string, icon: Image, price: number) {
         _init()
         if (EQUIPMENT_META_DATA[name]) {
             console.error("Equipment (" + name + ") already registered")
@@ -122,6 +134,7 @@ namespace cbland_equipment {
         if (_currentEquipment == name) {
             _currentEquipment = null
             update()
+            toggleToolbar(false)
         }
 
     }
@@ -132,6 +145,7 @@ namespace cbland_equipment {
     //%blockid=cbland_set_current_equipment block="set current equipment to %name"
     //%block.loc.zh-CN="设置当前工具为 %name"
     export function setCurrentEquipment(name: string) {
+        _init()
         if (!name) {
             _currentEquipment = null
             update()
@@ -202,7 +216,7 @@ namespace cbland_equipment {
             inventory.push(new miniMenu.MenuItem(key, EQUIPMENT_META_DATA[key].icon))
         }
 
-        inventory.push(new miniMenu.MenuItem("空手", assets.cbl_image`.`))
+        inventory.push(new miniMenu.MenuItem("空手", img`.`))
         return inventory
 
     }
@@ -214,35 +228,36 @@ namespace cbland_equipment {
         let menu = miniMenu.createMenuFromArray(_createMenuItemFromEquipment())
         cbland_info._setMenuStyle(menu)
 
-        let selected = false;
+        // let selected = false;
 
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             if (selection == "空手") {
                 setCurrentEquipment(null)
             } else {
                 setCurrentEquipment(selection)
+                toggleToolbar(true)
             }
 
             menu.close()
-            selected = true
+            // selected = true
             game.popScene()
         })
         menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {  
             menu.close()
-            selected = true
+            // selected = true
             game.popScene()
         })
         menu.onSelectionChanged((selection: string, selectedIndex: number) => {
             if (selection == "空手") {
                 menu.setTitle("空手")
             } else {
-                menu.setTitle(selection + EQUIPMENT_DATA[selection])
+                menu.setTitle(selection)
             }
         })
     }
 
     export function addEquipmentMenu() {
-        scene.systemMenu.addEntry(() => "Inventory", () => {
+        scene.systemMenu.addEntry(() => "Toolbox", () => {
             scene.systemMenu.closeMenu()
             openToolbox()
         }

@@ -35,17 +35,35 @@ cbland_info.registerItem('蘑菇', img`
     . . . . . b b d 1 1 b . . . . .
     . . . . . b d d 1 1 b . . . . .
 `, 15)
-
+cbland_equipment.registerEquipment('锄头', img`
+    . . . . . . . . . . . . . . . .
+    . . . . f f f f f . . . . . . .
+    . . . f d d d d f f f . . . . .
+    . . . . f f d d d d f f f . . .
+    . . . . . f f d d d d d f . . .
+    . . . . . . . f f d d d f . . .
+    . . . . . . . . d f d f f . . .
+    . . . . . . . d e f f f . . . .
+    . . . . . . d e f . . . . . . .
+    . . . . . d e f . . . . . . . .
+    . . . . d e f . . . . . . . . .
+    . . . d e f . . . . . . . . . .
+    . . d e f . . . . . . . . . . .
+    . d e f . . . . . . . . . . . .
+    d e f . . . . . . . . . . . . .
+    f f . . . . . . . . . . . . . .
+`, 100)
 
 // 1. invoke all dlc registeration
 cbland.startVillage()
+cbland_equipment.getItem("锄头")
 
 
 // cbland_info.getItem("鸡蛋", 10)
 // cbland_info.getItem("蘑菇", 5)
 // cbland_info.getItem("鸡蛋", 1)
 
-controller.B.onEvent(ControllerButtonEvent.Pressed, () => {
-    cbland_info.openInventoryAndSelectMultiple()
-})
+// controller.B.onEvent(ControllerButtonEvent.Pressed, () => {
+//     cbland_info.openInventoryAndSelectMultiple()
+// })
 
