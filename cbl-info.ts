@@ -1,4 +1,4 @@
-//%groups=["money", "clock"]
+//%groups=["money", "time", "Item"]
 //%icon="\uf132" color="#B6392F"
 //%block="CBLand_info"
 //%block.loc.zh-CN="方块鸟大陆-信息"
@@ -85,30 +85,40 @@ namespace cbland_info {
     let isDrawClock: boolean = false
     let isDrawClockIcon: boolean = false
 
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_draw_clock block="draw clock %on"
     //%block.loc.zh-CN="显示时钟 %on"
     export function drawClock(on: boolean) {
         isDrawClock = on
     }
 
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_current_hour block="current hour"
     //%block.loc.zh-CN="现在几点"
     export function currentHour(): number {
         return CLOCK_INSTANCE.hour
     }
 
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_current_minute block="current minute"
     //%block.loc.zh-CN="现在几分"
     export function currentMinute(): number {
         return CLOCK_INSTANCE.minute
     }
 
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_current_day block="current day"
     //%block.loc.zh-CN="现在是第几天"
     export function currentDay(): number {
         return CLOCK_INSTANCE.day
     }
 
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_draw_clock_icon block="draw clock icon %on"
     //%block.loc.zh-CN="显示时钟图标 %on"
     export function drawClockIcon(on: boolean) {
@@ -116,7 +126,8 @@ namespace cbland_info {
     }
 
 
-
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_set_time 
     //%block="set time to hour %hour, minute %minute || %tickInterval millis for one minute"
     //%block.loc.zh-CN="设置时钟 %hour 点 %minute 分 || 以 %tickInterval 毫秒代替一分钟"
@@ -125,7 +136,8 @@ namespace cbland_info {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
     }
 
-
+    //%group="Time"
+    //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_fast_forward_to
     //%block="fast forward time to hour %hour, minute %minute"
     //%block.loc.zh-CN="时间快进到 %hour 点 %minute 分"
@@ -302,7 +314,7 @@ namespace cbland_info {
     }
 
     function saveItems() {
-        settings.writeJSON("INTERNAL_ITEM_DATA", ITEM_DATA)
+        settings.writeJSON(INTERNAL_ITEM_DATA_SETTINGS_KEY, ITEM_DATA)
     }
 
 
@@ -371,6 +383,9 @@ namespace cbland_info {
             dummpySprite.sayText(1111)
         } else {
             ITEM_DATA[name] -= quantity
+            if (ITEM_DATA[name] == 0) {
+                delete ITEM_DATA[name]
+            }
         }
         saveItems()
     }
@@ -387,7 +402,7 @@ namespace cbland_info {
 
     }
 
-    function _setMenuStyle(menu: miniMenu.MenuSprite) {
+    export function _setMenuStyle(menu: miniMenu.MenuSprite) {
         menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Rows, 3)
         menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.Columns, 5)
         menu.setMenuStyleProperty(miniMenu.MenuStyleProperty.BackgroundColor, 1)
@@ -500,10 +515,6 @@ namespace cbland_info {
             }
 
         })
-        
-        // pauseUntil(() => selected)
-        
-        // return selectedItem
     }
 
     export function openInventoryAndSelectMultiple(): { [name: string]: number } {

@@ -141,6 +141,7 @@ namespace cbland {
         })
 
         cbland_info.addInventoryMenu()
+        cbland_equipment.addEquipmentMenu()
 
 
         player = sprites.create(img`

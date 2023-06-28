@@ -1,7 +1,7 @@
 // 自动生成的代码。请勿编辑。
 namespace myImages {
 
-    helpers._registerFactory("cbl_image", function(name: string) {
+    helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "image1":
             case "homeImage":return img`
@@ -285,6 +285,25 @@ c c c e e 4 4 4 4 4 4 4 4 4 4 4
 c c c e e 4 4 4 4 4 4 4 4 4 4 4 
 c c c e e e 4 4 4 4 4 4 4 4 4 e 
 . c c c e e e e e e e e e e e . 
+`;
+            case "image10":
+            case "toolboxIcon":return img`
+. . . . . . . . . . . . . . . . 
+. . . b b . . . . . . b b . . . 
+. . . b b c c c c c c b b . . . 
+. . . b b . . . . . . b b . . . 
+. . . b b . . . . . . b b . . . 
+d b d d d d d d d d d d d d b d 
+b b e e e e e e e e e e e e b b 
+d e e e e e 5 5 5 5 e e e e e d 
+d d d d d d 5 f f 5 d d d d d d 
+d b b b b b 5 f f 5 b b b b b d 
+d e e e e e 5 5 5 5 e e e e e d 
+d e e e e e e e e e e e e e e d 
+d b b b b b b b b b b b b b b d 
+d e e e e e e e e e e e e e e d 
+b b e e e e e e e e e e e e b b 
+d b d d d d d d d d d d d d b d 
 `;
         }
         return null;

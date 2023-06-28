@@ -44,6 +44,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "inventoryIcon"
     },
+    "image10": {
+        "data": "hwQQABAAAAAAANDb3d3d2wAAsOu97uu7AADQ7r3u696wu9vuve7r3rC72+697uveAAzQ7r3u694ADNBeVeXr3gAM0F7/5eveAAzQXv/l694ADNBeVeXr3gAM0O697uvesLvb7r3u696wu9vuve7r3gAA0O697uveAACw673u67sAANDb3d3d2w==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "toolboxIcon"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
