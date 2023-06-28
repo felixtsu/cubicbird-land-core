@@ -11,7 +11,7 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile4 = image.ofBuffer(hex``);
 
-    helpers._registerFactory("tilemap", function(name: string) {
+    helpers._registerFactory("cbl_tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "cbland":
             case "级别1":return tiles.createTilemap(hex`100010000a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a020606060606060606050a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a070101010101010101090a0a0a0a0a0a040808080808080808030a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a0a`, img`
@@ -58,7 +58,7 @@ namespace myTiles {
         return null;
     })
 
-    helpers._registerFactory("tile", function(name: string) {
+    helpers._registerFactory("cbl_tile", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "transparencyCBLInternal":return transparencyCBLInternal;
             case "myTile":
