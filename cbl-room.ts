@@ -1,7 +1,8 @@
 // 在此处添加您的代码
-//%icon="\uf132" color="#B6392F"
+//%icon="\u2302" color="#F3A21C"
 //%block="CBLand_Room"
 //%block.loc.zh-CN="方块鸟大陆-房间"
+//%weight=105
 namespace cbland {
 
 

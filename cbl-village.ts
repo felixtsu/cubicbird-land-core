@@ -165,8 +165,14 @@ namespace cbland {
         player.z = scene.HUD_Z - 10
 
         VILLAGE_INSTANCE = new cbland.VillageRoom()
+
+        
         cbland_info.initHud()
-        cbland_info.setMoneyTo(cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money"))
+        let savedMoney = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money")
+        if (!savedMoney) {
+            savedMoney = 0
+        }
+        cbland_info.setMoneyTo(savedMoney)
         cbland_info.setTime()
 
 

@@ -1,8 +1,9 @@
 //%groups=["Equipment"]
 //%groups.loc.zh-CN=["工具"]
-//%icon="\uf132" color="#B6392F"
+//%icon="\u26cf" color="#F3A21C"
 //%block="CBLand_Equipment"
 //%block.loc.zh-CN="方块鸟大陆-工具"
+//%weight=103
 namespace cbland_equipment {
 
 

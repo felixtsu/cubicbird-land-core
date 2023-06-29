@@ -1,7 +1,8 @@
 //%groups=["money", "time", "Item"]
-//%icon="\uf132" color="#B6392F"
+//%icon="\u2139" color="#F3A21C"
 //%block="CBLand_info"
 //%block.loc.zh-CN="方块鸟大陆-信息"
+//%weight=104
 namespace cbland_info {
 
     // ------ time begins ----------
