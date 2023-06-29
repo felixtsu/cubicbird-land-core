@@ -262,7 +262,7 @@ namespace cbland_equipment {
     }
 
     export function addEquipmentMenu() {
-        scene.systemMenu.addEntry(() => "Toolbox", () => {
+        scene.systemMenu.addEntry(() => "TOOLBOX", () => {
             scene.systemMenu.closeMenu()
             openToolbox()
         }
@@ -300,9 +300,7 @@ namespace cbland_equipment {
         let result = null
 
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
-            if (selection == "不买了") {
-                return null
-            } else {
+            if (selection != "不买了") {
                 result = selection
             }
 

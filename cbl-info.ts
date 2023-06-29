@@ -504,7 +504,7 @@ namespace cbland_info {
     }
 
     export function addInventoryMenu() {
-        scene.systemMenu.addEntry(()=>"Inventory", ()=>{
+        scene.systemMenu.addEntry(()=>"INVENTORY", ()=>{
             scene.systemMenu.closeMenu()
             openInventory()
             }
