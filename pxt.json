@@ -25,7 +25,8 @@
         "tilemap.g.jres",
         "tilemap.g.ts",
         "shop.ts",
-        "cbl-equipment.ts"
+        "cbl-equipment.ts",
+        "menu.ts"
     ],
     "testFiles": [
         "test.ts"

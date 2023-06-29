@@ -74,7 +74,7 @@ namespace cbland_equipment {
     //%group="Equipment"
     //%group.loc.zh-CN="工具"
     //%blockid=cbland_register_equipement block="register equipment $name of $price, icon %icon=screen_image_picker"
-    //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $price"
+    //%block.loc.zh-CN="登记工具 $name, 图标 %icon=screen_image_picker 价值 $price"
     export function registerEquipment(name: string, icon: Image, price: number) {
         _init()
         if (EQUIPMENT_META_DATA[name]) {
@@ -209,26 +209,31 @@ namespace cbland_equipment {
         update()
     }
 
+    function _createMenuItemOfAllRegisteredEquipments() {
+        let inventory = []
+        for (let key of Object.keys(EQUIPMENT_META_DATA)) {
+            inventory.push(new miniMenu.MenuItem(key, EQUIPMENT_META_DATA[key].icon))
+        }
+        return inventory
+    }
+
     
-    function _createMenuItemFromEquipment() {
+    function _createMenuItemOfPossessedEquipments() {
         let inventory = []
         for (let key of Object.keys(EQUIPMENT_DATA)) {
             inventory.push(new miniMenu.MenuItem(key, EQUIPMENT_META_DATA[key].icon))
         }
-
-        inventory.push(new miniMenu.MenuItem("空手", img`.`))
         return inventory
-
     }
 
     function openToolbox() {
 
         game.pushScene()
+        let menuItemArray = _createMenuItemOfPossessedEquipments()
+        menuItemArray.push(new miniMenu.MenuItem("空手", img`.`))
 
-        let menu = miniMenu.createMenuFromArray(_createMenuItemFromEquipment())
-        cbland_info._setMenuStyle(menu)
-
-        // let selected = false;
+        let menu = miniMenu.createMenuFromArray(menuItemArray)
+        custom_menu.setMenuStyle(menu)
 
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             if (selection == "空手") {
@@ -262,6 +267,66 @@ namespace cbland_equipment {
             openToolbox()
         }
             , assets.cbl_image`toolboxIcon`)
+    }
+
+    export function openAllMenu() :string {
+        game.pushScene()
+
+        let  menuItemArray = _createMenuItemOfAllRegisteredEquipments()
+        menuItemArray.push(new miniMenu.MenuItem("不买了", img`
+            . . . . . . . . . . . . . . . .
+            . . . . . 1 1 1 1 1 1 . . . . .
+            . . . . 1 2 2 2 2 2 2 1 . . . .
+            . . . 1 2 . . . . . . 2 1 . . .
+            . . 1 2 1 . . . . . . 1 2 1 . .
+            . 1 2 . 2 1 . . . . 1 2 . 2 1 .
+            . 2 . . . 2 1 . . 1 2 . . . 2 .
+            . 2 . . . . 2 1 1 2 . . . . 2 .
+            . 2 . . . . . 2 2 . . . . . 2 .
+            . 2 . . . . 1 2 2 1 . . . . 2 .
+            . 2 1 . . 1 2 . . 2 1 . . 1 2 .
+            . . 2 1 1 2 . . . . 2 1 1 2 . .
+            . . . 2 2 . . . . . . 2 2 . . .
+            . . . . 2 1 1 1 1 1 1 2 . . . .
+            . . . . . 2 2 2 2 2 2 . . . . .
+            . . . . . . . . . . . . . . . .
+        `))
+
+        let menu = miniMenu.createMenuFromArray(menuItemArray)
+
+        custom_menu.setMenuStyle(menu)
+
+        let selected = false
+        let result = null
+
+        menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
+            if (selection == "不买了") {
+                return null
+            } else {
+                result = selection
+            }
+
+            menu.close()
+            selected = true
+            game.popScene()
+        })
+        menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {
+            menu.close()
+            selected = true
+            game.popScene()
+        })
+        menu.onSelectionChanged((selection: string, selectedIndex: number) => {
+            if (selection == "不买了") {
+                menu.setTitle("不买了")
+            } else {
+                menu.setTitle(selection + "  " + EQUIPMENT_META_DATA[selection].price + "金币")
+            }
+            
+        })
+
+        pauseUntil(()=>selected)
+        return result
+        
     }
 
     // ------ equipment ends ---------

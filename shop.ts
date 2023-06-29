@@ -1,6 +1,6 @@
 namespace SpriteKind {
     export const Buyer = SpriteKind.create()
-    export const Seller = SpriteKind.create()
+    export const ToolSeller = SpriteKind.create()
 }
 namespace shop {
 
@@ -29,7 +29,7 @@ namespace shop {
                 . 4 f b 3 b 3 b 3 b b f 4 .
                 . . f f 3 b 3 b 3 3 f f . .
                 . . . . f f b b f f . . . .
-            `, SpriteKind.Buyer)
+            `)
             tiles.placeOnTile(buyer, tiles.getTileLocation(4, 2))
 
             let buyerActionSprite = room.createSprite(img`
@@ -71,7 +71,7 @@ namespace shop {
                 e e f 6 6 6 6 6 6 f e e .
                 . . . f f f f f f . . . .
                 . . . f f . . f f . . . .
-            `, SpriteKind.Seller)
+            `)
             tiles.placeOnTile(seller, tiles.getTileLocation(7, 2))
 
             let sellerActionSprite = room.createSprite(img`
@@ -91,7 +91,7 @@ namespace shop {
                 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
                 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
                 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
-            `, SpriteKind.Seller)
+            `, SpriteKind.ToolSeller)
             sellerActionSprite.setFlag(SpriteFlag.Invisible, true)
             tiles.placeOnTile(sellerActionSprite, tiles.getTileLocation(7, 4))
 
@@ -127,6 +127,29 @@ namespace shop {
                     story.cancelAllCutscenes()
                 })
                 
+            }
+        })
+
+        sprites.onOverlap(SpriteKind.Player, SpriteKind.ToolSeller, (sprite: Sprite, othersprite: Sprite) => {
+            if (controller.A.isPressed()) {
+                story.startCutscene(() => {
+                    story.printCharacterText("需要什么工具吗？", "工具售卖员")
+                    let toolToBuy = cbland_equipment.openAllMenu()
+                    let price = cbland_equipment.itemValue(toolToBuy)
+                    story.printCharacterText(toolToBuy + "需要" + price + "个金币，可以吗？", "工具售卖员")
+                    story.showPlayerChoices("是的", "再考虑一下")
+
+                    if (story.checkLastAnswer("是的")) {
+                        cbland_equipment.getItem(toolToBuy)
+                        cbland_info.changeMoneyBy(-price)
+                        story.printCharacterText("好的，已经帮你放到工具箱里", "工具售卖员")
+                        story.printCharacterText("请从菜单里选择手里的工具", "工具售卖员")
+                    }
+
+                    pauseUntil(() => !controller.A.isPressed())
+                    story.cancelAllCutscenes()
+                })
+
             }
         })
 
