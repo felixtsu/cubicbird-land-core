@@ -209,7 +209,6 @@ namespace room {
             super(roomName)
             this.tilemap = tilemap
             this._roomImage = roomImage
-            tiles.loadMap
         }
 
         protected roomTilemap(): tiles.TileMapData {
