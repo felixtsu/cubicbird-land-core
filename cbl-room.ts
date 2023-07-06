@@ -60,6 +60,18 @@ namespace cbland {
             } else {
                 return settings.readString(SAVINGDATA_GLOBAL_KEY + SavingData.SEPERATOR + key)
             }
+        } 
+
+        writeDataNumberArray(roomName:string, key:string, value:number[]) {
+            settings.writeNumberArray(roomName + SavingData.SEPERATOR + key, value)
+        }
+
+        readDataNumberArray(roomName:string, key:string) : number[] {
+            if (settings.exists(roomName + SavingData.SEPERATOR + key)) {
+                return settings.readNumberArray(roomName + SavingData.SEPERATOR + key)
+            } else {
+                return settings.readNumberArray(SAVINGDATA_GLOBAL_KEY + SavingData.SEPERATOR + key)
+            }
         }
     }
 
@@ -67,16 +79,16 @@ namespace cbland {
 
     //%group="Data"
     //%group.loc.zh-CN="数据"
-    //%blockid=cbland_write_saving_data_number block="write room %roomName data %key to %value"
-    //%block.loc.zh-CN="将房间 %roomName 的数据 %key 设为 %value"
+    //%blockid=cbland_write_saving_data_number block="write room %roomName numeric data %key to %value"
+    //%block.loc.zh-CN="将房间 %roomName 的(数字)数据 %key 设为 %value"
     export function writeSavingDataNumber(roomName:string, key:string, value:number) {
         SAVINGDATA_INSTANCE.writeDataNumber(roomName, key, value)
     }
 
     //%group="Data"
     //%group.loc.zh-CN="数据"
-    //%blockid=cbland_read_saving_data_number block="read room %roomName data of key %key"
-    //%block.loc.zh-CN="读取房间 %roomName 的 %key 数据"
+    //%blockid=cbland_read_saving_data_number block="read room %roomName numeric data of key %key"
+    //%block.loc.zh-CN="读取房间 %roomName 的 %key (数字)数据"
     export function readSavingDataNumber(roomName: string, key: string) :number {
         return SAVINGDATA_INSTANCE.readDataNumber(roomName, key)
     }
@@ -84,7 +96,7 @@ namespace cbland {
     //%group="Data"
     //%group.loc.zh-CN="数据"
     //%blockid=cbland_write_saving_data_boolean block="write room %roomName data %key to %value"
-    //%block.loc.zh-CN="将房间 %roomName 的数据 %key 设为 %value"
+    //%block.loc.zh-CN="将房间 %roomName 的 (布尔值)数据 %key 设为 %value"
     export function writeSavingDataBoolean(roomName: string, key: string, value: boolean) {
         SAVINGDATA_INSTANCE.writeDataBoolean(roomName, key, value)
     }
@@ -92,11 +104,26 @@ namespace cbland {
     //%group="Data"
     //%group.loc.zh-CN="数据"
     //%blockid=cbland_read_saving_data_boolean block="read room %roomName data of key %key"
-    //%block.loc.zh-CN="读取房间 %roomName 的 %key 数据"
+    //%block.loc.zh-CN="读取房间 %roomName 的 %key (布尔值)数据"
     export function readSavingDataBoolean(roomName: string, key: string): boolean {
         return SAVINGDATA_INSTANCE.readDataBoolean(roomName, key)
     }
 
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_write_saving_data_number_array block="write room %roomName data number array %key to %value"
+    //%block.loc.zh-CN="将房间 %roomName 的 (数字数组)数据 %key 设为 %value"
+    export function writeSavingDataNumberArray(roomName: string, key: string, value: number[]) {
+        SAVINGDATA_INSTANCE.writeDataNumberArray(roomName, key, value)
+    }
+
+    //%group="Data"
+    //%group.loc.zh-CN="数据"
+    //%blockid=cbland_read_saving_data_number_array block="read room %roomName data of key %key"
+    //%block.loc.zh-CN="读取房间 %roomName 的 %key (数字数组)数据"
+    export function readSavingDataNumberArray(roomName: string, key: string): number[] {
+        return SAVINGDATA_INSTANCE.readDataNumberArray(roomName, key)
+    }
 
 
     // ------ room life cycle begins ---------
