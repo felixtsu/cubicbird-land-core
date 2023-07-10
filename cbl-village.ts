@@ -1,5 +1,6 @@
 namespace SpriteKind {
     export const _CommonRoomDummy = SpriteKind.create()
+    export const _LandForSale = SpriteKind.create()
     export const Dog = SpriteKind.create()
     export const Bone = SpriteKind.create()
 }
@@ -19,7 +20,11 @@ namespace cbland {
             new RoomLocation(5, 2),
             new RoomLocation(10, 2),
             new RoomLocation(8, 9),
-            new RoomLocation(3, 6)
+            new RoomLocation(3, 6),
+            new RoomLocation(20, 9),
+            new RoomLocation(16, 9),
+            new RoomLocation(21, 9),
+            new RoomLocation(12, 9),
         ]
 
         public constructor() {
@@ -37,7 +42,7 @@ namespace cbland {
             // 这个地方把村子里面的空地放好，然后就在特定的地方
             let currentRoomLocationIndex = 0
             cbland.forEachRoom((roomName: string, room: room.CommonRoom) => {
-                let roomLocation = this._availableLocationForRooms[currentRoomLocationIndex++]
+                let roomLocation = this._availableLocationForRooms.removeAt(0)
                 this._roomLocations[roomName] = roomLocation
                 this.addExitOnLocation(roomName, roomLocation.col, roomLocation.row + 1)
             })
@@ -63,6 +68,13 @@ namespace cbland {
                 let roomLocation = this._roomLocations[roomName]
                 tiles.placeOnTile(roomSprite, tiles.getTileLocation(roomLocation.col, roomLocation.row))
             })
+
+            for (let locationForSale of this._availableLocationForRooms) {
+                let locationForSaleSprite = createSprite(assets.cbl_image`forSale`, SpriteKind._LandForSale, false)
+                tiles.placeOnTile(locationForSaleSprite, tiles.getTileLocation(locationForSale.col, locationForSale.row))
+            }
+
+
 
             let dogSprite = createSprite(img`
                 . . 4 4 4 . . . . 4 4 4 . . . .

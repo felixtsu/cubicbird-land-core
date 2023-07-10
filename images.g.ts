@@ -1,7 +1,7 @@
 // 自动生成的代码。请勿编辑。
 namespace myImages {
 
-    helpers._registerFactory("cbl_image", function(name: string) {
+    helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "image1":
             case "homeImage":return img`
@@ -304,6 +304,41 @@ d b b b b b b b b b b b b b b d
 d e e e e e e e e e e e e e e d 
 b b e e e e e e e e e e e e b b 
 d b d d d d d d d d d d d d b d 
+`;
+            case "image11":
+            case "forSale":return img`
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+edddeeeeeeeeeeedddddddddddddddde
+edddddddddddddddddddddddddddddde
+edddddddddddddddddddddddddddddde
+eddd555555ddddddddddddddddddddde
+eddd5dddd5ddddddddddddddddddddee
+eddd5dddddddddddddddddddddddddee
+eddd5dddddddddddddddddddddddddee
+eddd55555ddd555dddd5d555ddddddee
+eddd5ddddddd5dd55ddd5dddddddddee
+eddd5dddddd5dddd5ddd5dddddddddee
+eddd5dddddd5dddd5ddd5dddddddddee
+eddd5ddddddd55555ddd5dddddddddee
+eddd5ddddddddd55dddd5dddddddddee
+edddddddddddddddddddddddddddddee
+edddddddddddddddddddddddddddddee
+eddddddddddddddddddd5dddddddddde
+eedddd5555dddddddddd5dddddddddde
+eedddd5dd5dddddddddd5dddddddddde
+eedddd5dd5dddddddddd5dddddddddde
+eedddd5ddddddddddddd5ddddd555dde
+eedddd55dddddddddddd5dddd55d55de
+eeddddd55ddd5555dddd5dddd5ddd5de
+eeddddddd55d5dd55ddd5ddd55dd5dde
+eedddddddd5d5ddd5ddd55dd5d5dddde
+edddddddd55d5ddd5dddd5dd5d5dddde
+edddd55d55dd5ddd55ddd5555dd55dde
+eddddd55dddd55d5d55ddddddddd55de
+edddddddddddd555ddddddddddddddde
+edddddddddddddddddddddddddddddde
+eddddeeeeeedddddddddddddddddeeee
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `;
         }
         return null;

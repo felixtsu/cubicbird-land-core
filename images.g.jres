@@ -49,6 +49,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "toolboxIcon"
     },
+    "image11": {
+        "data": "hwQgACAAAADu7u7u7u7u7u7u7u7u7u7u3t3d3d3d3d3t7u7u3t3d7d7d3d3d3d3d3d3d3d3d3e3e3d3d3d3d3d3d3d3d3d3t7t1VVVVVVd3d3d3d3d3d7e7d1d3V3d3d3d3d3d3V3e7u3dXd1d3d3V1VVd3dVd3u7t3V3dXd3d1d3V3V3V3d7u7d1d3V3d3dXd3d1d3V3e7u3VXd3d3d3V1V3V1d1d3u7t3d3d3d3d3d3d1dVd3d7u7d3d3dVd3d3d3d3d3d3e3u3d3dVd3V3d3d3VVVVd3t7t3d3dXd1d3d3d3V3V3V7e7d3d3V3VXd3d3d1d3d1e3e3d3dXd1V3d3d3VXdXdXt3t3d3V1V1d3d3d1dVdXd7d7d3d3d3d3d3d3d3d1V3e3e3d3d3d3d3d3d3d3dXd3t3t3d3dXd3d3d3d3d3d3d7d7d3d1dVVXdVVVVVdXd3e3e3d3d1d3d3d3d3d1V1d3t3t3d3dXd3d3d3d3d3dXd7d7d3d3V3d3d3d3d3d3V3e3e3d3d3d3d3d3d3V1V1d3t3t3d3d3d3d3d3V1V3d3d7d7d3d3d3d3d3d1V3VXd3e3e3d3d3d3d3d3d1d3d1d3t3t3d3d3d3d3d3VVd3VXd7t7d3d3d3d3d3d1d1d1d3e7e3e3u7u7u7t3d3d3d3d3u7u7u7u7u7u7u7u7u7u7u7g==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "forSale"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",
