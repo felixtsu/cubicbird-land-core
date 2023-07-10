@@ -19,11 +19,10 @@ namespace cbland {
         _availableLocationForRooms = [
             new RoomLocation(5, 2),
             new RoomLocation(10, 2),
-            new RoomLocation(8, 9),
+            new RoomLocation(7, 12),
             new RoomLocation(3, 6),
-            new RoomLocation(20, 9),
-            new RoomLocation(16, 9),
-            new RoomLocation(21, 9),
+            new RoomLocation(20, 8),
+            new RoomLocation(16, 3),
             new RoomLocation(12, 9),
         ]
 
