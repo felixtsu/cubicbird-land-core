@@ -89,6 +89,14 @@ namespace scene_util {
         }
         // restore forever handlers ends
 
+        for (let spriteTileOverlapHandler of scene.tileOverlapHandlers) {
+            game.currentScene().tileOverlapHandlers.push(spriteTileOverlapHandler)
+        }
+
+        for (let spriteHitWallHandler of scene.wallCollisionHandlers) {
+            game.currentScene().wallCollisionHandlers.push(spriteHitWallHandler)
+        }
+
 
         // restore controller button event handlers 
         let roomButtonEventHandlers = _buttonEventHandlers[name]
