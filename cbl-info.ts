@@ -458,6 +458,14 @@ namespace cbland_info {
                 selectedItem[selection] = 1
                 selected = true
             })
+            menu.onSelectionChanged((selection: string, selectedIndex: number) => {
+                if (selection == "OK") {
+                    menu.setTitle("关闭")
+                } else {
+                    menu.setTitle(selection + "  " + ITEM_DATA[selection])
+                }
+
+            })
         }
         pauseUntil(() => selected)
         game.popScene()
@@ -499,9 +507,14 @@ namespace cbland_info {
         return openInventoryAndSelect(true)
     }
 
+    //%group="Item"
+    //%group.loc.zh-CN="物品"
+    //%blockid=cbland_lose_item block="open inventory and select single item"
+    //%block.loc.zh-CN="打开菜单并获得用户选择的物品"
     export function openInventoryAndSelectSingle(): string {
         let selectedItem = openInventoryAndSelect(false)
-        return Object.keys(selectedItem)[0]
+        let ret = Object.keys(selectedItem)[0]
+        return ret == "OK" ? "" : ret
     }
 
     export function addInventoryMenu() {
