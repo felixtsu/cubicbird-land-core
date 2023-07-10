@@ -391,6 +391,16 @@ namespace cbland_info {
         saveItems()
     }
     // ------ backpack ends ---------
+    function _createMenuItemFromMeta(): miniMenu.MenuItem[] {
+        let inventory = []
+        for (let key of Object.keys(ITEM_META_DATA)) {
+            inventory.push(new miniMenu.MenuItem(key, ITEM_META_DATA[key].icon))
+        }
+
+        inventory.push(new miniMenu.MenuItem("OK", assets.cbl_image`tick`))
+        return inventory
+
+    }
 
     function _createMenuItemFromInventory(): miniMenu.MenuItem[] {
         let inventory = []
@@ -505,6 +515,35 @@ namespace cbland_info {
 
     export function openInventoryAndSelectMultiple(): { [name: string]: number } {
         return openInventoryAndSelect(true)
+    }
+
+
+    export function listAllItemAndSelectSingle() : string {
+        game.pushScene()
+
+        let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
+        custom_menu.setMenuStyle(menu)
+
+        let selected = false;
+        let selectedItem: string = ""
+    
+        menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
+            menu.close()
+            selected = true
+            selectedItem = selection
+        })
+        menu.onSelectionChanged((selection: string, selectedIndex: number) => {
+            if (selection == "OK") {
+                menu.setTitle("关闭")
+            } else {
+                menu.setTitle(selection + "  " + Math.floor(ITEM_META_DATA[selection].value * 1.5) + "金币")
+            }
+
+        })
+        pauseUntil(() => selected)
+        game.popScene()
+        return selectedItem
+
     }
 
     //%group="Item"

@@ -1,6 +1,7 @@
 namespace SpriteKind {
     export const Buyer = SpriteKind.create()
     export const ToolSeller = SpriteKind.create()
+    export const ItemSeller = SpriteKind.create()
 }
 namespace shop {
 
@@ -95,6 +96,49 @@ namespace shop {
             sellerActionSprite.setFlag(SpriteFlag.Invisible, true)
             tiles.placeOnTile(sellerActionSprite, tiles.getTileLocation(7, 4))
 
+
+
+            let itemSeller = room.createSprite(img`
+                . . . . b b b b . . . . . . . .
+                . . . b 3 3 3 3 b b b b . . . .
+                . . b b 3 3 3 3 3 1 1 b b c c .
+                . . b 1 1 3 3 3 3 3 1 1 3 3 c c
+                . . b 1 1 3 3 3 3 3 3 3 3 3 b c
+                . . c 3 3 3 3 3 3 3 c c c b b f
+                . c 3 3 3 3 3 b b b b c c c b f
+                c 3 3 3 3 b b d d d d d c c b f
+                c 3 3 c b d d d d d d c d c c .
+                f 3 c c c d d c d d d c d b c .
+                f b c c c d d d c d d d d d f .
+                f b c c c d d d d d b b b d f .
+                f f b b c b d d d d d d d c . .
+                . f f f f b c c d d d d f f . .
+                . . f b d d b c c f f b b f f .
+                . . f d d d b . . f f b b b f .
+            `)
+            tiles.placeOnTile(itemSeller, tiles.getTileLocation(1, 2))
+
+            let itemSellerActionSprite = room.createSprite(img`
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+                5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5
+            `, SpriteKind.ItemSeller)
+            itemSellerActionSprite.setFlag(SpriteFlag.Invisible, true)
+            tiles.placeOnTile(itemSellerActionSprite, tiles.getTileLocation(1, 4))
+
             tiles.placeOnTile(player, tiles.getTileLocation(4, 5))
             controller.moveSprite(player)
         })
@@ -150,6 +194,44 @@ namespace shop {
                         story.printCharacterText("好的期待你的下次光临", "工具售卖员")
                     }
                     
+
+                    pauseUntil(() => !controller.A.isPressed())
+                    story.cancelAllCutscenes()
+                })
+
+            }
+        })
+
+        sprites.onOverlap(SpriteKind.Player, SpriteKind.ItemSeller, (sprite: Sprite, othersprite: Sprite) => {
+            if (controller.A.isPressed()) {
+                // TODO 这里需要搞定买道具
+                // 1. 列出从已经注册好的item里面 & 售价 （要加价卖）
+                // 2. 选择以后，可以选择数量 （要几个呢？）
+                // 3. 获得对应品
+                story.startCutscene(() => {
+                    story.printCharacterText("需要什么物品吗？", "物品售卖员")
+                    let itemToBuy = cbland_info.listAllItemAndSelectSingle()
+                    if (itemToBuy) {
+                        let price = Math.floor(cbland_info.itemValue(itemToBuy) * 1.5)
+                        story.printCharacterText("一个" + itemToBuy + "要" + price + "个金币\n要几个呢？", "物品售卖员")
+                        let amount = game.askForNumber("")
+                        if (amount * price > cbland_info.money()) {
+                            story.printCharacterText(amount + "个" + itemToBuy + "\n需要" + price + "个金币", "物品售卖员")
+                            story.printCharacterText("你的钱不够", "物品售卖员")
+                        } else {
+                            story.printCharacterText(amount + "个" + itemToBuy + "\n需要" + price + "个金币", "物品售卖员")
+                            story.showPlayerChoices("替我包起来", "再考虑一下")
+
+                            if (story.checkLastAnswer("替我包起来")) {
+                                cbland_info.getItem(itemToBuy, amount)
+                                cbland_info.changeMoneyBy(-amount * price )
+                                story.printCharacterText("好的，已经帮你放到背包里了", "物品售卖员")
+                            }
+                        }
+                    } else {
+                        story.printCharacterText("好的期待你的下次光临", "物品售卖员")
+                    }
+
 
                     pauseUntil(() => !controller.A.isPressed())
                     story.cancelAllCutscenes()
