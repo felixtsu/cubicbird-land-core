@@ -130,8 +130,8 @@ namespace cbland_info {
     //%group="Time"
     //%group.loc.zh-CN="时间"
     //%blockid=pxtclock_set_time 
-    //%block="set time to hour %hour, minute %minute || %tickInterval millis for one minute"
-    //%block.loc.zh-CN="设置时钟 %hour 点 %minute 分 || 以 %tickInterval 毫秒代替一分钟"
+    //%block="set time to day %day, hour %hour, minute %minute || %tickInterval millis for one minute"
+    //%block.loc.zh-CN="设置时钟 第 %day 天 %hour 点 %minute 分 || 以 %tickInterval 毫秒代替一分钟"
     //%tickInterval.defl=60000
     export function setTime(day?: number, hour?: number, minute?: number, tickInterval: number = 5000) {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
