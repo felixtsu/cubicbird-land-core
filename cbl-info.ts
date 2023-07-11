@@ -530,7 +530,11 @@ namespace cbland_info {
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             menu.close()
             selected = true
-            selectedItem = selection
+            if (selection == "OK") {
+                selectedItem = null
+            } else {
+                selectedItem = selection
+            }
         })
         menu.onSelectionChanged((selection: string, selectedIndex: number) => {
             if (selection == "OK") {
