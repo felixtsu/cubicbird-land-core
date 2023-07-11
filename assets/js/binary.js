@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.32/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.17","target":"arcade","targetVersion":"1.12.32","repo":"felixtsu/cubicbird-land-core"}
-// total=3121539 new=15.13% cached=79.91% other=4.96%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.32/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.18","target":"arcade","targetVersion":"1.12.32","repo":"felixtsu/cubicbird-land-core"}
+// total=3122489 new=15.15% cached=79.88% other=4.96%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -793,7 +793,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P127472(s) {
+function _main___P142376(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1475,14 +1475,14 @@ switch (step) {
     globals.ExitWaypoint___4913 = (r0);
     globals._currentRoom___8229 = (null);
     globals.EXIT_NAME_SD_KEY___8260 = ("EXIT_NAME_SD_KEY");
-    r0 = pxsim.image.ofBuffer(_hex87654);
-    globals.clockIcon___87655 = (r0);
-    globals.isDrawClock___87800 = (false);
-    globals.isDrawClockIcon___87802 = (false);
-    globals._money___87979 = (0);
+    r0 = pxsim.image.ofBuffer(_hex139461);
+    globals.clockIcon___139462 = (r0);
+    globals.isDrawClock___139607 = (false);
+    globals.isDrawClockIcon___139609 = (false);
+    globals._money___139786 = (0);
     r0 = pxsim_pxtrt.mkMap();
-    globals.ITEM_META_DATA___88112 = (r0);
-    globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___88114 = ("INTERNAL_ITEM_DATA");
+    globals.ITEM_META_DATA___139919 = (r0);
+    globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___139921 = ("INTERNAL_ITEM_DATA");
     globals._currentRoomInRegister___9389 = (null);
     globals.SAVINGDATA_GLOBAL_KEY___4964 = ("GLOBAL");
     globals.cbland_SavingData_SEPERATOR___4966 = ("||");
@@ -1578,7 +1578,7 @@ switch (step) {
     globals.INTERNAL_EQUIPMENT_DATA_SETTINGS_KEY___10316 = ("INTERNAL_EQUIPMENT_DATA");
     globals._currentEquipment___10319 = (null);
     globals.iconSprite___10321 = (null);
-    s.tmp_0 = cbland_info_registerItem__P87616_mk(s);
+    s.tmp_0 = cbland_info_registerItem__P139423_mk(s);
     s.tmp_0.arg0 = "鸡蛋";
     r0 = pxsim.image.ofBuffer(_hex10739);
     s.tmp_0.arg1 = r0;
@@ -1586,7 +1586,7 @@ switch (step) {
     s.callLocIdx = 557; s.pc = 65; return s.tmp_0;
   case 65:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_registerItem__P87616_mk(s);
+    s.tmp_0 = cbland_info_registerItem__P139423_mk(s);
     s.tmp_0.arg0 = "蘑菇";
     r0 = pxsim.image.ofBuffer(_hex10742);
     s.tmp_0.arg1 = r0;
@@ -1616,13 +1616,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P127472.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
-_main___P127472.continuations = [  ]
+_main___P142376.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
+_main___P142376.continuations = [  ]
 
-function _main___P127472_mk(s) {
+function _main___P142376_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P127472, depth: s.depth + 1,
+        parent: s, fn: _main___P142376, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -1673,7 +1673,7 @@ const _hex7102 = pxsim.BufferMethods.createBufferFromHex("870410001000000066c6cc
 const _hex7106 = pxsim.BufferMethods.createBufferFromHex("8704100010000000ccc6cc666cc67667ccc6c6666cc77667ccc6c6666cc77c67ccc6c6cc6cc7ccccccccc6666cc776c7ccccc6666cc77667ccc6c666ccc67667ccc6cc66cccc7667ccc6cc666cc67667ccc6c6666cc77667ccc6c6666cc77667ccc6c66c6cc7ccccccccc6cc6cc766c7ccccc6666cc77667ccc6c666ccc67667ccc6cc66cccc7667")
 const _hex7108 = pxsim.BufferMethods.createBufferFromHex("8704100010000000cfc6c6666ccc7667fcccc6666cc6766766ccc6666cc7cc67cccccc666cc7c6cc66c6cc666cc776cccccccc6c6cc776c76666c6cc6cc776c7666666cc6cc77667ccccccccccc67667cc666666cccc76676c777777c7cc7667cccccccccccc7c6766666c6666c6cc677777cc777777cc6c7777c7777777c7cf6666c66c666666fc")
 const _hex7186 = pxsim.BufferMethods.createBufferFromHex("8704100010000000eeeeeeeeeeeeeeee434e44444443eeee43eeeeeeee43ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec434e3ee44343ceec43eeeeeeee43ceec434e44444443eeeeeeeeeeeeeeeeeeee")
-const _hex87654 = pxsim.BufferMethods.createBufferFromHex("8704090009000000001011000000000000010001000000001000011000000000010001000100000011110100010000000100000001000000100000100000000000010001000000000010110000000000")
+const _hex139461 = pxsim.BufferMethods.createBufferFromHex("8704090009000000001011000000000000010001000000001000011000000000010001000100000011110100010000000100000001000000100000100000000000010001000000000010110000000000")
 const _hex104045 = pxsim.BufferMethods.createBufferFromHex("87041000100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000")
 const _hex104048 = pxsim.BufferMethods.createBufferFromHex("87041000100000001f111111f11111b1f1effeefeeffddbdd1fdeefeeeeeffbdd1ddefeeefeefebdd1ddddddddddeefed1dd1d1111d1edbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbed1bdccccccccedfebbbbccccccccedbf")
 const _hex104051 = pxsim.BufferMethods.createBufferFromHex("87041000100000001db1ccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedbfd1bdccccccccedfed1bdccccccccedbfd1ddbbbbbbbbebbfd1ddddddddddddbdd1ddddddddddddbdd1ddddddddddddbdd1ddddddddddddbdd1ddddddddddddbdd1ddddddddddddbdd1ddddddddddddbdbbbbbbbbbbbbbbbb")
@@ -3886,7 +3886,7 @@ switch (step) {
     s.callLocIdx = 187; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_addInventoryMenu__P87625_mk(s);
+    s.tmp_0 = cbland_info_addInventoryMenu__P139432_mk(s);
     s.callLocIdx = 188; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
@@ -3923,7 +3923,7 @@ switch (step) {
   case 12:
     r0 = s.retval;
     globals.VILLAGE_INSTANCE___8164 = (s.tmp_0);
-    s.tmp_0 = cbland_info_initHud__P87626_mk(s);
+    s.tmp_0 = cbland_info_initHud__P139433_mk(s);
     s.callLocIdx = 193; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
@@ -3943,12 +3943,12 @@ switch (step) {
     s.savedMoney___8197 = (0);
   case 3:
   case 4:
-    s.tmp_0 = cbland_info_setMoneyTo__P87627_mk(s);
+    s.tmp_0 = cbland_info_setMoneyTo__P139434_mk(s);
     s.tmp_0.arg0 = s.savedMoney___8197;
     s.callLocIdx = 195; s.pc = 15; return s.tmp_0;
   case 15:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_setTime__P87628_mk(s);
+    s.tmp_0 = cbland_info_setTime__P139435_mk(s);
     s.tmp_0.arg0 = undefined;
     s.tmp_0.arg1 = undefined;
     s.tmp_0.arg2 = undefined;
@@ -4098,12 +4098,12 @@ switch (step) {
   case 0:
 
     s.exitName___8405 = undefined;
-    s.unnamed8808___U1 = undefined;
-    s.unnamed8809___U2 = undefined;
+    s.unnamed10020___U1 = undefined;
+    s.unnamed10021___U2 = undefined;
     s.exits___8410 = undefined;
     s.exit___8415 = undefined;
-    s.unnamed8810___U5 = undefined;
-    s.unnamed8811___U6 = undefined;
+    s.unnamed10022___U5 = undefined;
+    s.unnamed10023___U6 = undefined;
     s.exitWayppointSprite___8421 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
@@ -4171,30 +4171,30 @@ switch (step) {
     r0 = s.arg0.fields["exits"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.keysOf(s.tmp_0);
-    s.unnamed8808___U1 = (r0);
-    s.unnamed8809___U2 = (0);
+    s.unnamed10020___U1 = (r0);
+    s.unnamed10021___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8809___U2;
-    r0 = pxsim_Array__length(s.unnamed8808___U1);
+    s.tmp_0 = r0 = s.unnamed10021___U2;
+    r0 = pxsim_Array__length(s.unnamed10020___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 8; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8808___U1, s.unnamed8809___U2);
+    r0 = pxsim_Array__getAt(s.unnamed10020___U1, s.unnamed10021___U2);
     s.exitName___8405 = (r0);
     r0 = s.arg0.fields["exits"];
     s.tmp_2 = r0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.exitName___8405);
     s.exits___8410 = (r0);
     s.exit___8415 = (undefined);
-    s.unnamed8810___U5 = (s.exits___8410);
-    s.unnamed8811___U6 = (0);
+    s.unnamed10022___U5 = (s.exits___8410);
+    s.unnamed10023___U6 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed8811___U6;
-    r0 = pxsim_Array__length(s.unnamed8810___U5);
+    s.tmp_0 = r0 = s.unnamed10023___U6;
+    r0 = pxsim_Array__length(s.unnamed10022___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 7; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8810___U5, s.unnamed8811___U6);
+    r0 = pxsim_Array__getAt(s.unnamed10022___U5, s.unnamed10023___U6);
     s.exit___8415 = (r0);
     r0 = s.exit___8415.fields["col"];
     s.tmp_3 = r0;
@@ -4248,16 +4248,16 @@ switch (step) {
   case 4:
   case 5:
   case 6:
-    r0 = (s.unnamed8811___U6 + 1);
-    s.unnamed8811___U6 = (r0);
+    r0 = (s.unnamed10023___U6 + 1);
+    s.unnamed10023___U6 = (r0);
     { step = 2; continue; }
   case 7:
-    s.unnamed8810___U5 = (undefined);
-    r0 = (s.unnamed8809___U2 + 1);
-    s.unnamed8809___U2 = (r0);
+    s.unnamed10022___U5 = (undefined);
+    r0 = (s.unnamed10021___U2 + 1);
+    s.unnamed10021___U2 = (r0);
     { step = 1; continue; }
   case 8:
-    s.unnamed8808___U1 = (undefined);
+    s.unnamed10020___U1 = (undefined);
     r0 = pxsim_pxtcore_mkAction(1, room_AbstractRoom_enterRoom_inline__P8449);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
@@ -4296,12 +4296,12 @@ function room_AbstractRoom_enterRoom__P4933_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   exitName___8405: undefined,
-  unnamed8808___U1: undefined,
-  unnamed8809___U2: undefined,
+  unnamed10020___U1: undefined,
+  unnamed10021___U2: undefined,
   exits___8410: undefined,
   exit___8415: undefined,
-  unnamed8810___U5: undefined,
-  unnamed8811___U6: undefined,
+  unnamed10022___U5: undefined,
+  unnamed10023___U6: undefined,
   exitWayppointSprite___8421: undefined,
   arg0: undefined,
   arg1: undefined,
@@ -4532,8 +4532,8 @@ switch (step) {
     s.result___8460 = undefined;
     s.nextRoomName___8465 = undefined;
     s.createdSprite___8473 = undefined;
-    s.unnamed8812___U3 = undefined;
-    s.unnamed8813___U4 = undefined;
+    s.unnamed10024___U3 = undefined;
+    s.unnamed10025___U4 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -4561,15 +4561,15 @@ switch (step) {
     s.nextRoomName___8465 = (r0);
     s.createdSprite___8473 = (undefined);
     r0 = s.arg0.fields["createdSprites"];
-    s.unnamed8812___U3 = (r0);
-    s.unnamed8813___U4 = (0);
+    s.unnamed10024___U3 = (r0);
+    s.unnamed10025___U4 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed8813___U4;
-    r0 = pxsim_Array__length(s.unnamed8812___U3);
+    s.tmp_0 = r0 = s.unnamed10025___U4;
+    r0 = pxsim_Array__length(s.unnamed10024___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8812___U3, s.unnamed8813___U4);
+    r0 = pxsim_Array__getAt(s.unnamed10024___U3, s.unnamed10025___U4);
     s.createdSprite___8473 = (r0);
     s.tmp_2 = Sprite_destroy__P2427_mk(s);
     s.tmp_2.arg0 = s.createdSprite___8473;
@@ -4581,11 +4581,11 @@ switch (step) {
     r0 = s.arg0.fields["statefulSprites"];
     s.tmp_0 = r0;
     r0 = pxsim_Array_.removeElement(s.tmp_0, s.createdSprite___8473);
-    r0 = (s.unnamed8813___U4 + 1);
-    s.unnamed8813___U4 = (r0);
+    r0 = (s.unnamed10025___U4 + 1);
+    s.unnamed10025___U4 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed8812___U3 = (undefined);
+    s.unnamed10024___U3 = (undefined);
     s.tmp_0 = game_popScene__P3003_mk(s);
     s.callLocIdx = 223; s.pc = 7; return s.tmp_0;
   case 7:
@@ -4631,8 +4631,8 @@ function room_AbstractRoom_leaveRoom__P4934_mk(s) {
   result___8460: undefined,
   nextRoomName___8465: undefined,
   createdSprite___8473: undefined,
-  unnamed8812___U3: undefined,
-  unnamed8813___U4: undefined,
+  unnamed10024___U3: undefined,
+  unnamed10025___U4: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -19800,7 +19800,7 @@ function particles_ParticleSource_clear__P3165_mk(s) {
 
 
 
-function cbland_info_setTime__P87628(s) {
+function cbland_info_setTime__P139435(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -19817,9 +19817,9 @@ switch (step) {
       s.arg3 = (s.lambdaArgs[3]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Clock__C87657_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Clock__C139464_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = cbland_info_Clock_constructor__P87660_mk(s);
+    s.tmp_1 = cbland_info_Clock_constructor__P139467_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
@@ -19828,17 +19828,17 @@ switch (step) {
     s.callLocIdx = 242; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
-    globals.CLOCK_INSTANCE___87798 = (s.tmp_0);
+    globals.CLOCK_INSTANCE___139605 = (s.tmp_0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_setTime__P87628.info = {"start":4154,"length":174,"line":135,"column":4,"endLine":137,"endColumn":5,"fileName":"cbl-info.ts","functionName":"setTime","argumentNames":["day","hour","minute","tickInterval"]}
+cbland_info_setTime__P139435.info = {"start":4154,"length":174,"line":135,"column":4,"endLine":137,"endColumn":5,"fileName":"cbl-info.ts","functionName":"setTime","argumentNames":["day","hour","minute","tickInterval"]}
 
-function cbland_info_setTime__P87628_mk(s) {
+function cbland_info_setTime__P139435_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_setTime__P87628, depth: s.depth + 1,
+        parent: s, fn: cbland_info_setTime__P139435, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -19852,7 +19852,7 @@ function cbland_info_setTime__P87628_mk(s) {
 
 
 
-function cbland_info_Clock_constructor__P87660(s) {
+function cbland_info_Clock_constructor__P139467(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -19871,7 +19871,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_info_Clock__C87657_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_info_Clock__C139464_VT)) failedCast(r0);
     r0 = (s.arg1 == undefined);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -19942,7 +19942,7 @@ switch (step) {
     r0 = s.arg0.fields["currentTimeMinutes"];
     s.tmp_0 = r0;
     r0 = (s.arg0).fields["setTimeMinutes"] = (s.tmp_0);
-    s.tmp_0 = cbland_info_Clock_save__P87658_mk(s);
+    s.tmp_0 = cbland_info_Clock_save__P139465_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 236; s.pc = 8; return s.tmp_0;
   case 8:
@@ -19951,12 +19951,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_Clock_constructor__P87660.info = {"start":710,"length":888,"line":33,"column":8,"endLine":56,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["this","day","hour","minute","tickInterval"]}
+cbland_info_Clock_constructor__P139467.info = {"start":710,"length":888,"line":33,"column":8,"endLine":56,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["this","day","hour","minute","tickInterval"]}
 
-function cbland_info_Clock_constructor__P87660_mk(s) {
+function cbland_info_Clock_constructor__P139467_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_Clock_constructor__P87660, depth: s.depth + 1,
+        parent: s, fn: cbland_info_Clock_constructor__P139467, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -19974,7 +19974,7 @@ function cbland_info_Clock_constructor__P87660_mk(s) {
 
 
 
-function cbland_info_Clock_save__P87658(s) {
+function cbland_info_Clock_save__P139465(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -19989,7 +19989,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_info_Clock__C87657_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_info_Clock__C139464_VT)) failedCast(r0);
     s.tmp_0 = cbland_writeSavingDataNumber__P4975_mk(s);
     s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___4964;
     s.tmp_0.arg1 = "day";
@@ -20026,12 +20026,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_Clock_save__P87658.info = {"start":1608,"length":397,"line":58,"column":8,"endLine":64,"endColumn":9,"fileName":"cbl-info.ts","functionName":"save","argumentNames":["this"]}
+cbland_info_Clock_save__P139465.info = {"start":1608,"length":397,"line":58,"column":8,"endLine":64,"endColumn":9,"fileName":"cbl-info.ts","functionName":"save","argumentNames":["this"]}
 
-function cbland_info_Clock_save__P87658_mk(s) {
+function cbland_info_Clock_save__P139465_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_Clock_save__P87658, depth: s.depth + 1,
+        parent: s, fn: cbland_info_Clock_save__P139465, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -20736,7 +20736,7 @@ function scene_Scene_millis__P2868_mk(s) {
 
 
 
-function cbland_info_setMoneyTo__P87627(s) {
+function cbland_info_setMoneyTo__P139434(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -20750,11 +20750,11 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    globals._money___87979 = (s.arg0);
+    globals._money___139786 = (s.arg0);
     s.tmp_0 = cbland_writeSavingDataNumber__P4975_mk(s);
     s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___4964;
     s.tmp_0.arg1 = "money";
-    s.tmp_0.arg2 = globals._money___87979;
+    s.tmp_0.arg2 = globals._money___139786;
     s.callLocIdx = 276; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -20762,12 +20762,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_setMoneyTo__P87627.info = {"start":8629,"length":158,"line":275,"column":4,"endLine":278,"endColumn":5,"fileName":"cbl-info.ts","functionName":"setMoneyTo","argumentNames":["amount"]}
+cbland_info_setMoneyTo__P139434.info = {"start":8629,"length":158,"line":275,"column":4,"endLine":278,"endColumn":5,"fileName":"cbl-info.ts","functionName":"setMoneyTo","argumentNames":["amount"]}
 
-function cbland_info_setMoneyTo__P87627_mk(s) {
+function cbland_info_setMoneyTo__P139434_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_setMoneyTo__P87627, depth: s.depth + 1,
+        parent: s, fn: cbland_info_setMoneyTo__P139434, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -21280,7 +21280,7 @@ function settings_exists__P2072_mk(s) {
 
 
 
-function cbland_info_initHud__P87626(s) {
+function cbland_info_initHud__P139433(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21290,22 +21290,22 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_info_initTimeHud__P87964_mk(s);
+    s.tmp_0 = cbland_info_initTimeHud__P139771_mk(s);
     s.callLocIdx = 265; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = game_onShade__P3016_mk(s);
-    s.tmp_0.arg0 = cbland_info_initHud_inline__P88060;
+    s.tmp_0.arg0 = cbland_info_initHud_inline__P139867;
     s.callLocIdx = 267; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = game_addScenePopHandler__P3019_mk(s);
-    s.tmp_0.arg0 = cbland_info_initHud_inline__P88063;
+    s.tmp_0.arg0 = cbland_info_initHud_inline__P139870;
     s.callLocIdx = 269; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
     s.tmp_0 = game_addScenePushHandler__P3017_mk(s);
-    s.tmp_0.arg0 = cbland_info_initHud_inline__P88075;
+    s.tmp_0.arg0 = cbland_info_initHud_inline__P139882;
     s.callLocIdx = 274; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
@@ -21313,12 +21313,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initHud__P87626.info = {"start":7506,"length":648,"line":241,"column":4,"endLine":260,"endColumn":5,"fileName":"cbl-info.ts","functionName":"initHud","argumentNames":[]}
+cbland_info_initHud__P139433.info = {"start":7506,"length":648,"line":241,"column":4,"endLine":260,"endColumn":5,"fileName":"cbl-info.ts","functionName":"initHud","argumentNames":[]}
 
-function cbland_info_initHud__P87626_mk(s) {
+function cbland_info_initHud__P139433_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initHud__P87626, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initHud__P139433, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -21327,7 +21327,7 @@ function cbland_info_initHud__P87626_mk(s) {
 
 
 
-function cbland_info_initHud_inline__P88060(s) {
+function cbland_info_initHud_inline__P139867(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21337,7 +21337,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_info_drawMoneyIconImpl__P87980_mk(s);
+    s.tmp_0 = cbland_info_drawMoneyIconImpl__P139787_mk(s);
     s.callLocIdx = 266; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -21345,12 +21345,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initHud_inline__P88060.info = {"start":7578,"length":55,"line":244,"column":21,"endLine":246,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_initHud_inline__P139867.info = {"start":7578,"length":55,"line":244,"column":21,"endLine":246,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_initHud_inline__P88060_mk(s) {
+function cbland_info_initHud_inline__P139867_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initHud_inline__P88060, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initHud_inline__P139867, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -21359,7 +21359,7 @@ function cbland_info_initHud_inline__P88060_mk(s) {
 
 
 
-function cbland_info_initHud_inline__P88063(s) {
+function cbland_info_initHud_inline__P139870(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21373,14 +21373,14 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_info_setTime__P87628_mk(s);
-    r0 = globals.CLOCK_INSTANCE___87798.fields["day"];
+    s.tmp_0 = cbland_info_setTime__P139435_mk(s);
+    r0 = globals.CLOCK_INSTANCE___139605.fields["day"];
     s.tmp_0.arg0 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["hour"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["hour"];
     s.tmp_0.arg1 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["minute"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["minute"];
     s.tmp_0.arg2 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["tickInterval"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["tickInterval"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 268; s.pc = 1; return s.tmp_0;
   case 1:
@@ -21389,12 +21389,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initHud_inline__P88063.info = {"start":7668,"length":163,"line":248,"column":32,"endLine":250,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["oldScene"]}
+cbland_info_initHud_inline__P139870.info = {"start":7668,"length":163,"line":248,"column":32,"endLine":250,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["oldScene"]}
 
-function cbland_info_initHud_inline__P88063_mk(s) {
+function cbland_info_initHud_inline__P139870_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initHud_inline__P88063, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initHud_inline__P139870, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -21404,7 +21404,7 @@ function cbland_info_initHud_inline__P88063_mk(s) {
 
 
 
-function cbland_info_initHud_inline__P88075(s) {
+function cbland_info_initHud_inline__P139882(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21418,24 +21418,24 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_info_setTime__P87628_mk(s);
-    r0 = globals.CLOCK_INSTANCE___87798.fields["day"];
+    s.tmp_0 = cbland_info_setTime__P139435_mk(s);
+    r0 = globals.CLOCK_INSTANCE___139605.fields["day"];
     s.tmp_0.arg0 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["hour"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["hour"];
     s.tmp_0.arg1 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["minute"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["minute"];
     s.tmp_0.arg2 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["tickInterval"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["tickInterval"];
     s.tmp_0.arg3 = r0;
     s.callLocIdx = 270; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_initTimeHud__P87964_mk(s);
+    s.tmp_0 = cbland_info_initTimeHud__P139771_mk(s);
     s.callLocIdx = 271; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
     s.tmp_0 = game_onShade__P3016_mk(s);
-    s.tmp_0.arg0 = cbland_info_initHud_inline__P88088;
+    s.tmp_0.arg0 = cbland_info_initHud_inline__P139895;
     s.callLocIdx = 273; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -21443,12 +21443,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initHud_inline__P88075.info = {"start":7867,"length":279,"line":252,"column":33,"endLine":258,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["oldScene"]}
+cbland_info_initHud_inline__P139882.info = {"start":7867,"length":279,"line":252,"column":33,"endLine":258,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["oldScene"]}
 
-function cbland_info_initHud_inline__P88075_mk(s) {
+function cbland_info_initHud_inline__P139882_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initHud_inline__P88075, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initHud_inline__P139882, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -21458,7 +21458,7 @@ function cbland_info_initHud_inline__P88075_mk(s) {
 
 
 
-function cbland_info_initHud_inline__P88088(s) {
+function cbland_info_initHud_inline__P139895(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21468,7 +21468,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_info_drawMoneyIconImpl__P87980_mk(s);
+    s.tmp_0 = cbland_info_drawMoneyIconImpl__P139787_mk(s);
     s.callLocIdx = 272; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -21476,12 +21476,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initHud_inline__P88088.info = {"start":8072,"length":63,"line":255,"column":25,"endLine":257,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_initHud_inline__P139895.info = {"start":8072,"length":63,"line":255,"column":25,"endLine":257,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_initHud_inline__P88088_mk(s) {
+function cbland_info_initHud_inline__P139895_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initHud_inline__P88088, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initHud_inline__P139895, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -21490,7 +21490,7 @@ function cbland_info_initHud_inline__P88088_mk(s) {
 
 
 
-function cbland_info_drawMoneyIconImpl__P87980(s) {
+function cbland_info_drawMoneyIconImpl__P139787(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -21500,31 +21500,31 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.s___87981 = undefined;
-    s.font___87985 = undefined;
-    s.offsetY___87986 = undefined;
-    s.num___87995 = undefined;
-    s.width___87999 = undefined;
-    s.start_x___88005 = undefined;
-    r0 = globals._money___87979;
-    s.s___87981 = (r0);
-    r0 = (s.s___87981 >= 1000000);
+    s.s___139788 = undefined;
+    s.font___139792 = undefined;
+    s.offsetY___139793 = undefined;
+    s.num___139802 = undefined;
+    s.width___139806 = undefined;
+    s.start_x___139812 = undefined;
+    r0 = globals._money___139786;
+    s.s___139788 = (r0);
+    r0 = (s.s___139788 >= 1000000);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.offsetY___87986 = (2);
-    s.font___87985 = (globals.font5___1980);
+    s.offsetY___139793 = (2);
+    s.font___139792 = (globals.font5___1980);
     { step = 2; continue; }
   case 1:
-    s.offsetY___87986 = (1);
-    s.font___87985 = (globals.font8___1975);
+    s.offsetY___139793 = (1);
+    s.font___139792 = (globals.font8___1975);
   case 2:
-    r0 = pxsim_numops.toString(s.s___87981);
-    s.num___87995 = (r0);
-    r0 = pxsim_String_.length(s.num___87995);
+    r0 = pxsim_numops.toString(s.s___139788);
+    s.num___139802 = (r0);
+    r0 = pxsim_String_.length(s.num___139802);
     s.tmp_0 = r0;
     s.tmp_2 = if_charWidth_1_mk(s);
-    s.tmp_2.arg0 = s.font___87985;
+    s.tmp_2.arg0 = s.font___139792;
     if (!s.tmp_2.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_2.arg0, "charWidth");
     } else {
@@ -21537,22 +21537,22 @@ switch (step) {
     r0 = s.retval;
     s.tmp_1 = r0;
     r0 = (s.tmp_0 * s.tmp_1);
-    s.width___87999 = (r0);
+    s.width___139806 = (r0);
     r0 = pxsim_ImageMethods.width(globals.screen___2032);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 - s.width___87999);
+    r0 = (s.tmp_2 - s.width___139806);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 2);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 - 8);
-    s.start_x___88005 = (r0);
+    s.start_x___139812 = (r0);
     s.tmp_0 = helpers_imageFillRect__P1956_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    s.tmp_0.arg1 = s.start_x___88005;
+    s.tmp_0.arg1 = s.start_x___139812;
     s.tmp_0.arg2 = 0;
     r0 = pxsim_ImageMethods.width(globals.screen___2032);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 - s.width___87999);
+    r0 = (s.tmp_2 - s.width___139806);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 2);
     s.tmp_0.arg3 = r0;
@@ -21581,12 +21581,12 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = helpers_imageFillRect__P1956_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    r0 = (s.start_x___88005 + 1);
+    r0 = (s.start_x___139812 + 1);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 0;
     r0 = pxsim_ImageMethods.width(globals.screen___2032);
     s.tmp_2 = r0;
-    r0 = (s.tmp_2 - s.width___87999);
+    r0 = (s.tmp_2 - s.width___139806);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 10);
     s.tmp_0.arg3 = r0;
@@ -21610,17 +21610,17 @@ switch (step) {
   case 7:
     r0 = s.retval;
     s.tmp_0 = r0 = globals.screen___2032;
-    r0 = pxsim.image.ofBuffer(_hex88046);
+    r0 = pxsim.image.ofBuffer(_hex139853);
     s.tmp_1 = r0;
-    r0 = pxsim_ImageMethods.drawTransparentImage(s.tmp_0, s.tmp_1, s.start_x___88005, 1);
+    r0 = pxsim_ImageMethods.drawTransparentImage(s.tmp_0, s.tmp_1, s.start_x___139812, 1);
     s.tmp_0 = helpers_imagePrint__P1990_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    s.tmp_0.arg1 = s.num___87995;
-    r0 = (s.start_x___88005 + 8);
+    s.tmp_0.arg1 = s.num___139802;
+    r0 = (s.start_x___139812 + 8);
     s.tmp_0.arg2 = r0;
     s.tmp_0.arg3 = 1;
     s.tmp_0.arg4 = 3;
-    s.tmp_0.arg5 = s.font___87985;
+    s.tmp_0.arg5 = s.font___139792;
     s.tmp_0.arg6 = undefined;
     s.callLocIdx = 264; s.pc = 9; return s.tmp_0;
   case 9:
@@ -21629,12 +21629,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_drawMoneyIconImpl__P87980.info = {"start":6475,"length":1025,"line":208,"column":4,"endLine":239,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawMoneyIconImpl","argumentNames":[]}
+cbland_info_drawMoneyIconImpl__P139787.info = {"start":6475,"length":1025,"line":208,"column":4,"endLine":239,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawMoneyIconImpl","argumentNames":[]}
 
-function cbland_info_drawMoneyIconImpl__P87980_mk(s) {
+function cbland_info_drawMoneyIconImpl__P139787_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_drawMoneyIconImpl__P87980, depth: s.depth + 1,
+        parent: s, fn: cbland_info_drawMoneyIconImpl__P139787, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -21642,15 +21642,15 @@ function cbland_info_drawMoneyIconImpl__P87980_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  s___87981: undefined,
-  font___87985: undefined,
-  offsetY___87986: undefined,
-  num___87995: undefined,
-  width___87999: undefined,
-  start_x___88005: undefined,
+  s___139788: undefined,
+  font___139792: undefined,
+  offsetY___139793: undefined,
+  num___139802: undefined,
+  width___139806: undefined,
+  start_x___139812: undefined,
 } }
 
-const _hex88046 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000bbcc00b055550f5b3d13fd5b11d1fdb055dd0f00bbcc0000000000")
+const _hex139853 = pxsim.BufferMethods.createBufferFromHex("87040800080000000000000000bbcc00b055550f5b3d13fd5b11d1fdb055dd0f00bbcc0000000000")
 
 
 
@@ -30738,7 +30738,7 @@ function info_PlayerInfoImpl_hasScore__P2608_mk(s) {
 
 
 
-function cbland_info_money__P87984(s) {
+function cbland_info_money__P139791(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -30748,16 +30748,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = globals._money___87979;
+    r0 = globals._money___139786;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_money__P87984.info = {"start":8917,"length":61,"line":284,"column":4,"endLine":286,"endColumn":5,"fileName":"cbl-info.ts","functionName":"money","argumentNames":[]}
+cbland_info_money__P139791.info = {"start":8917,"length":61,"line":284,"column":4,"endLine":286,"endColumn":5,"fileName":"cbl-info.ts","functionName":"money","argumentNames":[]}
 
-function cbland_info_money__P87984_mk(s) {
+function cbland_info_money__P139791_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_money__P87984, depth: s.depth + 1,
+        parent: s, fn: cbland_info_money__P139791, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -30822,7 +30822,7 @@ function game_onShade__P3016_mk(s) {
 
 
 
-function cbland_info_initTimeHud__P87964(s) {
+function cbland_info_initTimeHud__P139771(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -30832,11 +30832,11 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    globals.isDrawClock___87800 = (true);
-    globals.isDrawClockIcon___87802 = (true);
+    globals.isDrawClock___139607 = (true);
+    globals.isDrawClockIcon___139609 = (true);
     s.tmp_0 = scene_createRenderable__P2804_mk(s);
     s.tmp_0.arg0 = 100;
-    s.tmp_0.arg1 = cbland_info_initTimeHud_inline__P87970;
+    s.tmp_0.arg1 = cbland_info_initTimeHud_inline__P139777;
     s.tmp_0.arg2 = undefined;
     s.callLocIdx = 256; s.pc = 1; return s.tmp_0;
   case 1:
@@ -30845,12 +30845,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initTimeHud__P87964.info = {"start":6003,"length":349,"line":188,"column":4,"endLine":199,"endColumn":5,"fileName":"cbl-info.ts","functionName":"initTimeHud","argumentNames":[]}
+cbland_info_initTimeHud__P139771.info = {"start":6003,"length":349,"line":188,"column":4,"endLine":199,"endColumn":5,"fileName":"cbl-info.ts","functionName":"initTimeHud","argumentNames":[]}
 
-function cbland_info_initTimeHud__P87964_mk(s) {
+function cbland_info_initTimeHud__P139771_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initTimeHud__P87964, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initTimeHud__P139771, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -30859,7 +30859,7 @@ function cbland_info_initTimeHud__P87964_mk(s) {
 
 
 
-function cbland_info_initTimeHud_inline__P87970(s) {
+function cbland_info_initTimeHud_inline__P139777(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -30869,21 +30869,21 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.currentMillis___87971 = undefined;
+    s.currentMillis___139778 = undefined;
     s.tmp_1 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 252; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
     s.tmp_0 = r0;
     r0 = s.tmp_0.fields["_millis"];
-    s.currentMillis___87971 = (r0);
-    s.tmp_0 = cbland_info_Clock_timeElasped__P87659_mk(s);
-    s.tmp_0.arg0 = globals.CLOCK_INSTANCE___87798;
-    s.tmp_0.arg1 = s.currentMillis___87971;
+    s.currentMillis___139778 = (r0);
+    s.tmp_0 = cbland_info_Clock_timeElasped__P139466_mk(s);
+    s.tmp_0.arg0 = globals.CLOCK_INSTANCE___139605;
+    s.tmp_0.arg1 = s.currentMillis___139778;
     s.callLocIdx = 254; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_drawClockImplement__P87876_mk(s);
+    s.tmp_0 = cbland_info_drawClockImplement__P139683_mk(s);
     s.callLocIdx = 255; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -30891,23 +30891,23 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_initTimeHud_inline__P87970.info = {"start":6155,"length":181,"line":193,"column":12,"endLine":197,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_initTimeHud_inline__P139777.info = {"start":6155,"length":181,"line":193,"column":12,"endLine":197,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_initTimeHud_inline__P87970_mk(s) {
+function cbland_info_initTimeHud_inline__P139777_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_initTimeHud_inline__P87970, depth: s.depth + 1,
+        parent: s, fn: cbland_info_initTimeHud_inline__P139777, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  currentMillis___87971: undefined,
+  currentMillis___139778: undefined,
 } }
 
 
 
 
 
-function cbland_info_drawClockImplement__P87876(s) {
+function cbland_info_drawClockImplement__P139683(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -30917,30 +30917,30 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.font___87878 = undefined;
-    s.smallFont___87880 = undefined;
-    s.clockIconShift___87882 = undefined;
-    s.width___87887 = undefined;
-    s.left___87894 = undefined;
-    s.color1___87902 = undefined;
-    s.color2___87903 = undefined;
-    s.minuteToPrint___87935 = undefined;
-    r0 = pxsim_numops_toBoolDecr(cbland_info_drawClockImplement__P87876);
+    s.font___139685 = undefined;
+    s.smallFont___139687 = undefined;
+    s.clockIconShift___139689 = undefined;
+    s.width___139694 = undefined;
+    s.left___139701 = undefined;
+    s.color1___139709 = undefined;
+    s.color2___139710 = undefined;
+    s.minuteToPrint___139742 = undefined;
+    r0 = pxsim_numops_toBoolDecr(cbland_info_drawClockImplement__P139683);
     if (!r0) { step = 5; continue; }
-    s.font___87878 = (globals.font8___1975);
-    s.smallFont___87880 = (globals.font5___1980);
-    r0 = pxsim_numops_toBoolDecr(globals.isDrawClockIcon___87802);
+    s.font___139685 = (globals.font8___1975);
+    s.smallFont___139687 = (globals.font5___1980);
+    r0 = pxsim_numops_toBoolDecr(globals.isDrawClockIcon___139609);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_ImageMethods.width(globals.clockIcon___87655);
+    r0 = pxsim_ImageMethods.width(globals.clockIcon___139462);
     { step = 2; continue; }
   case 1:
     r0 = 0;
   case 2:
     // jmp value (already in r0)
     s.tmp_0 = r0;
-    s.clockIconShift___87882 = (s.tmp_0);
+    s.clockIconShift___139689 = (s.tmp_0);
     s.tmp_3 = if_charWidth_1_mk(s);
-    s.tmp_3.arg0 = s.font___87878;
+    s.tmp_3.arg0 = s.font___139685;
     if (!s.tmp_3.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_3.arg0, "charWidth");
     } else {
@@ -30956,27 +30956,27 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_1 - 2);
     s.tmp_0 = r0;
-    r0 = (s.tmp_0 + s.clockIconShift___87882);
-    s.width___87887 = (r0);
+    r0 = (s.tmp_0 + s.clockIconShift___139689);
+    s.width___139694 = (r0);
     r0 = pxsim_ImageMethods.width(globals.screen___2032);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 >> 1);
     s.tmp_0 = r0;
-    r0 = (s.width___87887 >> 1);
+    r0 = (s.width___139694 >> 1);
     s.tmp_2 = r0;
     r0 = (s.tmp_0 - s.tmp_2);
-    s.left___87894 = (r0);
-    s.color1___87902 = (1);
-    s.color2___87903 = (3);
+    s.left___139701 = (r0);
+    s.color1___139709 = (1);
+    s.color2___139710 = (3);
     s.tmp_0 = helpers_imageFillRect__P1956_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    r0 = (s.left___87894 - 3);
+    r0 = (s.left___139701 - 3);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 0;
-    r0 = (s.width___87887 + 6);
+    r0 = (s.width___139694 + 6);
     s.tmp_0.arg3 = r0;
     s.tmp_2 = if_charHeight_1_mk(s);
-    s.tmp_2.arg0 = s.font___87878;
+    s.tmp_2.arg0 = s.font___139685;
     if (!s.tmp_2.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_2.arg0, "charHeight");
     } else {
@@ -30990,19 +30990,19 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 3);
     s.tmp_0.arg4 = r0;
-    s.tmp_0.arg5 = s.color1___87902;
+    s.tmp_0.arg5 = s.color1___139709;
     s.callLocIdx = 246; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.tmp_0 = helpers_imageFillRect__P1956_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    r0 = (s.left___87894 - 2);
+    r0 = (s.left___139701 - 2);
     s.tmp_0.arg1 = r0;
     s.tmp_0.arg2 = 0;
-    r0 = (s.width___87887 + 4);
+    r0 = (s.width___139694 + 4);
     s.tmp_0.arg3 = r0;
     s.tmp_2 = if_charHeight_1_mk(s);
-    s.tmp_2.arg0 = s.font___87878;
+    s.tmp_2.arg0 = s.font___139685;
     if (!s.tmp_2.arg0.vtable.iface) {
       s.retval = pxsim_pxtrt.mapGetByString(s.tmp_2.arg0, "charHeight");
     } else {
@@ -31016,31 +31016,31 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_1 + 2);
     s.tmp_0.arg4 = r0;
-    s.tmp_0.arg5 = s.color2___87903;
+    s.tmp_0.arg5 = s.color2___139710;
     s.callLocIdx = 248; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
-    r0 = pxsim_numops_toBoolDecr(cbland_info_drawClockIcon__P87816);
+    r0 = pxsim_numops_toBoolDecr(cbland_info_drawClockIcon__P139623);
     if (!r0) { step = 3; continue; }
     s.tmp_0 = r0 = globals.screen___2032;
-    s.tmp_1 = r0 = globals.clockIcon___87655;
-    r0 = (s.left___87894 - 1);
+    s.tmp_1 = r0 = globals.clockIcon___139462;
+    r0 = (s.left___139701 - 1);
     s.tmp_2 = r0;
     r0 = pxsim_ImageMethods.drawTransparentImage(s.tmp_0, s.tmp_1, s.tmp_2, 1);
   case 3:
   case 4:
-    r0 = globals.CLOCK_INSTANCE___87798.fields["minute"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["minute"];
     s.tmp_2 = r0;
     r0 = (s.tmp_2 / 10);
     s.tmp_1 = r0;
     r0 = pxsim.Math_.floor(s.tmp_1);
     s.tmp_0 = r0;
     r0 = (s.tmp_0 * 10);
-    s.minuteToPrint___87935 = (r0);
+    s.minuteToPrint___139742 = (r0);
     s.tmp_0 = helpers_imagePrint__P1990_mk(s);
     s.tmp_0.arg0 = globals.screen___2032;
-    s.tmp_5 = cbland_info_formatDecimal__P87861_mk(s);
-    r0 = globals.CLOCK_INSTANCE___87798.fields["hour"];
+    s.tmp_5 = cbland_info_formatDecimal__P139668_mk(s);
+    r0 = globals.CLOCK_INSTANCE___139605.fields["hour"];
     s.tmp_5.arg0 = r0;
     s.callLocIdx = 249; s.pc = 13; return s.tmp_5;
   case 13:
@@ -31066,8 +31066,8 @@ switch (step) {
   case 15:
     r0 = s.retval;
     s.tmp_1 = r0;
-    s.tmp_8 = cbland_info_formatDecimal__P87861_mk(s);
-    s.tmp_8.arg0 = s.minuteToPrint___87935;
+    s.tmp_8 = cbland_info_formatDecimal__P139668_mk(s);
+    s.tmp_8.arg0 = s.minuteToPrint___139742;
     s.callLocIdx = 250; s.pc = 16; return s.tmp_8;
   case 16:
     r0 = s.retval;
@@ -31083,11 +31083,11 @@ switch (step) {
     s.tmp_6 = r0;
     r0 = pxsim_String__concat(s.tmp_1, s.tmp_6);
     s.tmp_0.arg1 = r0;
-    r0 = (s.left___87894 + s.clockIconShift___87882);
+    r0 = (s.left___139701 + s.clockIconShift___139689);
     s.tmp_0.arg2 = r0;
     s.tmp_0.arg3 = 1;
-    s.tmp_0.arg4 = s.color1___87902;
-    s.tmp_0.arg5 = s.font___87878;
+    s.tmp_0.arg4 = s.color1___139709;
+    s.tmp_0.arg5 = s.font___139685;
     s.tmp_0.arg6 = undefined;
     s.callLocIdx = 251; s.pc = 12; return s.tmp_0;
   case 12:
@@ -31098,12 +31098,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_drawClockImplement__P87876.info = {"start":5081,"length":916,"line":162,"column":4,"endLine":186,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawClockImplement","argumentNames":[]}
+cbland_info_drawClockImplement__P139683.info = {"start":5081,"length":916,"line":162,"column":4,"endLine":186,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawClockImplement","argumentNames":[]}
 
-function cbland_info_drawClockImplement__P87876_mk(s) {
+function cbland_info_drawClockImplement__P139683_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_drawClockImplement__P87876, depth: s.depth + 1,
+        parent: s, fn: cbland_info_drawClockImplement__P139683, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31114,21 +31114,21 @@ function cbland_info_drawClockImplement__P87876_mk(s) {
   tmp_6: undefined,
   tmp_7: undefined,
   tmp_8: undefined,
-  font___87878: undefined,
-  smallFont___87880: undefined,
-  clockIconShift___87882: undefined,
-  width___87887: undefined,
-  left___87894: undefined,
-  color1___87902: undefined,
-  color2___87903: undefined,
-  minuteToPrint___87935: undefined,
+  font___139685: undefined,
+  smallFont___139687: undefined,
+  clockIconShift___139689: undefined,
+  width___139694: undefined,
+  left___139701: undefined,
+  color1___139709: undefined,
+  color2___139710: undefined,
+  minuteToPrint___139742: undefined,
 } }
 
 
 
 
 
-function cbland_info_formatDecimal__P87861(s) {
+function cbland_info_formatDecimal__P139668(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31166,12 +31166,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_formatDecimal__P87861.info = {"start":4919,"length":156,"line":154,"column":4,"endLine":160,"endColumn":5,"fileName":"cbl-info.ts","functionName":"formatDecimal","argumentNames":["val"]}
+cbland_info_formatDecimal__P139668.info = {"start":4919,"length":156,"line":154,"column":4,"endLine":160,"endColumn":5,"fileName":"cbl-info.ts","functionName":"formatDecimal","argumentNames":["val"]}
 
-function cbland_info_formatDecimal__P87861_mk(s) {
+function cbland_info_formatDecimal__P139668_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_formatDecimal__P87861, depth: s.depth + 1,
+        parent: s, fn: cbland_info_formatDecimal__P139668, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31182,7 +31182,7 @@ function cbland_info_formatDecimal__P87861_mk(s) {
 
 
 
-function cbland_info_drawClockIcon__P87816(s) {
+function cbland_info_drawClockIcon__P139623(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31196,17 +31196,17 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    globals.isDrawClockIcon___87802 = (s.arg0);
+    globals.isDrawClockIcon___139609 = (s.arg0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_drawClockIcon__P87816.info = {"start":3768,"length":79,"line":124,"column":4,"endLine":126,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawClockIcon","argumentNames":["on"]}
+cbland_info_drawClockIcon__P139623.info = {"start":3768,"length":79,"line":124,"column":4,"endLine":126,"endColumn":5,"fileName":"cbl-info.ts","functionName":"drawClockIcon","argumentNames":["on"]}
 
-function cbland_info_drawClockIcon__P87816_mk(s) {
+function cbland_info_drawClockIcon__P139623_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_drawClockIcon__P87816, depth: s.depth + 1,
+        parent: s, fn: cbland_info_drawClockIcon__P139623, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -31215,7 +31215,7 @@ function cbland_info_drawClockIcon__P87816_mk(s) {
 
 
 
-function cbland_info_Clock_timeElasped__P87659(s) {
+function cbland_info_Clock_timeElasped__P139466(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31225,25 +31225,25 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.deltaMillis___87744 = undefined;
+    s.deltaMillis___139551 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_info_Clock__C87657_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_info_Clock__C139464_VT)) failedCast(r0);
     r0 = s.arg0.fields["lastTick"];
     s.tmp_0 = r0;
     r0 = (s.arg1 - s.tmp_0);
-    s.deltaMillis___87744 = (r0);
+    s.deltaMillis___139551 = (r0);
     r0 = (s.arg0).fields["lastTick"] = (s.arg1);
     s.tmp_0 = r0 = s.arg0;
     r0 = s.tmp_0.fields["currentTimeMinutes"];
     s.tmp_2 = r0;
     r0 = s.arg0.fields["tickInterval"];
     s.tmp_5 = r0;
-    r0 = (s.deltaMillis___87744 / s.tmp_5);
+    r0 = (s.deltaMillis___139551 / s.tmp_5);
     s.tmp_4 = r0;
     r0 = (s.tmp_4 * 60);
     s.tmp_3 = r0;
@@ -31290,7 +31290,7 @@ switch (step) {
     r0 = (s.tmp_2 % 60);
     s.tmp_1 = r0;
     r0 = (s.tmp_0).fields["minute"] = (s.tmp_1);
-    s.tmp_0 = cbland_info_Clock_save__P87658_mk(s);
+    s.tmp_0 = cbland_info_Clock_save__P139465_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.callLocIdx = 241; s.pc = 3; return s.tmp_0;
   case 3:
@@ -31299,12 +31299,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_Clock_timeElasped__P87659.info = {"start":2015,"length":591,"line":66,"column":8,"endLine":81,"endColumn":9,"fileName":"cbl-info.ts","functionName":"timeElasped","argumentNames":["this","currentMillis"]}
+cbland_info_Clock_timeElasped__P139466.info = {"start":2015,"length":591,"line":66,"column":8,"endLine":81,"endColumn":9,"fileName":"cbl-info.ts","functionName":"timeElasped","argumentNames":["this","currentMillis"]}
 
-function cbland_info_Clock_timeElasped__P87659_mk(s) {
+function cbland_info_Clock_timeElasped__P139466_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_Clock_timeElasped__P87659, depth: s.depth + 1,
+        parent: s, fn: cbland_info_Clock_timeElasped__P139466, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31312,7 +31312,7 @@ function cbland_info_Clock_timeElasped__P87659_mk(s) {
   tmp_3: undefined,
   tmp_4: undefined,
   tmp_5: undefined,
-  deltaMillis___87744: undefined,
+  deltaMillis___139551: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -31420,7 +31420,7 @@ switch (step) {
     s.callLocIdx = 142; s.pc = 8; return s.tmp_17;
   case 8:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_registerItem__P87616_mk(s);
+    s.tmp_0 = cbland_info_registerItem__P139423_mk(s);
     s.tmp_0.arg0 = "骨头";
     s.tmp_1 = helpers_getCBLImageByName__P4919_mk(s);
     s.tmp_1.arg0 = "boneImage";
@@ -31801,23 +31801,23 @@ switch (step) {
   case 0:
 
     s.name___9637 = undefined;
-    s.unnamed8816___U1 = undefined;
-    s.unnamed8817___U2 = undefined;
+    s.unnamed10028___U1 = undefined;
+    s.unnamed10029___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
     s.name___9637 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.rooms___9634);
-    s.unnamed8816___U1 = (r0);
-    s.unnamed8817___U2 = (0);
+    s.unnamed10028___U1 = (r0);
+    s.unnamed10029___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8817___U2;
-    r0 = pxsim_Array__length(s.unnamed8816___U1);
+    s.tmp_0 = r0 = s.unnamed10029___U2;
+    r0 = pxsim_Array__length(s.unnamed10028___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8816___U1, s.unnamed8817___U2);
+    r0 = pxsim_Array__getAt(s.unnamed10028___U1, s.unnamed10029___U2);
     s.name___9637 = (r0);
     s.tmp_2 = lambda_3_mk(s);
     s.tmp_2.argL = s.arg0;
@@ -31828,11 +31828,11 @@ switch (step) {
     s.callLocIdx = 352; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    r0 = (s.unnamed8817___U2 + 1);
-    s.unnamed8817___U2 = (r0);
+    r0 = (s.unnamed10029___U2 + 1);
+    s.unnamed10029___U2 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed8816___U1 = (undefined);
+    s.unnamed10028___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
@@ -31848,8 +31848,8 @@ function cbland_forEachRoom__P4981_mk(s) {
   tmp_1: undefined,
   tmp_2: undefined,
   name___9637: undefined,
-  unnamed8816___U1: undefined,
-  unnamed8817___U2: undefined,
+  unnamed10028___U1: undefined,
+  unnamed10029___U2: undefined,
   arg0: undefined,
 } }
 
@@ -44498,21 +44498,21 @@ switch (step) {
 
     s.inventory___10534 = undefined;
     s.key___10537 = undefined;
-    s.unnamed8834___U2 = undefined;
-    s.unnamed8835___U3 = undefined;
+    s.unnamed10046___U2 = undefined;
+    s.unnamed10047___U3 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___10534 = (r0);
     s.key___10537 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.EQUIPMENT_DATA___10315);
-    s.unnamed8834___U2 = (r0);
-    s.unnamed8835___U3 = (0);
+    s.unnamed10046___U2 = (r0);
+    s.unnamed10047___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8835___U3;
-    r0 = pxsim_Array__length(s.unnamed8834___U2);
+    s.tmp_0 = r0 = s.unnamed10047___U3;
+    r0 = pxsim_Array__length(s.unnamed10046___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8834___U2, s.unnamed8835___U3);
+    r0 = pxsim_Array__getAt(s.unnamed10046___U2, s.unnamed10047___U3);
     s.key___10537 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C4436_VT);
     s.tmp_2 = r0;
@@ -44526,11 +44526,11 @@ switch (step) {
   case 3:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.inventory___10534, s.tmp_2);
-    r0 = (s.unnamed8835___U3 + 1);
-    s.unnamed8835___U3 = (r0);
+    r0 = (s.unnamed10047___U3 + 1);
+    s.unnamed10047___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed8834___U2 = (undefined);
+    s.unnamed10046___U2 = (undefined);
     r0 = s.inventory___10534;
     return leave(s, r0)
   default: oops()
@@ -44548,8 +44548,8 @@ function cbland_equipment__createMenuItemOfPossessedEquipments__P10533_mk(s) {
   tmp_3: undefined,
   inventory___10534: undefined,
   key___10537: undefined,
-  unnamed8834___U2: undefined,
-  unnamed8835___U3: undefined,
+  unnamed10046___U2: undefined,
+  unnamed10047___U3: undefined,
 } }
 
 
@@ -44886,7 +44886,7 @@ function scene_systemMenu_MenuOption_constructor__P3087_mk(s) {
 
 
 
-function cbland_info_addInventoryMenu__P87625(s) {
+function cbland_info_addInventoryMenu__P139432(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44897,8 +44897,8 @@ switch (step) {
   case 0:
 
     s.tmp_0 = scene_systemMenu_addEntry__P3104_mk(s);
-    s.tmp_0.arg0 = cbland_info_addInventoryMenu_inline__P88601;
-    s.tmp_0.arg1 = cbland_info_addInventoryMenu_inline__P88602;
+    s.tmp_0.arg0 = cbland_info_addInventoryMenu_inline__P140412;
+    s.tmp_0.arg1 = cbland_info_addInventoryMenu_inline__P140413;
     s.tmp_1 = helpers_getCBLImageByName__P4919_mk(s);
     s.tmp_1.arg0 = "inventoryIcon";
     s.callLocIdx = 337; s.pc = 2; return s.tmp_1;
@@ -44912,12 +44912,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_addInventoryMenu__P87625.info = {"start":17733,"length":229,"line":558,"column":4,"endLine":564,"endColumn":5,"fileName":"cbl-info.ts","functionName":"addInventoryMenu","argumentNames":[]}
+cbland_info_addInventoryMenu__P139432.info = {"start":17845,"length":229,"line":562,"column":4,"endLine":568,"endColumn":5,"fileName":"cbl-info.ts","functionName":"addInventoryMenu","argumentNames":[]}
 
-function cbland_info_addInventoryMenu__P87625_mk(s) {
+function cbland_info_addInventoryMenu__P139432_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_addInventoryMenu__P87625, depth: s.depth + 1,
+        parent: s, fn: cbland_info_addInventoryMenu__P139432, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -44927,7 +44927,7 @@ function cbland_info_addInventoryMenu__P87625_mk(s) {
 
 
 
-function cbland_info_addInventoryMenu_inline__P88601(s) {
+function cbland_info_addInventoryMenu_inline__P140412(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44941,12 +44941,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_addInventoryMenu_inline__P88601.info = {"start":17804,"length":15,"line":559,"column":34,"endLine":559,"endColumn":49,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_addInventoryMenu_inline__P140412.info = {"start":17916,"length":15,"line":563,"column":34,"endLine":563,"endColumn":49,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_addInventoryMenu_inline__P88601_mk(s) {
+function cbland_info_addInventoryMenu_inline__P140412_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_addInventoryMenu_inline__P88601, depth: s.depth + 1,
+        parent: s, fn: cbland_info_addInventoryMenu_inline__P140412, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -44954,7 +44954,7 @@ function cbland_info_addInventoryMenu_inline__P88601_mk(s) {
 
 
 
-function cbland_info_addInventoryMenu_inline__P88602(s) {
+function cbland_info_addInventoryMenu_inline__P140413(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -44968,7 +44968,7 @@ switch (step) {
     s.callLocIdx = 335; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_openInventory__P88488_mk(s);
+    s.tmp_0 = cbland_info_openInventory__P140295_mk(s);
     s.callLocIdx = 336; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -44976,12 +44976,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_addInventoryMenu_inline__P88602.info = {"start":17821,"length":88,"line":559,"column":51,"endLine":562,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_addInventoryMenu_inline__P140413.info = {"start":17933,"length":88,"line":563,"column":51,"endLine":566,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_addInventoryMenu_inline__P88602_mk(s) {
+function cbland_info_addInventoryMenu_inline__P140413_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_addInventoryMenu_inline__P88602, depth: s.depth + 1,
+        parent: s, fn: cbland_info_addInventoryMenu_inline__P140413, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -44990,7 +44990,7 @@ function cbland_info_addInventoryMenu_inline__P88602_mk(s) {
 
 
 
-function cbland_info_openInventory__P88488(s) {
+function cbland_info_openInventory__P140295(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45000,13 +45000,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.menu___88490 = undefined;
+    s.menu___140297 = undefined;
     s.tmp_0 = game_pushScene__P3002_mk(s);
     s.callLocIdx = 309; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = miniMenu_createMenuFromArray__P4490_mk(s);
-    s.tmp_1 = cbland_info__createMenuItemFromInventory__P88269_mk(s);
+    s.tmp_1 = cbland_info__createMenuItemFromInventory__P140076_mk(s);
     s.callLocIdx = 310; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
@@ -45014,37 +45014,37 @@ switch (step) {
     s.callLocIdx = 311; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.menu___88490 = (r0);
+    s.menu___140297 = (r0);
     s.tmp_0 = custom_menu_setMenuStyle__P5030_mk(s);
-    s.tmp_0.arg0 = s.menu___88490;
+    s.tmp_0.arg0 = s.menu___140297;
     s.callLocIdx = 312; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P88498);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P140305);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88490);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140297);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88490;
+    s.tmp_1.arg0 = s.menu___140297;
     s.tmp_1.arg1 = globals.A___2113;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 315; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P88509);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P140316);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88490);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140297);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88490;
+    s.tmp_1.arg0 = s.menu___140297;
     s.tmp_1.arg1 = globals.menu___2119;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 318; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P88517);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventory_inline__P140324);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88490);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140297);
     s.tmp_1 = miniMenu_MenuSprite_onSelectionChanged__P4471_mk(s);
-    s.tmp_1.arg0 = s.menu___88490;
+    s.tmp_1.arg0 = s.menu___140297;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 321; s.pc = 7; return s.tmp_1;
   case 7:
@@ -45053,23 +45053,23 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventory__P88488.info = {"start":15430,"length":913,"line":485,"column":4,"endLine":513,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventory","argumentNames":[]}
+cbland_info_openInventory__P140295.info = {"start":15430,"length":913,"line":485,"column":4,"endLine":513,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventory","argumentNames":[]}
 
-function cbland_info_openInventory__P88488_mk(s) {
+function cbland_info_openInventory__P140295_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventory__P88488, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventory__P140295, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  menu___88490: undefined,
+  menu___140297: undefined,
 } }
 
 
 
 
 
-function cbland_info_openInventory_inline__P88498(s) {
+function cbland_info_openInventory_inline__P140305(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45103,12 +45103,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventory_inline__P88498.info = {"start":15679,"length":204,"line":493,"column":43,"endLine":499,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventory_inline__P140305.info = {"start":15679,"length":204,"line":493,"column":43,"endLine":499,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventory_inline__P88498_mk(s) {
+function cbland_info_openInventory_inline__P140305_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventory_inline__P88498, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventory_inline__P140305, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -45120,7 +45120,7 @@ function cbland_info_openInventory_inline__P88498_mk(s) {
 
 
 
-function cbland_info_openInventory_inline__P88509(s) {
+function cbland_info_openInventory_inline__P140316(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45148,12 +45148,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventory_inline__P88509.info = {"start":15931,"length":141,"line":500,"column":46,"endLine":504,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventory_inline__P140316.info = {"start":15931,"length":141,"line":500,"column":46,"endLine":504,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventory_inline__P88509_mk(s) {
+function cbland_info_openInventory_inline__P140316_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventory_inline__P88509, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventory_inline__P140316, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -45164,7 +45164,7 @@ function cbland_info_openInventory_inline__P88509_mk(s) {
 
 
 
-function cbland_info_openInventory_inline__P88517(s) {
+function cbland_info_openInventory_inline__P140324(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45202,7 +45202,7 @@ switch (step) {
   case 5:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_3 = r0;
     if ((s.tmp_3) && (s.tmp_3).vtable) {
     setupResume(s, 6);
@@ -45223,12 +45223,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventory_inline__P88517.info = {"start":16106,"length":230,"line":505,"column":32,"endLine":512,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventory_inline__P140324.info = {"start":16106,"length":230,"line":505,"column":32,"endLine":512,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventory_inline__P88517_mk(s) {
+function cbland_info_openInventory_inline__P140324_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventory_inline__P88517, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventory_inline__P140324, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -45242,7 +45242,7 @@ function cbland_info_openInventory_inline__P88517_mk(s) {
 
 
 
-function cbland_info__createMenuItemFromInventory__P88269(s) {
+function cbland_info__createMenuItemFromInventory__P140076(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -45252,41 +45252,41 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.inventory___88270 = undefined;
-    s.key___88273 = undefined;
-    s.unnamed8814___U2 = undefined;
-    s.unnamed8815___U3 = undefined;
+    s.inventory___140077 = undefined;
+    s.key___140080 = undefined;
+    s.unnamed10026___U2 = undefined;
+    s.unnamed10027___U3 = undefined;
     r0 = pxsim_Array__mk();
-    s.inventory___88270 = (r0);
-    s.key___88273 = (undefined);
-    r0 = pxsim_pxtrt.keysOf(globals.ITEM_DATA___88113);
-    s.unnamed8814___U2 = (r0);
-    s.unnamed8815___U3 = (0);
+    s.inventory___140077 = (r0);
+    s.key___140080 = (undefined);
+    r0 = pxsim_pxtrt.keysOf(globals.ITEM_DATA___139920);
+    s.unnamed10026___U2 = (r0);
+    s.unnamed10027___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8815___U3;
-    r0 = pxsim_Array__length(s.unnamed8814___U2);
+    s.tmp_0 = r0 = s.unnamed10027___U3;
+    r0 = pxsim_Array__length(s.unnamed10026___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8814___U2, s.unnamed8815___U3);
-    s.key___88273 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed10026___U2, s.unnamed10027___U3);
+    s.key___140080 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C4436_VT);
     s.tmp_2 = r0;
     s.tmp_3 = miniMenu_MenuItem_constructor__P4438_mk(s);
     s.tmp_3.arg0 = s.tmp_2;
-    s.tmp_3.arg1 = s.key___88273;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___88112, s.key___88273);
+    s.tmp_3.arg1 = s.key___140080;
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___139919, s.key___140080);
     r0 = r0.fields["icon"];
     s.tmp_3.arg2 = r0;
     s.callLocIdx = 287; s.pc = 3; return s.tmp_3;
   case 3:
     r0 = s.retval;
-    r0 = pxsim_Array__push(s.inventory___88270, s.tmp_2);
-    r0 = (s.unnamed8815___U3 + 1);
-    s.unnamed8815___U3 = (r0);
+    r0 = pxsim_Array__push(s.inventory___140077, s.tmp_2);
+    r0 = (s.unnamed10027___U3 + 1);
+    s.unnamed10027___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed8814___U2 = (undefined);
+    s.unnamed10026___U2 = (undefined);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C4436_VT);
     s.tmp_0 = r0;
     s.tmp_1 = miniMenu_MenuItem_constructor__P4438_mk(s);
@@ -45301,26 +45301,26 @@ switch (step) {
     s.callLocIdx = 289; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
-    r0 = pxsim_Array__push(s.inventory___88270, s.tmp_0);
-    r0 = s.inventory___88270;
+    r0 = pxsim_Array__push(s.inventory___140077, s.tmp_0);
+    r0 = s.inventory___140077;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info__createMenuItemFromInventory__P88269.info = {"start":12375,"length":339,"line":404,"column":4,"endLine":413,"endColumn":5,"fileName":"cbl-info.ts","functionName":"_createMenuItemFromInventory","argumentNames":[]}
+cbland_info__createMenuItemFromInventory__P140076.info = {"start":12375,"length":339,"line":404,"column":4,"endLine":413,"endColumn":5,"fileName":"cbl-info.ts","functionName":"_createMenuItemFromInventory","argumentNames":[]}
 
-function cbland_info__createMenuItemFromInventory__P88269_mk(s) {
+function cbland_info__createMenuItemFromInventory__P140076_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info__createMenuItemFromInventory__P88269, depth: s.depth + 1,
+        parent: s, fn: cbland_info__createMenuItemFromInventory__P140076, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  inventory___88270: undefined,
-  key___88273: undefined,
-  unnamed8814___U2: undefined,
-  unnamed8815___U3: undefined,
+  inventory___140077: undefined,
+  key___140080: undefined,
+  unnamed10026___U2: undefined,
+  unnamed10027___U3: undefined,
 } }
 
 
@@ -45762,19 +45762,19 @@ switch (step) {
     s.sellItems___125429 = undefined;
     s.text___125436 = undefined;
     s.item___125438 = undefined;
-    s.unnamed8828___U3 = undefined;
-    s.unnamed8829___U4 = undefined;
+    s.unnamed10040___U3 = undefined;
+    s.unnamed10041___U4 = undefined;
     s.coin___125478 = undefined;
     s.item___125480 = undefined;
-    s.unnamed8830___U7 = undefined;
-    s.unnamed8831___U8 = undefined;
+    s.unnamed10042___U7 = undefined;
+    s.unnamed10043___U8 = undefined;
     s.tmp_0 = story_printCharacterText__P4618_mk(s);
     s.tmp_0.arg0 = "今天要卖点什么？";
     s.tmp_0.arg1 = "收购员";
     s.callLocIdx = 430; s.pc = 9; return s.tmp_0;
   case 9:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_openInventoryAndSelectMultiple__P88533_mk(s);
+    s.tmp_0 = cbland_info_openInventoryAndSelectMultiple__P140340_mk(s);
     s.callLocIdx = 431; s.pc = 10; return s.tmp_0;
   case 10:
     r0 = s.retval;
@@ -45791,15 +45791,15 @@ switch (step) {
     s.text___125436 = (r0);
     s.item___125438 = (undefined);
     r0 = pxsim_pxtrt.keysOf(s.sellItems___125429);
-    s.unnamed8828___U3 = (r0);
-    s.unnamed8829___U4 = (0);
+    s.unnamed10040___U3 = (r0);
+    s.unnamed10041___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8829___U4;
-    r0 = pxsim_Array__length(s.unnamed8828___U3);
+    s.tmp_0 = r0 = s.unnamed10041___U4;
+    r0 = pxsim_Array__length(s.unnamed10040___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8828___U3, s.unnamed8829___U4);
+    r0 = pxsim_Array__getAt(s.unnamed10040___U3, s.unnamed10041___U4);
     s.item___125438 = (r0);
     if ((s.text___125436) && (s.text___125436).vtable) {
     setupResume(s, 11);
@@ -45865,11 +45865,11 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = pxsim_String__concat(s.tmp_2, s.tmp_3);
     s.text___125436 = (r0);
-    r0 = (s.unnamed8829___U4 + 1);
-    s.unnamed8829___U4 = (r0);
+    r0 = (s.unnamed10041___U4 + 1);
+    s.unnamed10041___U4 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed8828___U3 = (undefined);
+    s.unnamed10040___U3 = (undefined);
     s.tmp_0 = helpers_stringSlice__P119_mk(s);
     s.tmp_0.arg0 = s.text___125436;
     s.tmp_0.arg1 = 0;
@@ -45914,17 +45914,17 @@ switch (step) {
     s.coin___125478 = (0);
     s.item___125480 = (undefined);
     r0 = pxsim_pxtrt.keysOf(s.sellItems___125429);
-    s.unnamed8830___U7 = (r0);
-    s.unnamed8831___U8 = (0);
+    s.unnamed10042___U7 = (r0);
+    s.unnamed10043___U8 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed8831___U8;
-    r0 = pxsim_Array__length(s.unnamed8830___U7);
+    s.tmp_0 = r0 = s.unnamed10043___U8;
+    r0 = pxsim_Array__length(s.unnamed10042___U7);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8830___U7, s.unnamed8831___U8);
+    r0 = pxsim_Array__getAt(s.unnamed10042___U7, s.unnamed10043___U8);
     s.item___125480 = (r0);
-    s.tmp_2 = cbland_info_loseItem__P88198_mk(s);
+    s.tmp_2 = cbland_info_loseItem__P140005_mk(s);
     s.tmp_2.arg0 = s.item___125480;
     r0 = pxsim_pxtrt.mapGetGeneric(s.sellItems___125429, s.item___125480);
     s.tmp_2.arg1 = r0;
@@ -45932,7 +45932,7 @@ switch (step) {
   case 22:
     r0 = s.retval;
     s.tmp_0 = r0 = s.coin___125478;
-    s.tmp_3 = cbland_info_itemValue__P88188_mk(s);
+    s.tmp_3 = cbland_info_itemValue__P139995_mk(s);
     s.tmp_3.arg0 = s.item___125480;
     s.callLocIdx = 437; s.pc = 23; return s.tmp_3;
   case 23:
@@ -45944,12 +45944,12 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
     s.coin___125478 = (r0);
-    r0 = (s.unnamed8831___U8 + 1);
-    s.unnamed8831___U8 = (r0);
+    r0 = (s.unnamed10043___U8 + 1);
+    s.unnamed10043___U8 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed8830___U7 = (undefined);
-    s.tmp_0 = cbland_info_changeMoneyBy__P87610_mk(s);
+    s.unnamed10042___U7 = (undefined);
+    s.tmp_0 = cbland_info_changeMoneyBy__P139417_mk(s);
     s.tmp_0.arg0 = s.coin___125478;
     s.callLocIdx = 438; s.pc = 24; return s.tmp_0;
   case 24:
@@ -45994,12 +45994,12 @@ function shop_prepareShop_inline__P125427_mk(s) {
   sellItems___125429: undefined,
   text___125436: undefined,
   item___125438: undefined,
-  unnamed8828___U3: undefined,
-  unnamed8829___U4: undefined,
+  unnamed10040___U3: undefined,
+  unnamed10041___U4: undefined,
   coin___125478: undefined,
   item___125480: undefined,
-  unnamed8830___U7: undefined,
-  unnamed8831___U8: undefined,
+  unnamed10042___U7: undefined,
+  unnamed10043___U8: undefined,
 } }
 
 
@@ -46200,7 +46200,7 @@ switch (step) {
     s.callLocIdx = 449; s.pc = 15; return s.tmp_2;
   case 15:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_changeMoneyBy__P87610_mk(s);
+    s.tmp_0 = cbland_info_changeMoneyBy__P139417_mk(s);
     r0 = (0 - s.price___125521);
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 450; s.pc = 16; return s.tmp_0;
@@ -46378,14 +46378,14 @@ switch (step) {
     s.callLocIdx = 458; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_listAllItemAndSelectSingle__P88535_mk(s);
+    s.tmp_0 = cbland_info_listAllItemAndSelectSingle__P140342_mk(s);
     s.callLocIdx = 459; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.itemToBuy___125570 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.itemToBuy___125570);
     if (!r0) { step = 5; continue; }
-    s.tmp_2 = cbland_info_itemValue__P88188_mk(s);
+    s.tmp_2 = cbland_info_itemValue__P139995_mk(s);
     s.tmp_2.arg0 = s.itemToBuy___125570;
     s.callLocIdx = 460; s.pc = 9; return s.tmp_2;
   case 9:
@@ -46463,7 +46463,7 @@ switch (step) {
     s.amount___125598 = (r0);
     r0 = (s.amount___125598 * s.price___125573);
     s.tmp_1 = r0;
-    r0 = globals._money___87979;
+    r0 = globals._money___139786;
     s.tmp_2 = r0;
     r0 = (s.tmp_1 > s.tmp_2);
     s.tmp_0 = r0;
@@ -46650,13 +46650,13 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    s.tmp_2 = cbland_info_getItem__P88160_mk(s);
+    s.tmp_2 = cbland_info_getItem__P139967_mk(s);
     s.tmp_2.arg0 = s.itemToBuy___125570;
     s.tmp_2.arg1 = s.amount___125598;
     s.callLocIdx = 469; s.pc = 36; return s.tmp_2;
   case 36:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_changeMoneyBy__P87610_mk(s);
+    s.tmp_0 = cbland_info_changeMoneyBy__P139417_mk(s);
     r0 = (0 - s.amount___125598);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 * s.price___125573);
@@ -46767,7 +46767,7 @@ function shop_prepareShop_inline__P125667_mk(s) {
 
 
 
-function cbland_info_getItem__P88160(s) {
+function cbland_info_getItem__P139967(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46782,7 +46782,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     s.tmp_1 = r0;
@@ -46790,10 +46790,10 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtrt.mapSetGeneric(globals.ITEM_DATA___88113, s.arg0, s.arg1);
+    r0 = pxsim_pxtrt.mapSetGeneric(globals.ITEM_DATA___139920, s.arg0, s.arg1);
     { step = 2; continue; }
   case 1:
-    s.tmp_0 = r0 = globals.ITEM_DATA___88113;
+    s.tmp_0 = r0 = globals.ITEM_DATA___139920;
     s.tmp_1 = r0 = s.arg0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, s.arg0);
     s.tmp_3 = r0;
@@ -46801,7 +46801,7 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.tmp_2);
   case 2:
-    s.tmp_0 = cbland_info_saveItems__P88127_mk(s);
+    s.tmp_0 = cbland_info_saveItems__P139934_mk(s);
     s.callLocIdx = 283; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
@@ -46809,12 +46809,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_getItem__P88160.info = {"start":10465,"length":221,"line":340,"column":4,"endLine":347,"endColumn":5,"fileName":"cbl-info.ts","functionName":"getItem","argumentNames":["name","quantity"]}
+cbland_info_getItem__P139967.info = {"start":10465,"length":221,"line":340,"column":4,"endLine":347,"endColumn":5,"fileName":"cbl-info.ts","functionName":"getItem","argumentNames":["name","quantity"]}
 
-function cbland_info_getItem__P88160_mk(s) {
+function cbland_info_getItem__P139967_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_getItem__P88160, depth: s.depth + 1,
+        parent: s, fn: cbland_info_getItem__P139967, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -46828,7 +46828,7 @@ function cbland_info_getItem__P88160_mk(s) {
 
 
 
-function cbland_info_saveItems__P88127(s) {
+function cbland_info_saveItems__P139934(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -46839,8 +46839,8 @@ switch (step) {
   case 0:
 
     s.tmp_0 = settings_writeJSON__P2062_mk(s);
-    s.tmp_0.arg0 = globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___88114;
-    s.tmp_0.arg1 = globals.ITEM_DATA___88113;
+    s.tmp_0.arg0 = globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___139921;
+    s.tmp_0.arg1 = globals.ITEM_DATA___139920;
     s.callLocIdx = 278; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -46848,12 +46848,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_saveItems__P88127.info = {"start":9590,"length":99,"line":316,"column":4,"endLine":318,"endColumn":5,"fileName":"cbl-info.ts","functionName":"saveItems","argumentNames":[]}
+cbland_info_saveItems__P139934.info = {"start":9590,"length":99,"line":316,"column":4,"endLine":318,"endColumn":5,"fileName":"cbl-info.ts","functionName":"saveItems","argumentNames":[]}
 
-function cbland_info_saveItems__P88127_mk(s) {
+function cbland_info_saveItems__P139934_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_saveItems__P88127, depth: s.depth + 1,
+        parent: s, fn: cbland_info_saveItems__P139934, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -49819,7 +49819,7 @@ function game_NumberPrompt_constructor__P3051_mk(s) {
 
 
 
-function cbland_info_listAllItemAndSelectSingle__P88535(s) {
+function cbland_info_listAllItemAndSelectSingle__P140342(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49829,15 +49829,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.menu___88537 = undefined;
-    s.selected___88542 = undefined;
-    s.selectedItem___88543 = undefined;
+    s.menu___140344 = undefined;
+    s.selected___140349 = undefined;
+    s.selectedItem___140350 = undefined;
     s.tmp_0 = game_pushScene__P3002_mk(s);
     s.callLocIdx = 323; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
     s.tmp_0 = miniMenu_createMenuFromArray__P4490_mk(s);
-    s.tmp_1 = cbland_info__createMenuItemFromInventory__P88269_mk(s);
+    s.tmp_1 = cbland_info__createMenuItemFromInventory__P140076_mk(s);
     s.callLocIdx = 324; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
@@ -49845,45 +49845,45 @@ switch (step) {
     s.callLocIdx = 325; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.menu___88537 = (r0);
+    s.menu___140344 = (r0);
     s.tmp_0 = custom_menu_setMenuStyle__P5030_mk(s);
-    s.tmp_0.arg0 = s.menu___88537;
+    s.tmp_0.arg0 = s.menu___140344;
     s.callLocIdx = 326; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
     r0 = pxsim_pxtrt.mklocRef();
-    s.selected___88542 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.selected___88542, false);
+    s.selected___140349 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.selected___140349, false);
     r0 = pxsim_pxtrt.mklocRef();
-    s.selectedItem___88543 = (r0);
-    s.tmp_0 = r0 = s.selectedItem___88543;
+    s.selectedItem___140350 = (r0);
+    s.tmp_0 = r0 = s.selectedItem___140350;
     r0 = pxsim_String_.mkEmpty();
     s.tmp_1 = r0;
     r0 = pxsim_pxtrt_stlocRef(s.tmp_0, s.tmp_1);
-    r0 = pxsim_pxtcore_mkAction(3, cbland_info_listAllItemAndSelectSingle_inline__P88547);
+    r0 = pxsim_pxtcore_mkAction(3, cbland_info_listAllItemAndSelectSingle_inline__P140354);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88537);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selected___88542);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selectedItem___88543);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140344);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selected___140349);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selectedItem___140350);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88537;
+    s.tmp_1.arg0 = s.menu___140344;
     s.tmp_1.arg1 = globals.A___2113;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 328; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_listAllItemAndSelectSingle_inline__P88557);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_listAllItemAndSelectSingle_inline__P140368);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88537);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140344);
     s.tmp_1 = miniMenu_MenuSprite_onSelectionChanged__P4471_mk(s);
-    s.tmp_1.arg0 = s.menu___88537;
+    s.tmp_1.arg0 = s.menu___140344;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 331; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_listAllItemAndSelectSingle_inline__P88587);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_listAllItemAndSelectSingle_inline__P140398);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selected___88542);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selected___140349);
     s.tmp_1 = pauseUntil__P367_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = undefined;
@@ -49894,29 +49894,29 @@ switch (step) {
     s.callLocIdx = 333; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
-    r0 = pxsim_pxtrt_ldlocRef(s.selectedItem___88543);
+    r0 = pxsim_pxtrt_ldlocRef(s.selectedItem___140350);
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_listAllItemAndSelectSingle__P88535.info = {"start":16484,"length":867,"line":520,"column":4,"endLine":546,"endColumn":5,"fileName":"cbl-info.ts","functionName":"listAllItemAndSelectSingle","argumentNames":[]}
+cbland_info_listAllItemAndSelectSingle__P140342.info = {"start":16484,"length":979,"line":520,"column":4,"endLine":550,"endColumn":5,"fileName":"cbl-info.ts","functionName":"listAllItemAndSelectSingle","argumentNames":[]}
 
-function cbland_info_listAllItemAndSelectSingle__P88535_mk(s) {
+function cbland_info_listAllItemAndSelectSingle__P140342_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_listAllItemAndSelectSingle__P88535, depth: s.depth + 1,
+        parent: s, fn: cbland_info_listAllItemAndSelectSingle__P140342, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  menu___88537: undefined,
-  selected___88542: undefined,
-  selectedItem___88543: undefined,
+  menu___140344: undefined,
+  selected___140349: undefined,
+  selectedItem___140350: undefined,
 } }
 
 
 
 
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88547(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140354(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -49933,21 +49933,29 @@ switch (step) {
     }
     s.tmp_0 = miniMenu_MenuSprite_close__P4469_mk(s);
     s.tmp_0.arg0 = s.caps[0];
-    s.callLocIdx = 327; s.pc = 1; return s.tmp_0;
-  case 1:
+    s.callLocIdx = 327; s.pc = 3; return s.tmp_0;
+  case 3:
     r0 = s.retval;
     r0 = pxsim_pxtrt_stlocRef(s.caps[1], true);
+    r0 = (s.arg0 == "OK");
+    s.tmp_0 = r0;
+    r0 = pxsim_numops_toBoolDecr(s.tmp_0);
+    if (!r0) { step = 1; continue; }
+    r0 = pxsim_pxtrt_stlocRef(s.caps[2], null);
+    { step = 2; continue; }
+  case 1:
     r0 = pxsim_pxtrt_stlocRef(s.caps[2], s.arg0);
+  case 2:
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_listAllItemAndSelectSingle_inline__P88547.info = {"start":16802,"length":147,"line":529,"column":43,"endLine":533,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_listAllItemAndSelectSingle_inline__P140354.info = {"start":16802,"length":259,"line":529,"column":43,"endLine":537,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88547_mk(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140354_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P88547, depth: s.depth + 1,
+        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P140354, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -49958,7 +49966,7 @@ function cbland_info_listAllItemAndSelectSingle_inline__P88547_mk(s) {
 
 
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88557(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140368(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -50007,7 +50015,7 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_3 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___88112, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___139919, s.arg0);
     r0 = r0.fields["value"];
     s.tmp_9 = r0;
     r0 = (s.tmp_9 * 1.5);
@@ -50044,12 +50052,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_listAllItemAndSelectSingle_inline__P88557.info = {"start":16983,"length":273,"line":534,"column":32,"endLine":541,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_listAllItemAndSelectSingle_inline__P140368.info = {"start":17095,"length":273,"line":538,"column":32,"endLine":545,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88557_mk(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140368_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P88557, depth: s.depth + 1,
+        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P140368, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -50069,7 +50077,7 @@ function cbland_info_listAllItemAndSelectSingle_inline__P88557_mk(s) {
 
 
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88587(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140398(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -50083,12 +50091,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_listAllItemAndSelectSingle_inline__P88587.info = {"start":17277,"length":14,"line":542,"column":19,"endLine":542,"endColumn":33,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_listAllItemAndSelectSingle_inline__P140398.info = {"start":17389,"length":14,"line":546,"column":19,"endLine":546,"endColumn":33,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_listAllItemAndSelectSingle_inline__P88587_mk(s) {
+function cbland_info_listAllItemAndSelectSingle_inline__P140398_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P88587, depth: s.depth + 1,
+        parent: s, fn: cbland_info_listAllItemAndSelectSingle_inline__P140398, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -50499,21 +50507,21 @@ switch (step) {
 
     s.inventory___10515 = undefined;
     s.key___10518 = undefined;
-    s.unnamed8832___U2 = undefined;
-    s.unnamed8833___U3 = undefined;
+    s.unnamed10044___U2 = undefined;
+    s.unnamed10045___U3 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___10515 = (r0);
     s.key___10518 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.EQUIPMENT_META_DATA___10314);
-    s.unnamed8832___U2 = (r0);
-    s.unnamed8833___U3 = (0);
+    s.unnamed10044___U2 = (r0);
+    s.unnamed10045___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed8833___U3;
-    r0 = pxsim_Array__length(s.unnamed8832___U2);
+    s.tmp_0 = r0 = s.unnamed10045___U3;
+    r0 = pxsim_Array__length(s.unnamed10044___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8832___U2, s.unnamed8833___U3);
+    r0 = pxsim_Array__getAt(s.unnamed10044___U2, s.unnamed10045___U3);
     s.key___10518 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C4436_VT);
     s.tmp_2 = r0;
@@ -50527,11 +50535,11 @@ switch (step) {
   case 3:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.inventory___10515, s.tmp_2);
-    r0 = (s.unnamed8833___U3 + 1);
-    s.unnamed8833___U3 = (r0);
+    r0 = (s.unnamed10045___U3 + 1);
+    s.unnamed10045___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed8832___U2 = (undefined);
+    s.unnamed10044___U2 = (undefined);
     r0 = s.inventory___10515;
     return leave(s, r0)
   default: oops()
@@ -50549,8 +50557,8 @@ function cbland_equipment__createMenuItemOfAllRegisteredEquipments__P10514_mk(s)
   tmp_3: undefined,
   inventory___10515: undefined,
   key___10518: undefined,
-  unnamed8832___U2: undefined,
-  unnamed8833___U3: undefined,
+  unnamed10044___U2: undefined,
+  unnamed10045___U3: undefined,
 } }
 
 
@@ -53200,7 +53208,7 @@ function story_cancelCurrentCutscene__P4624_mk(s) {
 
 
 
-function cbland_info_changeMoneyBy__P87610(s) {
+function cbland_info_changeMoneyBy__P139417(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -53214,12 +53222,12 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = (globals._money___87979 + s.arg0);
-    globals._money___87979 = (r0);
+    r0 = (globals._money___139786 + s.arg0);
+    globals._money___139786 = (r0);
     s.tmp_0 = cbland_writeSavingDataNumber__P4975_mk(s);
     s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___4964;
     s.tmp_0.arg1 = "money";
-    s.tmp_0.arg2 = globals._money___87979;
+    s.tmp_0.arg2 = globals._money___139786;
     s.callLocIdx = 275; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
@@ -53227,12 +53235,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_changeMoneyBy__P87610.info = {"start":8314,"length":158,"line":266,"column":4,"endLine":269,"endColumn":5,"fileName":"cbl-info.ts","functionName":"changeMoneyBy","argumentNames":["incr"]}
+cbland_info_changeMoneyBy__P139417.info = {"start":8314,"length":158,"line":266,"column":4,"endLine":269,"endColumn":5,"fileName":"cbl-info.ts","functionName":"changeMoneyBy","argumentNames":["incr"]}
 
-function cbland_info_changeMoneyBy__P87610_mk(s) {
+function cbland_info_changeMoneyBy__P139417_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_changeMoneyBy__P87610, depth: s.depth + 1,
+        parent: s, fn: cbland_info_changeMoneyBy__P139417, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -53242,7 +53250,7 @@ function cbland_info_changeMoneyBy__P87610_mk(s) {
 
 
 
-function cbland_info_itemValue__P88188(s) {
+function cbland_info_itemValue__P139995(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -53252,14 +53260,14 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.ret___88190 = undefined;
+    s.ret___139997 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___88112, s.arg0);
-    s.ret___88190 = (r0);
-    r0 = (s.ret___88190 == null);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___139919, s.arg0);
+    s.ret___139997 = (r0);
+    r0 = (s.ret___139997 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -53267,20 +53275,20 @@ switch (step) {
     { step = 3; continue; }
   case 1:
   case 2:
-    r0 = s.ret___88190.fields["value"];
+    r0 = s.ret___139997.fields["value"];
   case 3:
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_itemValue__P88188.info = {"start":11149,"length":178,"line":366,"column":4,"endLine":372,"endColumn":5,"fileName":"cbl-info.ts","functionName":"itemValue","argumentNames":["name"]}
+cbland_info_itemValue__P139995.info = {"start":11149,"length":178,"line":366,"column":4,"endLine":372,"endColumn":5,"fileName":"cbl-info.ts","functionName":"itemValue","argumentNames":["name"]}
 
-function cbland_info_itemValue__P88188_mk(s) {
+function cbland_info_itemValue__P139995_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_itemValue__P88188, depth: s.depth + 1,
+        parent: s, fn: cbland_info_itemValue__P139995, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  ret___88190: undefined,
+  ret___139997: undefined,
   arg0: undefined,
 } }
 
@@ -53288,7 +53296,7 @@ function cbland_info_itemValue__P88188_mk(s) {
 
 
 
-function cbland_info_loseItem__P88198(s) {
+function cbland_info_loseItem__P140005(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -53298,13 +53306,13 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.dummpySprite___88225 = undefined;
+    s.dummpySprite___140032 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     s.tmp_1 = r0;
@@ -53315,7 +53323,7 @@ switch (step) {
     r0 = s.tmp_0;
     { step = 2; continue; }
   case 1:
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 < s.arg1);
   case 2:
@@ -53369,9 +53377,9 @@ switch (step) {
     s.callLocIdx = 284; s.pc = 7; return s.tmp_5;
   case 7:
     r0 = s.retval;
-    s.dummpySprite___88225 = (null);
+    s.dummpySprite___140032 = (null);
     s.tmp_0 = Sprite_sayText__P2411_mk(s);
-    s.tmp_0.arg0 = s.dummpySprite___88225;
+    s.tmp_0.arg0 = s.dummpySprite___140032;
     s.tmp_0.arg1 = 1111;
     s.tmp_0.arg2 = undefined;
     s.tmp_0.arg3 = false;
@@ -53382,24 +53390,24 @@ switch (step) {
     r0 = s.retval;
     { step = 6; continue; }
   case 3:
-    s.tmp_0 = r0 = globals.ITEM_DATA___88113;
+    s.tmp_0 = r0 = globals.ITEM_DATA___139920;
     s.tmp_1 = r0 = s.arg0;
     r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_0, s.arg0);
     s.tmp_3 = r0;
     r0 = (s.tmp_3 - s.arg1);
     s.tmp_2 = r0;
     r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.tmp_1, s.tmp_2);
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == 0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_pxtrt.mapDeleteByString(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapDeleteByString(globals.ITEM_DATA___139920, s.arg0);
   case 4:
   case 5:
   case 6:
-    s.tmp_0 = cbland_info_saveItems__P88127_mk(s);
+    s.tmp_0 = cbland_info_saveItems__P139934_mk(s);
     s.callLocIdx = 286; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
@@ -53407,12 +53415,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_loseItem__P88198.info = {"start":11505,"length":482,"line":379,"column":4,"endLine":391,"endColumn":5,"fileName":"cbl-info.ts","functionName":"loseItem","argumentNames":["name","quantity"]}
+cbland_info_loseItem__P140005.info = {"start":11505,"length":482,"line":379,"column":4,"endLine":391,"endColumn":5,"fileName":"cbl-info.ts","functionName":"loseItem","argumentNames":["name","quantity"]}
 
-function cbland_info_loseItem__P88198_mk(s) {
+function cbland_info_loseItem__P140005_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_loseItem__P88198, depth: s.depth + 1,
+        parent: s, fn: cbland_info_loseItem__P140005, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -53426,7 +53434,7 @@ function cbland_info_loseItem__P88198_mk(s) {
   tmp_9: undefined,
   tmp_10: undefined,
   tmp_11: undefined,
-  dummpySprite___88225: undefined,
+  dummpySprite___140032: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -54697,7 +54705,7 @@ function story_ShapeSprite_constructor__P4634_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelectMultiple__P88533(s) {
+function cbland_info_openInventoryAndSelectMultiple__P140340(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -54707,7 +54715,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_info_openInventoryAndSelect__P88295_mk(s);
+    s.tmp_0 = cbland_info_openInventoryAndSelect__P140102_mk(s);
     s.tmp_0.arg0 = true;
     s.callLocIdx = 322; s.pc = 1; return s.tmp_0;
   case 1:
@@ -54715,12 +54723,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelectMultiple__P88533.info = {"start":16349,"length":128,"line":515,"column":4,"endLine":517,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelectMultiple","argumentNames":[]}
+cbland_info_openInventoryAndSelectMultiple__P140340.info = {"start":16349,"length":128,"line":515,"column":4,"endLine":517,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelectMultiple","argumentNames":[]}
 
-function cbland_info_openInventoryAndSelectMultiple__P88533_mk(s) {
+function cbland_info_openInventoryAndSelectMultiple__P140340_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelectMultiple__P88533, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelectMultiple__P140340, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
 } }
@@ -54729,7 +54737,7 @@ function cbland_info_openInventoryAndSelectMultiple__P88533_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect__P88295(s) {
+function cbland_info_openInventoryAndSelect__P140102(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -54739,9 +54747,9 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.menu___88298 = undefined;
-    s.selected___88303 = undefined;
-    s.selectedItem___88304 = undefined;
+    s.menu___140105 = undefined;
+    s.selected___140110 = undefined;
+    s.selectedItem___140111 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -54751,7 +54759,7 @@ switch (step) {
   case 3:
     r0 = s.retval;
     s.tmp_0 = miniMenu_createMenuFromArray__P4490_mk(s);
-    s.tmp_1 = cbland_info__createMenuItemFromInventory__P88269_mk(s);
+    s.tmp_1 = cbland_info__createMenuItemFromInventory__P140076_mk(s);
     s.callLocIdx = 291; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
@@ -54759,79 +54767,79 @@ switch (step) {
     s.callLocIdx = 292; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.menu___88298 = (r0);
+    s.menu___140105 = (r0);
     s.tmp_0 = custom_menu_setMenuStyle__P5030_mk(s);
-    s.tmp_0.arg0 = s.menu___88298;
+    s.tmp_0.arg0 = s.menu___140105;
     s.callLocIdx = 293; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     r0 = pxsim_pxtrt.mklocRef();
-    s.selected___88303 = (r0);
-    r0 = pxsim_pxtrt_stlocRef(s.selected___88303, false);
+    s.selected___140110 = (r0);
+    r0 = pxsim_pxtrt_stlocRef(s.selected___140110, false);
     r0 = pxsim_pxtrt.mkMap();
-    s.selectedItem___88304 = (r0);
+    s.selectedItem___140111 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.arg0);
     if (!r0) { step = 1; continue; }
-    r0 = pxsim_pxtcore_mkAction(3, cbland_info_openInventoryAndSelect_inline__P88309);
+    r0 = pxsim_pxtcore_mkAction(3, cbland_info_openInventoryAndSelect_inline__P140116);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88298);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selected___88303);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selectedItem___88304);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140105);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selected___140110);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selectedItem___140111);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88298;
+    s.tmp_1.arg0 = s.menu___140105;
     s.tmp_1.arg1 = globals.A___2113;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 296; s.pc = 7; return s.tmp_1;
   case 7:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(2, cbland_info_openInventoryAndSelect_inline__P88363);
+    r0 = pxsim_pxtcore_mkAction(2, cbland_info_openInventoryAndSelect_inline__P140170);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selectedItem___88304);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.menu___88298);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selectedItem___140111);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.menu___140105);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88298;
+    s.tmp_1.arg0 = s.menu___140105;
     s.tmp_1.arg1 = globals.B___2114;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 298; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(2, cbland_info_openInventoryAndSelect_inline__P88414);
+    r0 = pxsim_pxtcore_mkAction(2, cbland_info_openInventoryAndSelect_inline__P140221);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88298);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selectedItem___88304);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140105);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selectedItem___140111);
     s.tmp_1 = miniMenu_MenuSprite_onSelectionChanged__P4471_mk(s);
-    s.tmp_1.arg0 = s.menu___88298;
+    s.tmp_1.arg0 = s.menu___140105;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 301; s.pc = 9; return s.tmp_1;
   case 9:
     r0 = s.retval;
     { step = 2; continue; }
   case 1:
-    r0 = pxsim_pxtcore_mkAction(3, cbland_info_openInventoryAndSelect_inline__P88451);
+    r0 = pxsim_pxtcore_mkAction(3, cbland_info_openInventoryAndSelect_inline__P140258);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88298);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selectedItem___88304);
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selected___88303);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140105);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 1, s.selectedItem___140111);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 2, s.selected___140110);
     s.tmp_1 = miniMenu_MenuSprite_onButtonPressed__P4470_mk(s);
-    s.tmp_1.arg0 = s.menu___88298;
+    s.tmp_1.arg0 = s.menu___140105;
     s.tmp_1.arg1 = globals.A___2113;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 303; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventoryAndSelect_inline__P88462);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventoryAndSelect_inline__P140269);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___88298);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.menu___140105);
     s.tmp_1 = miniMenu_MenuSprite_onSelectionChanged__P4471_mk(s);
-    s.tmp_1.arg0 = s.menu___88298;
+    s.tmp_1.arg0 = s.menu___140105;
     s.tmp_1.arg1 = s.tmp_0;
     s.callLocIdx = 306; s.pc = 11; return s.tmp_1;
   case 11:
     r0 = s.retval;
   case 2:
-    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventoryAndSelect_inline__P88484);
+    r0 = pxsim_pxtcore_mkAction(1, cbland_info_openInventoryAndSelect_inline__P140291);
     s.tmp_0 = r0;
-    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selected___88303);
+    r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.selected___140110);
     s.tmp_1 = pauseUntil__P367_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = undefined;
@@ -54842,22 +54850,22 @@ switch (step) {
     s.callLocIdx = 308; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    r0 = s.selectedItem___88304;
+    r0 = s.selectedItem___140111;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect__P88295.info = {"start":12721,"length":2703,"line":416,"column":4,"endLine":483,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelect","argumentNames":["multiple"]}
+cbland_info_openInventoryAndSelect__P140102.info = {"start":12721,"length":2703,"line":416,"column":4,"endLine":483,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelect","argumentNames":["multiple"]}
 
-function cbland_info_openInventoryAndSelect__P88295_mk(s) {
+function cbland_info_openInventoryAndSelect__P140102_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect__P88295, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect__P140102, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  menu___88298: undefined,
-  selected___88303: undefined,
-  selectedItem___88304: undefined,
+  menu___140105: undefined,
+  selected___140110: undefined,
+  selectedItem___140111: undefined,
   arg0: undefined,
 } }
 
@@ -54865,7 +54873,7 @@ function cbland_info_openInventoryAndSelect__P88295_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88309(s) {
+function cbland_info_openInventoryAndSelect_inline__P140116(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -54903,7 +54911,7 @@ switch (step) {
   case 2:
     r0 = pxsim_pxtrt.mapGetGeneric(s.caps[2], s.arg0);
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_2 = r0;
     r0 = (s.tmp_1 < s.tmp_2);
     s.tmp_0 = r0;
@@ -54974,7 +54982,7 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_11 = r0;
     if ((s.tmp_11) && (s.tmp_11).vtable) {
     setupResume(s, 14);
@@ -54995,12 +55003,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88309.info = {"start":13108,"length":588,"line":426,"column":47,"endLine":438,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventoryAndSelect_inline__P140116.info = {"start":13108,"length":588,"line":426,"column":47,"endLine":438,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventoryAndSelect_inline__P88309_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140116_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88309, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140116, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -55022,7 +55030,7 @@ function cbland_info_openInventoryAndSelect_inline__P88309_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88363(s) {
+function cbland_info_openInventoryAndSelect_inline__P140170(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -55133,7 +55141,7 @@ switch (step) {
   case 14:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_11 = r0;
     if ((s.tmp_11) && (s.tmp_11).vtable) {
     setupResume(s, 15);
@@ -55154,12 +55162,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88363.info = {"start":13745,"length":563,"line":439,"column":47,"endLine":451,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventoryAndSelect_inline__P140170.info = {"start":13745,"length":563,"line":439,"column":47,"endLine":451,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventoryAndSelect_inline__P88363_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140170_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88363, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140170, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -55181,7 +55189,7 @@ function cbland_info_openInventoryAndSelect_inline__P88363_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88414(s) {
+function cbland_info_openInventoryAndSelect_inline__P140221(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -55191,7 +55199,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.picked___88421 = undefined;
+    s.picked___140228 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -55209,13 +55217,13 @@ switch (step) {
     r0 = s.retval;
     { step = 4; continue; }
   case 1:
-    s.picked___88421 = (0);
+    s.picked___140228 = (0);
     r0 = pxsim_pxtrt.mapGetGeneric(s.caps[1], s.arg0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
     r0 = pxsim_pxtrt.mapGetGeneric(s.caps[1], s.arg0);
-    s.picked___88421 = (r0);
+    s.picked___140228 = (r0);
   case 2:
   case 3:
     s.tmp_0 = miniMenu_MenuSprite_setTitle__P4474_mk(s);
@@ -55240,12 +55248,12 @@ switch (step) {
   case 8:
     r0 = s.retval;
     s.tmp_5 = r0;
-    if ((s.picked___88421) && (s.picked___88421).vtable) {
+    if ((s.picked___140228) && (s.picked___140228).vtable) {
     setupResume(s, 9);
-    pxsim_String__stringConv(s.picked___88421);
+    pxsim_String__stringConv(s.picked___140228);
     checkResumeConsumed();
     return;
-    } else { s.retval = (s.picked___88421) + ""; }
+    } else { s.retval = (s.picked___140228) + ""; }
   case 9:
     r0 = s.retval;
     s.tmp_8 = r0;
@@ -55271,7 +55279,7 @@ switch (step) {
   case 11:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_10 = r0;
     if ((s.tmp_10) && (s.tmp_10).vtable) {
     setupResume(s, 12);
@@ -55292,12 +55300,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88414.info = {"start":14346,"length":442,"line":452,"column":36,"endLine":463,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventoryAndSelect_inline__P140221.info = {"start":14346,"length":442,"line":452,"column":36,"endLine":463,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventoryAndSelect_inline__P88414_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140221_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88414, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140221, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -55310,7 +55318,7 @@ function cbland_info_openInventoryAndSelect_inline__P88414_mk(s) {
   tmp_8: undefined,
   tmp_9: undefined,
   tmp_10: undefined,
-  picked___88421: undefined,
+  picked___140228: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -55319,7 +55327,7 @@ function cbland_info_openInventoryAndSelect_inline__P88414_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88451(s) {
+function cbland_info_openInventoryAndSelect_inline__P140258(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -55345,12 +55353,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88451.info = {"start":14854,"length":166,"line":465,"column":47,"endLine":469,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventoryAndSelect_inline__P140258.info = {"start":14854,"length":166,"line":465,"column":47,"endLine":469,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventoryAndSelect_inline__P88451_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140258_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88451, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140258, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -55361,7 +55369,7 @@ function cbland_info_openInventoryAndSelect_inline__P88451_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88462(s) {
+function cbland_info_openInventoryAndSelect_inline__P140269(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -55410,7 +55418,7 @@ switch (step) {
   case 6:
     r0 = s.retval;
     s.tmp_1 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___88113, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_DATA___139920, s.arg0);
     s.tmp_5 = r0;
     if ((s.tmp_5) && (s.tmp_5).vtable) {
     setupResume(s, 7);
@@ -55431,12 +55439,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88462.info = {"start":15058,"length":261,"line":470,"column":36,"endLine":477,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
+cbland_info_openInventoryAndSelect_inline__P140269.info = {"start":15058,"length":261,"line":470,"column":36,"endLine":477,"endColumn":13,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["selection","selectedIndex"]}
 
-function cbland_info_openInventoryAndSelect_inline__P88462_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140269_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88462, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140269, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -55452,7 +55460,7 @@ function cbland_info_openInventoryAndSelect_inline__P88462_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelect_inline__P88484(s) {
+function cbland_info_openInventoryAndSelect_inline__P140291(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -55466,12 +55474,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelect_inline__P88484.info = {"start":15350,"length":14,"line":479,"column":19,"endLine":479,"endColumn":33,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
+cbland_info_openInventoryAndSelect_inline__P140291.info = {"start":15350,"length":14,"line":479,"column":19,"endLine":479,"endColumn":33,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":[]}
 
-function cbland_info_openInventoryAndSelect_inline__P88484_mk(s) {
+function cbland_info_openInventoryAndSelect_inline__P140291_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P88484, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelect_inline__P140291, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -58996,7 +59004,7 @@ switch (step) {
     s.callLocIdx = 109; s.pc = 11; return s.tmp_0;
   case 11:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_changeMoneyBy__P87610_mk(s);
+    s.tmp_0 = cbland_info_changeMoneyBy__P139417_mk(s);
     s.tmp_0.arg0 = 1;
     s.callLocIdx = 110; s.pc = 12; return s.tmp_0;
   case 12:
@@ -59161,7 +59169,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_3 = cbland_info_fastForwardTo__P87613_mk(s);
+    s.tmp_3 = cbland_info_fastForwardTo__P139420_mk(s);
     s.tmp_3.arg0 = 6;
     s.tmp_3.arg1 = 30;
     s.callLocIdx = 121; s.pc = 11; return s.tmp_3;
@@ -59178,7 +59186,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 2; continue; }
-    s.tmp_3 = cbland_info_fastForwardTo__P87613_mk(s);
+    s.tmp_3 = cbland_info_fastForwardTo__P139420_mk(s);
     s.tmp_3.arg0 = 12;
     s.tmp_3.arg1 = 0;
     s.callLocIdx = 123; s.pc = 13; return s.tmp_3;
@@ -59195,7 +59203,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_3 = cbland_info_fastForwardTo__P87613_mk(s);
+    s.tmp_3 = cbland_info_fastForwardTo__P139420_mk(s);
     s.tmp_3.arg0 = 18;
     s.tmp_3.arg1 = 30;
     s.callLocIdx = 125; s.pc = 15; return s.tmp_3;
@@ -59242,7 +59250,7 @@ function home_prepareHome_inline__P7957_mk(s) {
 
 
 
-function cbland_info_fastForwardTo__P87613(s) {
+function cbland_info_fastForwardTo__P139420(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -59252,26 +59260,26 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.currentTickInterval___87833 = undefined;
-    s.currentDay___87836 = undefined;
+    s.currentTickInterval___139640 = undefined;
+    s.currentDay___139643 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    r0 = globals.CLOCK_INSTANCE___87798.fields["tickInterval"];
-    s.currentTickInterval___87833 = (r0);
-    r0 = globals.CLOCK_INSTANCE___87798.fields["day"];
-    s.currentDay___87836 = (r0);
+    r0 = globals.CLOCK_INSTANCE___139605.fields["tickInterval"];
+    s.currentTickInterval___139640 = (r0);
+    r0 = globals.CLOCK_INSTANCE___139605.fields["day"];
+    s.currentDay___139643 = (r0);
     r0 = (s.arg0 * 60);
     s.tmp_2 = r0;
     r0 = (s.tmp_2 + s.arg1);
     s.tmp_1 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["hour"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["hour"];
     s.tmp_5 = r0;
     r0 = (s.tmp_5 * 60);
     s.tmp_4 = r0;
-    r0 = globals.CLOCK_INSTANCE___87798.fields["minute"];
+    r0 = globals.CLOCK_INSTANCE___139605.fields["minute"];
     s.tmp_6 = r0;
     r0 = (s.tmp_4 + s.tmp_6);
     s.tmp_3 = r0;
@@ -59279,32 +59287,32 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    r0 = (s.currentDay___87836 + 1);
-    s.currentDay___87836 = (r0);
+    r0 = (s.currentDay___139643 + 1);
+    s.currentDay___139643 = (r0);
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Clock__C87657_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Clock__C139464_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = cbland_info_Clock_constructor__P87660_mk(s);
+    s.tmp_1 = cbland_info_Clock_constructor__P139467_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
-    s.tmp_1.arg1 = s.currentDay___87836;
+    s.tmp_1.arg1 = s.currentDay___139643;
     s.tmp_1.arg2 = s.arg0;
     s.tmp_1.arg3 = s.arg1;
-    s.tmp_1.arg4 = s.currentTickInterval___87833;
+    s.tmp_1.arg4 = s.currentTickInterval___139640;
     s.callLocIdx = 243; s.pc = 3; return s.tmp_1;
   case 3:
     r0 = s.retval;
-    globals.CLOCK_INSTANCE___87798 = (s.tmp_0);
+    globals.CLOCK_INSTANCE___139605 = (s.tmp_0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_fastForwardTo__P87613.info = {"start":4534,"length":379,"line":144,"column":4,"endLine":152,"endColumn":5,"fileName":"cbl-info.ts","functionName":"fastForwardTo","argumentNames":["hour","minute"]}
+cbland_info_fastForwardTo__P139420.info = {"start":4534,"length":379,"line":144,"column":4,"endLine":152,"endColumn":5,"fileName":"cbl-info.ts","functionName":"fastForwardTo","argumentNames":["hour","minute"]}
 
-function cbland_info_fastForwardTo__P87613_mk(s) {
+function cbland_info_fastForwardTo__P139420_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_fastForwardTo__P87613, depth: s.depth + 1,
+        parent: s, fn: cbland_info_fastForwardTo__P139420, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -59313,8 +59321,8 @@ function cbland_info_fastForwardTo__P87613_mk(s) {
   tmp_4: undefined,
   tmp_5: undefined,
   tmp_6: undefined,
-  currentTickInterval___87833: undefined,
-  currentDay___87836: undefined,
+  currentTickInterval___139640: undefined,
+  currentDay___139643: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -60807,21 +60815,21 @@ switch (step) {
 
     s.scene___9916 = undefined;
     s.overlapHandler___9923 = undefined;
-    s.unnamed8818___U2 = undefined;
-    s.unnamed8819___U3 = undefined;
+    s.unnamed10030___U2 = undefined;
+    s.unnamed10031___U3 = undefined;
     s.gameForeverHandler___9938 = undefined;
-    s.unnamed8820___U5 = undefined;
-    s.unnamed8821___U6 = undefined;
+    s.unnamed10032___U5 = undefined;
+    s.unnamed10033___U6 = undefined;
     s.spriteTileOverlapHandler___9948 = undefined;
-    s.unnamed8822___U8 = undefined;
-    s.unnamed8823___U9 = undefined;
+    s.unnamed10034___U8 = undefined;
+    s.unnamed10035___U9 = undefined;
     s.spriteHitWallHandler___9958 = undefined;
-    s.unnamed8824___U11 = undefined;
-    s.unnamed8825___U12 = undefined;
+    s.unnamed10036___U11 = undefined;
+    s.unnamed10037___U12 = undefined;
     s.roomButtonEventHandlers___9967 = undefined;
     s.buttonEventHandler___9972 = undefined;
-    s.unnamed8826___U15 = undefined;
-    s.unnamed8827___U16 = undefined;
+    s.unnamed10038___U15 = undefined;
+    s.unnamed10039___U16 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -60837,15 +60845,15 @@ switch (step) {
   case 2:
     s.overlapHandler___9923 = (undefined);
     r0 = s.scene___9916.fields["overlapHandlers"];
-    s.unnamed8818___U2 = (r0);
-    s.unnamed8819___U3 = (0);
+    s.unnamed10030___U2 = (r0);
+    s.unnamed10031___U3 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed8819___U3;
-    r0 = pxsim_Array__length(s.unnamed8818___U2);
+    s.tmp_0 = r0 = s.unnamed10031___U3;
+    r0 = pxsim_Array__length(s.unnamed10030___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8818___U2, s.unnamed8819___U3);
+    r0 = pxsim_Array__getAt(s.unnamed10030___U2, s.unnamed10031___U3);
     s.overlapHandler___9923 = (r0);
     s.tmp_3 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 383; s.pc = 16; return s.tmp_3;
@@ -60854,11 +60862,11 @@ switch (step) {
     r0 = r0.fields["overlapHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.overlapHandler___9923);
-    r0 = (s.unnamed8819___U3 + 1);
-    s.unnamed8819___U3 = (r0);
+    r0 = (s.unnamed10031___U3 + 1);
+    s.unnamed10031___U3 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed8818___U2 = (undefined);
+    s.unnamed10030___U2 = (undefined);
     s.tmp_1 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 384; s.pc = 17; return s.tmp_1;
   case 17:
@@ -60869,15 +60877,15 @@ switch (step) {
     r0 = (s.tmp_0).fields["overlapMap"] = (s.tmp_2);
     s.gameForeverHandler___9938 = (undefined);
     r0 = s.scene___9916.fields["gameForeverHandlers"];
-    s.unnamed8820___U5 = (r0);
-    s.unnamed8821___U6 = (0);
+    s.unnamed10032___U5 = (r0);
+    s.unnamed10033___U6 = (0);
   case 5:
-    s.tmp_0 = r0 = s.unnamed8821___U6;
-    r0 = pxsim_Array__length(s.unnamed8820___U5);
+    s.tmp_0 = r0 = s.unnamed10033___U6;
+    r0 = pxsim_Array__length(s.unnamed10032___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 6; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8820___U5, s.unnamed8821___U6);
+    r0 = pxsim_Array__getAt(s.unnamed10032___U5, s.unnamed10033___U6);
     s.gameForeverHandler___9938 = (r0);
     s.tmp_3 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 385; s.pc = 18; return s.tmp_3;
@@ -60886,22 +60894,22 @@ switch (step) {
     r0 = r0.fields["gameForeverHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.gameForeverHandler___9938);
-    r0 = (s.unnamed8821___U6 + 1);
-    s.unnamed8821___U6 = (r0);
+    r0 = (s.unnamed10033___U6 + 1);
+    s.unnamed10033___U6 = (r0);
     { step = 5; continue; }
   case 6:
-    s.unnamed8820___U5 = (undefined);
+    s.unnamed10032___U5 = (undefined);
     s.spriteTileOverlapHandler___9948 = (undefined);
     r0 = s.scene___9916.fields["tileOverlapHandlers"];
-    s.unnamed8822___U8 = (r0);
-    s.unnamed8823___U9 = (0);
+    s.unnamed10034___U8 = (r0);
+    s.unnamed10035___U9 = (0);
   case 7:
-    s.tmp_0 = r0 = s.unnamed8823___U9;
-    r0 = pxsim_Array__length(s.unnamed8822___U8);
+    s.tmp_0 = r0 = s.unnamed10035___U9;
+    r0 = pxsim_Array__length(s.unnamed10034___U8);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 8; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8822___U8, s.unnamed8823___U9);
+    r0 = pxsim_Array__getAt(s.unnamed10034___U8, s.unnamed10035___U9);
     s.spriteTileOverlapHandler___9948 = (r0);
     s.tmp_3 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 386; s.pc = 19; return s.tmp_3;
@@ -60910,22 +60918,22 @@ switch (step) {
     r0 = r0.fields["tileOverlapHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.spriteTileOverlapHandler___9948);
-    r0 = (s.unnamed8823___U9 + 1);
-    s.unnamed8823___U9 = (r0);
+    r0 = (s.unnamed10035___U9 + 1);
+    s.unnamed10035___U9 = (r0);
     { step = 7; continue; }
   case 8:
-    s.unnamed8822___U8 = (undefined);
+    s.unnamed10034___U8 = (undefined);
     s.spriteHitWallHandler___9958 = (undefined);
     r0 = s.scene___9916.fields["wallCollisionHandlers"];
-    s.unnamed8824___U11 = (r0);
-    s.unnamed8825___U12 = (0);
+    s.unnamed10036___U11 = (r0);
+    s.unnamed10037___U12 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed8825___U12;
-    r0 = pxsim_Array__length(s.unnamed8824___U11);
+    s.tmp_0 = r0 = s.unnamed10037___U12;
+    r0 = pxsim_Array__length(s.unnamed10036___U11);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 10; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8824___U11, s.unnamed8825___U12);
+    r0 = pxsim_Array__getAt(s.unnamed10036___U11, s.unnamed10037___U12);
     s.spriteHitWallHandler___9958 = (r0);
     s.tmp_3 = game_currentScene__P2998_mk(s);
     s.callLocIdx = 387; s.pc = 20; return s.tmp_3;
@@ -60934,25 +60942,25 @@ switch (step) {
     r0 = r0.fields["wallCollisionHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.spriteHitWallHandler___9958);
-    r0 = (s.unnamed8825___U12 + 1);
-    s.unnamed8825___U12 = (r0);
+    r0 = (s.unnamed10037___U12 + 1);
+    s.unnamed10037___U12 = (r0);
     { step = 9; continue; }
   case 10:
-    s.unnamed8824___U11 = (undefined);
+    s.unnamed10036___U11 = (undefined);
     r0 = pxsim_pxtrt.mapGetGeneric(globals._buttonEventHandlers___9794, s.arg0);
     s.roomButtonEventHandlers___9967 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.roomButtonEventHandlers___9967);
     if (!r0) { step = 13; continue; }
     s.buttonEventHandler___9972 = (undefined);
-    s.unnamed8826___U15 = (s.roomButtonEventHandlers___9967);
-    s.unnamed8827___U16 = (0);
+    s.unnamed10038___U15 = (s.roomButtonEventHandlers___9967);
+    s.unnamed10039___U16 = (0);
   case 11:
-    s.tmp_0 = r0 = s.unnamed8827___U16;
-    r0 = pxsim_Array__length(s.unnamed8826___U15);
+    s.tmp_0 = r0 = s.unnamed10039___U16;
+    r0 = pxsim_Array__length(s.unnamed10038___U15);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 12; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8826___U15, s.unnamed8827___U16);
+    r0 = pxsim_Array__getAt(s.unnamed10038___U15, s.unnamed10039___U16);
     s.buttonEventHandler___9972 = (r0);
     s.tmp_2 = controller_Button_onEvent__P2196_mk(s);
     s.tmp_3 = scene_util_controlButtonToButton__P9898_mk(s);
@@ -60969,11 +60977,11 @@ switch (step) {
     s.callLocIdx = 389; s.pc = 21; return s.tmp_2;
   case 21:
     r0 = s.retval;
-    r0 = (s.unnamed8827___U16 + 1);
-    s.unnamed8827___U16 = (r0);
+    r0 = (s.unnamed10039___U16 + 1);
+    s.unnamed10039___U16 = (r0);
     { step = 11; continue; }
   case 12:
-    s.unnamed8826___U15 = (undefined);
+    s.unnamed10038___U15 = (undefined);
   case 13:
   case 14:
   case 15:
@@ -60994,21 +61002,21 @@ function scene_util_restoreScene__P5001_mk(s) {
   tmp_3: undefined,
   scene___9916: undefined,
   overlapHandler___9923: undefined,
-  unnamed8818___U2: undefined,
-  unnamed8819___U3: undefined,
+  unnamed10030___U2: undefined,
+  unnamed10031___U3: undefined,
   gameForeverHandler___9938: undefined,
-  unnamed8820___U5: undefined,
-  unnamed8821___U6: undefined,
+  unnamed10032___U5: undefined,
+  unnamed10033___U6: undefined,
   spriteTileOverlapHandler___9948: undefined,
-  unnamed8822___U8: undefined,
-  unnamed8823___U9: undefined,
+  unnamed10034___U8: undefined,
+  unnamed10035___U9: undefined,
   spriteHitWallHandler___9958: undefined,
-  unnamed8824___U11: undefined,
-  unnamed8825___U12: undefined,
+  unnamed10036___U11: undefined,
+  unnamed10037___U12: undefined,
   roomButtonEventHandlers___9967: undefined,
   buttonEventHandler___9972: undefined,
-  unnamed8826___U15: undefined,
-  unnamed8827___U16: undefined,
+  unnamed10038___U15: undefined,
+  unnamed10039___U16: undefined,
   arg0: undefined,
 } }
 
@@ -61331,7 +61339,7 @@ function cbland_equipment_Equipment_constructor__P10308_mk(s) {
 
 
 
-function cbland_info_registerItem__P87616(s) {
+function cbland_info_registerItem__P139423(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -61341,18 +61349,18 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.dummpySprite___88147 = undefined;
+    s.dummpySprite___139954 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_info__init__P88116_mk(s);
+    s.tmp_0 = cbland_info__init__P139923_mk(s);
     s.callLocIdx = 279; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___88112, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___139919, s.arg0);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -61382,9 +61390,9 @@ switch (step) {
     s.callLocIdx = 280; s.pc = 4; return s.tmp_1;
   case 4:
     r0 = s.retval;
-    s.dummpySprite___88147 = (null);
+    s.dummpySprite___139954 = (null);
     s.tmp_0 = Sprite_sayText__P2411_mk(s);
-    s.tmp_0.arg0 = s.dummpySprite___88147;
+    s.tmp_0.arg0 = s.dummpySprite___139954;
     s.tmp_0.arg1 = 1111;
     s.tmp_0.arg2 = undefined;
     s.tmp_0.arg3 = false;
@@ -61395,9 +61403,9 @@ switch (step) {
     r0 = s.retval;
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Item__C88105_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(cbland_info_Item__C139912_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = cbland_info_Item_constructor__P88106_mk(s);
+    s.tmp_1 = cbland_info_Item_constructor__P139913_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
@@ -61405,24 +61413,24 @@ switch (step) {
     s.callLocIdx = 282; s.pc = 8; return s.tmp_1;
   case 8:
     r0 = s.retval;
-    r0 = pxsim_pxtrt.mapSetGeneric(globals.ITEM_META_DATA___88112, s.arg0, s.tmp_0);
+    r0 = pxsim_pxtrt.mapSetGeneric(globals.ITEM_META_DATA___139919, s.arg0, s.tmp_0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_registerItem__P87616.info = {"start":9926,"length":361,"line":325,"column":4,"endLine":334,"endColumn":5,"fileName":"cbl-info.ts","functionName":"registerItem","argumentNames":["name","icon","value"]}
+cbland_info_registerItem__P139423.info = {"start":9926,"length":361,"line":325,"column":4,"endLine":334,"endColumn":5,"fileName":"cbl-info.ts","functionName":"registerItem","argumentNames":["name","icon","value"]}
 
-function cbland_info_registerItem__P87616_mk(s) {
+function cbland_info_registerItem__P139423_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_registerItem__P87616, depth: s.depth + 1,
+        parent: s, fn: cbland_info_registerItem__P139423, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  dummpySprite___88147: undefined,
+  dummpySprite___139954: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -61432,7 +61440,7 @@ function cbland_info_registerItem__P87616_mk(s) {
 
 
 
-function cbland_info_Item_constructor__P88106(s) {
+function cbland_info_Item_constructor__P139913(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -61450,7 +61458,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_info_Item__C88105_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_info_Item__C139912_VT)) failedCast(r0);
     r0 = (s.arg0).fields["name"] = (s.arg1);
     r0 = (s.arg0).fields["icon"] = (s.arg2);
     r0 = (s.arg0).fields["value"] = (s.arg3);
@@ -61458,12 +61466,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_Item_constructor__P88106.info = {"start":9088,"length":86,"line":295,"column":8,"endLine":296,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["this","name","icon","value"]}
+cbland_info_Item_constructor__P139913.info = {"start":9088,"length":86,"line":295,"column":8,"endLine":296,"endColumn":9,"fileName":"cbl-info.ts","functionName":"inline","argumentNames":["this","name","icon","value"]}
 
-function cbland_info_Item_constructor__P88106_mk(s) {
+function cbland_info_Item_constructor__P139913_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_Item_constructor__P88106, depth: s.depth + 1,
+        parent: s, fn: cbland_info_Item_constructor__P139913, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -61475,7 +61483,7 @@ function cbland_info_Item_constructor__P88106_mk(s) {
 
 
 
-function cbland_info__init__P88116(s) {
+function cbland_info__init__P139923(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -61485,7 +61493,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = (globals.ITEM_DATA___88113 != null);
+    r0 = (globals.ITEM_DATA___139920 != null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
@@ -61493,17 +61501,17 @@ switch (step) {
   case 1:
   case 2:
     s.tmp_1 = settings_readJSON__P2067_mk(s);
-    s.tmp_1.arg0 = globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___88114;
+    s.tmp_1.arg0 = globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___139921;
     s.callLocIdx = 277; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
-    globals.ITEM_DATA___88113 = (r0);
-    r0 = (globals.ITEM_DATA___88113 == null);
+    globals.ITEM_DATA___139920 = (r0);
+    r0 = (globals.ITEM_DATA___139920 == null);
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     r0 = pxsim_pxtrt.mkMap();
-    globals.ITEM_DATA___88113 = (r0);
+    globals.ITEM_DATA___139920 = (r0);
   case 3:
   case 4:
   case 5:
@@ -61511,12 +61519,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info__init__P88116.info = {"start":9355,"length":229,"line":304,"column":4,"endLine":314,"endColumn":5,"fileName":"cbl-info.ts","functionName":"_init","argumentNames":[]}
+cbland_info__init__P139923.info = {"start":9355,"length":229,"line":304,"column":4,"endLine":314,"endColumn":5,"fileName":"cbl-info.ts","functionName":"_init","argumentNames":[]}
 
-function cbland_info__init__P88116_mk(s) {
+function cbland_info__init__P139923_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info__init__P88116, depth: s.depth + 1,
+        parent: s, fn: cbland_info__init__P139923, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -85674,8 +85682,8 @@ switch (step) {
     s.roomLocation___8059 = undefined;
     s.currentRoomLocationIndex___8078 = undefined;
     s.locationForSale___8100 = undefined;
-    s.unnamed8806___U3 = undefined;
-    s.unnamed8807___U4 = undefined;
+    s.unnamed10018___U3 = undefined;
+    s.unnamed10019___U4 = undefined;
     s.locationForSaleSprite___8103 = undefined;
     s.dogSprite___8115 = undefined;
     if (s.lambdaArgs) {
@@ -85749,15 +85757,15 @@ switch (step) {
     r0 = s.retval;
     s.locationForSale___8100 = (undefined);
     r0 = s.arg0.fields["_availableLocationForRooms"];
-    s.unnamed8806___U3 = (r0);
-    s.unnamed8807___U4 = (0);
+    s.unnamed10018___U3 = (r0);
+    s.unnamed10019___U4 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed8807___U4;
-    r0 = pxsim_Array__length(s.unnamed8806___U3);
+    s.tmp_0 = r0 = s.unnamed10019___U4;
+    r0 = pxsim_Array__length(s.unnamed10018___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed8806___U3, s.unnamed8807___U4);
+    r0 = pxsim_Array__getAt(s.unnamed10018___U3, s.unnamed10019___U4);
     s.locationForSale___8100 = (r0);
     s.tmp_2 = cbland_createSprite__P4994_mk(s);
     s.tmp_3 = helpers_getCBLImageByName__P4919_mk(s);
@@ -85786,11 +85794,11 @@ switch (step) {
     s.callLocIdx = 163; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
-    r0 = (s.unnamed8807___U4 + 1);
-    s.unnamed8807___U4 = (r0);
+    r0 = (s.unnamed10019___U4 + 1);
+    s.unnamed10019___U4 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed8806___U3 = (undefined);
+    s.unnamed10018___U3 = (undefined);
     s.tmp_0 = cbland_createSprite__P4994_mk(s);
     r0 = pxsim.image.ofBuffer(_hex8118);
     s.tmp_0.arg0 = r0;
@@ -85837,8 +85845,8 @@ function cbland_VillageRoom_didEnterRoom__P8000_mk(s) {
   roomLocation___8059: undefined,
   currentRoomLocationIndex___8078: undefined,
   locationForSale___8100: undefined,
-  unnamed8806___U3: undefined,
-  unnamed8807___U4: undefined,
+  unnamed10018___U3: undefined,
+  unnamed10019___U4: undefined,
   locationForSaleSprite___8103: undefined,
   dogSprite___8115: undefined,
   arg0: undefined,
@@ -85993,7 +86001,7 @@ switch (step) {
     s.callLocIdx = 167; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.tmp_0 = cbland_info_openInventoryAndSelectSingle__P87622_mk(s);
+    s.tmp_0 = cbland_info_openInventoryAndSelectSingle__P139429_mk(s);
     s.callLocIdx = 168; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
@@ -87311,7 +87319,7 @@ function sprites_LegacySpriteSayRenderer_inline__P21642_mk(s) {
 
 
 
-function cbland_info_openInventoryAndSelectSingle__P87622(s) {
+function cbland_info_openInventoryAndSelectSingle__P139429(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -87321,26 +87329,26 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.selectedItem___88591 = undefined;
-    s.ret___88593 = undefined;
-    s.tmp_0 = cbland_info_openInventoryAndSelect__P88295_mk(s);
+    s.selectedItem___140402 = undefined;
+    s.ret___140404 = undefined;
+    s.tmp_0 = cbland_info_openInventoryAndSelect__P140102_mk(s);
     s.tmp_0.arg0 = false;
     s.callLocIdx = 334; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.selectedItem___88591 = (r0);
-    r0 = pxsim_pxtrt.keysOf(s.selectedItem___88591);
+    s.selectedItem___140402 = (r0);
+    r0 = pxsim_pxtrt.keysOf(s.selectedItem___140402);
     s.tmp_0 = r0;
     r0 = pxsim_Array__getAt(s.tmp_0, 0);
-    s.ret___88593 = (r0);
-    r0 = (s.ret___88593 == "OK");
+    s.ret___140404 = (r0);
+    r0 = (s.ret___140404 == "OK");
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     r0 = pxsim_String_.mkEmpty();
     { step = 2; continue; }
   case 1:
-    r0 = s.ret___88593;
+    r0 = s.ret___140404;
   case 2:
     // jmp value (already in r0)
     s.tmp_1 = r0;
@@ -87348,17 +87356,17 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_info_openInventoryAndSelectSingle__P87622.info = {"start":17523,"length":204,"line":552,"column":4,"endLine":556,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelectSingle","argumentNames":[]}
+cbland_info_openInventoryAndSelectSingle__P139429.info = {"start":17635,"length":204,"line":556,"column":4,"endLine":560,"endColumn":5,"fileName":"cbl-info.ts","functionName":"openInventoryAndSelectSingle","argumentNames":[]}
 
-function cbland_info_openInventoryAndSelectSingle__P87622_mk(s) {
+function cbland_info_openInventoryAndSelectSingle__P139429_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_info_openInventoryAndSelectSingle__P87622, depth: s.depth + 1,
+        parent: s, fn: cbland_info_openInventoryAndSelectSingle__P139429, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  selectedItem___88591: undefined,
-  ret___88593: undefined,
+  selectedItem___140402: undefined,
+  ret___140404: undefined,
 } }
 
 
@@ -102323,7 +102331,7 @@ const sprites_SpriteMap__C2445_VT = mkVTable({
   },
   toStringMethod: sprites_SpriteMap_toString__P2453,
 });
-const cbland_info_Clock__C87657_VT = mkVTable({
+const cbland_info_Clock__C139464_VT = mkVTable({
   name: "Clock",
   numFields: 8,
   classNo: 59,
@@ -102348,8 +102356,8 @@ const cbland_info_Clock__C87657_VT = mkVTable({
     "set/setTimeMinutes": null,
     "lastTick": null,
     "set/lastTick": null,
-    "save": cbland_info_Clock_save__P87658,
-    "timeElasped": cbland_info_Clock_timeElasped__P87659,
+    "save": cbland_info_Clock_save__P139465,
+    "timeElasped": cbland_info_Clock_timeElasped__P139466,
   },
 });
 const info_PlayerInfoImpl__C2594_VT = mkVTable({
@@ -104096,7 +104104,7 @@ const cbland_equipment_Equipment__C10307_VT = mkVTable({
     "set/price": null,
   },
 });
-const cbland_info_Item__C88105_VT = mkVTable({
+const cbland_info_Item__C139912_VT = mkVTable({
   name: "Item",
   numFields: 3,
   classNo: 97,
@@ -104446,7 +104454,7 @@ const sprites_LegacySpriteSayRenderer__C2268_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["Wardrobe___4895","Bed___4896","_CommonRoomDummy___4900","_LandForSale___4901","Dog___4902","Bone___4903","ExitWaypoint___4913","clockIcon___87655","ITEM_META_DATA___88112","SAVINGDATA_INSTANCE___9589","rooms___9634","_scenes___9780","_buttonEventHandlers___9794","_buttonSequence___9891","transparencyCBLInternal___104046","tile3___104055","tile4___104058","tile5___104061","tile6___104064","tile7___104067","tile1___104049","tile2___104052","Buyer___125322","ToolSeller___125325","ItemSeller___125328","EQUIPMENT_META_DATA___10314","EQUIPMENT_DATA___10315","INTERNAL_EQUIPMENT_DATA_SETTINGS_KEY___10316","player___8166","VILLAGE_INSTANCE___8164","SAVINGDATA_GLOBAL_KEY___4964","_currentRoom___8229","EXIT_NAME_SD_KEY___8260","CLOCK_INSTANCE___87798","cbland_SavingData_SEPERATOR___4966","_money___87979","isDrawClock___87800","isDrawClockIcon___87802","iconSprite___10321","_currentEquipment___10319","ITEM_DATA___88113","INTERNAL_ITEM_DATA_SETTINGS_KEY___88114","_currentRoomInRegister___9389","_controlButtonSequence___9888"])
+const breakpoints = setupDebugger(1, ["Wardrobe___4895","Bed___4896","_CommonRoomDummy___4900","_LandForSale___4901","Dog___4902","Bone___4903","ExitWaypoint___4913","clockIcon___139462","ITEM_META_DATA___139919","SAVINGDATA_INSTANCE___9589","rooms___9634","_scenes___9780","_buttonEventHandlers___9794","_buttonSequence___9891","transparencyCBLInternal___104046","tile3___104055","tile4___104058","tile5___104061","tile6___104064","tile7___104067","tile1___104049","tile2___104052","Buyer___125322","ToolSeller___125325","ItemSeller___125328","EQUIPMENT_META_DATA___10314","EQUIPMENT_DATA___10315","INTERNAL_EQUIPMENT_DATA_SETTINGS_KEY___10316","player___8166","VILLAGE_INSTANCE___8164","SAVINGDATA_GLOBAL_KEY___4964","_currentRoom___8229","EXIT_NAME_SD_KEY___8260","CLOCK_INSTANCE___139605","cbland_SavingData_SEPERATOR___4966","_money___139786","isDrawClock___139607","isDrawClockIcon___139609","iconSprite___10321","_currentEquipment___10319","ITEM_DATA___139920","INTERNAL_ITEM_DATA_SETTINGS_KEY___139921","_currentRoomInRegister___9389","_controlButtonSequence___9888"])
 
-return _main___P127472
+return _main___P142376
 })
