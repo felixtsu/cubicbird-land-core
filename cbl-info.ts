@@ -293,7 +293,7 @@ namespace cbland_info {
     // ------ backpack begins ---------
     class Item {
 
-        constructor(public name: string, public icon: Image, public value: number) {
+        constructor(public name: string, public icon: Image, public value: number, public sellInShop : boolean) {
         }
 
     }
@@ -321,9 +321,9 @@ namespace cbland_info {
 
     //%group="Item"
     //%group.loc.zh-CN="物品"
-    //%blockid=cbland_register_item block="register item $name of $value, icon %icon=screen_image_picker"
-    //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $value"
-    export function registerItem(name: string, icon: Image, value: number) {
+    //%blockid=cbland_register_item block="register item $name of $value, icon %icon=screen_image_picker  || sell in shop? $sellInShop"
+    //%block.loc.zh-CN="登记物品 $name, 图标 %icon=screen_image_picker 价值 $value || 可在商店购买 $sellInShop" 
+    export function registerItem(name: string, icon: Image, value: number, sellInShop = true) {
         _init()
         if (ITEM_META_DATA[name]) {
             console.error("Item with name (" + name + ") already registered")
@@ -331,7 +331,7 @@ namespace cbland_info {
             dummpySprite.sayText(1111)
         }
 
-        ITEM_META_DATA[name] = new Item(name, icon, value)
+        ITEM_META_DATA[name] = new Item(name, icon, value, sellInShop)
     }
 
     //%group="Item"
@@ -394,7 +394,11 @@ namespace cbland_info {
     function _createMenuItemFromMeta(): miniMenu.MenuItem[] {
         let inventory = []
         for (let key of Object.keys(ITEM_META_DATA)) {
-            inventory.push(new miniMenu.MenuItem(key, ITEM_META_DATA[key].icon))
+            let item = ITEM_META_DATA[key]
+            if (item.sellInShop) {
+                inventory.push(new miniMenu.MenuItem(key, item.icon))
+            }
+            
         }
 
         inventory.push(new miniMenu.MenuItem("OK", assets.cbl_image`tick`))
@@ -521,7 +525,7 @@ namespace cbland_info {
     export function listAllItemAndSelectSingle() : string {
         game.pushScene()
 
-        let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
+        let menu = miniMenu.createMenuFromArray(_createMenuItemFromMeta())
         custom_menu.setMenuStyle(menu)
 
         let selected = false;

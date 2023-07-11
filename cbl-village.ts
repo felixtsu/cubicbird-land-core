@@ -29,7 +29,7 @@ namespace cbland {
         public constructor() {
 
             super('village')
-            cbland_info.registerItem("骨头",assets.cbl_image`boneImage`, 1)
+            cbland_info.registerItem("骨头",assets.cbl_image`boneImage`, 1, false)
             
             // 这里要组装dlc
             this.placeCustomRooms()
