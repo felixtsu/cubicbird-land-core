@@ -215,11 +215,13 @@ namespace shop {
                         let price = Math.floor(cbland_info.itemValue(itemToBuy) * 1.5)
                         story.printCharacterText("一个" + itemToBuy + "要" + price + "个金币\n要几个呢？", "物品售卖员")
                         let amount = game.askForNumber("")
+
                         if (amount * price > cbland_info.money()) {
-                            story.printCharacterText(amount + "个" + itemToBuy + "\n需要" + price + "个金币", "物品售卖员")
                             story.printCharacterText("你的钱不够", "物品售卖员")
+                        } else if (amount == 0) {
+                            story.printCharacterText("好的期待你的下次光临", "物品售卖员")
                         } else {
-                            story.printCharacterText(amount + "个" + itemToBuy + "\n需要" + price + "个金币", "物品售卖员")
+                            story.printCharacterText(amount + "个" + itemToBuy + "\n需要" + amount*price + "个金币", "物品售卖员")
                             story.showPlayerChoices("替我包起来", "再考虑一下")
 
                             if (story.checkLastAnswer("替我包起来")) {
