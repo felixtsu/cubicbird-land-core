@@ -376,7 +376,7 @@ namespace cbland_info {
     //%group="Item"
     //%group.loc.zh-CN="物品"
     //%blockid=cbland_lose_item block="lost item %name quantity %quantity"
-    //%block.loc.zh-CN="失去数量 %quantity 的 %name"
+    //%block.loc.zh-CN="失去数量 $quantity 的 $name"
     export function loseItem(name: string, quantity: number) {
         if (!ITEM_DATA[name] || ITEM_DATA[name] < quantity) {
             console.error("Insufficent Item with name (" + name + "), only has " + quantity)
