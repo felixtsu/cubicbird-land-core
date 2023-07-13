@@ -144,6 +144,11 @@ namespace cbland {
     //%blockid=cbland_start_village block="start village life"
     //%block.loc.zh-CN="开始乡村生活"
     export function startVillage(developementMode: boolean=true) {
+        if (developementMode) {
+            scene.setBackgroundImage(assets.cbl_image`titlescreen`)
+controller.pauseUntilAnyButtonIsPressed()
+        }
+
 
         if (developementMode) {
             scene_util.captureCurrentScene(cbland._getCurrentRoomInRegister())
