@@ -1,7 +1,7 @@
 // 自动生成的代码。请勿编辑。
 namespace myImages {
 
-    helpers._registerFactory("image", function(name: string) {
+    helpers._registerFactory("cbl_image", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "image1":
             case "homeImage":return img`
