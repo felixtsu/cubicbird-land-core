@@ -17,13 +17,13 @@ namespace cbland {
         _roomLocations: { [name: string]: RoomLocation} = {}
 
         _availableLocationForRooms = [
-            new RoomLocation(5, 2),
-            new RoomLocation(10, 2),
-            new RoomLocation(7, 12),
-            new RoomLocation(3, 6),
-            new RoomLocation(20, 8),
-            new RoomLocation(16, 3),
-            new RoomLocation(12, 9),
+            new RoomLocation(5, 10),
+            new RoomLocation(10, 10),
+            new RoomLocation(7, 20),
+            new RoomLocation(3, 14),
+            new RoomLocation(20, 16),
+            new RoomLocation(16, 11),
+            new RoomLocation(12, 17),
         ]
 
         public constructor() {
@@ -50,6 +50,8 @@ namespace cbland {
         protected roomTilemap(): tiles.TileMapData { return assets.cbl_tilemap`cbland`}
 
         protected didEnterRoom(entrance: string): void {
+
+            scene.setBackgroundImage(assets.cbl_image`mountainViewDay`)
             controller.moveSprite(this.heroSprite)
             scene.cameraFollowSprite(this.heroSprite)
 
@@ -189,7 +191,6 @@ namespace cbland {
         cbland_info.setMoneyTo(savedMoney)
         cbland_info.setTime()
 
-        scene.setBackgroundImage(assets.cbl_image`mountainViewDay`)
 
         _getVillageRoom().enterRoom(player)
     }
