@@ -201,9 +201,9 @@ namespace room {
             this._didEnterRoomCallback = cb
         }
 
-        private _willLeaveRoomCallback: (player: Sprite, room: CommonRoom, exit: string) => void
+        private _willLeaveRoomCallback: (player: Sprite, room: CommonRoom, exit: string) =>  boolean
 
-        public setWillLeaveRoomCallback(cb: (player: Sprite, room: CommonRoom, exit: string) => void) {
+        public setWillLeaveRoomCallback(cb: (player: Sprite, room: CommonRoom, exit: string) => boolean) {
             this._willLeaveRoomCallback = cb
         }
         
@@ -230,7 +230,9 @@ namespace room {
         }
 
         public willLeaveRoom(exit:string): boolean {
-            this._willLeaveRoomCallback(this.heroSprite, this, exit)
+            if (this._willLeaveRoomCallback) {
+                return this._willLeaveRoomCallback(this.heroSprite, this, exit)
+            }
             return true;
         }
 

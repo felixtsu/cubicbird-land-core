@@ -204,7 +204,7 @@ namespace cbland {
     //%topblock=false
     //%handlerStatement=true
     //%draggableParameters="player, room, exit"
-    export function willLeaveRoom(roomName: string, callback: (player: Sprite, room: room.Room, exit?: string) => void) {
+    export function willLeaveRoom(roomName: string, callback: (player: Sprite, room: room.Room, exit?: string) => boolean) {
         _getCommonRoom(roomName).setWillLeaveRoomCallback(callback)
     }
 
