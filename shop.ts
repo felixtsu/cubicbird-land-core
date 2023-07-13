@@ -181,15 +181,20 @@ namespace shop {
                     let toolToBuy = cbland_equipment.openAllMenu()
                     if (toolToBuy) {
                         let price = cbland_equipment.itemValue(toolToBuy)
-                        story.printCharacterText(toolToBuy + "需要" + price + "个金币，可以吗？", "工具售卖员")
-                        story.showPlayerChoices("是的", "再考虑一下")
+                        if (price > cbland_info.money()) {
+                            story.printCharacterText("你的钱不够", "工具售卖员")
+                        } else {
+                            story.printCharacterText(toolToBuy + "需要" + price + "个金币，可以吗？", "工具售卖员")
+                            story.showPlayerChoices("是的", "再考虑一下")
 
-                        if (story.checkLastAnswer("是的")) {
-                            cbland_equipment.getItem(toolToBuy)
-                            cbland_info.changeMoneyBy(-price)
-                            story.printCharacterText("好的，已经帮你放到工具箱里", "工具售卖员")
-                            story.printCharacterText("请从菜单里选择手里的工具", "工具售卖员")
+                            if (story.checkLastAnswer("是的")) {
+                                cbland_equipment.getItem(toolToBuy)
+                                cbland_info.changeMoneyBy(-price)
+                                story.printCharacterText("好的，已经帮你放到工具箱里", "工具售卖员")
+                                story.printCharacterText("请从菜单里选择手里的工具", "工具售卖员")
+                            }
                         }
+                        
                     } else {
                         story.printCharacterText("好的期待你的下次光临", "工具售卖员")
                     }

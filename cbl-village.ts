@@ -24,6 +24,8 @@ namespace cbland {
             new RoomLocation(20, 16),
             new RoomLocation(16, 11),
             new RoomLocation(12, 17),
+            new RoomLocation(24, 4),
+            new RoomLocation(27, 4)
         ]
 
         public constructor() {
