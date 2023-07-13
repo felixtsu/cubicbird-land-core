@@ -25,7 +25,7 @@ namespace myTiles {
     //% fixedInstance jres blockIdentity=images._tile
     export const tile11 = image.ofBuffer(hex``);
 
-    helpers._registerFactory("tilemap", function(name: string) {
+    helpers._registerFactory("cbl_tilemap", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "homeInside":
             case "homeInside1":return tiles.createTilemap(hex`0a000800010303030303030303040209090909090909090502090909090909090905020909090909090909050209090909090909090502090909090909090905060808080b0a0808080700000000000000000000`, img`
@@ -80,7 +80,7 @@ namespace myTiles {
         return null;
     })
 
-    helpers._registerFactory("tile", function(name: string) {
+    helpers._registerFactory("cbl_tile", function(name: string) {
         switch(helpers.stringTrim(name)) {
             case "transparencyCBLInternal":return transparencyCBLInternal;
             case "myTile":
