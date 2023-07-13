@@ -1,5 +1,5 @@
-// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.32/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.22","target":"arcade","targetVersion":"1.12.32","repo":"felixtsu/cubicbird-land-core"}
-// total=3158182 new=15.27% cached=79.72% other=5.01%
+// meta={"simUrl":"https://trg-arcade.userpxt.io/v1.12.32/---simulator","cdnUrl":"https://pxt.azureedge.net","version":"0.0.23","target":"arcade","targetVersion":"1.12.32","repo":"felixtsu/cubicbird-land-core"}
+// total=3158144 new=15.27% cached=79.72% other=5.01%
 (function (ectx) {
 'use strict';
 const runtime = ectx.runtime;
@@ -795,7 +795,7 @@ const pxsim_pxtrt = pxsim.pxtrt;
 const pxsim_numops = pxsim.numops;
 
 
-function _main___P219195(s) {
+function _main___P224950(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -1474,9 +1474,9 @@ switch (step) {
     s.callLocIdx = 200; s.pc = 56; return s.tmp_0;
   case 56:
     r0 = s.retval;
-    globals.ExitWaypoint___217052 = (r0);
-    globals._currentRoom___217067 = (null);
-    globals.EXIT_NAME_SD_KEY___217100 = ("EXIT_NAME_SD_KEY");
+    globals.ExitWaypoint___221241 = (r0);
+    globals._currentRoom___221256 = (null);
+    globals.EXIT_NAME_SD_KEY___221289 = ("EXIT_NAME_SD_KEY");
     r0 = pxsim.image.ofBuffer(_hex209029);
     globals.clockIcon___209030 = (r0);
     globals.isDrawClock___209183 = (false);
@@ -1485,13 +1485,13 @@ switch (step) {
     r0 = pxsim_pxtrt.mkMap();
     globals.ITEM_META_DATA___209496 = (r0);
     globals.INTERNAL_ITEM_DATA_SETTINGS_KEY___209498 = ("INTERNAL_ITEM_DATA");
-    globals._currentRoomInRegister___217465 = (null);
-    globals.SAVINGDATA_GLOBAL_KEY___217045 = ("GLOBAL");
-    globals.cbland_SavingData_SEPERATOR___217478 = ("||");
-    r0 = pxsim_pxtcore_mkClassInstance(cbland_SavingData__C217469_VT);
-    globals.SAVINGDATA_INSTANCE___217676 = (r0);
+    globals._currentRoomInRegister___223222 = (null);
+    globals.SAVINGDATA_GLOBAL_KEY___223117 = ("GLOBAL");
+    globals.cbland_SavingData_SEPERATOR___223235 = ("||");
+    r0 = pxsim_pxtcore_mkClassInstance(cbland_SavingData__C223226_VT);
+    globals.SAVINGDATA_INSTANCE___223433 = (r0);
     r0 = pxsim_pxtrt.mkMap();
-    globals.rooms___217723 = (r0);
+    globals.rooms___223480 = (r0);
     s.tmp_0 = helpers__registerFactory__P123687_mk(s);
     s.tmp_0.arg0 = "cbl_image";
     s.tmp_0.arg1 = myImages_inline__P130186;
@@ -1620,13 +1620,13 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-_main___P219195.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
-_main___P219195.continuations = [  ]
+_main___P224950.info = {"start":0,"length":0,"line":0,"column":0,"endLine":0,"endColumn":0,"fileName":"test.ts","functionName":"<main>","argumentNames":[]}
+_main___P224950.continuations = [  ]
 
-function _main___P219195_mk(s) {
+function _main___P224950_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: _main___P219195, depth: s.depth + 1,
+        parent: s, fn: _main___P224950, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -3873,7 +3873,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.arg0);
     if (!r0) { step = 1; continue; }
     s.tmp_0 = scene_util_captureCurrentScene__P125356_mk(s);
-    r0 = globals._currentRoomInRegister___217465;
+    r0 = globals._currentRoomInRegister___223222;
     s.tmp_0.arg0 = r0;
     s.callLocIdx = 183; s.pc = 5; return s.tmp_0;
   case 5:
@@ -3931,8 +3931,8 @@ switch (step) {
     s.callLocIdx = 195; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.tmp_0 = cbland_readSavingDataNumber__P217044_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_readSavingDataNumber__P223116_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "money";
     s.callLocIdx = 196; s.pc = 14; return s.tmp_0;
   case 14:
@@ -3960,12 +3960,12 @@ switch (step) {
     s.callLocIdx = 198; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
-    s.tmp_0 = room_AbstractRoom__C217019_v3_3_mk(s);
+    s.tmp_0 = room_AbstractRoom__C221214_v3_3_mk(s);
     r0 = globals.VILLAGE_INSTANCE___198184;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.player___198186;
     s.tmp_0.arg2 = undefined;
-    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C217019_VT)) failedCast(s.tmp_0.arg0);
+    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C221214_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.enterRoom;
     s.pc = 17; return s.tmp_0;
   case 17:
@@ -4091,7 +4091,7 @@ function cbland__getVillageRoom__P198187_mk(s) {
 
 
 
-function room_AbstractRoom_enterRoom__P217028(s) {
+function room_AbstractRoom_enterRoom__P221223(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4101,14 +4101,14 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.exitName___217245 = undefined;
-    s.unnamed6706___U1 = undefined;
-    s.unnamed6707___U2 = undefined;
-    s.exits___217250 = undefined;
-    s.exit___217255 = undefined;
-    s.unnamed6708___U5 = undefined;
-    s.unnamed6709___U6 = undefined;
-    s.exitWayppointSprite___217261 = undefined;
+    s.exitName___221434 = undefined;
+    s.unnamed7394___U1 = undefined;
+    s.unnamed7395___U2 = undefined;
+    s.exits___221439 = undefined;
+    s.exit___221444 = undefined;
+    s.unnamed7396___U5 = undefined;
+    s.unnamed7397___U6 = undefined;
+    s.exitWayppointSprite___221450 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -4116,8 +4116,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
-    globals._currentRoom___217067 = (s.arg0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
+    globals._currentRoom___221256 = (s.arg0);
     s.tmp_0 = game_pushScene__P123358_mk(s);
     s.callLocIdx = 207; s.pc = 9; return s.tmp_0;
   case 9:
@@ -4160,9 +4160,9 @@ switch (step) {
     r0 = 0;
     r0 = (s.arg0).fields["heroSprite"] = (s.arg1);
     s.tmp_0 = tiles_setTilemap__P123118_mk(s);
-    s.tmp_1 = room_AbstractRoom__C217019_v2_1_mk(s);
+    s.tmp_1 = room_AbstractRoom__C221214_v2_1_mk(s);
     s.tmp_1.arg0 = s.arg0;
-    if (!checkSubtype(s.tmp_1.arg0, room_AbstractRoom__C217019_VT)) failedCast(s.tmp_1.arg0);
+    if (!checkSubtype(s.tmp_1.arg0, room_AbstractRoom__C221214_VT)) failedCast(s.tmp_1.arg0);
     s.tmp_1.fn = s.tmp_1.arg0.vtable.methods.roomTilemap;
     s.pc = 17; return s.tmp_1;
   case 17:
@@ -4171,64 +4171,64 @@ switch (step) {
     s.callLocIdx = 213; s.pc = 16; return s.tmp_0;
   case 16:
     r0 = s.retval;
-    s.exitName___217245 = (undefined);
+    s.exitName___221434 = (undefined);
     r0 = s.arg0.fields["exits"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.keysOf(s.tmp_0);
-    s.unnamed6706___U1 = (r0);
-    s.unnamed6707___U2 = (0);
+    s.unnamed7394___U1 = (r0);
+    s.unnamed7395___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6707___U2;
-    r0 = pxsim_Array__length(s.unnamed6706___U1);
+    s.tmp_0 = r0 = s.unnamed7395___U2;
+    r0 = pxsim_Array__length(s.unnamed7394___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 8; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6706___U1, s.unnamed6707___U2);
-    s.exitName___217245 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed7394___U1, s.unnamed7395___U2);
+    s.exitName___221434 = (r0);
     r0 = s.arg0.fields["exits"];
     s.tmp_2 = r0;
-    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.exitName___217245);
-    s.exits___217250 = (r0);
-    s.exit___217255 = (undefined);
-    s.unnamed6708___U5 = (s.exits___217250);
-    s.unnamed6709___U6 = (0);
+    r0 = pxsim_pxtrt.mapGetGeneric(s.tmp_2, s.exitName___221434);
+    s.exits___221439 = (r0);
+    s.exit___221444 = (undefined);
+    s.unnamed7396___U5 = (s.exits___221439);
+    s.unnamed7397___U6 = (0);
   case 2:
-    s.tmp_0 = r0 = s.unnamed6709___U6;
-    r0 = pxsim_Array__length(s.unnamed6708___U5);
+    s.tmp_0 = r0 = s.unnamed7397___U6;
+    r0 = pxsim_Array__length(s.unnamed7396___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 7; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6708___U5, s.unnamed6709___U6);
-    s.exit___217255 = (r0);
-    r0 = s.exit___217255.fields["col"];
+    r0 = pxsim_Array__getAt(s.unnamed7396___U5, s.unnamed7397___U6);
+    s.exit___221444 = (r0);
+    r0 = s.exit___221444.fields["col"];
     s.tmp_3 = r0;
     r0 = (s.tmp_3 != undefined);
     s.tmp_2 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_2);
     if (!r0) { step = 5; continue; }
-    s.tmp_4 = room_AbstractRoom_createSprite__P217026_mk(s);
+    s.tmp_4 = room_AbstractRoom_createSprite__P221221_mk(s);
     s.tmp_4.arg0 = s.arg0;
-    r0 = s.exit___217255.fields["waypointImage"];
+    r0 = s.exit___221444.fields["waypointImage"];
     s.tmp_4.arg1 = r0;
-    s.tmp_4.arg2 = globals.ExitWaypoint___217052;
+    s.tmp_4.arg2 = globals.ExitWaypoint___221241;
     s.tmp_4.arg3 = undefined;
     s.callLocIdx = 214; s.pc = 18; return s.tmp_4;
   case 18:
     r0 = s.retval;
-    s.exitWayppointSprite___217261 = (r0);
+    s.exitWayppointSprite___221450 = (r0);
     s.tmp_0 = sprites_setDataString__P124853_mk(s);
-    s.tmp_0.arg0 = s.exitWayppointSprite___217261;
-    s.tmp_0.arg1 = globals.EXIT_NAME_SD_KEY___217100;
-    s.tmp_0.arg2 = s.exitName___217245;
+    s.tmp_0.arg0 = s.exitWayppointSprite___221450;
+    s.tmp_0.arg1 = globals.EXIT_NAME_SD_KEY___221289;
+    s.tmp_0.arg2 = s.exitName___221434;
     s.callLocIdx = 215; s.pc = 19; return s.tmp_0;
   case 19:
     r0 = s.retval;
     s.tmp_0 = tiles_placeOnTile__P123128_mk(s);
-    s.tmp_0.arg0 = s.exitWayppointSprite___217261;
+    s.tmp_0.arg0 = s.exitWayppointSprite___221450;
     s.tmp_1 = tiles_getTileLocation__P123122_mk(s);
-    r0 = s.exit___217255.fields["col"];
+    r0 = s.exit___221444.fields["col"];
     s.tmp_1.arg0 = r0;
-    r0 = s.exit___217255.fields["row"];
+    r0 = s.exit___221444.fields["row"];
     s.tmp_1.arg1 = r0;
     s.callLocIdx = 216; s.pc = 21; return s.tmp_1;
   case 21:
@@ -4237,12 +4237,12 @@ switch (step) {
     s.callLocIdx = 217; s.pc = 20; return s.tmp_0;
   case 20:
     r0 = s.retval;
-    r0 = s.exit___217255.fields["hidden"];
+    r0 = s.exit___221444.fields["hidden"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
     s.tmp_1 = Sprite_setFlag__P122774_mk(s);
-    s.tmp_1.arg0 = s.exitWayppointSprite___217261;
+    s.tmp_1.arg0 = s.exitWayppointSprite___221450;
     s.tmp_1.arg1 = 128;
     s.tmp_1.arg2 = true;
     s.callLocIdx = 218; s.pc = 22; return s.tmp_1;
@@ -4252,17 +4252,17 @@ switch (step) {
   case 4:
   case 5:
   case 6:
-    r0 = (s.unnamed6709___U6 + 1);
-    s.unnamed6709___U6 = (r0);
+    r0 = (s.unnamed7397___U6 + 1);
+    s.unnamed7397___U6 = (r0);
     { step = 2; continue; }
   case 7:
-    s.unnamed6708___U5 = (undefined);
-    r0 = (s.unnamed6707___U2 + 1);
-    s.unnamed6707___U2 = (r0);
+    s.unnamed7396___U5 = (undefined);
+    r0 = (s.unnamed7395___U2 + 1);
+    s.unnamed7395___U2 = (r0);
     { step = 1; continue; }
   case 8:
-    s.unnamed6706___U1 = (undefined);
-    r0 = pxsim_pxtcore_mkAction(1, room_AbstractRoom_enterRoom_inline__P217288);
+    s.unnamed7394___U1 = (undefined);
+    r0 = pxsim_pxtcore_mkAction(1, room_AbstractRoom_enterRoom_inline__P221477);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
     s.tmp_1 = sprites_onOverlap__P122813_mk(s);
@@ -4270,15 +4270,15 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = s.tmp_2.fields["_kind"];
     s.tmp_1.arg0 = r0;
-    s.tmp_1.arg1 = globals.ExitWaypoint___217052;
+    s.tmp_1.arg1 = globals.ExitWaypoint___221241;
     s.tmp_1.arg2 = s.tmp_0;
     s.callLocIdx = 222; s.pc = 23; return s.tmp_1;
   case 23:
     r0 = s.retval;
-    s.tmp_0 = room_AbstractRoom__C217019_v0_2_mk(s);
+    s.tmp_0 = room_AbstractRoom__C221214_v0_2_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg2;
-    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C217019_VT)) failedCast(s.tmp_0.arg0);
+    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C221214_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.didEnterRoom;
     s.pc = 24; return s.tmp_0;
   case 24:
@@ -4287,26 +4287,26 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_enterRoom__P217028.info = {"start":3933,"length":1436,"line":138,"column":8,"endLine":172,"endColumn":9,"fileName":"room.ts","functionName":"enterRoom","argumentNames":["this","heroSprite","entrance"]}
+room_AbstractRoom_enterRoom__P221223.info = {"start":3933,"length":1436,"line":138,"column":8,"endLine":172,"endColumn":9,"fileName":"room.ts","functionName":"enterRoom","argumentNames":["this","heroSprite","entrance"]}
 
-function room_AbstractRoom_enterRoom__P217028_mk(s) {
+function room_AbstractRoom_enterRoom__P221223_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_enterRoom__P217028, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_enterRoom__P221223, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
   tmp_4: undefined,
-  exitName___217245: undefined,
-  unnamed6706___U1: undefined,
-  unnamed6707___U2: undefined,
-  exits___217250: undefined,
-  exit___217255: undefined,
-  unnamed6708___U5: undefined,
-  unnamed6709___U6: undefined,
-  exitWayppointSprite___217261: undefined,
+  exitName___221434: undefined,
+  unnamed7394___U1: undefined,
+  unnamed7395___U2: undefined,
+  exits___221439: undefined,
+  exit___221444: undefined,
+  unnamed7396___U5: undefined,
+  unnamed7397___U6: undefined,
+  exitWayppointSprite___221450: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -4316,7 +4316,7 @@ function room_AbstractRoom_enterRoom__P217028_mk(s) {
 
 
 
-function room_AbstractRoom_enterRoom_inline__P217288(s) {
+function room_AbstractRoom_enterRoom_inline__P221477(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4331,11 +4331,11 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = room_AbstractRoom_leaveRoom__P217029_mk(s);
+    s.tmp_0 = room_AbstractRoom_leaveRoom__P221224_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.tmp_1 = sprites_readDataString__P124854_mk(s);
     s.tmp_1.arg0 = s.arg1;
-    s.tmp_1.arg1 = globals.EXIT_NAME_SD_KEY___217100;
+    s.tmp_1.arg1 = globals.EXIT_NAME_SD_KEY___221289;
     s.callLocIdx = 220; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -4347,12 +4347,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_enterRoom_inline__P217288.info = {"start":5175,"length":142,"line":167,"column":79,"endLine":169,"endColumn":13,"fileName":"room.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
+room_AbstractRoom_enterRoom_inline__P221477.info = {"start":5175,"length":142,"line":167,"column":79,"endLine":169,"endColumn":13,"fileName":"room.ts","functionName":"inline","argumentNames":["sprite","otherSprite"]}
 
-function room_AbstractRoom_enterRoom_inline__P217288_mk(s) {
+function room_AbstractRoom_enterRoom_inline__P221477_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_enterRoom_inline__P217288, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_enterRoom_inline__P221477, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -4364,7 +4364,7 @@ function room_AbstractRoom_enterRoom_inline__P217288_mk(s) {
 
 
 
-function room_AbstractRoom_didEnterRoom__P217024(s) {
+function room_AbstractRoom_didEnterRoom__P221219(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4380,17 +4380,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_didEnterRoom__P217024.info = {"start":3296,"length":58,"line":114,"column":8,"endLine":115,"endColumn":9,"fileName":"room.ts","functionName":"didEnterRoom","argumentNames":["this","entrance"]}
+room_AbstractRoom_didEnterRoom__P221219.info = {"start":3296,"length":58,"line":114,"column":8,"endLine":115,"endColumn":9,"fileName":"room.ts","functionName":"didEnterRoom","argumentNames":["this","entrance"]}
 
-function room_AbstractRoom_didEnterRoom__P217024_mk(s) {
+function room_AbstractRoom_didEnterRoom__P221219_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_didEnterRoom__P217024, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_didEnterRoom__P221219, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -4523,7 +4523,7 @@ function Sprite_data__P122731_mk(s) {
 
 
 
-function room_AbstractRoom_leaveRoom__P217029(s) {
+function room_AbstractRoom_leaveRoom__P221224(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4533,28 +4533,28 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.result___217299 = undefined;
-    s.nextRoomName___217304 = undefined;
-    s.createdSprite___217312 = undefined;
-    s.unnamed6710___U3 = undefined;
-    s.unnamed6711___U4 = undefined;
+    s.result___221488 = undefined;
+    s.nextRoomName___221493 = undefined;
+    s.createdSprite___221501 = undefined;
+    s.unnamed7398___U3 = undefined;
+    s.unnamed7399___U4 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
-    s.tmp_0 = room_AbstractRoom__C217019_v1_2_mk(s);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
+    s.tmp_0 = room_AbstractRoom__C221214_v1_2_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C217019_VT)) failedCast(s.tmp_0.arg0);
+    if (!checkSubtype(s.tmp_0.arg0, room_AbstractRoom__C221214_VT)) failedCast(s.tmp_0.arg0);
     s.tmp_0.fn = s.tmp_0.arg0.vtable.methods.willLeaveRoom;
     s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
-    s.result___217299 = (r0);
-    r0 = pxsim_numops_toBoolDecr(s.result___217299);
+    s.result___221488 = (r0);
+    r0 = pxsim_numops_toBoolDecr(s.result___221488);
     s.tmp_1 = r0;
     r0 = pxsim_Boolean__bang(s.tmp_1);
     s.tmp_0 = r0;
@@ -4569,21 +4569,21 @@ switch (step) {
     s.tmp_2 = r0;
     r0 = pxsim_Array__getAt(s.tmp_2, 0);
     r0 = r0.fields["roomName"];
-    s.nextRoomName___217304 = (r0);
-    s.createdSprite___217312 = (undefined);
+    s.nextRoomName___221493 = (r0);
+    s.createdSprite___221501 = (undefined);
     r0 = s.arg0.fields["createdSprites"];
-    s.unnamed6710___U3 = (r0);
-    s.unnamed6711___U4 = (0);
+    s.unnamed7398___U3 = (r0);
+    s.unnamed7399___U4 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed6711___U4;
-    r0 = pxsim_Array__length(s.unnamed6710___U3);
+    s.tmp_0 = r0 = s.unnamed7399___U4;
+    r0 = pxsim_Array__length(s.unnamed7398___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6710___U3, s.unnamed6711___U4);
-    s.createdSprite___217312 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed7398___U3, s.unnamed7399___U4);
+    s.createdSprite___221501 = (r0);
     s.tmp_2 = Sprite_destroy__P122783_mk(s);
-    s.tmp_2.arg0 = s.createdSprite___217312;
+    s.tmp_2.arg0 = s.createdSprite___221501;
     s.tmp_2.arg1 = undefined;
     s.tmp_2.arg2 = undefined;
     s.callLocIdx = 223; s.pc = 7; return s.tmp_2;
@@ -4591,19 +4591,19 @@ switch (step) {
     r0 = s.retval;
     r0 = s.arg0.fields["statefulSprites"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array_.removeElement(s.tmp_0, s.createdSprite___217312);
-    r0 = (s.unnamed6711___U4 + 1);
-    s.unnamed6711___U4 = (r0);
+    r0 = pxsim_Array_.removeElement(s.tmp_0, s.createdSprite___221501);
+    r0 = (s.unnamed7399___U4 + 1);
+    s.unnamed7399___U4 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed6710___U3 = (undefined);
+    s.unnamed7398___U3 = (undefined);
     s.tmp_0 = game_popScene__P123359_mk(s);
     s.callLocIdx = 224; s.pc = 8; return s.tmp_0;
   case 8:
     r0 = s.retval;
     s.tmp_0 = if_enterRoom_3_mk(s);
-    s.tmp_1 = cbland__getRoom__P217328_mk(s);
-    s.tmp_1.arg0 = s.nextRoomName___217304;
+    s.tmp_1 = cbland__getRoom__P223139_mk(s);
+    s.tmp_1.arg0 = s.nextRoomName___221493;
     s.callLocIdx = 225; s.pc = 10; return s.tmp_1;
   case 10:
     r0 = s.retval;
@@ -4628,22 +4628,22 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_leaveRoom__P217029.info = {"start":5378,"length":537,"line":173,"column":8,"endLine":188,"endColumn":9,"fileName":"room.ts","functionName":"leaveRoom","argumentNames":["this","name"]}
+room_AbstractRoom_leaveRoom__P221224.info = {"start":5378,"length":537,"line":173,"column":8,"endLine":188,"endColumn":9,"fileName":"room.ts","functionName":"leaveRoom","argumentNames":["this","name"]}
 
-function room_AbstractRoom_leaveRoom__P217029_mk(s) {
+function room_AbstractRoom_leaveRoom__P221224_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_leaveRoom__P217029, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_leaveRoom__P221224, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  result___217299: undefined,
-  nextRoomName___217304: undefined,
-  createdSprite___217312: undefined,
-  unnamed6710___U3: undefined,
-  unnamed6711___U4: undefined,
+  result___221488: undefined,
+  nextRoomName___221493: undefined,
+  createdSprite___221501: undefined,
+  unnamed7398___U3: undefined,
+  unnamed7399___U4: undefined,
   arg0: undefined,
   arg1: undefined,
 } }
@@ -4652,7 +4652,7 @@ function room_AbstractRoom_leaveRoom__P217029_mk(s) {
 
 
 
-function room_AbstractRoom_getRoomName__P217020(s) {
+function room_AbstractRoom_getRoomName__P221215(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4667,17 +4667,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = s.arg0.fields["name"];
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_getRoomName__P217020.info = {"start":2069,"length":62,"line":80,"column":8,"endLine":82,"endColumn":9,"fileName":"room.ts","functionName":"getRoomName","argumentNames":["this"]}
+room_AbstractRoom_getRoomName__P221215.info = {"start":2069,"length":62,"line":80,"column":8,"endLine":82,"endColumn":9,"fileName":"room.ts","functionName":"getRoomName","argumentNames":["this"]}
 
-function room_AbstractRoom_getRoomName__P217020_mk(s) {
+function room_AbstractRoom_getRoomName__P221215_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_getRoomName__P217020, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_getRoomName__P221215, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -4686,7 +4686,7 @@ function room_AbstractRoom_getRoomName__P217020_mk(s) {
 
 
 
-function cbland__getRoom__P217328(s) {
+function cbland__getRoom__P223139(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4708,17 +4708,17 @@ switch (step) {
     { step = 3; continue; }
   case 1:
   case 2:
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.arg0);
   case 3:
     return leave(s, r0)
   default: oops()
 } } }
-cbland__getRoom__P217328.info = {"start":5280,"length":193,"line":140,"column":4,"endLine":145,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getRoom","argumentNames":["roomName"]}
+cbland__getRoom__P223139.info = {"start":5280,"length":193,"line":140,"column":4,"endLine":145,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getRoom","argumentNames":["roomName"]}
 
-function cbland__getRoom__P217328_mk(s) {
+function cbland__getRoom__P223139_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland__getRoom__P217328, depth: s.depth + 1,
+        parent: s, fn: cbland__getRoom__P223139, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -4728,7 +4728,7 @@ function cbland__getRoom__P217328_mk(s) {
 
 
 
-function cbland__getCommonRoom__P217739(s) {
+function cbland__getCommonRoom__P223496(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -4742,16 +4742,16 @@ switch (step) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.arg0);
     return leave(s, r0)
   default: oops()
 } } }
-cbland__getCommonRoom__P217739.info = {"start":5480,"length":103,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getCommonRoom","argumentNames":["roomName"]}
+cbland__getCommonRoom__P223496.info = {"start":5480,"length":103,"line":148,"column":4,"endLine":150,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getCommonRoom","argumentNames":["roomName"]}
 
-function cbland__getCommonRoom__P217739_mk(s) {
+function cbland__getCommonRoom__P223496_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland__getCommonRoom__P217739, depth: s.depth + 1,
+        parent: s, fn: cbland__getCommonRoom__P223496, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -7621,7 +7621,7 @@ function helpers_arrayForEach__P120465_mk(s) {
 
 
 
-function room_AbstractRoom_willLeaveRoom__P217025(s) {
+function room_AbstractRoom_willLeaveRoom__P221220(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -7637,17 +7637,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = true;
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_willLeaveRoom__P217025.info = {"start":3364,"length":82,"line":117,"column":8,"endLine":119,"endColumn":9,"fileName":"room.ts","functionName":"willLeaveRoom","argumentNames":["this","exit"]}
+room_AbstractRoom_willLeaveRoom__P221220.info = {"start":3364,"length":82,"line":117,"column":8,"endLine":119,"endColumn":9,"fileName":"room.ts","functionName":"willLeaveRoom","argumentNames":["this","exit"]}
 
-function room_AbstractRoom_willLeaveRoom__P217025_mk(s) {
+function room_AbstractRoom_willLeaveRoom__P221220_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_willLeaveRoom__P217025, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_willLeaveRoom__P221220, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -8835,7 +8835,7 @@ function sprites_setDataString__P124853_mk(s) {
 
 
 
-function room_AbstractRoom_createSprite__P217026(s) {
+function room_AbstractRoom_createSprite__P221221(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8845,7 +8845,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.result___217202 = undefined;
+    s.result___221391 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -8854,37 +8854,37 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     s.tmp_0 = sprites_create__P122631_mk(s);
     s.tmp_0.arg0 = s.arg1;
     s.tmp_0.arg1 = s.arg2;
     s.callLocIdx = 206; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.result___217202 = (r0);
+    s.result___221391 = (r0);
     r0 = s.arg0.fields["createdSprites"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.result___217202);
+    r0 = pxsim_Array__push(s.tmp_0, s.result___221391);
     r0 = pxsim_numops_toBoolDecr(s.arg3);
     if (!r0) { step = 1; continue; }
     r0 = s.arg0.fields["statefulSprites"];
     s.tmp_0 = r0;
-    r0 = pxsim_Array__push(s.tmp_0, s.result___217202);
+    r0 = pxsim_Array__push(s.tmp_0, s.result___221391);
   case 1:
   case 2:
-    r0 = s.result___217202;
+    r0 = s.result___221391;
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_createSprite__P217026.info = {"start":3543,"length":312,"line":124,"column":8,"endLine":134,"endColumn":9,"fileName":"room.ts","functionName":"createSprite","argumentNames":["this","image","spriteKind","stateful"]}
+room_AbstractRoom_createSprite__P221221.info = {"start":3543,"length":312,"line":124,"column":8,"endLine":134,"endColumn":9,"fileName":"room.ts","functionName":"createSprite","argumentNames":["this","image","spriteKind","stateful"]}
 
-function room_AbstractRoom_createSprite__P217026_mk(s) {
+function room_AbstractRoom_createSprite__P221221_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_createSprite__P217026, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_createSprite__P221221, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
-  result___217202: undefined,
+  result___221391: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -8895,7 +8895,7 @@ function room_AbstractRoom_createSprite__P217026_mk(s) {
 
 
 
-function room_AbstractRoom_roomTilemap__P217027(s) {
+function room_AbstractRoom_roomTilemap__P221222(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -8910,17 +8910,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = null;
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_roomTilemap__P217027.info = {"start":3865,"length":58,"line":136,"column":8,"endLine":136,"endColumn":66,"fileName":"room.ts","functionName":"roomTilemap","argumentNames":["this"]}
+room_AbstractRoom_roomTilemap__P221222.info = {"start":3865,"length":58,"line":136,"column":8,"endLine":136,"endColumn":66,"fileName":"room.ts","functionName":"roomTilemap","argumentNames":["this"]}
 
-function room_AbstractRoom_roomTilemap__P217027_mk(s) {
+function room_AbstractRoom_roomTilemap__P221222_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_roomTilemap__P217027, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_roomTilemap__P221222, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -19887,29 +19887,29 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
-    s.tmp_1 = cbland_readSavingDataNumber__P217044_mk(s);
-    s.tmp_1.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_1 = cbland_readSavingDataNumber__P223116_mk(s);
+    s.tmp_1.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_1.arg1 = "day";
     s.callLocIdx = 232; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
     s.arg1 = (r0);
-    s.tmp_0 = cbland_readSavingDataNumber__P217044_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_readSavingDataNumber__P223116_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "hour";
     s.callLocIdx = 233; s.pc = 6; return s.tmp_0;
   case 6:
     r0 = s.retval;
     s.arg2 = (r0);
-    s.tmp_0 = cbland_readSavingDataNumber__P217044_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_readSavingDataNumber__P223116_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "minute";
     s.callLocIdx = 234; s.pc = 7; return s.tmp_0;
   case 7:
     r0 = s.retval;
     s.arg3 = (r0);
-    s.tmp_0 = cbland_readSavingDataNumber__P217044_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_readSavingDataNumber__P223116_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "tickInterval";
     s.callLocIdx = 235; s.pc = 8; return s.tmp_0;
   case 8:
@@ -20011,32 +20011,32 @@ switch (step) {
     }
     r0 = s.arg0;
     if (!checkSubtype(r0, cbland_info_Clock__C209032_VT)) failedCast(r0);
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "day";
     r0 = s.arg0.fields["day"];
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 239; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "hour";
     r0 = s.arg0.fields["hour"];
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 240; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "minute";
     r0 = s.arg0.fields["minute"];
     s.tmp_0.arg2 = r0;
     s.callLocIdx = 241; s.pc = 3; return s.tmp_0;
   case 3:
     r0 = s.retval;
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "tickInterval";
     r0 = s.arg0.fields["tickInterval"];
     s.tmp_0.arg2 = r0;
@@ -20062,7 +20062,7 @@ function cbland_info_Clock_save__P209033_mk(s) {
 
 
 
-function cbland_writeSavingDataNumber__P217392(s) {
+function cbland_writeSavingDataNumber__P223149(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -20078,8 +20078,8 @@ switch (step) {
       s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_SavingData_writeDataNumber__P217470_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___217676;
+    s.tmp_0 = cbland_SavingData_writeDataNumber__P223227_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___223433;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.tmp_0.arg3 = s.arg2;
@@ -20090,12 +20090,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_writeSavingDataNumber__P217392.info = {"start":2955,"length":154,"line":83,"column":4,"endLine":85,"endColumn":5,"fileName":"cbl-room.ts","functionName":"writeSavingDataNumber","argumentNames":["roomName","key","value"]}
+cbland_writeSavingDataNumber__P223149.info = {"start":2955,"length":154,"line":83,"column":4,"endLine":85,"endColumn":5,"fileName":"cbl-room.ts","functionName":"writeSavingDataNumber","argumentNames":["roomName","key","value"]}
 
-function cbland_writeSavingDataNumber__P217392_mk(s) {
+function cbland_writeSavingDataNumber__P223149_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_writeSavingDataNumber__P217392, depth: s.depth + 1,
+        parent: s, fn: cbland_writeSavingDataNumber__P223149, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -20107,7 +20107,7 @@ function cbland_writeSavingDataNumber__P217392_mk(s) {
 
 
 
-function cbland_SavingData_writeDataNumber__P217470(s) {
+function cbland_SavingData_writeDataNumber__P223227(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -20125,7 +20125,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_SavingData__C217469_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_SavingData__C223226_VT)) failedCast(r0);
     s.tmp_0 = settings_writeNumber__P122419_mk(s);
     if ((s.arg1) && (s.arg1).vtable) {
     setupResume(s, 2);
@@ -20136,12 +20136,12 @@ switch (step) {
   case 2:
     r0 = s.retval;
     s.tmp_3 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 3);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 3:
     r0 = s.retval;
     s.tmp_4 = r0;
@@ -20175,12 +20175,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_SavingData_writeDataNumber__P217470.info = {"start":508,"length":165,"line":27,"column":8,"endLine":30,"endColumn":9,"fileName":"cbl-room.ts","functionName":"writeDataNumber","argumentNames":["this","roomName","key","value"]}
+cbland_SavingData_writeDataNumber__P223227.info = {"start":508,"length":165,"line":27,"column":8,"endLine":30,"endColumn":9,"fileName":"cbl-room.ts","functionName":"writeDataNumber","argumentNames":["this","roomName","key","value"]}
 
-function cbland_SavingData_writeDataNumber__P217470_mk(s) {
+function cbland_SavingData_writeDataNumber__P223227_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_SavingData_writeDataNumber__P217470, depth: s.depth + 1,
+        parent: s, fn: cbland_SavingData_writeDataNumber__P223227, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -20772,8 +20772,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     globals._money___209362 = (s.arg0);
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "money";
     s.tmp_0.arg2 = globals._money___209362;
     s.callLocIdx = 278; s.pc = 1; return s.tmp_0;
@@ -20798,7 +20798,7 @@ function cbland_info_setMoneyTo__P209000_mk(s) {
 
 
 
-function cbland_readSavingDataNumber__P217044(s) {
+function cbland_readSavingDataNumber__P223116(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -20813,8 +20813,8 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_SavingData_readDataNumber__P217471_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___217676;
+    s.tmp_0 = cbland_SavingData_readDataNumber__P223228_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___223433;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.callLocIdx = 354; s.pc = 1; return s.tmp_0;
@@ -20823,12 +20823,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_readSavingDataNumber__P217044.info = {"start":3316,"length":148,"line":91,"column":4,"endLine":93,"endColumn":5,"fileName":"cbl-room.ts","functionName":"readSavingDataNumber","argumentNames":["roomName","key"]}
+cbland_readSavingDataNumber__P223116.info = {"start":3316,"length":148,"line":91,"column":4,"endLine":93,"endColumn":5,"fileName":"cbl-room.ts","functionName":"readSavingDataNumber","argumentNames":["roomName","key"]}
 
-function cbland_readSavingDataNumber__P217044_mk(s) {
+function cbland_readSavingDataNumber__P223116_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_readSavingDataNumber__P217044, depth: s.depth + 1,
+        parent: s, fn: cbland_readSavingDataNumber__P223116, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -20839,7 +20839,7 @@ function cbland_readSavingDataNumber__P217044_mk(s) {
 
 
 
-function cbland_SavingData_readDataNumber__P217471(s) {
+function cbland_SavingData_readDataNumber__P223228(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -20856,7 +20856,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_SavingData__C217469_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_SavingData__C223226_VT)) failedCast(r0);
     if ((s.arg1) && (s.arg1).vtable) {
     setupResume(s, 4);
     pxsim_String__stringConv(s.arg1);
@@ -20866,12 +20866,12 @@ switch (step) {
   case 4:
     r0 = s.retval;
     s.tmp_4 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 5);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 5:
     r0 = s.retval;
     s.tmp_5 = r0;
@@ -20911,12 +20911,12 @@ switch (step) {
   case 9:
     r0 = s.retval;
     s.tmp_10 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 10);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 10:
     r0 = s.retval;
     s.tmp_11 = r0;
@@ -20949,21 +20949,21 @@ switch (step) {
     { step = 2; continue; }
   case 1:
     s.tmp_13 = settings_readNumber__P122424_mk(s);
-    if ((globals.SAVINGDATA_GLOBAL_KEY___217045) && (globals.SAVINGDATA_GLOBAL_KEY___217045).vtable) {
+    if ((globals.SAVINGDATA_GLOBAL_KEY___223117) && (globals.SAVINGDATA_GLOBAL_KEY___223117).vtable) {
     setupResume(s, 14);
-    pxsim_String__stringConv(globals.SAVINGDATA_GLOBAL_KEY___217045);
+    pxsim_String__stringConv(globals.SAVINGDATA_GLOBAL_KEY___223117);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.SAVINGDATA_GLOBAL_KEY___217045) + ""; }
+    } else { s.retval = (globals.SAVINGDATA_GLOBAL_KEY___223117) + ""; }
   case 14:
     r0 = s.retval;
     s.tmp_16 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 15);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 15:
     r0 = s.retval;
     s.tmp_17 = r0;
@@ -20999,12 +20999,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_SavingData_readDataNumber__P217471.info = {"start":683,"length":351,"line":32,"column":8,"endLine":38,"endColumn":9,"fileName":"cbl-room.ts","functionName":"readDataNumber","argumentNames":["this","roomName","key"]}
+cbland_SavingData_readDataNumber__P223228.info = {"start":683,"length":351,"line":32,"column":8,"endLine":38,"endColumn":9,"fileName":"cbl-room.ts","functionName":"readDataNumber","argumentNames":["this","roomName","key"]}
 
-function cbland_SavingData_readDataNumber__P217471_mk(s) {
+function cbland_SavingData_readDataNumber__P223228_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_SavingData_readDataNumber__P217471, depth: s.depth + 1,
+        parent: s, fn: cbland_SavingData_readDataNumber__P223228, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31435,7 +31435,7 @@ switch (step) {
     r0 = s.retval;
     r0 = pxsim_Array__push(s.tmp_4, s.tmp_15);
     r0 = (s.arg0).fields["_availableLocationForRooms"] = (s.tmp_4);
-    s.tmp_17 = room_AbstractRoom_constructor__P217030_mk(s);
+    s.tmp_17 = room_AbstractRoom_constructor__P221225_mk(s);
     s.tmp_17.arg0 = s.arg0;
     s.tmp_17.arg1 = "village";
     s.callLocIdx = 142; s.pc = 8; return s.tmp_17;
@@ -31443,7 +31443,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = cbland_info_registerItem__P208989_mk(s);
     s.tmp_0.arg0 = "骨头";
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "boneImage";
     s.callLocIdx = 143; s.pc = 10; return s.tmp_1;
   case 10:
@@ -31516,7 +31516,7 @@ switch (step) {
     r0 = pxsim_pxtcore_mkAction(1, cbland_VillageRoom_placeCustomRooms_inline__P198038);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    s.tmp_1 = cbland_forEachRoom__P217033_mk(s);
+    s.tmp_1 = cbland_forEachRoom__P223107_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 147; s.pc = 1; return s.tmp_1;
   case 1:
@@ -31565,7 +31565,7 @@ switch (step) {
     r0 = s.caps[0].fields["_roomLocations"];
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt.mapSetGeneric(s.tmp_0, s.arg0, s.roomLocation___198041);
-    s.tmp_0 = room_AbstractRoom_addExitOnLocation__P217022_mk(s);
+    s.tmp_0 = room_AbstractRoom_addExitOnLocation__P221217_mk(s);
     s.tmp_0.arg0 = s.caps[0];
     s.tmp_0.arg1 = s.arg0;
     r0 = s.roomLocation___198041.fields["col"];
@@ -31600,7 +31600,7 @@ function cbland_VillageRoom_placeCustomRooms_inline__P198038_mk(s) {
 
 
 
-function room_AbstractRoom_addExitOnLocation__P217022(s) {
+function room_AbstractRoom_addExitOnLocation__P221217(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31610,7 +31610,7 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.exit___217159 = undefined;
+    s.exit___221348 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
@@ -31620,10 +31620,10 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
-    r0 = pxsim_pxtcore_mkClassInstance(room_Exit__C217070_VT);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
+    r0 = pxsim_pxtcore_mkClassInstance(room_Exit__C221259_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = room_Exit_constructor__P217071_mk(s);
+    s.tmp_1 = room_Exit_constructor__P221260_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg1;
     s.tmp_1.arg2 = s.arg2;
@@ -31632,11 +31632,11 @@ switch (step) {
     s.callLocIdx = 204; s.pc = 1; return s.tmp_1;
   case 1:
     r0 = s.retval;
-    s.exit___217159 = (s.tmp_0);
-    s.tmp_0 = room_AbstractRoom_addExit__P217023_mk(s);
+    s.exit___221348 = (s.tmp_0);
+    s.tmp_0 = room_AbstractRoom_addExit__P221218_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
-    s.tmp_0.arg2 = s.exit___217159;
+    s.tmp_0.arg2 = s.exit___221348;
     s.callLocIdx = 205; s.pc = 2; return s.tmp_0;
   case 2:
     r0 = s.retval;
@@ -31644,16 +31644,16 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_addExitOnLocation__P217022.info = {"start":2742,"length":225,"line":97,"column":8,"endLine":101,"endColumn":9,"fileName":"room.ts","functionName":"addExitOnLocation","argumentNames":["this","nextRoomName","col","row","waypointSignImage"]}
+room_AbstractRoom_addExitOnLocation__P221217.info = {"start":2742,"length":225,"line":97,"column":8,"endLine":101,"endColumn":9,"fileName":"room.ts","functionName":"addExitOnLocation","argumentNames":["this","nextRoomName","col","row","waypointSignImage"]}
 
-function room_AbstractRoom_addExitOnLocation__P217022_mk(s) {
+function room_AbstractRoom_addExitOnLocation__P221217_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_addExitOnLocation__P217022, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_addExitOnLocation__P221217, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
-  exit___217159: undefined,
+  exit___221348: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -31665,7 +31665,7 @@ function room_AbstractRoom_addExitOnLocation__P217022_mk(s) {
 
 
 
-function room_AbstractRoom_addExit__P217023(s) {
+function room_AbstractRoom_addExit__P221218(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31682,7 +31682,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = s.arg0.fields["exits"];
     s.tmp_1 = r0;
     r0 = (s.tmp_1 == undefined);
@@ -31722,12 +31722,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_addExit__P217023.info = {"start":2977,"length":309,"line":103,"column":8,"endLine":112,"endColumn":9,"fileName":"room.ts","functionName":"addExit","argumentNames":["this","nextRoomName","exit"]}
+room_AbstractRoom_addExit__P221218.info = {"start":2977,"length":309,"line":103,"column":8,"endLine":112,"endColumn":9,"fileName":"room.ts","functionName":"addExit","argumentNames":["this","nextRoomName","exit"]}
 
-function room_AbstractRoom_addExit__P217023_mk(s) {
+function room_AbstractRoom_addExit__P221218_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_addExit__P217023, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_addExit__P221218, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31745,7 +31745,7 @@ function room_AbstractRoom_addExit__P217023_mk(s) {
 
 
 
-function room_Exit_constructor__P217071(s) {
+function room_Exit_constructor__P221260(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31764,7 +31764,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_Exit__C217070_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_Exit__C221259_VT)) failedCast(r0);
     r0 = (s.arg0).fields["roomName"] = (s.arg1);
     r0 = (s.arg0).fields["col"] = (s.arg2);
     r0 = (s.arg0).fields["row"] = (s.arg3);
@@ -31775,7 +31775,7 @@ switch (step) {
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 1; continue; }
     s.tmp_2 = r0 = s.arg0;
-    s.tmp_4 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_4 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_4.arg0 = "waypoint_default_E";
     s.callLocIdx = 203; s.pc = 3; return s.tmp_4;
   case 3:
@@ -31789,12 +31789,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_Exit_constructor__P217071.info = {"start":1038,"length":366,"line":42,"column":8,"endLine":52,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","roomName","col","row","waypointImage"]}
+room_Exit_constructor__P221260.info = {"start":1038,"length":366,"line":42,"column":8,"endLine":52,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","roomName","col","row","waypointImage"]}
 
-function room_Exit_constructor__P217071_mk(s) {
+function room_Exit_constructor__P221260_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_Exit_constructor__P217071, depth: s.depth + 1,
+        parent: s, fn: room_Exit_constructor__P221260, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -31812,7 +31812,7 @@ function room_Exit_constructor__P217071_mk(s) {
 
 
 
-function cbland_forEachRoom__P217033(s) {
+function cbland_forEachRoom__P223107(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31822,56 +31822,56 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.name___217726 = undefined;
-    s.unnamed6716___U1 = undefined;
-    s.unnamed6717___U2 = undefined;
+    s.name___223483 = undefined;
+    s.unnamed7404___U1 = undefined;
+    s.unnamed7405___U2 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
     }
-    s.name___217726 = (undefined);
-    r0 = pxsim_pxtrt.keysOf(globals.rooms___217723);
-    s.unnamed6716___U1 = (r0);
-    s.unnamed6717___U2 = (0);
+    s.name___223483 = (undefined);
+    r0 = pxsim_pxtrt.keysOf(globals.rooms___223480);
+    s.unnamed7404___U1 = (r0);
+    s.unnamed7405___U2 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6717___U2;
-    r0 = pxsim_Array__length(s.unnamed6716___U1);
+    s.tmp_0 = r0 = s.unnamed7405___U2;
+    r0 = pxsim_Array__length(s.unnamed7404___U1);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6716___U1, s.unnamed6717___U2);
-    s.name___217726 = (r0);
+    r0 = pxsim_Array__getAt(s.unnamed7404___U1, s.unnamed7405___U2);
+    s.name___223483 = (r0);
     s.tmp_2 = lambda_3_mk(s);
     s.tmp_2.argL = s.arg0;
-    s.tmp_2.arg0 = s.name___217726;
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.name___217726);
+    s.tmp_2.arg0 = s.name___223483;
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.name___223483);
     s.tmp_2.arg1 = r0;
     setupLambda(s.tmp_2, s.tmp_2.argL);
     s.callLocIdx = 357; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    r0 = (s.unnamed6717___U2 + 1);
-    s.unnamed6717___U2 = (r0);
+    r0 = (s.unnamed7405___U2 + 1);
+    s.unnamed7405___U2 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed6716___U1 = (undefined);
+    s.unnamed7404___U1 = (undefined);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_forEachRoom__P217033.info = {"start":5079,"length":195,"line":134,"column":4,"endLine":138,"endColumn":5,"fileName":"cbl-room.ts","functionName":"forEachRoom","argumentNames":["callback"]}
+cbland_forEachRoom__P223107.info = {"start":5079,"length":195,"line":134,"column":4,"endLine":138,"endColumn":5,"fileName":"cbl-room.ts","functionName":"forEachRoom","argumentNames":["callback"]}
 
-function cbland_forEachRoom__P217033_mk(s) {
+function cbland_forEachRoom__P223107_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_forEachRoom__P217033, depth: s.depth + 1,
+        parent: s, fn: cbland_forEachRoom__P223107, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
-  name___217726: undefined,
-  unnamed6716___U1: undefined,
-  unnamed6717___U2: undefined,
+  name___223483: undefined,
+  unnamed7404___U1: undefined,
+  unnamed7405___U2: undefined,
   arg0: undefined,
 } }
 
@@ -31879,7 +31879,7 @@ function cbland_forEachRoom__P217033_mk(s) {
 
 
 
-function helpers_getCBLImageByName__P217002(s) {
+function helpers_getCBLImageByName__P221202(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -31902,12 +31902,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-helpers_getCBLImageByName__P217002.info = {"start":644,"length":110,"line":21,"column":4,"endLine":23,"endColumn":5,"fileName":"room.ts","functionName":"getCBLImageByName","argumentNames":["name"]}
+helpers_getCBLImageByName__P221202.info = {"start":644,"length":110,"line":21,"column":4,"endLine":23,"endColumn":5,"fileName":"room.ts","functionName":"getCBLImageByName","argumentNames":["name"]}
 
-function helpers_getCBLImageByName__P217002_mk(s) {
+function helpers_getCBLImageByName__P221202_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: helpers_getCBLImageByName__P217002, depth: s.depth + 1,
+        parent: s, fn: helpers_getCBLImageByName__P221202, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -32026,7 +32026,7 @@ function helpers__getFactoryInstance__P123688_mk(s) {
 
 
 
-function assets_cbl_image__P217001(s) {
+function assets_cbl_image__P221201(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -32045,12 +32045,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-assets_cbl_image__P217001.info = {"start":421,"length":75,"line":13,"column":4,"endLine":13,"endColumn":79,"fileName":"room.ts","functionName":"cbl_image","argumentNames":["lits","args"]}
+assets_cbl_image__P221201.info = {"start":421,"length":75,"line":13,"column":4,"endLine":13,"endColumn":79,"fileName":"room.ts","functionName":"cbl_image","argumentNames":["lits","args"]}
 
-function assets_cbl_image__P217001_mk(s) {
+function assets_cbl_image__P221201_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: assets_cbl_image__P217001, depth: s.depth + 1,
+        parent: s, fn: assets_cbl_image__P221201, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -32100,7 +32100,7 @@ function cbland_RoomLocation_constructor__P198002_mk(s) {
 
 
 
-function room_AbstractRoom_constructor__P217030(s) {
+function room_AbstractRoom_constructor__P221225(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -32116,7 +32116,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_AbstractRoom__C217019_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_AbstractRoom__C221214_VT)) failedCast(r0);
     r0 = (s.arg0).fields["name"] = (s.arg1);
     s.tmp_0 = r0 = s.arg0;
     r0 = pxsim_Array__mk();
@@ -32130,12 +32130,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_AbstractRoom_constructor__P217030.info = {"start":1918,"length":141,"line":74,"column":8,"endLine":78,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","name"]}
+room_AbstractRoom_constructor__P221225.info = {"start":1918,"length":141,"line":74,"column":8,"endLine":78,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","name"]}
 
-function room_AbstractRoom_constructor__P217030_mk(s) {
+function room_AbstractRoom_constructor__P221225_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_AbstractRoom_constructor__P217030, depth: s.depth + 1,
+        parent: s, fn: room_AbstractRoom_constructor__P221225, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -33132,7 +33132,7 @@ switch (step) {
     s.tmp_0 = scene_systemMenu_addEntry__P123460_mk(s);
     s.tmp_0.arg0 = cbland_equipment_addEquipmentMenu_inline__P131177;
     s.tmp_0.arg1 = cbland_equipment_addEquipmentMenu_inline__P131178;
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "toolboxIcon";
     s.callLocIdx = 529; s.pc = 2; return s.tmp_1;
   case 2:
@@ -44520,21 +44520,21 @@ switch (step) {
 
     s.inventory___131105 = undefined;
     s.key___131108 = undefined;
-    s.unnamed6734___U2 = undefined;
-    s.unnamed6735___U3 = undefined;
+    s.unnamed7422___U2 = undefined;
+    s.unnamed7423___U3 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___131105 = (r0);
     s.key___131108 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.EQUIPMENT_DATA___130886);
-    s.unnamed6734___U2 = (r0);
-    s.unnamed6735___U3 = (0);
+    s.unnamed7422___U2 = (r0);
+    s.unnamed7423___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6735___U3;
-    r0 = pxsim_Array__length(s.unnamed6734___U2);
+    s.tmp_0 = r0 = s.unnamed7423___U3;
+    r0 = pxsim_Array__length(s.unnamed7422___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6734___U2, s.unnamed6735___U3);
+    r0 = pxsim_Array__getAt(s.unnamed7422___U2, s.unnamed7423___U3);
     s.key___131108 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C124792_VT);
     s.tmp_2 = r0;
@@ -44548,11 +44548,11 @@ switch (step) {
   case 3:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.inventory___131105, s.tmp_2);
-    r0 = (s.unnamed6735___U3 + 1);
-    s.unnamed6735___U3 = (r0);
+    r0 = (s.unnamed7423___U3 + 1);
+    s.unnamed7423___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed6734___U2 = (undefined);
+    s.unnamed7422___U2 = (undefined);
     r0 = s.inventory___131105;
     return leave(s, r0)
   default: oops()
@@ -44570,8 +44570,8 @@ function cbland_equipment__createMenuItemOfPossessedEquipments__P131104_mk(s) {
   tmp_3: undefined,
   inventory___131105: undefined,
   key___131108: undefined,
-  unnamed6734___U2: undefined,
-  unnamed6735___U3: undefined,
+  unnamed7422___U2: undefined,
+  unnamed7423___U3: undefined,
 } }
 
 
@@ -44921,7 +44921,7 @@ switch (step) {
     s.tmp_0 = scene_systemMenu_addEntry__P123460_mk(s);
     s.tmp_0.arg0 = cbland_info_addInventoryMenu_inline__P209994;
     s.tmp_0.arg1 = cbland_info_addInventoryMenu_inline__P209995;
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "inventoryIcon";
     s.callLocIdx = 342; s.pc = 2; return s.tmp_1;
   case 2:
@@ -45276,21 +45276,21 @@ switch (step) {
 
     s.inventory___209659 = undefined;
     s.key___209662 = undefined;
-    s.unnamed6714___U2 = undefined;
-    s.unnamed6715___U3 = undefined;
+    s.unnamed7402___U2 = undefined;
+    s.unnamed7403___U3 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___209659 = (r0);
     s.key___209662 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.ITEM_DATA___209497);
-    s.unnamed6714___U2 = (r0);
-    s.unnamed6715___U3 = (0);
+    s.unnamed7402___U2 = (r0);
+    s.unnamed7403___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6715___U3;
-    r0 = pxsim_Array__length(s.unnamed6714___U2);
+    s.tmp_0 = r0 = s.unnamed7403___U3;
+    r0 = pxsim_Array__length(s.unnamed7402___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6714___U2, s.unnamed6715___U3);
+    r0 = pxsim_Array__getAt(s.unnamed7402___U2, s.unnamed7403___U3);
     s.key___209662 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C124792_VT);
     s.tmp_2 = r0;
@@ -45304,17 +45304,17 @@ switch (step) {
   case 3:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.inventory___209659, s.tmp_2);
-    r0 = (s.unnamed6715___U3 + 1);
-    s.unnamed6715___U3 = (r0);
+    r0 = (s.unnamed7403___U3 + 1);
+    s.unnamed7403___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed6714___U2 = (undefined);
+    s.unnamed7402___U2 = (undefined);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C124792_VT);
     s.tmp_0 = r0;
     s.tmp_1 = miniMenu_MenuItem_constructor__P124794_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = "OK";
-    s.tmp_2 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_2 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_2.arg0 = "tick";
     s.callLocIdx = 293; s.pc = 5; return s.tmp_2;
   case 5:
@@ -45341,8 +45341,8 @@ function cbland_info__createMenuItemFromInventory__P209658_mk(s) {
   tmp_3: undefined,
   inventory___209659: undefined,
   key___209662: undefined,
-  unnamed6714___U2: undefined,
-  unnamed6715___U3: undefined,
+  unnamed7402___U2: undefined,
+  unnamed7403___U3: undefined,
 } }
 
 
@@ -45359,15 +45359,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_registerRoom__P217000_mk(s);
+    s.tmp_0 = cbland_registerRoom__P223090_mk(s);
     s.tmp_0.arg0 = "shop";
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "shopImage";
     s.callLocIdx = 405; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
-    s.tmp_2 = helpers_getCBLTilemapByName__P217004_mk(s);
+    s.tmp_2 = helpers_getCBLTilemapByName__P221204_mk(s);
     s.tmp_2.arg0 = "shopInside";
     s.callLocIdx = 406; s.pc = 3; return s.tmp_2;
   case 3:
@@ -45376,7 +45376,7 @@ switch (step) {
     s.callLocIdx = 407; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = cbland_addExit__P217005_mk(s);
+    s.tmp_0 = cbland_addExit__P223091_mk(s);
     s.tmp_0.arg0 = "shop";
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = 6;
@@ -45385,7 +45385,7 @@ switch (step) {
     s.callLocIdx = 408; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = cbland_addExit__P217005_mk(s);
+    s.tmp_0 = cbland_addExit__P223091_mk(s);
     s.tmp_0.arg0 = "shop";
     s.tmp_0.arg1 = 5;
     s.tmp_0.arg2 = 6;
@@ -45394,7 +45394,7 @@ switch (step) {
     s.callLocIdx = 409; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = cbland_didEnterRoom__P217008_mk(s);
+    s.tmp_0 = cbland_didEnterRoom__P223094_mk(s);
     s.tmp_0.arg0 = "shop";
     s.tmp_0.arg1 = shop_prepareShop_inline__P130562;
     s.callLocIdx = 434; s.pc = 6; return s.tmp_0;
@@ -45784,12 +45784,12 @@ switch (step) {
     s.sellItems___130651 = undefined;
     s.text___130658 = undefined;
     s.item___130660 = undefined;
-    s.unnamed6728___U3 = undefined;
-    s.unnamed6729___U4 = undefined;
+    s.unnamed7416___U3 = undefined;
+    s.unnamed7417___U4 = undefined;
     s.coin___130700 = undefined;
     s.item___130702 = undefined;
-    s.unnamed6730___U7 = undefined;
-    s.unnamed6731___U8 = undefined;
+    s.unnamed7418___U7 = undefined;
+    s.unnamed7419___U8 = undefined;
     s.tmp_0 = story_printCharacterText__P124974_mk(s);
     s.tmp_0.arg0 = "今天要卖点什么？";
     s.tmp_0.arg1 = "收购员";
@@ -45813,15 +45813,15 @@ switch (step) {
     s.text___130658 = (r0);
     s.item___130660 = (undefined);
     r0 = pxsim_pxtrt.keysOf(s.sellItems___130651);
-    s.unnamed6728___U3 = (r0);
-    s.unnamed6729___U4 = (0);
+    s.unnamed7416___U3 = (r0);
+    s.unnamed7417___U4 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6729___U4;
-    r0 = pxsim_Array__length(s.unnamed6728___U3);
+    s.tmp_0 = r0 = s.unnamed7417___U4;
+    r0 = pxsim_Array__length(s.unnamed7416___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6728___U3, s.unnamed6729___U4);
+    r0 = pxsim_Array__getAt(s.unnamed7416___U3, s.unnamed7417___U4);
     s.item___130660 = (r0);
     if ((s.text___130658) && (s.text___130658).vtable) {
     setupResume(s, 11);
@@ -45887,11 +45887,11 @@ switch (step) {
     s.tmp_3 = r0;
     r0 = pxsim_String__concat(s.tmp_2, s.tmp_3);
     s.text___130658 = (r0);
-    r0 = (s.unnamed6729___U4 + 1);
-    s.unnamed6729___U4 = (r0);
+    r0 = (s.unnamed7417___U4 + 1);
+    s.unnamed7417___U4 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed6728___U3 = (undefined);
+    s.unnamed7416___U3 = (undefined);
     s.tmp_0 = helpers_stringSlice__P120475_mk(s);
     s.tmp_0.arg0 = s.text___130658;
     s.tmp_0.arg1 = 0;
@@ -45936,15 +45936,15 @@ switch (step) {
     s.coin___130700 = (0);
     s.item___130702 = (undefined);
     r0 = pxsim_pxtrt.keysOf(s.sellItems___130651);
-    s.unnamed6730___U7 = (r0);
-    s.unnamed6731___U8 = (0);
+    s.unnamed7418___U7 = (r0);
+    s.unnamed7419___U8 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed6731___U8;
-    r0 = pxsim_Array__length(s.unnamed6730___U7);
+    s.tmp_0 = r0 = s.unnamed7419___U8;
+    r0 = pxsim_Array__length(s.unnamed7418___U7);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6730___U7, s.unnamed6731___U8);
+    r0 = pxsim_Array__getAt(s.unnamed7418___U7, s.unnamed7419___U8);
     s.item___130702 = (r0);
     s.tmp_2 = cbland_info_loseItem__P209584_mk(s);
     s.tmp_2.arg0 = s.item___130702;
@@ -45966,11 +45966,11 @@ switch (step) {
     s.tmp_1 = r0;
     r0 = (s.tmp_0 + s.tmp_1);
     s.coin___130700 = (r0);
-    r0 = (s.unnamed6731___U8 + 1);
-    s.unnamed6731___U8 = (r0);
+    r0 = (s.unnamed7419___U8 + 1);
+    s.unnamed7419___U8 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed6730___U7 = (undefined);
+    s.unnamed7418___U7 = (undefined);
     s.tmp_0 = cbland_info_changeMoneyBy__P208983_mk(s);
     s.tmp_0.arg0 = s.coin___130700;
     s.callLocIdx = 443; s.pc = 24; return s.tmp_0;
@@ -46016,12 +46016,12 @@ function shop_prepareShop_inline__P130649_mk(s) {
   sellItems___130651: undefined,
   text___130658: undefined,
   item___130660: undefined,
-  unnamed6728___U3: undefined,
-  unnamed6729___U4: undefined,
+  unnamed7416___U3: undefined,
+  unnamed7417___U4: undefined,
   coin___130700: undefined,
   item___130702: undefined,
-  unnamed6730___U7: undefined,
-  unnamed6731___U8: undefined,
+  unnamed7418___U7: undefined,
+  unnamed7419___U8: undefined,
 } }
 
 
@@ -50073,22 +50073,22 @@ switch (step) {
 
     s.inventory___209630 = undefined;
     s.key___209633 = undefined;
-    s.unnamed6712___U2 = undefined;
-    s.unnamed6713___U3 = undefined;
+    s.unnamed7400___U2 = undefined;
+    s.unnamed7401___U3 = undefined;
     s.item___209637 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___209630 = (r0);
     s.key___209633 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.ITEM_META_DATA___209496);
-    s.unnamed6712___U2 = (r0);
-    s.unnamed6713___U3 = (0);
+    s.unnamed7400___U2 = (r0);
+    s.unnamed7401___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6713___U3;
-    r0 = pxsim_Array__length(s.unnamed6712___U2);
+    s.tmp_0 = r0 = s.unnamed7401___U3;
+    r0 = pxsim_Array__length(s.unnamed7400___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6712___U2, s.unnamed6713___U3);
+    r0 = pxsim_Array__getAt(s.unnamed7400___U2, s.unnamed7401___U3);
     s.key___209633 = (r0);
     r0 = pxsim_pxtrt.mapGetGeneric(globals.ITEM_META_DATA___209496, s.key___209633);
     s.item___209637 = (r0);
@@ -50109,17 +50109,17 @@ switch (step) {
     r0 = pxsim_Array__push(s.inventory___209630, s.tmp_1);
   case 2:
   case 3:
-    r0 = (s.unnamed6713___U3 + 1);
-    s.unnamed6713___U3 = (r0);
+    r0 = (s.unnamed7401___U3 + 1);
+    s.unnamed7401___U3 = (r0);
     { step = 1; continue; }
   case 4:
-    s.unnamed6712___U2 = (undefined);
+    s.unnamed7400___U2 = (undefined);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C124792_VT);
     s.tmp_0 = r0;
     s.tmp_1 = miniMenu_MenuItem_constructor__P124794_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = "OK";
-    s.tmp_2 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_2 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_2.arg0 = "tick";
     s.callLocIdx = 290; s.pc = 7; return s.tmp_2;
   case 7:
@@ -50145,8 +50145,8 @@ function cbland_info__createMenuItemFromMeta__P209629_mk(s) {
   tmp_2: undefined,
   inventory___209630: undefined,
   key___209633: undefined,
-  unnamed6712___U2: undefined,
-  unnamed6713___U3: undefined,
+  unnamed7400___U2: undefined,
+  unnamed7401___U3: undefined,
   item___209637: undefined,
 } }
 
@@ -50557,21 +50557,21 @@ switch (step) {
 
     s.inventory___131086 = undefined;
     s.key___131089 = undefined;
-    s.unnamed6732___U2 = undefined;
-    s.unnamed6733___U3 = undefined;
+    s.unnamed7420___U2 = undefined;
+    s.unnamed7421___U3 = undefined;
     r0 = pxsim_Array__mk();
     s.inventory___131086 = (r0);
     s.key___131089 = (undefined);
     r0 = pxsim_pxtrt.keysOf(globals.EQUIPMENT_META_DATA___130885);
-    s.unnamed6732___U2 = (r0);
-    s.unnamed6733___U3 = (0);
+    s.unnamed7420___U2 = (r0);
+    s.unnamed7421___U3 = (0);
   case 1:
-    s.tmp_0 = r0 = s.unnamed6733___U3;
-    r0 = pxsim_Array__length(s.unnamed6732___U2);
+    s.tmp_0 = r0 = s.unnamed7421___U3;
+    r0 = pxsim_Array__length(s.unnamed7420___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 2; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6732___U2, s.unnamed6733___U3);
+    r0 = pxsim_Array__getAt(s.unnamed7420___U2, s.unnamed7421___U3);
     s.key___131089 = (r0);
     r0 = pxsim_pxtcore_mkClassInstance(miniMenu_MenuItem__C124792_VT);
     s.tmp_2 = r0;
@@ -50585,11 +50585,11 @@ switch (step) {
   case 3:
     r0 = s.retval;
     r0 = pxsim_Array__push(s.inventory___131086, s.tmp_2);
-    r0 = (s.unnamed6733___U3 + 1);
-    s.unnamed6733___U3 = (r0);
+    r0 = (s.unnamed7421___U3 + 1);
+    s.unnamed7421___U3 = (r0);
     { step = 1; continue; }
   case 2:
-    s.unnamed6732___U2 = (undefined);
+    s.unnamed7420___U2 = (undefined);
     r0 = s.inventory___131086;
     return leave(s, r0)
   default: oops()
@@ -50607,8 +50607,8 @@ function cbland_equipment__createMenuItemOfAllRegisteredEquipments__P131085_mk(s
   tmp_3: undefined,
   inventory___131086: undefined,
   key___131089: undefined,
-  unnamed6732___U2: undefined,
-  unnamed6733___U3: undefined,
+  unnamed7420___U2: undefined,
+  unnamed7421___U3: undefined,
 } }
 
 
@@ -53274,8 +53274,8 @@ switch (step) {
     }
     r0 = (globals._money___209362 + s.arg0);
     globals._money___209362 = (r0);
-    s.tmp_0 = cbland_writeSavingDataNumber__P217392_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___217045;
+    s.tmp_0 = cbland_writeSavingDataNumber__P223149_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_GLOBAL_KEY___223117;
     s.tmp_0.arg1 = "money";
     s.tmp_0.arg2 = globals._money___209362;
     s.callLocIdx = 277; s.pc = 1; return s.tmp_0;
@@ -58019,7 +58019,7 @@ function controller_ControlledSprite_constructor__P122488_mk(s) {
 
 
 
-function cbland_didEnterRoom__P217008(s) {
+function cbland_didEnterRoom__P223094(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58034,8 +58034,8 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = room_CommonRoom_setDidEnterRoomCallback__P217335_mk(s);
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.arg0);
+    s.tmp_0 = room_CommonRoom_setDidEnterRoomCallback__P221523_mk(s);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.arg0);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = s.arg1;
     s.callLocIdx = 364; s.pc = 1; return s.tmp_0;
@@ -58045,12 +58045,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_didEnterRoom__P217008.info = {"start":7027,"length":190,"line":191,"column":4,"endLine":193,"endColumn":5,"fileName":"cbl-room.ts","functionName":"didEnterRoom","argumentNames":["roomName","callback"]}
+cbland_didEnterRoom__P223094.info = {"start":7027,"length":190,"line":191,"column":4,"endLine":193,"endColumn":5,"fileName":"cbl-room.ts","functionName":"didEnterRoom","argumentNames":["roomName","callback"]}
 
-function cbland_didEnterRoom__P217008_mk(s) {
+function cbland_didEnterRoom__P223094_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_didEnterRoom__P217008, depth: s.depth + 1,
+        parent: s, fn: cbland_didEnterRoom__P223094, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -58061,7 +58061,7 @@ function cbland_didEnterRoom__P217008_mk(s) {
 
 
 
-function room_CommonRoom_setDidEnterRoomCallback__P217335(s) {
+function room_CommonRoom_setDidEnterRoomCallback__P221523(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58077,18 +58077,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
     r0 = (s.arg0).fields["_didEnterRoomCallback"] = (s.arg1);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-room_CommonRoom_setDidEnterRoomCallback__P217335.info = {"start":6161,"length":153,"line":199,"column":8,"endLine":201,"endColumn":9,"fileName":"room.ts","functionName":"setDidEnterRoomCallback","argumentNames":["this","cb"]}
+room_CommonRoom_setDidEnterRoomCallback__P221523.info = {"start":6161,"length":153,"line":199,"column":8,"endLine":201,"endColumn":9,"fileName":"room.ts","functionName":"setDidEnterRoomCallback","argumentNames":["this","cb"]}
 
-function room_CommonRoom_setDidEnterRoomCallback__P217335_mk(s) {
+function room_CommonRoom_setDidEnterRoomCallback__P221523_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_setDidEnterRoomCallback__P217335, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_setDidEnterRoomCallback__P221523, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -58098,7 +58098,7 @@ function room_CommonRoom_setDidEnterRoomCallback__P217335_mk(s) {
 
 
 
-function cbland_addExit__P217005(s) {
+function cbland_addExit__P223091(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58116,8 +58116,8 @@ switch (step) {
       s.arg4 = (s.lambdaArgs[4]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = room_AbstractRoom_addExitOnLocation__P217022_mk(s);
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.arg0);
+    s.tmp_0 = room_AbstractRoom_addExitOnLocation__P221217_mk(s);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.arg0);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = s.arg3;
     s.tmp_0.arg2 = s.arg1;
@@ -58130,12 +58130,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_addExit__P217005.info = {"start":8382,"length":216,"line":230,"column":4,"endLine":232,"endColumn":5,"fileName":"cbl-room.ts","functionName":"addExit","argumentNames":["roomName","col","row","nextRoomName","waypointSignImage"]}
+cbland_addExit__P223091.info = {"start":8379,"length":216,"line":230,"column":4,"endLine":232,"endColumn":5,"fileName":"cbl-room.ts","functionName":"addExit","argumentNames":["roomName","col","row","nextRoomName","waypointSignImage"]}
 
-function cbland_addExit__P217005_mk(s) {
+function cbland_addExit__P223091_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_addExit__P217005, depth: s.depth + 1,
+        parent: s, fn: cbland_addExit__P223091, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -58149,7 +58149,7 @@ function cbland_addExit__P217005_mk(s) {
 
 
 
-function helpers_getCBLTilemapByName__P217004(s) {
+function helpers_getCBLTilemapByName__P221204(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58172,12 +58172,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-helpers_getCBLTilemapByName__P217004.info = {"start":523,"length":114,"line":16,"column":4,"endLine":18,"endColumn":5,"fileName":"room.ts","functionName":"getCBLTilemapByName","argumentNames":["name"]}
+helpers_getCBLTilemapByName__P221204.info = {"start":523,"length":114,"line":16,"column":4,"endLine":18,"endColumn":5,"fileName":"room.ts","functionName":"getCBLTilemapByName","argumentNames":["name"]}
 
-function helpers_getCBLTilemapByName__P217004_mk(s) {
+function helpers_getCBLTilemapByName__P221204_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: helpers_getCBLTilemapByName__P217004, depth: s.depth + 1,
+        parent: s, fn: helpers_getCBLTilemapByName__P221204, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -58187,7 +58187,7 @@ function helpers_getCBLTilemapByName__P217004_mk(s) {
 
 
 
-function assets_cbl_tilemap__P217003(s) {
+function assets_cbl_tilemap__P221203(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58206,12 +58206,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-assets_cbl_tilemap__P217003.info = {"start":214,"length":89,"line":7,"column":4,"endLine":7,"endColumn":93,"fileName":"room.ts","functionName":"cbl_tilemap","argumentNames":["lits","args"]}
+assets_cbl_tilemap__P221203.info = {"start":214,"length":89,"line":7,"column":4,"endLine":7,"endColumn":93,"fileName":"room.ts","functionName":"cbl_tilemap","argumentNames":["lits","args"]}
 
-function assets_cbl_tilemap__P217003_mk(s) {
+function assets_cbl_tilemap__P221203_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: assets_cbl_tilemap__P217003, depth: s.depth + 1,
+        parent: s, fn: assets_cbl_tilemap__P221203, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
   arg1: undefined,
@@ -58221,7 +58221,7 @@ function assets_cbl_tilemap__P217003_mk(s) {
 
 
 
-function cbland_registerRoom__P217000(s) {
+function cbland_registerRoom__P223090(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58231,16 +58231,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.dummpySprite___217760 = undefined;
-    s.newRoom___217765 = undefined;
+    s.dummpySprite___223517 = undefined;
+    s.newRoom___223522 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.arg1 = (s.lambdaArgs[1]);
       s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    globals._currentRoomInRegister___217465 = (s.arg0);
-    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___217723, s.arg0);
+    globals._currentRoomInRegister___223222 = (s.arg0);
+    r0 = pxsim_pxtrt.mapGetGeneric(globals.rooms___223480, s.arg0);
     s.tmp_1 = r0;
     r0 = (s.tmp_1 != null);
     s.tmp_0 = r0;
@@ -58261,9 +58261,9 @@ switch (step) {
     s.callLocIdx = 360; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
-    s.dummpySprite___217760 = (null);
+    s.dummpySprite___223517 = (null);
     s.tmp_0 = Sprite_sayText__P122767_mk(s);
-    s.tmp_0.arg0 = s.dummpySprite___217760;
+    s.tmp_0.arg0 = s.dummpySprite___223517;
     s.tmp_0.arg1 = 1111;
     s.tmp_0.arg2 = undefined;
     s.tmp_0.arg3 = false;
@@ -58274,9 +58274,9 @@ switch (step) {
     r0 = s.retval;
   case 1:
   case 2:
-    r0 = pxsim_pxtcore_mkClassInstance(room_CommonRoom__C217333_VT);
+    r0 = pxsim_pxtcore_mkClassInstance(room_CommonRoom__C221521_VT);
     s.tmp_0 = r0;
-    s.tmp_1 = room_CommonRoom_constructor__P217356_mk(s);
+    s.tmp_1 = room_CommonRoom_constructor__P221544_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.tmp_1.arg1 = s.arg0;
     s.tmp_1.arg2 = s.arg1;
@@ -58284,25 +58284,25 @@ switch (step) {
     s.callLocIdx = 362; s.pc = 6; return s.tmp_1;
   case 6:
     r0 = s.retval;
-    s.newRoom___217765 = (s.tmp_0);
-    r0 = pxsim_pxtrt.mapSetGeneric(globals.rooms___217723, s.arg0, s.newRoom___217765);
+    s.newRoom___223522 = (s.tmp_0);
+    r0 = pxsim_pxtrt.mapSetGeneric(globals.rooms___223480, s.arg0, s.newRoom___223522);
     r0 = undefined;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_registerRoom__P217000.info = {"start":6117,"length":453,"line":164,"column":4,"endLine":173,"endColumn":5,"fileName":"cbl-room.ts","functionName":"registerRoom","argumentNames":["roomName","roomImage","tilemap"]}
+cbland_registerRoom__P223090.info = {"start":6117,"length":453,"line":164,"column":4,"endLine":173,"endColumn":5,"fileName":"cbl-room.ts","functionName":"registerRoom","argumentNames":["roomName","roomImage","tilemap"]}
 
-function cbland_registerRoom__P217000_mk(s) {
+function cbland_registerRoom__P223090_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_registerRoom__P217000, depth: s.depth + 1,
+        parent: s, fn: cbland_registerRoom__P223090, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
   tmp_2: undefined,
   tmp_3: undefined,
-  dummpySprite___217760: undefined,
-  newRoom___217765: undefined,
+  dummpySprite___223517: undefined,
+  newRoom___223522: undefined,
   arg0: undefined,
   arg1: undefined,
   arg2: undefined,
@@ -58312,7 +58312,7 @@ function cbland_registerRoom__P217000_mk(s) {
 
 
 
-function room_CommonRoom_constructor__P217356(s) {
+function room_CommonRoom_constructor__P221544(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -58330,8 +58330,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
-    s.tmp_0 = room_AbstractRoom_constructor__P217030_mk(s);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
+    s.tmp_0 = room_AbstractRoom_constructor__P221225_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
     s.callLocIdx = 228; s.pc = 1; return s.tmp_0;
@@ -58343,12 +58343,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_CommonRoom_constructor__P217356.info = {"start":6678,"length":197,"line":214,"column":8,"endLine":218,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","roomName","roomImage","tilemap"]}
+room_CommonRoom_constructor__P221544.info = {"start":6672,"length":197,"line":214,"column":8,"endLine":218,"endColumn":9,"fileName":"room.ts","functionName":"inline","argumentNames":["this","roomName","roomImage","tilemap"]}
 
-function room_CommonRoom_constructor__P217356_mk(s) {
+function room_CommonRoom_constructor__P221544_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_constructor__P217356, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_constructor__P221544, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -58734,15 +58734,15 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    s.tmp_0 = cbland_registerRoom__P217000_mk(s);
+    s.tmp_0 = cbland_registerRoom__P223090_mk(s);
     s.tmp_0.arg0 = "home";
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "homeImage";
     s.callLocIdx = 78; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
     s.tmp_0.arg1 = r0;
-    s.tmp_2 = helpers_getCBLTilemapByName__P217004_mk(s);
+    s.tmp_2 = helpers_getCBLTilemapByName__P221204_mk(s);
     s.tmp_2.arg0 = "homeInside";
     s.callLocIdx = 79; s.pc = 3; return s.tmp_2;
   case 3:
@@ -58751,7 +58751,7 @@ switch (step) {
     s.callLocIdx = 80; s.pc = 1; return s.tmp_0;
   case 1:
     r0 = s.retval;
-    s.tmp_0 = cbland_addExit__P217005_mk(s);
+    s.tmp_0 = cbland_addExit__P223091_mk(s);
     s.tmp_0.arg0 = "home";
     s.tmp_0.arg1 = 4;
     s.tmp_0.arg2 = 6;
@@ -58760,7 +58760,7 @@ switch (step) {
     s.callLocIdx = 81; s.pc = 4; return s.tmp_0;
   case 4:
     r0 = s.retval;
-    s.tmp_0 = cbland_addExit__P217005_mk(s);
+    s.tmp_0 = cbland_addExit__P223091_mk(s);
     s.tmp_0.arg0 = "home";
     s.tmp_0.arg1 = 5;
     s.tmp_0.arg2 = 6;
@@ -58769,7 +58769,7 @@ switch (step) {
     s.callLocIdx = 82; s.pc = 5; return s.tmp_0;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = cbland_didEnterRoom__P217008_mk(s);
+    s.tmp_0 = cbland_didEnterRoom__P223094_mk(s);
     s.tmp_0.arg0 = "home";
     s.tmp_0.arg1 = home_prepareHome_inline__P128235;
     s.callLocIdx = 103; s.pc = 6; return s.tmp_0;
@@ -58827,8 +58827,8 @@ switch (step) {
       s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_createRoomSprite__P217009_mk(s);
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_0 = cbland_createRoomSprite__P223095_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "wardrobe";
     s.callLocIdx = 83; s.pc = 4; return s.tmp_1;
   case 4:
@@ -58839,7 +58839,7 @@ switch (step) {
   case 3:
     r0 = s.retval;
     s.wardrobe___128239 = (r0);
-    s.tmp_1 = cbland_readSavingDataBoolean__P217010_mk(s);
+    s.tmp_1 = cbland_readSavingDataBoolean__P223096_mk(s);
     s.tmp_1.arg0 = "home";
     s.tmp_1.arg1 = "wardrobe_open";
     s.callLocIdx = 85; s.pc = 5; return s.tmp_1;
@@ -58850,7 +58850,7 @@ switch (step) {
     if (!r0) { step = 1; continue; }
     s.tmp_2 = Sprite_setImage__P122746_mk(s);
     s.tmp_2.arg0 = s.wardrobe___128239;
-    s.tmp_3 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_3 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_3.arg0 = "wardrobe_open";
     s.callLocIdx = 86; s.pc = 7; return s.tmp_3;
   case 7:
@@ -58901,8 +58901,8 @@ switch (step) {
     s.callLocIdx = 93; s.pc = 12; return s.tmp_0;
   case 12:
     r0 = s.retval;
-    s.tmp_0 = cbland_createRoomSprite__P217009_mk(s);
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_0 = cbland_createRoomSprite__P223095_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "singleBed";
     s.callLocIdx = 94; s.pc = 15; return s.tmp_1;
   case 15:
@@ -59019,7 +59019,7 @@ switch (step) {
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
     if (!r0) { step = 3; continue; }
-    s.tmp_3 = cbland_readSavingDataBoolean__P217010_mk(s);
+    s.tmp_3 = cbland_readSavingDataBoolean__P223096_mk(s);
     s.tmp_3.arg0 = "home";
     s.tmp_3.arg1 = "wardrobe_open";
     s.callLocIdx = 105; s.pc = 7; return s.tmp_3;
@@ -59030,7 +59030,7 @@ switch (step) {
     if (!r0) { step = 1; continue; }
     s.tmp_4 = Sprite_setImage__P122746_mk(s);
     s.tmp_4.arg0 = s.arg1;
-    s.tmp_5 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_5 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_5.arg0 = "wardrobe";
     s.callLocIdx = 106; s.pc = 9; return s.tmp_5;
   case 9:
@@ -59039,7 +59039,7 @@ switch (step) {
     s.callLocIdx = 107; s.pc = 8; return s.tmp_4;
   case 8:
     r0 = s.retval;
-    s.tmp_0 = cbland_writeSavingDataBoolean__P217014_mk(s);
+    s.tmp_0 = cbland_writeSavingDataBoolean__P223100_mk(s);
     s.tmp_0.arg0 = "home";
     s.tmp_0.arg1 = "wardrobe_open";
     s.tmp_0.arg2 = false;
@@ -59061,7 +59061,7 @@ switch (step) {
     r0 = s.retval;
     s.tmp_0 = Sprite_setImage__P122746_mk(s);
     s.tmp_0.arg0 = s.arg1;
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "wardrobe_open";
     s.callLocIdx = 111; s.pc = 14; return s.tmp_1;
   case 14:
@@ -59070,7 +59070,7 @@ switch (step) {
     s.callLocIdx = 112; s.pc = 13; return s.tmp_0;
   case 13:
     r0 = s.retval;
-    s.tmp_0 = cbland_writeSavingDataBoolean__P217014_mk(s);
+    s.tmp_0 = cbland_writeSavingDataBoolean__P223100_mk(s);
     s.tmp_0.arg0 = "home";
     s.tmp_0.arg1 = "wardrobe_open";
     s.tmp_0.arg2 = true;
@@ -60139,7 +60139,7 @@ function game_BaseDialog_drawTextCore__P123274_mk(s) {
 
 
 
-function cbland_writeSavingDataBoolean__P217014(s) {
+function cbland_writeSavingDataBoolean__P223100(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60155,8 +60155,8 @@ switch (step) {
       s.arg2 = (s.lambdaArgs[2]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_SavingData_writeDataBoolean__P217472_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___217676;
+    s.tmp_0 = cbland_SavingData_writeDataBoolean__P223229_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___223433;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.tmp_0.arg3 = s.arg2;
@@ -60167,12 +60167,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_writeSavingDataBoolean__P217014.info = {"start":3679,"length":160,"line":99,"column":4,"endLine":101,"endColumn":5,"fileName":"cbl-room.ts","functionName":"writeSavingDataBoolean","argumentNames":["roomName","key","value"]}
+cbland_writeSavingDataBoolean__P223100.info = {"start":3679,"length":160,"line":99,"column":4,"endLine":101,"endColumn":5,"fileName":"cbl-room.ts","functionName":"writeSavingDataBoolean","argumentNames":["roomName","key","value"]}
 
-function cbland_writeSavingDataBoolean__P217014_mk(s) {
+function cbland_writeSavingDataBoolean__P223100_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_writeSavingDataBoolean__P217014, depth: s.depth + 1,
+        parent: s, fn: cbland_writeSavingDataBoolean__P223100, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -60184,7 +60184,7 @@ function cbland_writeSavingDataBoolean__P217014_mk(s) {
 
 
 
-function cbland_SavingData_writeDataBoolean__P217472(s) {
+function cbland_SavingData_writeDataBoolean__P223229(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60202,7 +60202,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_SavingData__C217469_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_SavingData__C223226_VT)) failedCast(r0);
     r0 = pxsim_numops_toBoolDecr(s.arg3);
     if (!r0) { step = 1; continue; }
     r0 = 1;
@@ -60222,12 +60222,12 @@ switch (step) {
   case 4:
     r0 = s.retval;
     s.tmp_4 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 5);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 5:
     r0 = s.retval;
     s.tmp_5 = r0;
@@ -60261,12 +60261,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_SavingData_writeDataBoolean__P217472.info = {"start":1044,"length":162,"line":40,"column":8,"endLine":42,"endColumn":9,"fileName":"cbl-room.ts","functionName":"writeDataBoolean","argumentNames":["this","roomName","key","value"]}
+cbland_SavingData_writeDataBoolean__P223229.info = {"start":1044,"length":162,"line":40,"column":8,"endLine":42,"endColumn":9,"fileName":"cbl-room.ts","functionName":"writeDataBoolean","argumentNames":["this","roomName","key","value"]}
 
-function cbland_SavingData_writeDataBoolean__P217472_mk(s) {
+function cbland_SavingData_writeDataBoolean__P223229_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_SavingData_writeDataBoolean__P217472, depth: s.depth + 1,
+        parent: s, fn: cbland_SavingData_writeDataBoolean__P223229, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -60285,7 +60285,7 @@ function cbland_SavingData_writeDataBoolean__P217472_mk(s) {
 
 
 
-function cbland_readSavingDataBoolean__P217010(s) {
+function cbland_readSavingDataBoolean__P223096(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60300,8 +60300,8 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_SavingData_readDataBoolean__P217473_mk(s);
-    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___217676;
+    s.tmp_0 = cbland_SavingData_readDataBoolean__P223230_mk(s);
+    s.tmp_0.arg0 = globals.SAVINGDATA_INSTANCE___223433;
     s.tmp_0.arg1 = s.arg0;
     s.tmp_0.arg2 = s.arg1;
     s.callLocIdx = 356; s.pc = 1; return s.tmp_0;
@@ -60310,12 +60310,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_readSavingDataBoolean__P217010.info = {"start":4040,"length":151,"line":107,"column":4,"endLine":109,"endColumn":5,"fileName":"cbl-room.ts","functionName":"readSavingDataBoolean","argumentNames":["roomName","key"]}
+cbland_readSavingDataBoolean__P223096.info = {"start":4040,"length":151,"line":107,"column":4,"endLine":109,"endColumn":5,"fileName":"cbl-room.ts","functionName":"readSavingDataBoolean","argumentNames":["roomName","key"]}
 
-function cbland_readSavingDataBoolean__P217010_mk(s) {
+function cbland_readSavingDataBoolean__P223096_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_readSavingDataBoolean__P217010, depth: s.depth + 1,
+        parent: s, fn: cbland_readSavingDataBoolean__P223096, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -60326,7 +60326,7 @@ function cbland_readSavingDataBoolean__P217010_mk(s) {
 
 
 
-function cbland_SavingData_readDataBoolean__P217473(s) {
+function cbland_SavingData_readDataBoolean__P223230(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60343,7 +60343,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, cbland_SavingData__C217469_VT)) failedCast(r0);
+    if (!checkSubtype(r0, cbland_SavingData__C223226_VT)) failedCast(r0);
     if ((s.arg1) && (s.arg1).vtable) {
     setupResume(s, 8);
     pxsim_String__stringConv(s.arg1);
@@ -60353,12 +60353,12 @@ switch (step) {
   case 8:
     r0 = s.retval;
     s.tmp_4 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 9);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 9:
     r0 = s.retval;
     s.tmp_5 = r0;
@@ -60398,12 +60398,12 @@ switch (step) {
   case 13:
     r0 = s.retval;
     s.tmp_12 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 14);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 14:
     r0 = s.retval;
     s.tmp_13 = r0;
@@ -60449,21 +60449,21 @@ switch (step) {
     { step = 6; continue; }
   case 3:
     s.tmp_18 = settings_readNumber__P122424_mk(s);
-    if ((globals.SAVINGDATA_GLOBAL_KEY___217045) && (globals.SAVINGDATA_GLOBAL_KEY___217045).vtable) {
+    if ((globals.SAVINGDATA_GLOBAL_KEY___223117) && (globals.SAVINGDATA_GLOBAL_KEY___223117).vtable) {
     setupResume(s, 18);
-    pxsim_String__stringConv(globals.SAVINGDATA_GLOBAL_KEY___217045);
+    pxsim_String__stringConv(globals.SAVINGDATA_GLOBAL_KEY___223117);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.SAVINGDATA_GLOBAL_KEY___217045) + ""; }
+    } else { s.retval = (globals.SAVINGDATA_GLOBAL_KEY___223117) + ""; }
   case 18:
     r0 = s.retval;
     s.tmp_21 = r0;
-    if ((globals.cbland_SavingData_SEPERATOR___217478) && (globals.cbland_SavingData_SEPERATOR___217478).vtable) {
+    if ((globals.cbland_SavingData_SEPERATOR___223235) && (globals.cbland_SavingData_SEPERATOR___223235).vtable) {
     setupResume(s, 19);
-    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___217478);
+    pxsim_String__stringConv(globals.cbland_SavingData_SEPERATOR___223235);
     checkResumeConsumed();
     return;
-    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___217478) + ""; }
+    } else { s.retval = (globals.cbland_SavingData_SEPERATOR___223235) + ""; }
   case 19:
     r0 = s.retval;
     s.tmp_22 = r0;
@@ -60512,12 +60512,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_SavingData_readDataBoolean__P217473.info = {"start":1216,"length":392,"line":44,"column":8,"endLine":50,"endColumn":9,"fileName":"cbl-room.ts","functionName":"readDataBoolean","argumentNames":["this","roomName","key"]}
+cbland_SavingData_readDataBoolean__P223230.info = {"start":1216,"length":392,"line":44,"column":8,"endLine":50,"endColumn":9,"fileName":"cbl-room.ts","functionName":"readDataBoolean","argumentNames":["this","roomName","key"]}
 
-function cbland_SavingData_readDataBoolean__P217473_mk(s) {
+function cbland_SavingData_readDataBoolean__P223230_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_SavingData_readDataBoolean__P217473, depth: s.depth + 1,
+        parent: s, fn: cbland_SavingData_readDataBoolean__P223230, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -60553,7 +60553,7 @@ function cbland_SavingData_readDataBoolean__P217473_mk(s) {
 
 
 
-function cbland_createRoomSprite__P217009(s) {
+function cbland_createRoomSprite__P223095(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60569,7 +60569,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = if_createSprite_4_mk(s);
-    s.tmp_1 = cbland_currentRoom__P217467_mk(s);
+    s.tmp_1 = cbland_currentRoom__P223224_mk(s);
     s.callLocIdx = 367; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -60591,12 +60591,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_createRoomSprite__P217009.info = {"start":8604,"length":143,"line":234,"column":4,"endLine":236,"endColumn":5,"fileName":"cbl-room.ts","functionName":"createRoomSprite","argumentNames":["image","spriteKind"]}
+cbland_createRoomSprite__P223095.info = {"start":8601,"length":143,"line":234,"column":4,"endLine":236,"endColumn":5,"fileName":"cbl-room.ts","functionName":"createRoomSprite","argumentNames":["image","spriteKind"]}
 
-function cbland_createRoomSprite__P217009_mk(s) {
+function cbland_createRoomSprite__P223095_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_createRoomSprite__P217009, depth: s.depth + 1,
+        parent: s, fn: cbland_createRoomSprite__P223095, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -60608,7 +60608,7 @@ function cbland_createRoomSprite__P217009_mk(s) {
 
 
 
-function cbland_currentRoom__P217467(s) {
+function cbland_currentRoom__P223224(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60618,16 +60618,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = globals._currentRoom___217067;
+    r0 = globals._currentRoom___221256;
     return leave(s, r0)
   default: oops()
 } } }
-cbland_currentRoom__P217467.info = {"start":294,"length":82,"line":15,"column":4,"endLine":17,"endColumn":5,"fileName":"cbl-room.ts","functionName":"currentRoom","argumentNames":[]}
+cbland_currentRoom__P223224.info = {"start":294,"length":82,"line":15,"column":4,"endLine":17,"endColumn":5,"fileName":"cbl-room.ts","functionName":"currentRoom","argumentNames":[]}
 
-function cbland_currentRoom__P217467_mk(s) {
+function cbland_currentRoom__P223224_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_currentRoom__P217467, depth: s.depth + 1,
+        parent: s, fn: cbland_currentRoom__P223224, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -60635,7 +60635,7 @@ function cbland_currentRoom__P217467_mk(s) {
 
 
 
-function room_currentRoom__P217068(s) {
+function room_currentRoom__P221257(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -60645,16 +60645,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = globals._currentRoom___217067;
+    r0 = globals._currentRoom___221256;
     return leave(s, r0)
   default: oops()
 } } }
-room_currentRoom__P217068.info = {"start":815,"length":72,"line":30,"column":4,"endLine":32,"endColumn":5,"fileName":"room.ts","functionName":"currentRoom","argumentNames":[]}
+room_currentRoom__P221257.info = {"start":815,"length":72,"line":30,"column":4,"endLine":32,"endColumn":5,"fileName":"room.ts","functionName":"currentRoom","argumentNames":[]}
 
-function room_currentRoom__P217068_mk(s) {
+function room_currentRoom__P221257_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_currentRoom__P217068, depth: s.depth + 1,
+        parent: s, fn: room_currentRoom__P221257, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -60734,7 +60734,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = scene_util_captureScene__P125354_mk(s);
-    r0 = globals._currentRoomInRegister___217465;
+    r0 = globals._currentRoomInRegister___223222;
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = s.arg0;
     s.callLocIdx = 380; s.pc = 1; return s.tmp_0;
@@ -60775,7 +60775,7 @@ switch (step) {
     }
     s.tmp_0 = scene_util_restoreScene__P125358_mk(s);
     s.tmp_1 = if_getRoomName_1_mk(s);
-    s.tmp_2 = cbland_currentRoom__P217467_mk(s);
+    s.tmp_2 = cbland_currentRoom__P223224_mk(s);
     s.callLocIdx = 382; s.pc = 3; return s.tmp_2;
   case 3:
     r0 = s.retval;
@@ -60865,21 +60865,21 @@ switch (step) {
 
     s.scene___130365 = undefined;
     s.overlapHandler___130372 = undefined;
-    s.unnamed6718___U2 = undefined;
-    s.unnamed6719___U3 = undefined;
+    s.unnamed7406___U2 = undefined;
+    s.unnamed7407___U3 = undefined;
     s.gameForeverHandler___130387 = undefined;
-    s.unnamed6720___U5 = undefined;
-    s.unnamed6721___U6 = undefined;
+    s.unnamed7408___U5 = undefined;
+    s.unnamed7409___U6 = undefined;
     s.spriteTileOverlapHandler___130397 = undefined;
-    s.unnamed6722___U8 = undefined;
-    s.unnamed6723___U9 = undefined;
+    s.unnamed7410___U8 = undefined;
+    s.unnamed7411___U9 = undefined;
     s.spriteHitWallHandler___130407 = undefined;
-    s.unnamed6724___U11 = undefined;
-    s.unnamed6725___U12 = undefined;
+    s.unnamed7412___U11 = undefined;
+    s.unnamed7413___U12 = undefined;
     s.roomButtonEventHandlers___130416 = undefined;
     s.buttonEventHandler___130421 = undefined;
-    s.unnamed6726___U15 = undefined;
-    s.unnamed6727___U16 = undefined;
+    s.unnamed7414___U15 = undefined;
+    s.unnamed7415___U16 = undefined;
     if (s.lambdaArgs) {
       s.arg0 = (s.lambdaArgs[0]);
       s.lambdaArgs = null;
@@ -60895,15 +60895,15 @@ switch (step) {
   case 2:
     s.overlapHandler___130372 = (undefined);
     r0 = s.scene___130365.fields["overlapHandlers"];
-    s.unnamed6718___U2 = (r0);
-    s.unnamed6719___U3 = (0);
+    s.unnamed7406___U2 = (r0);
+    s.unnamed7407___U3 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed6719___U3;
-    r0 = pxsim_Array__length(s.unnamed6718___U2);
+    s.tmp_0 = r0 = s.unnamed7407___U3;
+    r0 = pxsim_Array__length(s.unnamed7406___U2);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6718___U2, s.unnamed6719___U3);
+    r0 = pxsim_Array__getAt(s.unnamed7406___U2, s.unnamed7407___U3);
     s.overlapHandler___130372 = (r0);
     s.tmp_3 = game_currentScene__P123354_mk(s);
     s.callLocIdx = 388; s.pc = 16; return s.tmp_3;
@@ -60912,11 +60912,11 @@ switch (step) {
     r0 = r0.fields["overlapHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.overlapHandler___130372);
-    r0 = (s.unnamed6719___U3 + 1);
-    s.unnamed6719___U3 = (r0);
+    r0 = (s.unnamed7407___U3 + 1);
+    s.unnamed7407___U3 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed6718___U2 = (undefined);
+    s.unnamed7406___U2 = (undefined);
     s.tmp_1 = game_currentScene__P123354_mk(s);
     s.callLocIdx = 389; s.pc = 17; return s.tmp_1;
   case 17:
@@ -60927,15 +60927,15 @@ switch (step) {
     r0 = (s.tmp_0).fields["overlapMap"] = (s.tmp_2);
     s.gameForeverHandler___130387 = (undefined);
     r0 = s.scene___130365.fields["gameForeverHandlers"];
-    s.unnamed6720___U5 = (r0);
-    s.unnamed6721___U6 = (0);
+    s.unnamed7408___U5 = (r0);
+    s.unnamed7409___U6 = (0);
   case 5:
-    s.tmp_0 = r0 = s.unnamed6721___U6;
-    r0 = pxsim_Array__length(s.unnamed6720___U5);
+    s.tmp_0 = r0 = s.unnamed7409___U6;
+    r0 = pxsim_Array__length(s.unnamed7408___U5);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 6; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6720___U5, s.unnamed6721___U6);
+    r0 = pxsim_Array__getAt(s.unnamed7408___U5, s.unnamed7409___U6);
     s.gameForeverHandler___130387 = (r0);
     s.tmp_3 = game_currentScene__P123354_mk(s);
     s.callLocIdx = 390; s.pc = 18; return s.tmp_3;
@@ -60944,22 +60944,22 @@ switch (step) {
     r0 = r0.fields["gameForeverHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.gameForeverHandler___130387);
-    r0 = (s.unnamed6721___U6 + 1);
-    s.unnamed6721___U6 = (r0);
+    r0 = (s.unnamed7409___U6 + 1);
+    s.unnamed7409___U6 = (r0);
     { step = 5; continue; }
   case 6:
-    s.unnamed6720___U5 = (undefined);
+    s.unnamed7408___U5 = (undefined);
     s.spriteTileOverlapHandler___130397 = (undefined);
     r0 = s.scene___130365.fields["tileOverlapHandlers"];
-    s.unnamed6722___U8 = (r0);
-    s.unnamed6723___U9 = (0);
+    s.unnamed7410___U8 = (r0);
+    s.unnamed7411___U9 = (0);
   case 7:
-    s.tmp_0 = r0 = s.unnamed6723___U9;
-    r0 = pxsim_Array__length(s.unnamed6722___U8);
+    s.tmp_0 = r0 = s.unnamed7411___U9;
+    r0 = pxsim_Array__length(s.unnamed7410___U8);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 8; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6722___U8, s.unnamed6723___U9);
+    r0 = pxsim_Array__getAt(s.unnamed7410___U8, s.unnamed7411___U9);
     s.spriteTileOverlapHandler___130397 = (r0);
     s.tmp_3 = game_currentScene__P123354_mk(s);
     s.callLocIdx = 391; s.pc = 19; return s.tmp_3;
@@ -60968,22 +60968,22 @@ switch (step) {
     r0 = r0.fields["tileOverlapHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.spriteTileOverlapHandler___130397);
-    r0 = (s.unnamed6723___U9 + 1);
-    s.unnamed6723___U9 = (r0);
+    r0 = (s.unnamed7411___U9 + 1);
+    s.unnamed7411___U9 = (r0);
     { step = 7; continue; }
   case 8:
-    s.unnamed6722___U8 = (undefined);
+    s.unnamed7410___U8 = (undefined);
     s.spriteHitWallHandler___130407 = (undefined);
     r0 = s.scene___130365.fields["wallCollisionHandlers"];
-    s.unnamed6724___U11 = (r0);
-    s.unnamed6725___U12 = (0);
+    s.unnamed7412___U11 = (r0);
+    s.unnamed7413___U12 = (0);
   case 9:
-    s.tmp_0 = r0 = s.unnamed6725___U12;
-    r0 = pxsim_Array__length(s.unnamed6724___U11);
+    s.tmp_0 = r0 = s.unnamed7413___U12;
+    r0 = pxsim_Array__length(s.unnamed7412___U11);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 10; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6724___U11, s.unnamed6725___U12);
+    r0 = pxsim_Array__getAt(s.unnamed7412___U11, s.unnamed7413___U12);
     s.spriteHitWallHandler___130407 = (r0);
     s.tmp_3 = game_currentScene__P123354_mk(s);
     s.callLocIdx = 392; s.pc = 20; return s.tmp_3;
@@ -60992,25 +60992,25 @@ switch (step) {
     r0 = r0.fields["wallCollisionHandlers"];
     s.tmp_2 = r0;
     r0 = pxsim_Array__push(s.tmp_2, s.spriteHitWallHandler___130407);
-    r0 = (s.unnamed6725___U12 + 1);
-    s.unnamed6725___U12 = (r0);
+    r0 = (s.unnamed7413___U12 + 1);
+    s.unnamed7413___U12 = (r0);
     { step = 9; continue; }
   case 10:
-    s.unnamed6724___U11 = (undefined);
+    s.unnamed7412___U11 = (undefined);
     r0 = pxsim_pxtrt.mapGetGeneric(globals._buttonEventHandlers___130243, s.arg0);
     s.roomButtonEventHandlers___130416 = (r0);
     r0 = pxsim_numops_toBoolDecr(s.roomButtonEventHandlers___130416);
     if (!r0) { step = 13; continue; }
     s.buttonEventHandler___130421 = (undefined);
-    s.unnamed6726___U15 = (s.roomButtonEventHandlers___130416);
-    s.unnamed6727___U16 = (0);
+    s.unnamed7414___U15 = (s.roomButtonEventHandlers___130416);
+    s.unnamed7415___U16 = (0);
   case 11:
-    s.tmp_0 = r0 = s.unnamed6727___U16;
-    r0 = pxsim_Array__length(s.unnamed6726___U15);
+    s.tmp_0 = r0 = s.unnamed7415___U16;
+    r0 = pxsim_Array__length(s.unnamed7414___U15);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 12; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6726___U15, s.unnamed6727___U16);
+    r0 = pxsim_Array__getAt(s.unnamed7414___U15, s.unnamed7415___U16);
     s.buttonEventHandler___130421 = (r0);
     s.tmp_2 = controller_Button_onEvent__P122552_mk(s);
     s.tmp_3 = scene_util_controlButtonToButton__P130347_mk(s);
@@ -61027,11 +61027,11 @@ switch (step) {
     s.callLocIdx = 394; s.pc = 21; return s.tmp_2;
   case 21:
     r0 = s.retval;
-    r0 = (s.unnamed6727___U16 + 1);
-    s.unnamed6727___U16 = (r0);
+    r0 = (s.unnamed7415___U16 + 1);
+    s.unnamed7415___U16 = (r0);
     { step = 11; continue; }
   case 12:
-    s.unnamed6726___U15 = (undefined);
+    s.unnamed7414___U15 = (undefined);
   case 13:
   case 14:
   case 15:
@@ -61052,21 +61052,21 @@ function scene_util_restoreScene__P125358_mk(s) {
   tmp_3: undefined,
   scene___130365: undefined,
   overlapHandler___130372: undefined,
-  unnamed6718___U2: undefined,
-  unnamed6719___U3: undefined,
+  unnamed7406___U2: undefined,
+  unnamed7407___U3: undefined,
   gameForeverHandler___130387: undefined,
-  unnamed6720___U5: undefined,
-  unnamed6721___U6: undefined,
+  unnamed7408___U5: undefined,
+  unnamed7409___U6: undefined,
   spriteTileOverlapHandler___130397: undefined,
-  unnamed6722___U8: undefined,
-  unnamed6723___U9: undefined,
+  unnamed7410___U8: undefined,
+  unnamed7411___U9: undefined,
   spriteHitWallHandler___130407: undefined,
-  unnamed6724___U11: undefined,
-  unnamed6725___U12: undefined,
+  unnamed7412___U11: undefined,
+  unnamed7413___U12: undefined,
   roomButtonEventHandlers___130416: undefined,
   buttonEventHandler___130421: undefined,
-  unnamed6726___U15: undefined,
-  unnamed6727___U16: undefined,
+  unnamed7414___U15: undefined,
+  unnamed7415___U16: undefined,
   arg0: undefined,
 } }
 
@@ -61174,7 +61174,7 @@ function scene_util_captureScene__P125354_mk(s) {
 
 
 
-function cbland__getCurrentRoomInRegister__P217043(s) {
+function cbland__getCurrentRoomInRegister__P223115(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -61184,16 +61184,16 @@ if (yieldSteps-- < 0 && maybeYield(s, step, r0) || runtime !== pxsim.runtime) re
 switch (step) {
   case 0:
 
-    r0 = globals._currentRoomInRegister___217465;
+    r0 = globals._currentRoomInRegister___223222;
     return leave(s, r0)
   default: oops()
 } } }
-cbland__getCurrentRoomInRegister__P217043.info = {"start":185,"length":98,"line":10,"column":4,"endLine":12,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getCurrentRoomInRegister","argumentNames":[]}
+cbland__getCurrentRoomInRegister__P223115.info = {"start":185,"length":98,"line":10,"column":4,"endLine":12,"endColumn":5,"fileName":"cbl-room.ts","functionName":"_getCurrentRoomInRegister","argumentNames":[]}
 
-function cbland__getCurrentRoomInRegister__P217043_mk(s) {
+function cbland__getCurrentRoomInRegister__P223115_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland__getCurrentRoomInRegister__P217043, depth: s.depth + 1,
+        parent: s, fn: cbland__getCurrentRoomInRegister__P223115, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
 } }
 
@@ -73602,7 +73602,7 @@ function game_BaseDialog_setText__P123273_mk(s) {
 
 
 
-function room_CommonRoom_willLeaveRoom__P217339(s) {
+function room_CommonRoom_willLeaveRoom__P221527(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -73618,7 +73618,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
     r0 = s.arg0.fields["_willLeaveRoomCallback"];
     s.tmp_0 = r0;
     r0 = pxsim_numops_toBoolDecr(s.tmp_0);
@@ -73631,29 +73631,27 @@ switch (step) {
     s.tmp_1.arg3 = s.arg1;
     if (!s.tmp_1.arg0.vtable.iface) {
       setupLambda(s.tmp_1, pxsim_pxtrt.mapGetByString(s.tmp_1.arg0, "_willLeaveRoomCallback"), 4);
-      s.callLocIdx = 231; s.pc = 4; return s.tmp_1;
+      s.callLocIdx = 231; s.pc = 3; return s.tmp_1;
     } else {
       s.tmp_1.fn = s.tmp_1.arg0.vtable.iface["_willLeaveRoomCallback"];
-      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["_willLeaveRoomCallback"], 4); s.callLocIdx = 231; s.pc = 4; return s.tmp_1; }
-      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 231; s.pc = 4; return s.tmp_1;; }
-     else { s.callLocIdx = 231; s.pc = 4; return s.tmp_1; }
+      if (s.tmp_1.fn == null) { setupLambda(s.tmp_1, s.tmp_1.arg0.fields["_willLeaveRoomCallback"], 4); s.callLocIdx = 231; s.pc = 3; return s.tmp_1; }
+      else if (s.tmp_1.fn.isGetter) { s.tmp_1.stage2Call = true; s.callLocIdx = 231; s.pc = 3; return s.tmp_1;; }
+     else { s.callLocIdx = 231; s.pc = 3; return s.tmp_1; }
     }
-  case 4:
+  case 3:
     r0 = s.retval;
-    { step = 3; continue; }
   case 1:
   case 2:
     r0 = true;
-  case 3:
     return leave(s, r0)
   default: oops()
 } } }
-room_CommonRoom_willLeaveRoom__P217339.info = {"start":7183,"length":220,"line":231,"column":8,"endLine":236,"endColumn":9,"fileName":"room.ts","functionName":"willLeaveRoom","argumentNames":["this","exit"]}
+room_CommonRoom_willLeaveRoom__P221527.info = {"start":7177,"length":213,"line":231,"column":8,"endLine":236,"endColumn":9,"fileName":"room.ts","functionName":"willLeaveRoom","argumentNames":["this","exit"]}
 
-function room_CommonRoom_willLeaveRoom__P217339_mk(s) {
+function room_CommonRoom_willLeaveRoom__P221527_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_willLeaveRoom__P217339, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_willLeaveRoom__P221527, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -73665,7 +73663,7 @@ function room_CommonRoom_willLeaveRoom__P217339_mk(s) {
 
 
 
-function room_CommonRoom_enterRoom__P217338(s) {
+function room_CommonRoom_enterRoom__P221526(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -73682,8 +73680,8 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
-    s.tmp_0 = room_AbstractRoom_enterRoom__P217028_mk(s);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
+    s.tmp_0 = room_AbstractRoom_enterRoom__P221223_mk(s);
     s.tmp_0.arg0 = s.arg0;
     s.tmp_0.arg1 = s.arg1;
     s.tmp_0.arg2 = s.arg2;
@@ -73710,12 +73708,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-room_CommonRoom_enterRoom__P217338.info = {"start":6981,"length":192,"line":224,"column":8,"endLine":229,"endColumn":9,"fileName":"room.ts","functionName":"enterRoom","argumentNames":["this","heroSprite","entrance"]}
+room_CommonRoom_enterRoom__P221526.info = {"start":6975,"length":192,"line":224,"column":8,"endLine":229,"endColumn":9,"fileName":"room.ts","functionName":"enterRoom","argumentNames":["this","heroSprite","entrance"]}
 
-function room_CommonRoom_enterRoom__P217338_mk(s) {
+function room_CommonRoom_enterRoom__P221526_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_enterRoom__P217338, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_enterRoom__P221526, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   arg0: undefined,
@@ -73727,7 +73725,7 @@ function room_CommonRoom_enterRoom__P217338_mk(s) {
 
 
 
-function room_CommonRoom_roomTilemap__P217337(s) {
+function room_CommonRoom_roomTilemap__P221525(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -73742,17 +73740,17 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
     r0 = s.arg0.fields["tilemap"];
     return leave(s, r0)
   default: oops()
 } } }
-room_CommonRoom_roomTilemap__P217337.info = {"start":6885,"length":86,"line":220,"column":8,"endLine":222,"endColumn":9,"fileName":"room.ts","functionName":"roomTilemap","argumentNames":["this"]}
+room_CommonRoom_roomTilemap__P221525.info = {"start":6879,"length":86,"line":220,"column":8,"endLine":222,"endColumn":9,"fileName":"room.ts","functionName":"roomTilemap","argumentNames":["this"]}
 
-function room_CommonRoom_roomTilemap__P217337_mk(s) {
+function room_CommonRoom_roomTilemap__P221525_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_roomTilemap__P217337, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_roomTilemap__P221525, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -85801,8 +85799,8 @@ switch (step) {
     s.roomLocation___198071 = undefined;
     s.currentRoomLocationIndex___198090 = undefined;
     s.locationForSale___198112 = undefined;
-    s.unnamed6704___U3 = undefined;
-    s.unnamed6705___U4 = undefined;
+    s.unnamed7392___U3 = undefined;
+    s.unnamed7393___U4 = undefined;
     s.locationForSaleSprite___198115 = undefined;
     s.dogSprite___198127 = undefined;
     if (s.lambdaArgs) {
@@ -85869,25 +85867,25 @@ switch (step) {
     r0 = pxsim_pxtcore_mkAction(1, cbland_VillageRoom_didEnterRoom_inline__P198092);
     s.tmp_0 = r0;
     r0 = pxsim_pxtrt_stclo(s.tmp_0, 0, s.arg0);
-    s.tmp_1 = cbland_forEachRoom__P217033_mk(s);
+    s.tmp_1 = cbland_forEachRoom__P223107_mk(s);
     s.tmp_1.arg0 = s.tmp_0;
     s.callLocIdx = 159; s.pc = 11; return s.tmp_1;
   case 11:
     r0 = s.retval;
     s.locationForSale___198112 = (undefined);
     r0 = s.arg0.fields["_availableLocationForRooms"];
-    s.unnamed6704___U3 = (r0);
-    s.unnamed6705___U4 = (0);
+    s.unnamed7392___U3 = (r0);
+    s.unnamed7393___U4 = (0);
   case 3:
-    s.tmp_0 = r0 = s.unnamed6705___U4;
-    r0 = pxsim_Array__length(s.unnamed6704___U3);
+    s.tmp_0 = r0 = s.unnamed7393___U4;
+    r0 = pxsim_Array__length(s.unnamed7392___U3);
     s.tmp_1 = r0;
     r0 = (s.tmp_0 < s.tmp_1);
     if (!r0) { step = 4; continue; }
-    r0 = pxsim_Array__getAt(s.unnamed6704___U3, s.unnamed6705___U4);
+    r0 = pxsim_Array__getAt(s.unnamed7392___U3, s.unnamed7393___U4);
     s.locationForSale___198112 = (r0);
-    s.tmp_2 = cbland_createSprite__P217038_mk(s);
-    s.tmp_3 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_2 = cbland_createSprite__P223111_mk(s);
+    s.tmp_3 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_3.arg0 = "forSale";
     s.callLocIdx = 160; s.pc = 13; return s.tmp_3;
   case 13:
@@ -85913,12 +85911,12 @@ switch (step) {
     s.callLocIdx = 163; s.pc = 14; return s.tmp_0;
   case 14:
     r0 = s.retval;
-    r0 = (s.unnamed6705___U4 + 1);
-    s.unnamed6705___U4 = (r0);
+    r0 = (s.unnamed7393___U4 + 1);
+    s.unnamed7393___U4 = (r0);
     { step = 3; continue; }
   case 4:
-    s.unnamed6704___U3 = (undefined);
-    s.tmp_0 = cbland_createSprite__P217038_mk(s);
+    s.unnamed7392___U3 = (undefined);
+    s.tmp_0 = cbland_createSprite__P223111_mk(s);
     r0 = pxsim.image.ofBuffer(_hex198130);
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals.Dog___197996;
@@ -85971,8 +85969,8 @@ function cbland_VillageRoom_didEnterRoom__P198010_mk(s) {
   roomLocation___198071: undefined,
   currentRoomLocationIndex___198090: undefined,
   locationForSale___198112: undefined,
-  unnamed6704___U3: undefined,
-  unnamed6705___U4: undefined,
+  unnamed7392___U3: undefined,
+  unnamed7393___U4: undefined,
   locationForSaleSprite___198115: undefined,
   dogSprite___198127: undefined,
   arg0: undefined,
@@ -86001,7 +85999,7 @@ switch (step) {
       s.arg1 = (s.lambdaArgs[1]);
       s.lambdaArgs = null;
     }
-    s.tmp_0 = cbland_createSprite__P217038_mk(s);
+    s.tmp_0 = cbland_createSprite__P223111_mk(s);
     r0 = s.arg1.fields["_roomImage"];
     s.tmp_0.arg0 = r0;
     s.tmp_0.arg1 = globals._CommonRoomDummy___197990;
@@ -86145,8 +86143,8 @@ switch (step) {
     s.callLocIdx = 169; s.pc = 5; return s.tmp_1;
   case 5:
     r0 = s.retval;
-    s.tmp_0 = cbland_createSprite__P217038_mk(s);
-    s.tmp_1 = helpers_getCBLImageByName__P217002_mk(s);
+    s.tmp_0 = cbland_createSprite__P223111_mk(s);
+    s.tmp_1 = helpers_getCBLImageByName__P221202_mk(s);
     s.tmp_1.arg0 = "boneImage";
     s.callLocIdx = 170; s.pc = 7; return s.tmp_1;
   case 7:
@@ -87544,7 +87542,7 @@ function cbland_info_openInventoryAndSelectSingle__P208995_mk(s) {
 
 
 
-function room_CommonRoom_roomImage__P217039(s) {
+function room_CommonRoom_roomImage__P221232(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -87559,18 +87557,18 @@ switch (step) {
       s.lambdaArgs = null;
     }
     r0 = s.arg0;
-    if (!checkSubtype(r0, room_CommonRoom__C217333_VT)) failedCast(r0);
+    if (!checkSubtype(r0, room_CommonRoom__C221521_VT)) failedCast(r0);
     r0 = s.arg0.fields["_roomImage"];
     return leaveAccessor(s, r0)
   default: oops()
 } } }
-room_CommonRoom_roomImage__P217039.info = {"start":6606,"length":62,"line":210,"column":8,"endLine":212,"endColumn":9,"fileName":"room.ts","functionName":"roomImage","argumentNames":["this"]}
-room_CommonRoom_roomImage__P217039.isGetter = true;
+room_CommonRoom_roomImage__P221232.info = {"start":6600,"length":62,"line":210,"column":8,"endLine":212,"endColumn":9,"fileName":"room.ts","functionName":"roomImage","argumentNames":["this"]}
+room_CommonRoom_roomImage__P221232.isGetter = true;
 
-function room_CommonRoom_roomImage__P217039_mk(s) {
+function room_CommonRoom_roomImage__P221232_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: room_CommonRoom_roomImage__P217039, depth: s.depth + 1,
+        parent: s, fn: room_CommonRoom_roomImage__P221232, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   arg0: undefined,
 } }
@@ -87579,7 +87577,7 @@ function room_CommonRoom_roomImage__P217039_mk(s) {
 
 
 
-function cbland_createSprite__P217038(s) {
+function cbland_createSprite__P223111(s) {
 let r0 = s.r0, step = s.pc;
 s.pc = -1;
 
@@ -87596,7 +87594,7 @@ switch (step) {
       s.lambdaArgs = null;
     }
     s.tmp_0 = if_createSprite_4_mk(s);
-    s.tmp_1 = cbland_currentRoom__P217467_mk(s);
+    s.tmp_1 = cbland_currentRoom__P223224_mk(s);
     s.callLocIdx = 369; s.pc = 2; return s.tmp_1;
   case 2:
     r0 = s.retval;
@@ -87618,12 +87616,12 @@ switch (step) {
     return leave(s, r0)
   default: oops()
 } } }
-cbland_createSprite__P217038.info = {"start":9497,"length":170,"line":270,"column":4,"endLine":273,"endColumn":5,"fileName":"cbl-room.ts","functionName":"createSprite","argumentNames":["image","spriteKind","stateful"]}
+cbland_createSprite__P223111.info = {"start":9494,"length":170,"line":270,"column":4,"endLine":273,"endColumn":5,"fileName":"cbl-room.ts","functionName":"createSprite","argumentNames":["image","spriteKind","stateful"]}
 
-function cbland_createSprite__P217038_mk(s) {
+function cbland_createSprite__P223111_mk(s) {
     checkStack(s.depth);
     return {
-        parent: s, fn: cbland_createSprite__P217038, depth: s.depth + 1,
+        parent: s, fn: cbland_createSprite__P223111, depth: s.depth + 1,
         pc: 0, retval: undefined, r0: undefined, overwrittenPC: false, lambdaArgs: null,
   tmp_0: undefined,
   tmp_1: undefined,
@@ -87701,7 +87699,7 @@ switch (step) {
     }
     r0 = s.arg0;
     if (!checkSubtype(r0, cbland_VillageRoom__C198006_VT)) failedCast(r0);
-    s.tmp_0 = helpers_getCBLTilemapByName__P217004_mk(s);
+    s.tmp_0 = helpers_getCBLTilemapByName__P221204_mk(s);
     s.tmp_0.arg0 = "cbland";
     s.callLocIdx = 148; s.pc = 1; return s.tmp_0;
   case 1:
@@ -101248,7 +101246,7 @@ function if_state_1_mk(s) {
 } }
 
 
-function room_AbstractRoom__C217019_v3_3_mk(s) {
+function room_AbstractRoom__C221214_v3_3_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -101264,7 +101262,7 @@ function room_AbstractRoom__C217019_v3_3_mk(s) {
 } }
 
 
-function room_AbstractRoom__C217019_v2_1_mk(s) {
+function room_AbstractRoom__C221214_v2_1_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -101278,7 +101276,7 @@ function room_AbstractRoom__C217019_v2_1_mk(s) {
 } }
 
 
-function room_AbstractRoom__C217019_v0_2_mk(s) {
+function room_AbstractRoom__C221214_v0_2_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -101293,7 +101291,7 @@ function room_AbstractRoom__C217019_v0_2_mk(s) {
 } }
 
 
-function room_AbstractRoom__C217019_v1_2_mk(s) {
+function room_AbstractRoom__C221214_v1_2_mk(s) {
     checkStack(s.depth);
     return {
         parent: s, fn: null, depth: s.depth + 1,
@@ -101603,7 +101601,7 @@ const music_Melody__C121982_VT = mkVTable({
   },
   toStringMethod: music_Melody_toString__P121991,
 });
-const cbland_SavingData__C217469_VT = mkVTable({
+const cbland_SavingData__C223226_VT = mkVTable({
   name: "SavingData",
   numFields: 0,
   classNo: 22,
@@ -101612,10 +101610,10 @@ const cbland_SavingData__C217469_VT = mkVTable({
   methods: {
   },
   iface: {
-    "writeDataNumber": cbland_SavingData_writeDataNumber__P217470,
-    "readDataNumber": cbland_SavingData_readDataNumber__P217471,
-    "writeDataBoolean": cbland_SavingData_writeDataBoolean__P217472,
-    "readDataBoolean": cbland_SavingData_readDataBoolean__P217473,
+    "writeDataNumber": cbland_SavingData_writeDataNumber__P223227,
+    "readDataNumber": cbland_SavingData_readDataNumber__P223228,
+    "writeDataBoolean": cbland_SavingData_writeDataBoolean__P223229,
+    "readDataBoolean": cbland_SavingData_readDataBoolean__P223230,
   },
 });
 const JSON_Stringifier__C125465_VT = mkVTable({
@@ -101637,17 +101635,17 @@ const JSON_Stringifier__C125465_VT = mkVTable({
     "go": JSON_Stringifier_go__P125467,
   },
 });
-const room_AbstractRoom__C217019_VT = mkVTable({
+const room_AbstractRoom__C221214_VT = mkVTable({
   name: "AbstractRoom",
   numFields: 5,
   classNo: 24,
   lastSubtypeNo: 26,
   maxBgInstances: null,
   methods: {
-    "didEnterRoom": room_AbstractRoom_didEnterRoom__P217024,
-    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P217025,
-    "roomTilemap": room_AbstractRoom_roomTilemap__P217027,
-    "enterRoom": room_AbstractRoom_enterRoom__P217028,
+    "didEnterRoom": room_AbstractRoom_didEnterRoom__P221219,
+    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P221220,
+    "roomTilemap": room_AbstractRoom_roomTilemap__P221222,
+    "enterRoom": room_AbstractRoom_enterRoom__P221223,
   },
   iface: {
     "exits": null,
@@ -101660,15 +101658,15 @@ const room_AbstractRoom__C217019_VT = mkVTable({
     "set/createdSprites": null,
     "statefulSprites": null,
     "set/statefulSprites": null,
-    "getRoomName": room_AbstractRoom_getRoomName__P217020,
-    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P217022,
-    "addExit": room_AbstractRoom_addExit__P217023,
-    "didEnterRoom": room_AbstractRoom_didEnterRoom__P217024,
-    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P217025,
-    "createSprite": room_AbstractRoom_createSprite__P217026,
-    "roomTilemap": room_AbstractRoom_roomTilemap__P217027,
-    "enterRoom": room_AbstractRoom_enterRoom__P217028,
-    "leaveRoom": room_AbstractRoom_leaveRoom__P217029,
+    "getRoomName": room_AbstractRoom_getRoomName__P221215,
+    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P221217,
+    "addExit": room_AbstractRoom_addExit__P221218,
+    "didEnterRoom": room_AbstractRoom_didEnterRoom__P221219,
+    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P221220,
+    "createSprite": room_AbstractRoom_createSprite__P221221,
+    "roomTilemap": room_AbstractRoom_roomTilemap__P221222,
+    "enterRoom": room_AbstractRoom_enterRoom__P221223,
+    "leaveRoom": room_AbstractRoom_leaveRoom__P221224,
   },
 });
 const cbland_VillageRoom__C198006_VT = mkVTable({
@@ -101679,9 +101677,9 @@ const cbland_VillageRoom__C198006_VT = mkVTable({
   maxBgInstances: null,
   methods: {
     "didEnterRoom": cbland_VillageRoom_didEnterRoom__P198010,
-    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P217025,
+    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P221220,
     "roomTilemap": cbland_VillageRoom_roomTilemap__P198009,
-    "enterRoom": room_AbstractRoom_enterRoom__P217028,
+    "enterRoom": room_AbstractRoom_enterRoom__P221223,
   },
   iface: {
     "exits": null,
@@ -101701,13 +101699,13 @@ const cbland_VillageRoom__C198006_VT = mkVTable({
     "placeCustomRooms": cbland_VillageRoom_placeCustomRooms__P198008,
     "roomTilemap": cbland_VillageRoom_roomTilemap__P198009,
     "didEnterRoom": cbland_VillageRoom_didEnterRoom__P198010,
-    "getRoomName": room_AbstractRoom_getRoomName__P217020,
-    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P217022,
-    "addExit": room_AbstractRoom_addExit__P217023,
-    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P217025,
-    "createSprite": room_AbstractRoom_createSprite__P217026,
-    "enterRoom": room_AbstractRoom_enterRoom__P217028,
-    "leaveRoom": room_AbstractRoom_leaveRoom__P217029,
+    "getRoomName": room_AbstractRoom_getRoomName__P221215,
+    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P221217,
+    "addExit": room_AbstractRoom_addExit__P221218,
+    "willLeaveRoom": room_AbstractRoom_willLeaveRoom__P221220,
+    "createSprite": room_AbstractRoom_createSprite__P221221,
+    "enterRoom": room_AbstractRoom_enterRoom__P221223,
+    "leaveRoom": room_AbstractRoom_leaveRoom__P221224,
   },
 });
 const scene_Scene__C123198_VT = mkVTable({
@@ -102858,7 +102856,7 @@ const cbland_RoomLocation__C198001_VT = mkVTable({
     "set/row": null,
   },
 });
-const room_Exit__C217070_VT = mkVTable({
+const room_Exit__C221259_VT = mkVTable({
   name: "Exit",
   numFields: 5,
   classNo: 71,
@@ -104188,17 +104186,17 @@ const controller_ControlledSprite__C122486_VT = mkVTable({
     "set/vy": null,
   },
 });
-const room_CommonRoom__C217333_VT = mkVTable({
+const room_CommonRoom__C221521_VT = mkVTable({
   name: "CommonRoom",
   numFields: 9,
   classNo: 26,
   lastSubtypeNo: 26,
   maxBgInstances: null,
   methods: {
-    "didEnterRoom": room_AbstractRoom_didEnterRoom__P217024,
-    "willLeaveRoom": room_CommonRoom_willLeaveRoom__P217339,
-    "roomTilemap": room_CommonRoom_roomTilemap__P217337,
-    "enterRoom": room_CommonRoom_enterRoom__P217338,
+    "didEnterRoom": room_AbstractRoom_didEnterRoom__P221219,
+    "willLeaveRoom": room_CommonRoom_willLeaveRoom__P221527,
+    "roomTilemap": room_CommonRoom_roomTilemap__P221525,
+    "enterRoom": room_CommonRoom_enterRoom__P221526,
   },
   iface: {
     "exits": null,
@@ -104219,17 +104217,17 @@ const room_CommonRoom__C217333_VT = mkVTable({
     "set/_didEnterRoomCallback": null,
     "_willLeaveRoomCallback": null,
     "set/_willLeaveRoomCallback": null,
-    "setDidEnterRoomCallback": room_CommonRoom_setDidEnterRoomCallback__P217335,
-    "roomImage": room_CommonRoom_roomImage__P217039,
-    "roomTilemap": room_CommonRoom_roomTilemap__P217337,
-    "enterRoom": room_CommonRoom_enterRoom__P217338,
-    "willLeaveRoom": room_CommonRoom_willLeaveRoom__P217339,
-    "getRoomName": room_AbstractRoom_getRoomName__P217020,
-    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P217022,
-    "addExit": room_AbstractRoom_addExit__P217023,
-    "didEnterRoom": room_AbstractRoom_didEnterRoom__P217024,
-    "createSprite": room_AbstractRoom_createSprite__P217026,
-    "leaveRoom": room_AbstractRoom_leaveRoom__P217029,
+    "setDidEnterRoomCallback": room_CommonRoom_setDidEnterRoomCallback__P221523,
+    "roomImage": room_CommonRoom_roomImage__P221232,
+    "roomTilemap": room_CommonRoom_roomTilemap__P221525,
+    "enterRoom": room_CommonRoom_enterRoom__P221526,
+    "willLeaveRoom": room_CommonRoom_willLeaveRoom__P221527,
+    "getRoomName": room_AbstractRoom_getRoomName__P221215,
+    "addExitOnLocation": room_AbstractRoom_addExitOnLocation__P221217,
+    "addExit": room_AbstractRoom_addExit__P221218,
+    "didEnterRoom": room_AbstractRoom_didEnterRoom__P221219,
+    "createSprite": room_AbstractRoom_createSprite__P221221,
+    "leaveRoom": room_AbstractRoom_leaveRoom__P221224,
   },
 });
 const game_SplashDialog__C123287_VT = mkVTable({
@@ -104664,7 +104662,7 @@ const sprites_LegacySpriteSayRenderer__C122624_VT = mkVTable({
   },
 });
 
-const breakpoints = setupDebugger(1, ["Wardrobe___125251","Bed___125252","_CommonRoomDummy___197990","_LandForSale___197993","Dog___197996","Bone___197999","ExitWaypoint___217052","clockIcon___209030","ITEM_META_DATA___209496","SAVINGDATA_INSTANCE___217676","rooms___217723","_scenes___130229","_buttonEventHandlers___130243","_buttonSequence___130340","transparencyCBLInternal___125360","tile3___125363","tile4___125364","tile5___125365","tile6___125366","tile7___125367","tile1___125361","tile2___125362","Buyer___125369","ToolSeller___125370","ItemSeller___125371","EQUIPMENT_META_DATA___130885","EQUIPMENT_DATA___130886","INTERNAL_EQUIPMENT_DATA_SETTINGS_KEY___130887","player___198186","VILLAGE_INSTANCE___198184","SAVINGDATA_GLOBAL_KEY___217045","_currentRoom___217067","EXIT_NAME_SD_KEY___217100","CLOCK_INSTANCE___209181","cbland_SavingData_SEPERATOR___217478","_money___209362","isDrawClock___209183","isDrawClockIcon___209185","iconSprite___130892","_currentEquipment___130890","ITEM_DATA___209497","INTERNAL_ITEM_DATA_SETTINGS_KEY___209498","_currentRoomInRegister___217465","_controlButtonSequence___130337"])
+const breakpoints = setupDebugger(1, ["Wardrobe___125251","Bed___125252","_CommonRoomDummy___197990","_LandForSale___197993","Dog___197996","Bone___197999","ExitWaypoint___221241","clockIcon___209030","ITEM_META_DATA___209496","SAVINGDATA_INSTANCE___223433","rooms___223480","_scenes___130229","_buttonEventHandlers___130243","_buttonSequence___130340","transparencyCBLInternal___125360","tile3___125363","tile4___125364","tile5___125365","tile6___125366","tile7___125367","tile1___125361","tile2___125362","Buyer___125369","ToolSeller___125370","ItemSeller___125371","EQUIPMENT_META_DATA___130885","EQUIPMENT_DATA___130886","INTERNAL_EQUIPMENT_DATA_SETTINGS_KEY___130887","player___198186","VILLAGE_INSTANCE___198184","SAVINGDATA_GLOBAL_KEY___223117","_currentRoom___221256","EXIT_NAME_SD_KEY___221289","CLOCK_INSTANCE___209181","cbland_SavingData_SEPERATOR___223235","_money___209362","isDrawClock___209183","isDrawClockIcon___209185","iconSprite___130892","_currentEquipment___130890","ITEM_DATA___209497","INTERNAL_ITEM_DATA_SETTINGS_KEY___209498","_currentRoomInRegister___223222","_controlButtonSequence___130337"])
 
-return _main___P219195
+return _main___P224950
 })
