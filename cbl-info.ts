@@ -37,7 +37,12 @@ namespace cbland_info {
                 hour = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour")
                 minute = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute")
                 tickInterval = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval")
-
+            } 
+            if (day == undefined) {
+                day = 1
+                hour = 8
+                minute = 0
+                tickInterval = tickInterval
             }
 
 

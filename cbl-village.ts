@@ -113,6 +113,9 @@ namespace cbland {
                     })
                 }
             })
+            sprites.onOverlap(SpriteKind.Player, SpriteKind._LandForSale, (sprite: Sprite, otherSprite: Sprite) => {
+                otherSprite.sayText("等待开发...", 50)
+            })
             
         }
     }

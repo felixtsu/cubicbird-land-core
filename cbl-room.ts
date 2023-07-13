@@ -193,9 +193,19 @@ namespace cbland {
         _getCommonRoom(roomName).setDidEnterRoomCallback(callback)
     }
 
-    //%blocks
-    export function willLeaveRoom(roomName: string, callback: () => void) {
-
+    //%block
+    //%blockNamespace=cbland
+    //%group="Room"
+    //%group.loc.zh-CN="房间"
+    //%blockId=cbland_rooom_will_leave_room
+    //%block="run code before player leaves room $roomName"
+    //%block.loc.zh-CN="离开 $roomName 前运行"
+    //%weight=90
+    //%topblock=false
+    //%handlerStatement=true
+    //%draggableParameters="player, room, exit"
+    export function willLeaveRoom(roomName: string, callback: (player: Sprite, room: room.Room, exit?: string) => void) {
+        _getCommonRoom(roomName).setWillLeaveRoomCallback(callback)
     }
 
     //%blocks
