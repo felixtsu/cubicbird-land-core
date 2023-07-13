@@ -40,7 +40,7 @@
         "tilemapTile": true,
         "displayName": "riverU0"
     },
-    "tile7": {
+    "cbl_tile7": {
         "data": "hwQQABAAAACIiIiIiIh4d4iIiIiIiIh3iIiIiIiIiFWIiIiIiIiId4iIiIiIiIh3iIiIiIiIiHeIiIiIiIiIV4iIiIiIiIhXiIiIiIiIiHeIiIiIiIiId4iIiIiIiIh3iIiIiIiIeHWIiIiIiIh4d4iIiIiIiHhXiIiIiIiIeHeIiIiIiIhXdQ==",
         "mimeType": "image/x-mkcd-f4",
         "tilemapTile": true,
