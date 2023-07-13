@@ -85,8 +85,8 @@
             "sprites.dungeon.greenOuterSouthWest",
             "sprites.dungeon.greenOuterSouth1",
             "sprites.dungeon.floorLight2",
-            "myTiles.tile3",
-            "myTiles.tile4"
+            "myTiles.cbl_tile3",
+            "myTiles.cbl_tile4"
         ],
         "displayName": "homeInside"
     },
@@ -105,8 +105,8 @@
             "sprites.dungeon.greenOuterSouthWest",
             "sprites.dungeon.greenOuterSouth1",
             "sprites.dungeon.floorLight2",
-            "myTiles.tile3",
-            "myTiles.tile4",
+            "myTiles.cbl_tile3",
+            "myTiles.cbl_tile4",
             "sprites.dungeon.stairLadder"
         ],
         "displayName": "shopInside"
@@ -127,14 +127,14 @@
             "sprites.castle.tilePath8",
             "sprites.castle.tilePath6",
             "sprites.castle.tileGrass1",
-            "myTiles.tile5",
-            "myTiles.tile6",
-            "myTiles.tile7",
+            "myTiles.cbl_tile5",
+            "myTiles.cbl_tile6",
+            "myTiles.cbl_tile7",
             "sprites.castle.tileGrass3",
-            "myTiles.tile8",
-            "myTiles.tile9",
-            "myTiles.tile10",
-            "myTiles.tile11"
+            "myTiles.cbl_tile8",
+            "myTiles.cbl_tile9",
+            "myTiles.cbl_tile10",
+            "myTiles.cbl_tile11"
         ],
         "displayName": "cbland"
     },
