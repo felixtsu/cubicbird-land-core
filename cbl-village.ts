@@ -189,6 +189,7 @@ namespace cbland {
         cbland_info.setMoneyTo(savedMoney)
         cbland_info.setTime()
 
+        scene.setBackgroundImage(assets.cbl_image`mountainViewDay`)
 
         _getVillageRoom().enterRoom(player)
     }
