@@ -70,9 +70,12 @@ namespace cbland_info {
             cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval", this.tickInterval)
         }
 
-        timeElasped(currentMillis: number) {
+        timeElasped(currentMillis: number, freezeTime:boolean) {
             let deltaMillis = currentMillis - this.lastTick
             this.lastTick = currentMillis
+            if (freezeTime) {
+                return
+            }
             this.currentTimeMinutes += deltaMillis / this.tickInterval * 60
 
             // another day has pass
@@ -141,7 +144,6 @@ namespace cbland_info {
     //%tickInterval.defl=60000
     export function setTime(day?: number, hour?: number, minute?: number, tickInterval: number = 5000) {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
-        console.log("after setTime:" + CLOCK_INSTANCE.hour)
     }
 
     //%group="Time"
@@ -199,7 +201,7 @@ namespace cbland_info {
             () => {
                 // console.log("CLOCK_INSTANCE:" + CLOCK_INSTANCE + "|" + CLOCK_INSTANCE.hour)
                 let currentMillis = game.currentScene().millis()
-                CLOCK_INSTANCE.timeElasped(currentMillis)
+                CLOCK_INSTANCE.timeElasped(currentMillis, !room.isCurrentSceneARoomScene())
                 drawClockImplement()
             }
         )
@@ -252,9 +254,9 @@ namespace cbland_info {
             drawMoneyIconImpl()
         })
 
-        // game.addScenePopHandler((oldScene: scene.Scene) => {
-        //     cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
-        // })
+        game.addScenePopHandler((oldScene: scene.Scene) => {
+            cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
+        })
 
         game.addScenePushHandler((oldScene: scene.Scene) => {
             cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)

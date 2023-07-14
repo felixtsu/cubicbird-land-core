@@ -53,6 +53,12 @@ namespace room {
         }
     }
 
+    const CBL_CORE_ROOM_SCENE_FLAG = 'CubicbirdLandCore-RoomScene'
+
+    export function isCurrentSceneARoomScene() {
+        return game.currentScene().data[CBL_CORE_ROOM_SCENE_FLAG]
+    }
+
 
     export interface Room {
         enterRoom(heroSprite: Sprite, entrance?: string): void
@@ -136,9 +142,12 @@ namespace room {
 
         protected roomTilemap(): tiles.TileMapData { return null }
 
+        
         public enterRoom(heroSprite: Sprite, entrance?: string): void {
             _currentRoom = this;
+            
             game.pushScene()
+            game.currentScene().data[CBL_CORE_ROOM_SCENE_FLAG] = true
 
             // 这样就把外层游戏sprite带入这个场景
             game.currentScene().addSprite(heroSprite)
