@@ -192,13 +192,15 @@ namespace cbland {
         VILLAGE_INSTANCE = new cbland.VillageRoom()
 
         
-        cbland_info.initHud()
+        
         let savedMoney = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "money")
         if (!savedMoney) {
             savedMoney = 0
         }
         cbland_info.setMoneyTo(savedMoney)
         cbland_info.setTime()
+
+        cbland_info.initHud()
 
 
         _getVillageRoom().enterRoom(player)
@@ -301,6 +303,7 @@ namespace cbland {
             }
             pause(10)
         }
+        game.popScene()
         
         // pauseUntil(()=>finished)
 

@@ -33,10 +33,13 @@ namespace cbland_info {
 
         constructor(day?: number, hour?: number, minute?: number, tickInterval?: number) {
             if (day == undefined) {
-                day = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day")
-                hour = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour")
-                minute = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute")
-                tickInterval = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval")
+                let saved_day = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day")
+                if (saved_day != undefined) {
+                    day = saved_day
+                    hour = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour")
+                    minute = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute")
+                    tickInterval = cbland.readSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "tickInterval")
+                }
             } 
             if (day == undefined) {
                 day = 1
@@ -45,24 +48,22 @@ namespace cbland_info {
                 tickInterval = tickInterval
             }
 
-
+            this.day = day
             this.hour = (hour + 24) % 24
             this.minute = (minute + 60) % 60
             this.tickInterval = tickInterval
-            this.day = day
-
-
-
+            
             this.currentTimeMinutes = this.hour * 60 + this.minute
 
             this.lastTick = game.currentScene().millis()
             this.setTimeMinutes = this.currentTimeMinutes
 
             this.save()
+
+            
         }
 
         save() {
-
             cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "day", this.day)
             cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "hour", this.hour)
             cbland.writeSavingDataNumber(cbland.SAVINGDATA_GLOBAL_KEY, "minute", this.minute)
@@ -140,6 +141,7 @@ namespace cbland_info {
     //%tickInterval.defl=60000
     export function setTime(day?: number, hour?: number, minute?: number, tickInterval: number = 5000) {
         CLOCK_INSTANCE = new Clock(day, hour, minute, tickInterval)
+        console.log("after setTime:" + CLOCK_INSTANCE.hour)
     }
 
     //%group="Time"
@@ -184,8 +186,6 @@ namespace cbland_info {
 
             let minuteToPrint = Math.floor(CLOCK_INSTANCE.minute / 10) * 10
 
-
-
             screen.print(formatDecimal(CLOCK_INSTANCE.hour) + ":" + formatDecimal(minuteToPrint), left + clockIconShift, 1, color1, font)
 
         }
@@ -197,6 +197,7 @@ namespace cbland_info {
         scene.createRenderable(
             scene.HUD_Z,
             () => {
+                // console.log("CLOCK_INSTANCE:" + CLOCK_INSTANCE + "|" + CLOCK_INSTANCE.hour)
                 let currentMillis = game.currentScene().millis()
                 CLOCK_INSTANCE.timeElasped(currentMillis)
                 drawClockImplement()
@@ -251,9 +252,9 @@ namespace cbland_info {
             drawMoneyIconImpl()
         })
 
-        game.addScenePopHandler((oldScene: scene.Scene) => {
-            cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
-        })
+        // game.addScenePopHandler((oldScene: scene.Scene) => {
+        //     cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
+        // })
 
         game.addScenePushHandler((oldScene: scene.Scene) => {
             cbland_info.setTime(CLOCK_INSTANCE.day, CLOCK_INSTANCE.hour, CLOCK_INSTANCE.minute, CLOCK_INSTANCE.tickInterval)
@@ -498,18 +499,14 @@ namespace cbland_info {
         let menu = miniMenu.createMenuFromArray(_createMenuItemFromInventory())
         custom_menu.setMenuStyle(menu)
 
-        // let selected = false;
-
         menu.onButtonPressed(controller.A, (selection: string, selectedIndex: number) => {
             if (selection == "OK") {
                 menu.close()
-                // selected = true
                 game.popScene()
             }
         })
         menu.onButtonPressed(controller.menu, (selection: string, selectedIndex: number) => {
             menu.close()
-            // selected = true
             game.popScene()
         })
         menu.onSelectionChanged((selection: string, selectedIndex: number) => {
