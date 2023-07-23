@@ -144,12 +144,9 @@ namespace cbland {
     //%blockid=cbland_start_village block="start village life"
     //%block.loc.zh-CN="开始乡村生活"
     export function startVillage(developementMode: boolean=true) {
-        if (developementMode) {
-            
-            
+        // if (developementMode) {
             prepareTitleScreen()
-            // controller.pauseUntilAnyButtonIsPressed()
-        }
+        // }
 
 
         if (developementMode) {
