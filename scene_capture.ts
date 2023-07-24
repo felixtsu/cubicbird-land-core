@@ -41,15 +41,24 @@ namespace scene_util {
         scene_util.captureScene(name, game.currentScene())
     }
 
+    let _init = false;
+
     export function captureRegisteringRoomScenes(callback: () => void) {
+        
         let sceneCaptureHandler = (oldScene: scene.Scene) => {
             scene_util.captureScene(cbland._getCurrentRoomInRegister(), oldScene)
         }
         game.addScenePopHandler(sceneCaptureHandler)
 
-        game.addScenePushHandler((oldScene: scene.Scene) => {
-            scene_util.restoreScene(cbland.currentRoom().getRoomName())
-        })
+        if (!_init) {
+            game.addScenePushHandler((oldScene: scene.Scene) => {
+                if (cbland.currentRoom() != null) {
+                    scene_util.restoreScene(cbland.currentRoom().getRoomName())
+                }   
+                    
+            })
+            _init=true
+        }
 
         callback()
 

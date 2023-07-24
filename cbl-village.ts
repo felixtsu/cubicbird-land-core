@@ -144,11 +144,7 @@ namespace cbland {
     //%blockid=cbland_start_village block="start village life"
     //%block.loc.zh-CN="开始乡村生活"
     export function startVillage(developementMode: boolean=true) {
-        // if (developementMode) {
-            prepareTitleScreen()
-        // }
-
-
+        
         if (developementMode) {
             scene_util.captureCurrentScene(cbland._getCurrentRoomInRegister())
         }
@@ -161,6 +157,10 @@ namespace cbland {
             shop.prepareShop()
             game.popScene()
         })
+
+        // if (developementMode) {
+        prepareTitleScreen()
+        // }
 
         cbland_info.addInventoryMenu()
         cbland_equipment.addEquipmentMenu()

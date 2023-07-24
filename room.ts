@@ -156,8 +156,6 @@ namespace room {
             heroSprite.vx = 0, heroSprite.vy = 0
             this.heroSprite = heroSprite
 
-            
-
             tiles.setTilemap(this.roomTilemap())
 
             for (let exitName of Object.keys(this.exits)) {
