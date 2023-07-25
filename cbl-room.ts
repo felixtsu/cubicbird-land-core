@@ -254,7 +254,12 @@ namespace cbland {
     //%weight=90
     //%topblock=false
     export function onButtonEvent(roomName : string, button:ControllerButton, event:ControllerButtonEvent, handler:()=>void) {
-        scene_util.registerRoomButtonEvent(roomName, button, event, handler)
+        
+        scene_util.registerRoomButtonEvent(roomName, button, event, () => {
+            if (room.isCurrentSceneARoomScene()) {
+                handler()
+            }
+        })
     }
 
     // ------ end begins -----------

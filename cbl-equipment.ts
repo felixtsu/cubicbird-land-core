@@ -265,7 +265,7 @@ namespace cbland_equipment {
     export function addEquipmentMenu() {
         scene.systemMenu.addEntry(() => "TOOLBOX", () => {
             scene.systemMenu.closeMenu()
-            openToolbox()
+            openToolbox() // this function runs in parallel thread 
         }
             , assets.cbl_image`toolboxIcon`)
     }
