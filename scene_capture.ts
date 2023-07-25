@@ -106,6 +106,13 @@ namespace scene_util {
             game.currentScene().wallCollisionHandlers.push(spriteHitWallHandler)
         }
 
+        for (let spriteDestoryHandler of scene.destroyedHandlers) {
+            game.currentScene().destroyedHandlers.push(spriteDestoryHandler)
+        }
+
+        for (let spriteCreatedHandler of scene.createdHandlers) {
+            game.currentScene().createdHandlers.push(spriteCreatedHandler)
+        }
 
         // restore controller button event handlers 
         let roomButtonEventHandlers = _buttonEventHandlers[name]
